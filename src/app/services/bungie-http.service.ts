@@ -18,8 +18,8 @@ export class BungieHttpService {
         this._apiKey = '4da0bc9d76774c5696ea2703b129a2cd';
         break;
 
-      case 'https://guardian.theater':
-        this._apiKey = 'fc91f657672b41189d2682be8eb51697';
+      case 'https://chrisfried.github.io':
+        this._apiKey = '83c21174d7ed4292884fed250a383fee';
         break;
     }
   }
