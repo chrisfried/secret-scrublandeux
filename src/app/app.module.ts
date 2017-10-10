@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BungieHttpService } from './services/bungie-http.service';
 
 import { AppComponent } from './app.component';
 
@@ -10,7 +11,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [BungieHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

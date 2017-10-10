@@ -4,11 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host dev.guardian.theater --port 3000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ngh": "ng build --prod && cp dist/index.html dist/404.html && ngh"    
   },
   "private": true,
   "dependencies": {
