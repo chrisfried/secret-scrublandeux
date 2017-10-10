@@ -71,7 +71,19 @@ THE SOFTWARE.
 MIT
 MIT
 
+@angular/router@4.4.4
+MIT
+MIT
+
 @angular/http@4.4.4
+MIT
+MIT
+
+ng2-adsense@4.0.12
+MIT
+MIT
+
+@angular/forms@4.4.4
 MIT
 MIT
 
