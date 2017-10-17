@@ -18,7 +18,6 @@ export class NavComponent implements OnInit {
   }
 
   search() {
-    console.log('search', this.searchString);
     if (this.searchString.length) {
       this.router.navigate(['/search', this.searchString]);
     }

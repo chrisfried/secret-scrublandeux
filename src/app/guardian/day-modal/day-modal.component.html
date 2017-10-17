@@ -2,13 +2,14 @@
 <mat-dialog-content>
   <div class="timelineBase">
     <a
-      class="timelineActivity"
       *ngFor="let activity of data.activities"
+      class="timelineActivity"
+      [ngClass]="'mode-' + activity.activityDetails.mode"
       [ngStyle]="{
         'height': Math.floor(activity.values.timePlayedSeconds.basic.value / 60) + 'px',
         'top': getOffset(activity) + 'px'
       }"
-      [matTooltip]="activity.activityDetails.instanceId"
+      [matTooltip]="(activity.activityDetails.mode | destinyHash:'activityMode') + ' | ' + (activity.activityDetails.referenceId | destinyHash:'activityName')"
       matTooltipPosition="after"
       target="_blank"
       [href]="'http://destinytracker.com/d2/pgcr/' + activity.activityDetails.instanceId"></a>      

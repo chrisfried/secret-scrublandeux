@@ -23,6 +23,7 @@ import { MatIconModule } from '@angular/material';
 import { MatTooltipModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
 import { DayModalComponent } from './guardian/day-modal/day-modal.component';
+import { DestinyHashPipe } from './pipes/destiny-hash.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DayModalComponent } from './guardian/day-modal/day-modal.component';
     SearchComponent,
     GuardianComponent,
     AddTimePipe,
-    DayModalComponent
+    DayModalComponent,
+    DestinyHashPipe
   ],
   imports: [
     BrowserModule,

@@ -142,7 +142,6 @@ export class GuardianComponent implements OnInit, OnDestroy {
         .subscribe(([membershipId, membershipType, characters]) => {
           this.activities = [];
           characters.forEach(character => {
-            console.log(character);
             const url = 'https://www.bungie.net/Platform/Destiny2/' + membershipType + '/Account/' + membershipId
               + '/Character/' + character.characterId + '/Stats/Activities/?mode=None&count=250&page=';
             this.addHistorySub(url, 0);
@@ -170,8 +169,6 @@ export class GuardianComponent implements OnInit, OnDestroy {
               } catch (e) { }
             });
           }
-          console.log(res);
-          console.log(this.days);
         })
     );
   }

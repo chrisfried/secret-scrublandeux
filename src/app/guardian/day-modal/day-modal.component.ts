@@ -14,7 +14,6 @@ export class DayModalComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.data);
   }
 
   getOffset(activity) {
