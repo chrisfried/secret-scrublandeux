@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/
 import { Subscription, BehaviorSubject, Observable } from 'rxjs/Rx';
 import { ActivatedRoute, Params } from '@angular/router';
 import { BungieHttpService } from '../services/bungie-http.service';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { DayModalComponent } from './day-modal/day-modal.component';
 
 @Component({
   selector: 'app-guardian',
@@ -27,6 +29,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
   constructor(
     private bHttp: BungieHttpService,
     private activatedRoute: ActivatedRoute,
+    public dialog: MatDialog
   ) {
     this.Math = Math;
   }
@@ -56,7 +59,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
     }
     this.yearKeys = Object.keys(this.days);
     this.monthKeys = {};
-    this.monthOffsets = { 2017: { 9: 5 }};
+    this.monthOffsets = { 2017: { 9: 5 } };
     let previousOffset = 5;
     let previousCount = 30;
     this.dayKeys = {};
@@ -97,16 +100,16 @@ export class GuardianComponent implements OnInit, OnDestroy {
         return '';
       }
     })
-    .distinctUntilChanged()
-    .switchMap((url) => {
-      if (url.length) {
-        return this.bHttp.get(url)
-          .map((res: any) => res.json())
-          .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
-      } else {
-        return Observable.empty();
-      }
-    });
+      .distinctUntilChanged()
+      .switchMap((url) => {
+        if (url.length) {
+          return this.bHttp.get(url)
+            .map((res: any) => res.json())
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+        } else {
+          return Observable.empty();
+        }
+      });
 
     this.displayName = this.accountResponse.map(res => {
       return res.Response.profile.data.userInfo.displayName;
@@ -141,7 +144,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
           characters.forEach(character => {
             console.log(character);
             const url = 'https://www.bungie.net/Platform/Destiny2/' + membershipType + '/Account/' + membershipId
-            + '/Character/' + character.characterId + '/Stats/Activities/?mode=None&count=250&page=';
+              + '/Character/' + character.characterId + '/Stats/Activities/?mode=None&count=250&page=';
             this.addHistorySub(url, 0);
           });
         })
@@ -163,10 +166,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
               activity.endDate.setSeconds(activity.startDate.getSeconds() + activity.values.timePlayedSeconds.basic.value);
               this.activities.push(activity);
               try {
-                this.addDay(activity.startDate);
-                this.addDay(activity.endDate);
                 this.days[activity.startDate.getFullYear()][activity.startDate.getMonth() + 1][activity.startDate.getDate()].push(activity);
-                this.days[activity.endDate.getFullYear()][activity.endDate.getMonth() + 1][activity.endDate.getDate()].push(activity);
               } catch (e) { }
             });
           }
@@ -174,6 +174,16 @@ export class GuardianComponent implements OnInit, OnDestroy {
           console.log(this.days);
         })
     );
+  }
+
+  openDay(date, day) {
+    const dialogRef = this.dialog.open(DayModalComponent, {
+      data: {
+        date: date,
+        activities: day
+      },
+      width: '300px'
+    });
   }
 
   ngOnDestroy() {

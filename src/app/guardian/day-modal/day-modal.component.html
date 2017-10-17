@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>{{data.date}}</h2>
+<mat-dialog-content>
+  <div class="timelineBase">
+    <a
+      class="timelineActivity"
+      *ngFor="let activity of data.activities"
+      [ngStyle]="{
+        'height': Math.floor(activity.values.timePlayedSeconds.basic.value / 60) + 'px',
+        'top': getOffset(activity) + 'px'
+      }"
+      [matTooltip]="activity.activityDetails.instanceId"
+      matTooltipPosition="after"
+      target="_blank"
+      [href]="'http://destinytracker.com/d2/pgcr/' + activity.activityDetails.instanceId"></a>      
+  </div>
+</mat-dialog-content>

@@ -21,6 +21,8 @@ import { MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { MatIconModule } from '@angular/material';
 import { MatTooltipModule } from '@angular/material';
+import { MatDialogModule } from '@angular/material';
+import { DayModalComponent } from './guardian/day-modal/day-modal.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { MatTooltipModule } from '@angular/material';
     FrontPageComponent,
     SearchComponent,
     GuardianComponent,
-    AddTimePipe
+    AddTimePipe,
+    DayModalComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { MatTooltipModule } from '@angular/material';
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
+    MatDialogModule,
     FormsModule,
     HttpModule,
     RoutesModule,
@@ -45,6 +49,9 @@ import { MatTooltipModule } from '@angular/material';
       adClient: 'ca-pub-7822250090731539',
       adSlot: 9015826003
     })
+  ],
+  entryComponents: [
+    DayModalComponent
   ],
   providers: [BungieHttpService],
   bootstrap: [AppComponent]
