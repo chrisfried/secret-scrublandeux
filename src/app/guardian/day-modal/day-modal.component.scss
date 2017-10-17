@@ -1,14 +1,30 @@
 .timelineBase {
-  width: 100px;
+  width: 59px;
   height: 1441px;
   display: block;
   position: relative;
   background-color: rgb(230, 230, 230);
+  margin-left: 3em;
+}
+.timelineLabels {
+  display: block;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-bottom: solid 1px white;
+
+  .time {
+    margin-left: -3.5em;
+    width: 3em;
+    display: block;
+    text-align: right;
+  }
 }
 .timelineActivity {
   display: block;
-  width: 100px;
+  width: 60px;
   position: absolute;
+  left: .5em;
   background-color: rgb(50, 50, 150)
 }
 // Trials
