@@ -1,0 +1,14 @@
+.calYear {
+  display: flex;
+}
+.calMonth {
+  display: flex;
+  flex-direction: column;
+  height: 7em;
+  flex-wrap: wrap;
+}
+.calDay {
+  display: block;
+  width: 1em;
+  height: 1em;
+}

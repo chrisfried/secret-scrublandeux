@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
   public searchString: string;
@@ -18,8 +18,9 @@ export class NavComponent implements OnInit {
   }
 
   search() {
+    console.log('search', this.searchString);
     if (this.searchString.length) {
-      this.router.navigate(['/guardian', this.searchString]);
+      this.router.navigate(['/search', this.searchString]);
     }
   }
 

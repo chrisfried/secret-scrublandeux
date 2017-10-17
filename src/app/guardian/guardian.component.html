@@ -1,0 +1,13 @@
+Name: {{ displayName | async }} <br />
+Minutes Played Total: {{ minutesPlayedTotal | async }} <br />
+Activity Count: {{ activities.length }} <br />
+<div *ngFor="let year of yearKeys" class="calYear">
+  <div *ngFor="let month of monthKeys[year]" 
+       class="calMonth"
+       [ngStyle]="{'width': Math.ceil(dayKeys[year][month].length / 7) + 'em'}">
+    <div *ngFor="let day of dayKeys[year][month]" 
+         class="calDay"
+         [ngStyle]="{'background-color': 'hsl(' + ((100 - ((days[year][month][day] | addTime) / 864)) * 120 / 50 - 120) + ', 100%, ' + ((days[year][month][day] | addTime) > 0 ? '50%' : '100%') + ')'}"
+         [title]="(days[year][month][day] | addTime) / 86400"></div>
+  </div>
+</div>

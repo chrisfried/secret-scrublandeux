@@ -179,7 +179,9 @@ declare namespace bungie {
       startSeconds: ActivityStat,
       timePlayedSeconds: ActivityStat,
       playerCount: ActivityStat
-    }
+    },
+    startDate?: Date,
+    endDate?: Date
   }
 
   interface Team {
