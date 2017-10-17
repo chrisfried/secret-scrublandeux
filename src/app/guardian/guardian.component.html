@@ -1,14 +1,21 @@
-Name: {{ displayName | async }} <br />
-Minutes Played Total: {{ minutesPlayedTotal | async }} <br />
-Activity Count: {{ activities.length }} <br />
+<div class="mat-body-1">
+  Name: <span class="mat-body-2">{{ displayName | async }}</span> <br />
+  Minutes Played Total: <span class="mat-body-2">{{ minutesPlayedTotal | async }}</span> <br />
+  Activity Count: <span class="mat-body-2">{{ activities.length }}</span> <br />
+</div>
 <div *ngFor="let year of yearKeys" class="calYear">
+  <div class="yearLabel mat-caption"><span>{{ year }}</span></div>
   <div *ngFor="let month of monthKeys[year]" 
        class="calMonth"
        [ngStyle]="{'width': Math.ceil((dayKeys[year][month].length + monthOffsets[year][month]) / 7) + 'em'}">
-    <div class="monthSpacer" [ngStyle]="{'height': monthOffsets[year][month] + 'em'}"></div>
-    <div *ngFor="let day of dayKeys[year][month]" 
-         class="calDay"
-         [ngStyle]="{'background-color': 'hsl(' + ((100 - ((days[year][month][day] | addTime) / 864)) * 120 / 50 - 120) + ', ' + ((days[year][month][day] | addTime) / 86400 > 0 ? '100%' : '0%') + ', ' + ((days[year][month][day] | addTime) / 86400 > 0 ? ((days[year][month][day] | addTime) / 864 > 50 ? (100 - (days[year][month][day] | addTime) / 864) + '%' : '50%') : '90%') + ')'}"
-         [title]="year + '-' + month + '-' + day + ': ' + Math.floor((days[year][month][day] | addTime) / 86400 * 24) + 'h ' + Math.floor((days[year][month][day] | addTime) % 3600 / 60) + 'm'"></div>
+    <div class="monthLabel mat-caption">{{ month }}</div>
+    <div class="dayWrapper">
+      <div class="monthSpacer" [ngStyle]="{'height': monthOffsets[year][month] + 'em'}"></div>
+      <div *ngFor="let day of dayKeys[year][month]" 
+            class="calDay"
+            [ngStyle]="{'background-color': 'hsl(' + ((100 - ((days[year][month][day] | addTime) / 864)) * 120 / 50 - 120) + ', ' + ((days[year][month][day] | addTime) / 86400 > 0 ? '100%' : '0%') + ', ' + ((days[year][month][day] | addTime) / 86400 > 0 ? ((days[year][month][day] | addTime) / 864 > 50 ? (100 - (days[year][month][day] | addTime) / 864) + '%' : '50%') : '90%') + ')'}"
+            [matTooltip]="year + '-' + month + '-' + day + ': ' + Math.floor((days[year][month][day] | addTime) / 86400 * 24) + 'h ' + Math.floor((days[year][month][day] | addTime) % 3600 / 60) + 'm'"
+            matTooltipPosition="after"></div>
+    </div>
   </div>
 </div>

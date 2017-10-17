@@ -3,12 +3,14 @@
     <ng2-adsense></ng2-adsense>
   </div>
   <div class="small-12 columns">
-    <form class="row search-form" (ngSubmit)="search()">
-      <div class="small-12 columns input-group search-bar">
-        <input [(ngModel)]="searchString" name="searchString" text="quick-links" class="input-group-field search-box" type="search" placeholder="Guardian" autofocus="true">
-        <div class="input-group-button">
-          <button type="submit" class="button search-button">Go</button>
-        </div>
+    <form class="search-form" (ngSubmit)="search()">
+      <div class="search-bar">
+        <mat-form-field>
+          <input matInput [(ngModel)]="searchString" name="searchString" text="quick-links" class=" search-box" type="search" placeholder="Guardian" autofocus="true">
+        </mat-form-field>
+        <button mat-icon-button color="primary" type="submit" class="button search-button">
+          <mat-icon aria-label="Search for Guardian">search</mat-icon>
+        </button>
       </div>
     </form>
   </div>

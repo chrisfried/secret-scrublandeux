@@ -1,15 +1,19 @@
 .calYear {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: .5em;
+  margin-top: 1em;
 }
 .calMonth {
   display: flex;
   flex-direction: column;
-  height: 7em;
-  flex-wrap: wrap;
   margin-right: .5em;
   margin-bottom: .5em;
+}
+.dayWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 7em;
+  flex-wrap: wrap;
 }
 .calDay {
   display: block;
@@ -17,6 +21,17 @@
   height: 1em;
   box-sizing: border-box;
 }
+.yearLabel {
+  display: flex;
+  align-items: center;
+}
+.yearLabel span {
+  display: block;
+  transform: rotate(-90deg);
+}
 .monthSpacer {
   width: 1em;
+}
+.monthLabel {
+  text-align: center;
 }

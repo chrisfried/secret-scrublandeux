@@ -3,5 +3,5 @@
 </div>
 <div *ngIf="!searching && !searchResults.length">Guardian {{ searchName | async }} not found.</div>
 <div class="results">
-  <button (click)="route(['/guardian', result.membershipType, result.membershipId])" *ngFor="let result of searchResults"><img [src]="'https://www.bungie.net' + result.iconPath">{{ result.displayName }}</button>
+  <button mat-raised-button class="resultButton" (click)="route(['/guardian', result.membershipType, result.membershipId])" *ngFor="let result of searchResults"><img class="resultConsoleIcon" [src]="'https://www.bungie.net' + result.iconPath"> {{ result.displayName }}</button>
 </div>
