@@ -20,6 +20,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
   public days: {};
   public yearKeys: string[];
   public monthKeys;
+  public monthOffsets;
   public dayKeys;
   public Math;
 
@@ -55,11 +56,22 @@ export class GuardianComponent implements OnInit, OnDestroy {
     }
     this.yearKeys = Object.keys(this.days);
     this.monthKeys = {};
+    this.monthOffsets = { 2017: { 9: 5 }};
+    let previousOffset = 5;
+    let previousCount = 30;
     this.dayKeys = {};
     this.yearKeys.forEach(year => {
       this.monthKeys[year] = Object.keys(this.days[year]);
+      if (!this.monthOffsets[year]) {
+        this.monthOffsets[year] = {};
+      }
       this.dayKeys[year] = {};
       this.monthKeys[year].forEach(month => {
+        if (!this.monthOffsets[year][month]) {
+          this.monthOffsets[year][month] = (previousCount + previousOffset) % 7;
+          previousCount = Object.keys(this.days[year][month]).length;
+          previousOffset = this.monthOffsets[year][month];
+        }
         this.dayKeys[year][month] = Object.keys(this.days[year][month]);
       });
     });

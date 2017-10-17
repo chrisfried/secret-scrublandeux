@@ -1,14 +1,22 @@
 .calYear {
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: .5em;
 }
 .calMonth {
   display: flex;
   flex-direction: column;
   height: 7em;
   flex-wrap: wrap;
+  margin-right: .5em;
+  margin-bottom: .5em;
 }
 .calDay {
   display: block;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
+}
+.monthSpacer {
+  width: 1em;
 }
