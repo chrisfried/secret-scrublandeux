@@ -131,10 +131,6 @@ MIT
 MIT
 MIT
 
-ng2-adsense@4.0.12
-MIT
-MIT
-
 @angular/forms@4.4.5
 MIT
 MIT
