@@ -24,6 +24,10 @@ import { MatTooltipModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
 import { DayModalComponent } from './guardian/day-modal/day-modal.component';
 import { DestinyHashPipe } from './pipes/destiny-hash.pipe';
+import { ActivitiesTotalTimePipe } from './pipes/activities-total-time.pipe';
+import { ParseMinutesPlayedPipe } from './pipes/parse-minutes-played.pipe';
+import { ActivitiesTotalHoursPipe } from './pipes/activities-total-hours.pipe';
+import { HoursPlayedPipe } from './pipes/hours-played.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { DestinyHashPipe } from './pipes/destiny-hash.pipe';
     GuardianComponent,
     AddTimePipe,
     DayModalComponent,
-    DestinyHashPipe
+    DestinyHashPipe,
+    ActivitiesTotalTimePipe,
+    ParseMinutesPlayedPipe,
+    ActivitiesTotalHoursPipe,
+    HoursPlayedPipe
   ],
   imports: [
     BrowserModule,

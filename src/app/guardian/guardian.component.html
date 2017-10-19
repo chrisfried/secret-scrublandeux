@@ -1,6 +1,7 @@
 <div class="mat-body-1">
   Name: <span class="mat-body-2">{{ displayName | async }}</span> <br />
-  Minutes Played Total: <span class="mat-body-2">{{ minutesPlayedTotal | async }}</span> <br />
+  Total Time in Game: <span class="mat-body-2">{{ minutesPlayedTotal | async | hoursPlayed }}</span> = <span class="mat-body-2">{{ minutesPlayedTotal | async | parseMinutesPlayed }}</span> <br />
+  Total Time in Activities: <span class="mat-body-2">{{ activities | activitiesTotalHours}}</span> = <span class="mat-body-2">{{ activities | activitiesTotalTime}}</span> <br />
   Activity Count: <span class="mat-body-2">{{ activities.length }}</span> <br />
 </div>
 <div *ngFor="let year of yearKeys" class="calYear">
