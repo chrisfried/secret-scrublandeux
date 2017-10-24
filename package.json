@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ngh": "ng build --prod --base-href /secret-scrublandeux/ && cp dist/index.html dist/404.html && ngh"
+    "ngh": "ng build --prod --base-href /secret-scrubland/ && cp dist/index.html dist/404.html && ngh --repo=https://github.com/chrisfried/secret-scrubland.git"
   },
   "private": true,
   "dependencies": {
