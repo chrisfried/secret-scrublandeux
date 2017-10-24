@@ -21,7 +21,6 @@ export class BungieStatusComponent implements OnInit {
       .map((res: any) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
       .subscribe(res => {
-        console.log(res.Response);
         try {
           this.bungieStatus.next(res.Response);
         } catch (e) { }

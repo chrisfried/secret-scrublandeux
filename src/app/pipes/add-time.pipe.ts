@@ -13,8 +13,11 @@ export class AddTimePipe implements PipeTransform {
           || modeFilter === 0
           || modeFilter === '0'
           || modeFilter === activity.activityDetails.mode
-          || activity.activityDetails.modes.indexOf(+modeFilter) > -1) {
-        count += activity.values.timePlayedSeconds.basic.value;
+          || +modeFilter === +activity.activityDetails.mode) {
+        count += activity.values.activityDurationSeconds.basic.value;
+        if (activity.values.leaveRemainingSeconds) {
+          count -= activity.values.leaveRemainingSeconds.basic.value;
+        }
       }
     });
     return count;

@@ -11,16 +11,14 @@
       }">
       <span class="time mat-caption">{{ hour }}</span>
     </div>
-    <a *ngFor="let activity of data.activities"
+    <div *ngFor="let activity of data.activities"
       class="timelineActivity"
       [ngClass]="'mode-' + activity.activityDetails.mode"
       [ngStyle]="{
-        'height': Math.floor(activity.values.timePlayedSeconds.basic.value / 60) + 'px',
+        'height': Math.floor((activity.values.activityDurationSeconds.basic.value - activity.values.leaveRemainingSeconds.basic.value) / 60) + 'px',
         'top': getOffset(activity) + 'px'
       }"
       [matTooltip]="(activity.activityDetails.mode | destinyHash:'activityMode') + ' | ' + (activity.activityDetails.referenceId | destinyHash:'activityName')"
-      matTooltipPosition="after"
-      target="_blank"
-      [href]="'http://destinytracker.com/d2/pgcr/' + activity.activityDetails.instanceId"></a>      
+      matTooltipPosition="after"></div>      
   </div>
 </mat-dialog-content>

@@ -17,7 +17,9 @@ declare namespace bungie {
   }
 
   interface ActivityHistoryResponse extends Response {
-    Response: ActivityHistory
+    Response: {
+      data: ActivityHistory
+    }
   }
 
   interface PostGameCarnageReportResponse extends Response {
@@ -72,12 +74,14 @@ declare namespace bungie {
   }
 
   interface Character {
-    membershipId: string,
-    membershipType: number,
-    characterId: string,
     dateLastPlayed: string,
     minutesPlayedThisSession: string,
-    minutesPlayedTotal: string,
+    characterBase: {
+      membershipId: string,
+      membershipType: number,
+      characterId: string,
+      minutesPlayedTotal: string      
+    },
     light: number,
     stats: any,
     raceHash: number,
@@ -131,8 +135,8 @@ declare namespace bungie {
   }
 
   interface Account {
-    characters?: {
-      data: any
+    data?: {
+      characters?: Character[]
     },
     profile?: {
       data: {
@@ -179,7 +183,8 @@ declare namespace bungie {
       fireteamId: ActivityStat,
       startSeconds: ActivityStat,
       timePlayedSeconds: ActivityStat,
-      playerCount: ActivityStat
+      playerCount: ActivityStat,
+      leaveRemainingSeconds: ActivityStat
     },
     startDate?: Date,
     endDate?: Date

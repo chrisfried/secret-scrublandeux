@@ -56,7 +56,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
     this.days = {};
     this.modeOptions = Object.keys(DestinyActivityModeDefinition['en']);
 
-    const day = new Date('Sept 1, 2017');
+    const day = new Date('Sept 1, 2014');
     const now = new Date();
     while (day <= now) {
       this.addDay(day);
@@ -65,7 +65,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
     this.yearKeys = Object.keys(this.days);
     this.monthKeys = {};
     this.monthOffsets = { 2017: { 9: 5 } };
-    let previousOffset = 5;
+    let previousOffset = 1;
     let previousCount = 30;
     this.dayKeys = {};
     this.yearKeys.forEach(year => {
@@ -97,7 +97,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
     ).map(([membershipId, membershipType]) => {
       try {
         if (membershipType && membershipId) {
-          return 'https://www.bungie.net/Platform/Destiny2/' + membershipType + '/Profile/' + membershipId + '/?components=100,200';
+          return 'https://www.bungie.net/d1/Platform/Destiny/' + membershipType + '/Account/' + membershipId + '/Summary/';
         } else {
           return '';
         }
@@ -116,23 +116,18 @@ export class GuardianComponent implements OnInit, OnDestroy {
         }
       });
 
-    this.displayName = this.accountResponse.map(res => {
-      return res.Response.profile.data.userInfo.displayName;
-    });
     this.characters = this.accountResponse.map(res => {
-      const characters = [];
       try {
-        Object.keys(res.Response.characters.data).forEach(key => {
-          characters.push(res.Response.characters.data[key]);
-        });
-      } catch (e) { }
-      return characters;
+        return res.Response.data.characters;
+      } catch (e) {
+        return [];
+      }
     });
 
     this.minutesPlayedTotal = this.characters.map(characters => {
       let minutesPlayed = 0;
       characters.forEach(character => {
-        minutesPlayed += +character.minutesPlayedTotal;
+        minutesPlayed += +character.characterBase.minutesPlayedTotal;
       });
       return minutesPlayed;
     });
@@ -147,8 +142,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
         .subscribe(([membershipId, membershipType, characters]) => {
           this.activities = [];
           characters.forEach(character => {
-            const url = 'https://www.bungie.net/Platform/Destiny2/' + membershipType + '/Account/' + membershipId
-              + '/Character/' + character.characterId + '/Stats/Activities/?mode=None&count=250&page=';
+            const url = 'https://www.bungie.net/d1/Platform/Destiny/Stats/ActivityHistory/' + membershipType + '/' + membershipId
+              + '/' + character.characterBase.characterId + '/?mode=None&count=250&page=';
             this.addHistorySub(url, 0);
           });
         })
@@ -161,13 +156,18 @@ export class GuardianComponent implements OnInit, OnDestroy {
         .map((res: any) => res.json())
         .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
         .subscribe((res: bungie.ActivityHistoryResponse) => {
-          if (res.Response.activities && res.Response.activities.length) {
+          console.log(res);
+          if (res.Response && res.Response.data && res.Response.data.activities && res.Response.data.activities.length) {
             this.addHistorySub(url, page + 1);
-            res.Response.activities.forEach(activity => {
+            res.Response.data.activities.forEach(activity => {
               activity.startDate = new Date(activity.period);
-              activity.startDate.setSeconds(activity.startDate.getSeconds() + activity.values.startSeconds.basic.value);
               activity.endDate = new Date(activity.startDate.getTime());
-              activity.endDate.setSeconds(activity.startDate.getSeconds() + activity.values.timePlayedSeconds.basic.value);
+              activity.endDate.setSeconds(activity.startDate.getSeconds()
+                + activity.values.activityDurationSeconds.basic.value);
+              if (activity.values.leaveRemainingSeconds) {
+                activity.endDate.setSeconds(activity.startDate.getSeconds()
+                - activity.values.leaveRemainingSeconds.basic.value);
+              }
               this.activities.push(activity);
               try {
                 this.days[activity.startDate.getFullYear()][activity.startDate.getMonth() + 1][activity.startDate.getDate()].push(activity);
