@@ -31,6 +31,7 @@ import { ActivitiesTotalHoursPipe } from './pipes/activities-total-hours.pipe';
 import { HoursPlayedPipe } from './pipes/hours-played.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { BungieStatusComponent } from './bungie-status/bungie-status.component';
+import { MilestonePipe } from './pipes/milestone.pipe';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { BungieStatusComponent } from './bungie-status/bungie-status.component';
     ActivitiesTotalHoursPipe,
     HoursPlayedPipe,
     FooterComponent,
-    BungieStatusComponent
+    BungieStatusComponent,
+    MilestonePipe
   ],
   imports: [
     BrowserModule,

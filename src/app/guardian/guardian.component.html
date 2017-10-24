@@ -19,9 +19,10 @@
       <div class="monthSpacer" [ngStyle]="{'height': monthOffsets[year][month] + 'em'}"></div>
       <div *ngFor="let day of dayKeys[year][month]" 
             class="calDay"
-            (click)="openDay(year + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '')  + day, days[year][month][day])"
+            [ngClass]="year + '-' + month + '-' + day | milestone:'class'"
+            (click)="openDay(year + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day, days[year][month][day])"
             [ngStyle]="{'background-color': 'hsl(' + ((100 - ((days[year][month][day] | addTime:calendarFilter) / 864)) * 120 / 50 - 120) + ', ' + ((days[year][month][day] | addTime:calendarFilter) / 86400 > 0 ? '100%' : '0%') + ', ' + ((days[year][month][day] | addTime:calendarFilter) / 86400 > 0 ? ((days[year][month][day] | addTime:calendarFilter) / 864 > 50 ? (100 - (days[year][month][day] | addTime) / 864) + '%' : '50%') : '90%') + ')'}"
-            [matTooltip]="year + '-' + month + '-' + day + ': ' + Math.floor((days[year][month][day] | addTime:calendarFilter) / 86400 * 24) + 'h ' + Math.floor((days[year][month][day] | addTime:calendarFilter) % 3600 / 60) + 'm'"
+            [matTooltip]="year + '-' + month + '-' + day + (year + '-' + month + '-' + day | milestone:'text') + ': ' + Math.floor((days[year][month][day] | addTime:calendarFilter) / 86400 * 24) + 'h ' + Math.floor((days[year][month][day] | addTime:calendarFilter) % 3600 / 60) + 'm'"
             matTooltipPosition="after"></div>
     </div>
   </div>
