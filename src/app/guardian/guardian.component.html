@@ -1,7 +1,7 @@
 <div class="mat-body-1">
-  Total Time in Game: <span class="mat-body-2">{{ minutesPlayedTotal | async | hoursPlayed }}</span> = <span class="mat-body-2">{{ minutesPlayedTotal | async | parseMinutesPlayed }}</span> <br />
+  Total Time in Destiny 1: <span class="mat-body-2">{{ minutesPlayedTotal | async | hoursPlayed }}</span> = <span class="mat-body-2">{{ minutesPlayedTotal | async | parseMinutesPlayed }}</span> <br />
   Total Time in Activities: <span class="mat-body-2">{{ activities | activitiesTotalHours}}</span> = <span class="mat-body-2">{{ activities | activitiesTotalTime}}</span> <br />
-  Activity Count: <span class="mat-body-2">{{ activities.length }}</span> <br />
+  Destiny 1 Activity Count: <span class="mat-body-2">{{ activities.length }}</span> <br />
   Filter Heatmap: <mat-form-field>
     <mat-select [(ngModel)]="calendarFilter">
       <mat-option *ngFor="let option of modeOptions" [value]="option">{{ option | destinyHash:'activityMode' }}</mat-option>
