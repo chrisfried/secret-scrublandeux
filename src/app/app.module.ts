@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AdsenseModule } from 'ng2-adsense';
 
 import { BungieHttpService } from './services/bungie-http.service';
 
@@ -22,12 +21,16 @@ import { MatButtonModule } from '@angular/material';
 import { MatIconModule } from '@angular/material';
 import { MatTooltipModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material';
+import { MatCardModule } from '@angular/material';
 import { DayModalComponent } from './guardian/day-modal/day-modal.component';
 import { DestinyHashPipe } from './pipes/destiny-hash.pipe';
 import { ActivitiesTotalTimePipe } from './pipes/activities-total-time.pipe';
 import { ParseMinutesPlayedPipe } from './pipes/parse-minutes-played.pipe';
 import { ActivitiesTotalHoursPipe } from './pipes/activities-total-hours.pipe';
 import { HoursPlayedPipe } from './pipes/hours-played.pipe';
+import { FooterComponent } from './footer/footer.component';
+import { BungieStatusComponent } from './bungie-status/bungie-status.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { HoursPlayedPipe } from './pipes/hours-played.pipe';
     ActivitiesTotalTimePipe,
     ParseMinutesPlayedPipe,
     ActivitiesTotalHoursPipe,
-    HoursPlayedPipe
+    HoursPlayedPipe,
+    FooterComponent,
+    BungieStatusComponent
   ],
   imports: [
     BrowserModule,
@@ -52,13 +57,11 @@ import { HoursPlayedPipe } from './pipes/hours-played.pipe';
     MatIconModule,
     MatTooltipModule,
     MatDialogModule,
+    MatSelectModule,
+    MatCardModule,
     FormsModule,
     HttpModule,
-    RoutesModule,
-    AdsenseModule.forRoot({
-      adClient: 'ca-pub-7822250090731539',
-      adSlot: 9015826003
-    })
+    RoutesModule
   ],
   entryComponents: [
     DayModalComponent

@@ -4,6 +4,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { BungieHttpService } from '../services/bungie-http.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { DayModalComponent } from './day-modal/day-modal.component';
+import { DestinyActivityModeDefinition } from '../defs/DestinyActivityModeDefinition';
 
 @Component({
   selector: 'app-guardian',
@@ -25,6 +26,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
   public monthOffsets;
   public dayKeys;
   public Math;
+  public calendarFilter: any;
+  public modeOptions: any[];
 
   constructor(
     private bHttp: BungieHttpService,
@@ -47,9 +50,11 @@ export class GuardianComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.calendarFilter = '0';
     this.subs = [];
     this.activities = [];
     this.days = {};
+    this.modeOptions = Object.keys(DestinyActivityModeDefinition['en']);
 
     const day = new Date('Sept 1, 2017');
     const now = new Date();

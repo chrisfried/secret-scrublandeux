@@ -1,0 +1,20 @@
+.appWrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  min-height: 100%;
+  top: 0;
+  left: .5em;
+}
+
+.bungieStatus, .nav {
+  margin-top: .5em;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.footer {
+  margin-bottom: .5em;
+}

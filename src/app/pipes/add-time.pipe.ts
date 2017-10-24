@@ -6,10 +6,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class AddTimePipe implements PipeTransform {
 
-  transform(activities: bungie.Activity[], args?: any): number {
+  transform(activities: bungie.Activity[], modeFilter?: any): number {
     let count = 0;
     activities.forEach(activity => {
-      count += activity.values.timePlayedSeconds.basic.value;
+      if (!modeFilter
+          || modeFilter === 0
+          || modeFilter === '0'
+          || modeFilter === activity.activityDetails.mode
+          || activity.activityDetails.modes.indexOf(+modeFilter) > -1) {
+        count += activity.values.timePlayedSeconds.basic.value;
+      }
     });
     return count;
   }

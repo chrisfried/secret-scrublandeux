@@ -157,6 +157,7 @@ declare namespace bungie {
     referenceId: number,
     instanceId: string,
     mode: number,
+    modes?: number[],
     activityTypeHashOverride: number,
     isPrivate: boolean
   }
