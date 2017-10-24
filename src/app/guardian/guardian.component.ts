@@ -156,7 +156,6 @@ export class GuardianComponent implements OnInit, OnDestroy {
         .map((res: any) => res.json())
         .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
         .subscribe((res: bungie.ActivityHistoryResponse) => {
-          console.log(res);
           if (res.Response && res.Response.data && res.Response.data.activities && res.Response.data.activities.length) {
             this.addHistorySub(url, page + 1);
             res.Response.data.activities.forEach(activity => {
