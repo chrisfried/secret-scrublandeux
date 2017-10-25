@@ -10,6 +10,7 @@ export class MilestonePipe implements PipeTransform {
       case 'class':
         switch (date) {
           case '2017-9-6':
+          case '2017-09-06':
           case '2017-10-24':
             return 'milestone';
           default:
@@ -18,9 +19,10 @@ export class MilestonePipe implements PipeTransform {
       case 'text':
         switch (date) {
           case '2017-9-6':
-            return ' | Destiny 2 Console Release';
+          case '2017-09-06':
+            return ' | Destiny 2 Console';
           case '2017-10-24':
-            return ' | Destiny 2 PC Release';
+            return ' | Destiny 2 PC';
           default:
             return '';
         }

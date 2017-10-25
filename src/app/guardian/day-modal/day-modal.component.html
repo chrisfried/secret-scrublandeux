@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>{{data.date}}</h2>
+<h2 mat-dialog-title>{{ data.date + (data.date | milestone:'text') + ': ' + Math.floor((data.activities | addTime:'0') / 86400 * 24) + 'h ' + Math.floor((data.activities | addTime:'0') % 3600 / 60) + 'm'}}</h2>
 <mat-dialog-content>
   <div class="timelineBase">
     <div *ngFor="let hour of ['12am', '1am', '2am', '3am', '4am', '5am', 
