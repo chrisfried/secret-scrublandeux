@@ -23,6 +23,7 @@ import { MatTooltipModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
 import { MatCardModule } from '@angular/material';
+import { MatProgressSpinnerModule } from '@angular/material';
 import { DayModalComponent } from './guardian/day-modal/day-modal.component';
 import { DestinyHashPipe } from './pipes/destiny-hash.pipe';
 import { ActivitiesTotalTimePipe } from './pipes/activities-total-time.pipe';
@@ -32,6 +33,7 @@ import { HoursPlayedPipe } from './pipes/hours-played.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { BungieStatusComponent } from './bungie-status/bungie-status.component';
 import { MilestonePipe } from './pipes/milestone.pipe';
+import { LoadingReducePipe } from './pipes/loading-reduce.pipe';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { MilestonePipe } from './pipes/milestone.pipe';
     HoursPlayedPipe,
     FooterComponent,
     BungieStatusComponent,
-    MilestonePipe
+    MilestonePipe,
+    LoadingReducePipe
   ],
   imports: [
     BrowserModule,
@@ -61,6 +64,7 @@ import { MilestonePipe } from './pipes/milestone.pipe';
     MatDialogModule,
     MatSelectModule,
     MatCardModule,
+    MatProgressSpinnerModule,
     FormsModule,
     HttpModule,
     RoutesModule

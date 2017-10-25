@@ -28,6 +28,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
   public Math;
   public calendarFilter: any;
   public modeOptions: any[];
+  public loadingArray: { loading: boolean }[];
 
   constructor(
     private bHttp: BungieHttpService,
@@ -50,6 +51,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.loadingArray = [];
     this.calendarFilter = '0';
     this.subs = [];
     this.activities = [];
@@ -150,19 +152,24 @@ export class GuardianComponent implements OnInit, OnDestroy {
             const url = 'https://www.bungie.net/Platform/Destiny2/' + membershipType + '/Account/' + membershipId
               + '/Character/' + character.characterId + '/Stats/Activities/?mode=None&count=250&page=';
             this.addHistorySub(url, 0);
+            this.addHistorySub(url, 1);
+            this.addHistorySub(url, 2);
           });
         })
     );
   }
 
   addHistorySub(url: string, page: number) {
+    const loading = { loading: true };
+    this.loadingArray.push(loading);
+
     this.subs.push(
       this.bHttp.get(url + page)
         .map((res: any) => res.json())
         .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
         .subscribe((res: bungie.ActivityHistoryResponse) => {
           if (res.Response.activities && res.Response.activities.length) {
-            this.addHistorySub(url, page + 1);
+            this.addHistorySub(url, page + 3);
             res.Response.activities.forEach(activity => {
               activity.startDate = new Date(activity.period);
               activity.startDate.setSeconds(activity.startDate.getSeconds() + activity.values.startSeconds.basic.value);
@@ -174,6 +181,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
               } catch (e) { }
             });
           }
+          loading.loading = false;
         })
     );
   }
