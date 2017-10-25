@@ -1,12 +1,13 @@
 <div class="mat-body-1">
   Total Time in Destiny 1: <span class="mat-body-2">{{ minutesPlayedTotal | async | hoursPlayed }}</span> = <span class="mat-body-2">{{ minutesPlayedTotal | async | parseMinutesPlayed }}</span> <br />
   Total Time in Activities: <span class="mat-body-2">{{ activities | activitiesTotalHours}}</span> = <span class="mat-body-2">{{ activities | activitiesTotalTime}}</span> <br />
-  Destiny 1 Activity Count: <span class="mat-body-2">{{ activities.length }}</span> <br />
+  Destiny 1 Activity Count: <span class="mat-body-2">{{ activities.length }}</span> 
+    <mat-icon *ngIf="loadingArray | loadingReduce" aria-label="Search for Guardian" class="spinner">settings</mat-icon><br />
   Filter Heatmap: <mat-form-field>
     <mat-select [(ngModel)]="calendarFilter">
       <mat-option *ngFor="let option of modeOptions" [value]="option">{{ option | destinyHash:'activityMode' }}</mat-option>
     </mat-select>
-  </mat-form-field>    
+  </mat-form-field>
 </div>
 <div *ngFor="let year of yearKeys" class="calYear">
   <div class="yearLabel mat-caption"><span>{{ year }}</span></div>

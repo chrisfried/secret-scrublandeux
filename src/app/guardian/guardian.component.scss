@@ -3,18 +3,21 @@
   flex-wrap: wrap;
   margin-top: 1em;
 }
+
 .calMonth {
   display: flex;
   flex-direction: column;
   margin-right: .5em;
   margin-bottom: .5em;
 }
+
 .dayWrapper {
   display: flex;
   flex-direction: column;
   height: 7em;
   flex-wrap: wrap;
 }
+
 .calDay {
   display: block;
   width: 1em;
@@ -22,20 +25,53 @@
   box-sizing: border-box;
   cursor: pointer;
 }
+
 .yearLabel {
   display: flex;
   align-items: center;
 }
+
 .yearLabel span {
   display: block;
   transform: rotate(-90deg);
 }
+
 .monthSpacer {
   width: 1em;
 }
+
 .monthLabel {
   text-align: center;
 }
+
 .milestone {
   border: solid 2px white;
+}
+
+.spinner {
+  -webkit-animation: spin 3s infinite linear;
+  animation: spin 3s infinite linear;
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  line-height: 1em;
+  font-size: .75em;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinX {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
