@@ -34,6 +34,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BungieStatusComponent } from './bungie-status/bungie-status.component';
 import { MilestonePipe } from './pipes/milestone.pipe';
 import { LoadingReducePipe } from './pipes/loading-reduce.pipe';
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { LoadingReducePipe } from './pipes/loading-reduce.pipe';
     MatProgressSpinnerModule,
     FormsModule,
     HttpModule,
-    RoutesModule
+    RoutesModule,
+    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics])
   ],
   entryComponents: [
     DayModalComponent
