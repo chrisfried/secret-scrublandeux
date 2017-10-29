@@ -1,3 +1,7 @@
+<mat-card *ngIf="errorStatus" class="errorStatus">
+  <mat-card-title>{{ errorStatus }}</mat-card-title>
+  <mat-card-subtitle>{{ errorMessage }}</mat-card-subtitle>
+</mat-card>
 <div class="mat-body-1">
   Total Time in Destiny 1: <span class="mat-body-2">{{ minutesPlayedTotal | async | hoursPlayed }}</span> = <span class="mat-body-2">{{ minutesPlayedTotal | async | parseMinutesPlayed }}</span> <br />
   Total Time in Activities: <span class="mat-body-2">{{ activities | activitiesTotalHours}}</span> = <span class="mat-body-2">{{ activities | activitiesTotalTime}}</span> <br />
