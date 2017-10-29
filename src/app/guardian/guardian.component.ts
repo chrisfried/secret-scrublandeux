@@ -184,7 +184,6 @@ export class GuardianComponent implements OnInit, OnDestroy {
             this.errorStatus = res.ErrorStatus;
             this.errorMessage = res.Message;
           }
-          console.log(res);
           if (res.Response.activities && res.Response.activities.length) {
             this.addHistorySub(url, page + 3);
             res.Response.activities.forEach(activity => {
