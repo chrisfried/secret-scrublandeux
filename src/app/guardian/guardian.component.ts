@@ -29,6 +29,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
   public calendarFilter: any;
   public modeOptions: any[];
   public loadingArray: { loading: boolean }[];
+  public errorStatus: string;
+  public errorMessage: string;
 
   constructor(
     private bHttp: BungieHttpService,
@@ -57,6 +59,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
     this.activities = [];
     this.days = {};
     this.modeOptions = Object.keys(DestinyActivityModeDefinition['en']);
+    this.errorStatus = '';
+    this.errorMessage = '';
 
     const day = new Date('Sept 1, 2017');
     const now = new Date();
@@ -119,9 +123,17 @@ export class GuardianComponent implements OnInit, OnDestroy {
       });
 
     this.displayName = this.accountResponse.map(res => {
+      if (res.ErrorCode !== 1 && res.ErrorStatus) {
+        this.errorStatus = res.ErrorStatus;
+        this.errorMessage = res.Message;
+      }
       return res.Response.profile.data.userInfo.displayName;
     });
     this.characters = this.accountResponse.map(res => {
+      if (res.ErrorCode !== 1 && res.ErrorStatus) {
+        this.errorStatus = res.ErrorStatus;
+        this.errorMessage = res.Message;
+      }
       const characters = [];
       try {
         Object.keys(res.Response.characters.data).forEach(key => {
@@ -168,6 +180,11 @@ export class GuardianComponent implements OnInit, OnDestroy {
         .map((res: any) => res.json())
         .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
         .subscribe((res: bungie.ActivityHistoryResponse) => {
+          if (res.ErrorCode !== 1 && res.ErrorStatus) {
+            this.errorStatus = res.ErrorStatus;
+            this.errorMessage = res.Message;
+          }
+          console.log(res);
           if (res.Response.activities && res.Response.activities.length) {
             this.addHistorySub(url, page + 3);
             res.Response.activities.forEach(activity => {
