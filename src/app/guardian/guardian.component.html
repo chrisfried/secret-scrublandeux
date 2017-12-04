@@ -7,6 +7,8 @@
   Total Time in Activities: <span class="mat-body-2">{{ activities | activitiesTotalHours}}</span> = <span class="mat-body-2">{{ activities | activitiesTotalTime}}</span> <br />
   Destiny 1 Activity Count: <span class="mat-body-2">{{ activities.length }}</span> 
     <mat-icon *ngIf="loadingArray | loadingReduce" aria-label="Search for Guardian" class="spinner">settings</mat-icon><br />
+  Current Streak: {{ flatDays | currentStreak }}<br />
+  Longest Streaks: {{ flatDays | longestStreaks }}<br />
   Filter Heatmap: <mat-form-field>
     <mat-select [(ngModel)]="calendarFilter">
       <mat-option *ngFor="let option of modeOptions" [value]="option">{{ option | destinyHash:'activityMode' }}</mat-option>

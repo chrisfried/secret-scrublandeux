@@ -16,11 +16,13 @@ export class GuardianComponent implements OnInit, OnDestroy {
   private membershipType: Observable<string>;
   private membershipId: Observable<string>;
   private accountResponse: Observable<bungie.AccountResponse>;
+  private flatDaysBS: BehaviorSubject<any[]>;
   public displayName: Observable<string>;
   public characters: Observable<bungie.Character[]>;
   public minutesPlayedTotal: Observable<number>;
   public activities: bungie.Activity[];
   public days: {};
+  public flatDays: any[][];
   public yearKeys: string[];
   public monthKeys;
   public monthOffsets;
@@ -50,6 +52,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
     if (!this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()]) {
       this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()] = [];
     }
+    this.flatDays.push(this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()]);
   }
 
   ngOnInit() {
@@ -58,6 +61,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
     this.subs = [];
     this.activities = [];
     this.days = {};
+    this.flatDays = [];
+    this.flatDaysBS = new BehaviorSubject([]);
     this.modeOptions = Object.keys(DestinyActivityModeDefinition['en']);
     this.errorStatus = '';
     this.errorMessage = '';
@@ -68,6 +73,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
       this.addDay(day);
       day.setDate(day.getDate() + 1);
     }
+    this.flatDaysBS.next(this.flatDays);
     this.yearKeys = Object.keys(this.days);
     this.monthKeys = {};
     this.monthOffsets = { 2017: { 9: 5 } };
@@ -190,6 +196,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
               try {
                 this.days[activity.startDate.getFullYear()][activity.startDate.getMonth() + 1][activity.startDate.getDate()].push(activity);
               } catch (e) { }
+              this.flatDaysBS.next(this.flatDays);
             });
           }
           loading.loading = false;
