@@ -35,6 +35,8 @@ import { BungieStatusComponent } from './bungie-status/bungie-status.component';
 import { MilestonePipe } from './pipes/milestone.pipe';
 import { LoadingReducePipe } from './pipes/loading-reduce.pipe';
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
+import { CurrentStreakPipe } from './pipes/current-streak.pipe';
+import { LongestStreaksPipe } from './pipes/longest-streaks.pipe';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
     FooterComponent,
     BungieStatusComponent,
     MilestonePipe,
-    LoadingReducePipe
+    LoadingReducePipe,
+    CurrentStreakPipe,
+    LongestStreaksPipe
   ],
   imports: [
     BrowserModule,
