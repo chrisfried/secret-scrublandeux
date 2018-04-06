@@ -22,6 +22,10 @@ let definitions = [
   'DestinyRaceDefinition'
 ]
 
+try {
+  fs.mkdirSync('./utils/defs');
+} catch (e) { console.log('error creating folder'); }
+
 languages.forEach(language => {
   noHyphen = language;
   if (language[2]) {
@@ -41,14 +45,14 @@ languages.forEach(language => {
   definitions.forEach(definition => {
     try {
       let file = fs.createWriteStream('./utils/defs/' + noHyphen + '/' + definition + '.json');
-      https.get('https://destiny.plumbing/2/' + language + '/raw/' + definition + '.json', response => {
+      https.get('https://destiny.plumbing/' + language + '/raw/' + definition + '.json', response => {
         response.pipe(file);
       });
     } catch (e) { console.log(e); }
   });
   try {
     let file = fs.createWriteStream('./utils/defs/en/Emblem.json');
-    https.get('https://destiny.plumbing/2/en/items/Emblem.json', response => {
+    https.get('https://destiny.plumbing/en/items/Emblem.json', response => {
       response.pipe(file);
     });
   } catch (e) { console.log(e); }

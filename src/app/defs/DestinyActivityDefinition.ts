@@ -9,9 +9,6 @@ export const DestinyActivityDefinition = {
     37050217: {
       name: 'Untersuchungsmission'
     },
-    38244167: {
-      name: 'Javelin-4'
-    },
     51408141: {
       name: 'Bergungsmission'
     },
@@ -47,6 +44,9 @@ export const DestinyActivityDefinition = {
     143647473: {
       name: 'Bergungsmission'
     },
+    145136689: {
+      name: 'Kampfmission'
+    },
     145302664: {
       name: 'Dämmerung: Der Waffenhändler'
     },
@@ -76,6 +76,9 @@ export const DestinyActivityDefinition = {
     },
     286324446: {
       name: 'Bergungsmission'
+    },
+    286562305: {
+      name: 'Die verdrehte Säule'
     },
     287649202: {
       name: 'Leviathan'
@@ -107,6 +110,9 @@ export const DestinyActivityDefinition = {
     359488722: {
       name: 'Den Planeten hacken'
     },
+    373475104: {
+      name: 'Dämmerung: Eine Gartenwelt'
+    },
     374818561: {
       name: 'Frist des Imperators'
     },
@@ -115,9 +121,6 @@ export const DestinyActivityDefinition = {
     },
     387171436: {
       name: 'Bergungsmission'
-    },
-    387487590: {
-      name: 'Vorbestellen'
     },
     388289443: {
       name: 'Untersuchungsmission'
@@ -133,6 +136,9 @@ export const DestinyActivityDefinition = {
     },
     435989417: {
       name: 'Analysemission'
+    },
+    442671778: {
+      name: 'Der Waffenhändler'
     },
     444087412: {
       name: 'Kampfmission'
@@ -150,9 +156,6 @@ export const DestinyActivityDefinition = {
     },
     474380713: {
       name: 'Bergungsmission'
-    },
-    482312911: {
-      name: 'Die Farm'
     },
     539897061: {
       name: 'Umgepolt'
@@ -174,9 +177,6 @@ export const DestinyActivityDefinition = {
     585071442: {
       name: 'Dämmerung: Savathûns Lied'
     },
-    586390928: {
-      name: 'Heimkehr'
-    },
     601540706: {
       name: 'Dämmerung: Der Waffenhändler'
     },
@@ -195,11 +195,20 @@ export const DestinyActivityDefinition = {
     652598202: {
       name: 'Legionsschlucht'
     },
+    656703508: {
+      name: 'Eine Gartenwelt'
+    },
+    661855681: {
+      name: 'See der Schatten'
+    },
     667604912: {
       name: 'Meditation: „Kreislauf“'
     },
     671904429: {
       name: 'Bergungsmission'
+    },
+    689927878: {
+      name: 'Eine Gartenwelt'
     },
     703311712: {
       name: 'Bruchstück des Reisenden'
@@ -209,6 +218,9 @@ export const DestinyActivityDefinition = {
     },
     719906507: {
       name: 'Die dritte Säule'
+    },
+    723733266: {
+      name: 'Der Läufer (Heroisch)'
     },
     743100125: {
       name: 'Bergungsmission'
@@ -237,14 +249,26 @@ export const DestinyActivityDefinition = {
     808931822: {
       name: 'Postmoderner Prometheus'
     },
+    809170886: {
+      name: 'Leviathan, Weltenverschlinger'
+    },
+    834864522: {
+      name: 'Fluch des Osiris'
+    },
     837763871: {
       name: 'Bergungsmission'
+    },
+    840678113: {
+      name: 'Baum der Wahrscheinlichkeiten'
     },
     849242583: {
       name: 'Analysemission'
     },
     880665770: {
       name: 'Untersuchungsmission'
+    },
+    903584917: {
+      name: 'Hexenkessel'
     },
     919252154: {
       name: 'Dunkle Allianz'
@@ -273,11 +297,23 @@ export const DestinyActivityDefinition = {
     969385987: {
       name: 'Licht ins Dunkel'
     },
+    989294159: {
+      name: 'Dämmerung: Baum der Wahrscheinlichkeiten'
+    },
+    991410404: {
+      name: 'Meditation: „Gekapert“'
+    },
     993152361: {
       name: 'Bergungsmission'
     },
+    1002145272: {
+      name: 'Baum der Wahrscheinlichkeiten'
+    },
     1019362992: {
       name: 'Meditation: „Heimkehr“'
+    },
+    1034805570: {
+      name: 'Meditation: „Eine Gartenwelt“'
     },
     1035135049: {
       name: 'Das Pyramidion'
@@ -285,11 +321,20 @@ export const DestinyActivityDefinition = {
     1038710420: {
       name: 'Attentatsmission'
     },
+    1049899965: {
+      name: 'Immerfort am gleichen Ort'
+    },
     1053141615: {
       name: 'Attentatsmission'
     },
+    1057017675: {
+      name: 'Der Eingang'
+    },
     1063969232: {
       name: 'Einladung vom Imperator'
+    },
+    1073289414: {
+      name: 'Landezone'
     },
     1075152813: {
       name: 'Europäische Todeszone'
@@ -315,6 +360,9 @@ export const DestinyActivityDefinition = {
     1107208644: {
       name: 'Den Planeten hacken'
     },
+    1120584691: {
+      name: 'Bergungsmission'
+    },
     1129066976: {
       name: 'Dämmerung: Das Pyramidion'
     },
@@ -323,6 +371,9 @@ export const DestinyActivityDefinition = {
     },
     1164772243: {
       name: 'Bergungsmission'
+    },
+    1175770231: {
+      name: 'Der Eingang'
     },
     1206154103: {
       name: 'Attentatsmission'
@@ -351,6 +402,12 @@ export const DestinyActivityDefinition = {
     1265390366: {
       name: 'Schlechter Empfang'
     },
+    1278641935: {
+      name: 'Eine Gartenwelt'
+    },
+    1279862229: {
+      name: 'Fehler im System'
+    },
     1289867188: {
       name: 'Gut gepanzert'
     },
@@ -359,6 +416,9 @@ export const DestinyActivityDefinition = {
     },
     1309646866: {
       name: 'Die Farm'
+    },
+    1310854805: {
+      name: 'Rumble'
     },
     1331268141: {
       name: 'Untersuchungsmission'
@@ -374,6 +434,12 @@ export const DestinyActivityDefinition = {
     },
     1416597166: {
       name: 'Angebot und Nachfrage'
+    },
+    1418217191: {
+      name: 'Das Auf-und-Auf (Heroisch)'
+    },
+    1426391278: {
+      name: 'Gut gelagert'
     },
     1428050875: {
       name: 'Mein Captain'
@@ -396,6 +462,9 @@ export const DestinyActivityDefinition = {
     1498466193: {
       name: 'Bergungsmission'
     },
+    1512980468: {
+      name: 'Der Eingang'
+    },
     1521232506: {
       name: 'Klassifiziert'
     },
@@ -404,6 +473,9 @@ export const DestinyActivityDefinition = {
     },
     1536764325: {
       name: 'Untersuchungsmission'
+    },
+    1549614516: {
+      name: 'Exodus-Absturz'
     },
     1557641249: {
       name: 'Bergungsmission'
@@ -414,8 +486,14 @@ export const DestinyActivityDefinition = {
     1568750156: {
       name: 'Die Farm'
     },
+    1570598249: {
+      name: 'Der Läufer'
+    },
     1581219251: {
       name: 'Untersuchungsmission'
+    },
+    1603374112: {
+      name: 'Das Pyramidion'
     },
     1614692057: {
       name: 'Bergungsmission'
@@ -441,6 +519,15 @@ export const DestinyActivityDefinition = {
     1720510574: {
       name: 'Die Festung'
     },
+    1725302079: {
+      name: 'Das Auf-und-auf'
+    },
+    1740310101: {
+      name: 'Fehler im System (Heroisch)'
+    },
+    1755484011: {
+      name: 'Klassifiziert'
+    },
     1756055546: {
       name: 'Bergungsmission'
     },
@@ -462,6 +549,12 @@ export const DestinyActivityDefinition = {
     1792985204: {
       name: 'Dämmerung: Exodus-Absturz'
     },
+    1802930364: {
+      name: 'Wurmhafen'
+    },
+    1823921651: {
+      name: 'Das Auf-und-auf'
+    },
     1824067376: {
       name: 'Road Rage'
     },
@@ -470,6 +563,9 @@ export const DestinyActivityDefinition = {
     },
     1863334927: {
       name: 'Dämmerung: Savathûns Lied'
+    },
+    1874578888: {
+      name: 'Fehler im System (Heroisch)'
     },
     1875726950: {
       name: 'Leviathan'
@@ -498,6 +594,9 @@ export const DestinyActivityDefinition = {
     1984315274: {
       name: 'Vorhut-Strikes'
     },
+    1987624188: {
+      name: 'Das Auf-und-Auf (Heroisch)'
+    },
     1988701745: {
       name: 'Vergeltung'
     },
@@ -510,11 +609,23 @@ export const DestinyActivityDefinition = {
     2025057095: {
       name: 'Kampfmission'
     },
+    2026037412: {
+      name: 'Heroische Strikes-Playlist'
+    },
     2033669713: {
       name: 'Javelin-4'
     },
+    2046332536: {
+      name: 'Dämmerung: Baum der Wahrscheinlichkeiten'
+    },
     2052289205: {
       name: 'Verbrennung'
+    },
+    2056035210: {
+      name: 'Klassifiziert'
+    },
+    2067233851: {
+      name: 'Nicht mal die Dunkelheit'
     },
     2079994698: {
       name: 'Untersuchungsmission'
@@ -522,11 +633,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: 'Der Waffenhändler'
     },
+    2081576589: {
+      name: 'Der Burnout'
+    },
     2113712124: {
       name: 'Sakrileg'
     },
     2151274060: {
       name: 'Analysemission'
+    },
+    2164432138: {
+      name: 'Leviathan, Weltenverschlinger'
     },
     2174556965: {
       name: 'Reinlegen'
@@ -539,6 +656,9 @@ export const DestinyActivityDefinition = {
     },
     2187073261: {
       name: 'Analysemission'
+    },
+    2199986157: {
+      name: 'Gekapert'
     },
     2231840083: {
       name: 'Sirenenlied'
@@ -561,6 +681,12 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: 'Die Farm'
     },
+    2276204547: {
+      name: 'Omega'
+    },
+    2279197206: {
+      name: 'Tödliche Prüfung'
+    },
     2287222467: {
       name: 'Analysemission'
     },
@@ -576,20 +702,38 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: 'Untersuchungsmission'
     },
+    2307090074: {
+      name: 'Signallicht'
+    },
     2318812547: {
       name: 'Das Pyramidion'
     },
     2319065780: {
       name: 'Eisenbanner: Konflikt'
     },
+    2322829199: {
+      name: 'Dämmerung: Eine Gartenwelt'
+    },
     2336998357: {
       name: 'Auf lange Sicht'
+    },
+    2351745587: {
+      name: 'Der Eingang'
     },
     2379494367: {
       name: 'Analysemission'
     },
+    2416546450: {
+      name: 'Dämmerung: Baum der Wahrscheinlichkeiten'
+    },
+    2417088417: {
+      name: 'Pacifica'
+    },
     2420240009: {
       name: 'Bergungsmission'
+    },
+    2444890541: {
+      name: 'Scharlach-Woche'
     },
     2445164291: {
       name: 'Attentatsmission'
@@ -666,8 +810,17 @@ export const DestinyActivityDefinition = {
     2667533713: {
       name: 'Vostok'
     },
+    2675435236: {
+      name: 'Fehler im System'
+    },
+    2678510381: {
+      name: 'Baum der Wahrscheinlichkeiten'
+    },
     2684479494: {
       name: 'Bergungsmission'
+    },
+    2688061647: {
+      name: 'Dämmerung: Eine Gartenwelt'
     },
     2693136600: {
       name: 'Leviathan'
@@ -717,17 +870,20 @@ export const DestinyActivityDefinition = {
     2798856614: {
       name: 'Untersuchungsmission'
     },
-    2830345500: {
-      name: 'Heimkehr'
-    },
     2846775197: {
       name: 'Kampfmission'
+    },
+    2867288098: {
+      name: 'Klassifiziert'
     },
     2908287325: {
       name: 'Untersuchungsmission'
     },
     2926767881: {
       name: 'Rache'
+    },
+    2934103434: {
+      name: 'Klassifiziert'
     },
     2949941834: {
       name: 'Unerwartete Gäste'
@@ -737,6 +893,9 @@ export const DestinyActivityDefinition = {
     },
     3002511278: {
       name: 'Dunkle Allianz'
+    },
+    3011963288: {
+      name: 'Osiris: Schnellspiel'
     },
     3026637018: {
       name: 'Untersuchungsmission'
@@ -752,6 +911,9 @@ export const DestinyActivityDefinition = {
     },
     3062197616: {
       name: 'Kompetitiv'
+    },
+    3089205900: {
+      name: 'Leviathan, Weltenverschlinger'
     },
     3105090879: {
       name: 'Lebewohl'
@@ -777,6 +939,12 @@ export const DestinyActivityDefinition = {
     3173130826: {
       name: 'Kampfmission'
     },
+    3191123858: {
+      name: 'Savathûns Lied'
+    },
+    3206026167: {
+      name: 'Der Eingang'
+    },
     3208779612: {
       name: 'Bergungsmission'
     },
@@ -786,11 +954,20 @@ export const DestinyActivityDefinition = {
     3211568383: {
       name: 'Sirenenlied'
     },
+    3215844014: {
+      name: 'Meditation: „Omega“'
+    },
+    3226632017: {
+      name: 'Meditation: „Tödliche Prüfung“'
+    },
     3231065327: {
       name: 'Analysemission'
     },
     3243161126: {
       name: 'Schnellspiel'
+    },
+    3248193378: {
+      name: 'Das Auf-und-Auf (Heroisch)'
     },
     3268684190: {
       name: 'Bergungsmission'
@@ -807,6 +984,12 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: 'Verlorene Crew'
     },
+    3289842296: {
+      name: 'Fluch des Osiris'
+    },
+    3292523719: {
+      name: 'Meditation: „Der Eingang“'
+    },
     3298775062: {
       name: 'Untersuchungsmission'
     },
@@ -815,6 +998,9 @@ export const DestinyActivityDefinition = {
     },
     3304835347: {
       name: 'Ruf der Heimat'
+    },
+    3306366908: {
+      name: 'Strahlende Klippen'
     },
     3336275007: {
       name: 'Meditation: „Sechs“'
@@ -830,6 +1016,12 @@ export const DestinyActivityDefinition = {
     },
     3368226533: {
       name: 'Dämmerung: Die verdrehte Säule'
+    },
+    3370527053: {
+      name: 'Der Läufer (Heroisch)'
+    },
+    3376869257: {
+      name: 'Bergungsmission'
     },
     3379039897: {
       name: 'Bergungsmission'
@@ -879,8 +1071,8 @@ export const DestinyActivityDefinition = {
     3631476566: {
       name: 'Die Farm'
     },
-    3634044339: {
-      name: 'Aktivitäten-Vorschau-Trailer'
+    3642412717: {
+      name: 'Meditation: „Baum der Wahrscheinlichkeiten“'
     },
     3645117987: {
       name: 'Schlechte Nachbarschaft'
@@ -896,9 +1088,6 @@ export const DestinyActivityDefinition = {
     },
     3669054326: {
       name: 'Bergungsmission'
-    },
-    3681513787: {
-      name: 'Schnellspiel'
     },
     3688464794: {
       name: 'Warum ein gutes Netzwerk wichtig ist'
@@ -945,8 +1134,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: 'Turm'
     },
+    3906001398: {
+      name: 'Osiris: Kompetitiv'
+    },
     3916343513: {
       name: 'Leviathan'
+    },
+    3920569453: {
+      name: 'Fehler im System (Heroisch)'
     },
     3920643231: {
       name: 'Dämmerung: Der Waffenhändler'
@@ -956,9 +1151,6 @@ export const DestinyActivityDefinition = {
     },
     3966792859: {
       name: 'Nessus, instabiler Zentaur'
-    },
-    3969712481: {
-      name: 'Story-Vorschau-Trailer'
     },
     3978357488: {
       name: 'Bergungsmission'
@@ -990,6 +1182,9 @@ export const DestinyActivityDefinition = {
     4103844069: {
       name: 'Attentatsmission'
     },
+    4119522487: {
+      name: 'Meditation: „Gut gelagert“'
+    },
     4159221189: {
       name: 'Io'
     },
@@ -999,26 +1194,17 @@ export const DestinyActivityDefinition = {
     4174103238: {
       name: 'Bergungsmission'
     },
-    4185964042: {
-      name: 'Die verdrehte Säule'
-    },
     4209774794: {
       name: 'Bergungsmission'
     },
     4216926874: {
       name: 'Bergungsmission'
     },
-    4221067410: {
-      name: 'Innenstadt'
-    },
     4231544111: {
       name: 'Untersuchungsmission'
     },
     4239233351: {
       name: 'Meditation: „Funke“'
-    },
-    4246755813: {
-      name: 'Kompetitiv'
     },
     4254776501: {
       name: 'Bergungsmission'
@@ -1039,9 +1225,6 @@ export const DestinyActivityDefinition = {
     },
     37050217: {
       name: 'Survey mission'
-    },
-    38244167: {
-      name: 'Javelin-4'
     },
     51408141: {
       name: 'Salvage Mission'
@@ -1078,6 +1261,9 @@ export const DestinyActivityDefinition = {
     143647473: {
       name: 'Salvage Mission'
     },
+    145136689: {
+      name: 'Combat mission'
+    },
     145302664: {
       name: 'Nightfall: The Arms Dealer'
     },
@@ -1107,6 +1293,9 @@ export const DestinyActivityDefinition = {
     },
     286324446: {
       name: 'Salvage Mission'
+    },
+    286562305: {
+      name: 'The Inverted Spire'
     },
     287649202: {
       name: 'Leviathan'
@@ -1138,6 +1327,9 @@ export const DestinyActivityDefinition = {
     359488722: {
       name: 'Hack the Planet'
     },
+    373475104: {
+      name: 'Nightfall: A Garden World'
+    },
     374818561: {
       name: 'Emperor\'s Respite'
     },
@@ -1146,9 +1338,6 @@ export const DestinyActivityDefinition = {
     },
     387171436: {
       name: 'Salvage Mission'
-    },
-    387487590: {
-      name: 'Pre-Order'
     },
     388289443: {
       name: 'Survey mission'
@@ -1164,6 +1353,9 @@ export const DestinyActivityDefinition = {
     },
     435989417: {
       name: 'Analysis Mission'
+    },
+    442671778: {
+      name: 'The Arms Dealer'
     },
     444087412: {
       name: 'Combat Mission'
@@ -1181,9 +1373,6 @@ export const DestinyActivityDefinition = {
     },
     474380713: {
       name: 'Salvage Mission'
-    },
-    482312911: {
-      name: 'The Farm'
     },
     539897061: {
       name: 'Reversing the Polarity'
@@ -1205,9 +1394,6 @@ export const DestinyActivityDefinition = {
     585071442: {
       name: 'Nightfall: Savathûn\'s Song'
     },
-    586390928: {
-      name: 'Homecoming'
-    },
     601540706: {
       name: 'Nightfall: The Arms Dealer'
     },
@@ -1226,11 +1412,20 @@ export const DestinyActivityDefinition = {
     652598202: {
       name: 'Legion\'s Gulch'
     },
+    656703508: {
+      name: 'A Garden World'
+    },
+    661855681: {
+      name: 'Lake of Shadows'
+    },
     667604912: {
       name: 'Meditation: "Looped"'
     },
     671904429: {
       name: 'Salvage Mission'
+    },
+    689927878: {
+      name: 'A Garden World'
     },
     703311712: {
       name: 'Shard of the Traveler'
@@ -1240,6 +1435,9 @@ export const DestinyActivityDefinition = {
     },
     719906507: {
       name: 'The Third Spire'
+    },
+    723733266: {
+      name: 'The Runner (Heroic)'
     },
     743100125: {
       name: 'Salvage Mission'
@@ -1268,14 +1466,26 @@ export const DestinyActivityDefinition = {
     808931822: {
       name: 'Postmodern Prometheus'
     },
+    809170886: {
+      name: 'Leviathan, Eater of Worlds'
+    },
+    834864522: {
+      name: 'Curse of Osiris'
+    },
     837763871: {
       name: 'Salvage Mission'
+    },
+    840678113: {
+      name: 'Tree of Probabilities'
     },
     849242583: {
       name: 'Analysis Mission'
     },
     880665770: {
       name: 'Survey mission'
+    },
+    903584917: {
+      name: 'Mayhem'
     },
     919252154: {
       name: 'Dark Alliance'
@@ -1304,11 +1514,23 @@ export const DestinyActivityDefinition = {
     969385987: {
       name: 'Lighting the Dark'
     },
+    989294159: {
+      name: 'Nightfall: Tree of Probabilities'
+    },
+    991410404: {
+      name: 'Meditation: "Hijacked"'
+    },
     993152361: {
       name: 'Salvage Mission'
     },
+    1002145272: {
+      name: 'Tree of Probabilities'
+    },
     1019362992: {
       name: 'Meditation: "Homecoming"'
+    },
+    1034805570: {
+      name: 'Meditation: "A Garden World"'
     },
     1035135049: {
       name: 'The Pyramidion'
@@ -1316,11 +1538,20 @@ export const DestinyActivityDefinition = {
     1038710420: {
       name: 'Assassination Mission'
     },
+    1049899965: {
+      name: 'Beyond Infinity'
+    },
     1053141615: {
       name: 'Assassination Mission'
     },
+    1057017675: {
+      name: 'The Gateway'
+    },
     1063969232: {
       name: 'Invitation from the Emperor'
+    },
+    1073289414: {
+      name: 'Landing Zone'
     },
     1075152813: {
       name: 'European Dead Zone'
@@ -1346,6 +1577,9 @@ export const DestinyActivityDefinition = {
     1107208644: {
       name: 'Hack the Planet'
     },
+    1120584691: {
+      name: 'Salvage mission'
+    },
     1129066976: {
       name: 'Nightfall: The Pyramidion'
     },
@@ -1354,6 +1588,9 @@ export const DestinyActivityDefinition = {
     },
     1164772243: {
       name: 'Salvage Mission'
+    },
+    1175770231: {
+      name: 'The Gateway'
     },
     1206154103: {
       name: 'Assassination Mission'
@@ -1382,6 +1619,12 @@ export const DestinyActivityDefinition = {
     1265390366: {
       name: 'Poor Reception'
     },
+    1278641935: {
+      name: 'A Garden World'
+    },
+    1279862229: {
+      name: 'Bug in the System'
+    },
     1289867188: {
       name: 'Unbreakable'
     },
@@ -1390,6 +1633,9 @@ export const DestinyActivityDefinition = {
     },
     1309646866: {
       name: 'The Farm'
+    },
+    1310854805: {
+      name: 'Rumble'
     },
     1331268141: {
       name: 'Survey mission'
@@ -1405,6 +1651,12 @@ export const DestinyActivityDefinition = {
     },
     1416597166: {
       name: 'Supply and Demand'
+    },
+    1418217191: {
+      name: 'The Up and Up (Heroic)'
+    },
+    1426391278: {
+      name: 'Deep Storage'
     },
     1428050875: {
       name: 'My Captain'
@@ -1427,6 +1679,9 @@ export const DestinyActivityDefinition = {
     1498466193: {
       name: 'Salvage Mission'
     },
+    1512980468: {
+      name: 'The Gateway'
+    },
     1521232506: {
       name: 'Classified'
     },
@@ -1435,6 +1690,9 @@ export const DestinyActivityDefinition = {
     },
     1536764325: {
       name: 'Survey mission'
+    },
+    1549614516: {
+      name: 'Exodus Crash'
     },
     1557641249: {
       name: 'Salvage Mission'
@@ -1445,8 +1703,14 @@ export const DestinyActivityDefinition = {
     1568750156: {
       name: 'The Farm'
     },
+    1570598249: {
+      name: 'The Runner'
+    },
     1581219251: {
       name: 'Survey mission'
+    },
+    1603374112: {
+      name: 'The Pyramidion'
     },
     1614692057: {
       name: 'Salvage Mission'
@@ -1472,6 +1736,15 @@ export const DestinyActivityDefinition = {
     1720510574: {
       name: 'The Fortress'
     },
+    1725302079: {
+      name: 'The Up and Up'
+    },
+    1740310101: {
+      name: 'Bug in the System (Heroic)'
+    },
+    1755484011: {
+      name: 'Classified'
+    },
     1756055546: {
       name: 'Salvage Mission'
     },
@@ -1493,6 +1766,12 @@ export const DestinyActivityDefinition = {
     1792985204: {
       name: 'Nightfall: Exodus Crash'
     },
+    1802930364: {
+      name: 'Wormhaven'
+    },
+    1823921651: {
+      name: 'The Up and Up'
+    },
     1824067376: {
       name: 'Road Rage'
     },
@@ -1501,6 +1780,9 @@ export const DestinyActivityDefinition = {
     },
     1863334927: {
       name: 'Nightfall: Savathûn\'s Song'
+    },
+    1874578888: {
+      name: 'Bug in the System (Heroic)'
     },
     1875726950: {
       name: 'Leviathan'
@@ -1529,6 +1811,9 @@ export const DestinyActivityDefinition = {
     1984315274: {
       name: 'Vanguard Strikes'
     },
+    1987624188: {
+      name: 'The Up and Up (Heroic)'
+    },
     1988701745: {
       name: 'Retribution'
     },
@@ -1541,11 +1826,23 @@ export const DestinyActivityDefinition = {
     2025057095: {
       name: 'Combat Mission'
     },
+    2026037412: {
+      name: 'Heroic Strikes Playlist'
+    },
     2033669713: {
       name: 'Javelin-4'
     },
+    2046332536: {
+      name: 'Nightfall: Tree of Probabilities'
+    },
     2052289205: {
       name: 'Combustion'
+    },
+    2056035210: {
+      name: 'Classified'
+    },
+    2067233851: {
+      name: 'Not Even the Darkness'
     },
     2079994698: {
       name: 'Survey mission'
@@ -1553,11 +1850,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: 'The Arms Dealer'
     },
+    2081576589: {
+      name: 'The Burnout'
+    },
     2113712124: {
       name: 'Sacrilege'
     },
     2151274060: {
       name: 'Analysis Mission'
+    },
+    2164432138: {
+      name: 'Leviathan, Eater of Worlds'
     },
     2174556965: {
       name: 'A Frame Job'
@@ -1570,6 +1873,9 @@ export const DestinyActivityDefinition = {
     },
     2187073261: {
       name: 'Analysis Mission'
+    },
+    2199986157: {
+      name: 'Hijacked'
     },
     2231840083: {
       name: 'Siren Song'
@@ -1592,6 +1898,12 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: 'The Farm'
     },
+    2276204547: {
+      name: 'Omega'
+    },
+    2279197206: {
+      name: 'A Deadly Trial'
+    },
     2287222467: {
       name: 'Analysis Mission'
     },
@@ -1607,20 +1919,38 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: 'Survey mission'
     },
+    2307090074: {
+      name: 'Signal Light'
+    },
     2318812547: {
       name: 'The Pyramidion'
     },
     2319065780: {
       name: 'Iron Banner Clash'
     },
+    2322829199: {
+      name: 'Nightfall: A Garden World'
+    },
     2336998357: {
       name: 'The Long Play'
+    },
+    2351745587: {
+      name: 'The Gateway'
     },
     2379494367: {
       name: 'Analysis Mission'
     },
+    2416546450: {
+      name: 'Nightfall: Tree of Probabilities'
+    },
+    2417088417: {
+      name: 'Pacifica'
+    },
     2420240009: {
       name: 'Salvage Mission'
+    },
+    2444890541: {
+      name: 'Crimson Days'
     },
     2445164291: {
       name: 'Assassination Mission'
@@ -1697,8 +2027,17 @@ export const DestinyActivityDefinition = {
     2667533713: {
       name: 'Vostok'
     },
+    2675435236: {
+      name: 'Bug in the System'
+    },
+    2678510381: {
+      name: 'Tree of Probabilities'
+    },
     2684479494: {
       name: 'Salvage Mission'
+    },
+    2688061647: {
+      name: 'Nightfall: A Garden World'
     },
     2693136600: {
       name: 'Leviathan'
@@ -1748,17 +2087,20 @@ export const DestinyActivityDefinition = {
     2798856614: {
       name: 'Survey mission'
     },
-    2830345500: {
-      name: 'Homecoming'
-    },
     2846775197: {
       name: 'Combat Mission'
+    },
+    2867288098: {
+      name: 'Classified'
     },
     2908287325: {
       name: 'Survey mission'
     },
     2926767881: {
       name: 'Payback'
+    },
+    2934103434: {
+      name: 'Classified'
     },
     2949941834: {
       name: 'Unexpected Guests'
@@ -1768,6 +2110,9 @@ export const DestinyActivityDefinition = {
     },
     3002511278: {
       name: 'Dark Alliance'
+    },
+    3011963288: {
+      name: 'Osiris Quickplay'
     },
     3026637018: {
       name: 'Survey mission'
@@ -1783,6 +2128,9 @@ export const DestinyActivityDefinition = {
     },
     3062197616: {
       name: 'Competitive'
+    },
+    3089205900: {
+      name: 'Leviathan, Eater of Worlds'
     },
     3105090879: {
       name: 'Adieu'
@@ -1808,6 +2156,12 @@ export const DestinyActivityDefinition = {
     3173130826: {
       name: 'Combat Mission'
     },
+    3191123858: {
+      name: 'Savathûn\'s Song'
+    },
+    3206026167: {
+      name: 'The Gateway'
+    },
     3208779612: {
       name: 'Salvage Mission'
     },
@@ -1817,11 +2171,20 @@ export const DestinyActivityDefinition = {
     3211568383: {
       name: 'Siren Song'
     },
+    3215844014: {
+      name: 'Meditation: "Omega"'
+    },
+    3226632017: {
+      name: 'Meditation: "A Deadly Trial"'
+    },
     3231065327: {
       name: 'Analysis Mission'
     },
     3243161126: {
       name: 'Quickplay'
+    },
+    3248193378: {
+      name: 'The Up and Up (Heroic)'
     },
     3268684190: {
       name: 'Salvage Mission'
@@ -1838,6 +2201,12 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: 'Lost Crew'
     },
+    3289842296: {
+      name: 'Curse of Osiris'
+    },
+    3292523719: {
+      name: 'Meditation: "The Gateway"'
+    },
     3298775062: {
       name: 'Survey mission'
     },
@@ -1846,6 +2215,9 @@ export const DestinyActivityDefinition = {
     },
     3304835347: {
       name: 'Calling Them Home'
+    },
+    3306366908: {
+      name: 'Radiant Cliffs'
     },
     3336275007: {
       name: 'Meditation: "Six"'
@@ -1861,6 +2233,12 @@ export const DestinyActivityDefinition = {
     },
     3368226533: {
       name: 'Nightfall: The Inverted Spire'
+    },
+    3370527053: {
+      name: 'The Runner (Heroic)'
+    },
+    3376869257: {
+      name: 'Salvage mission'
     },
     3379039897: {
       name: 'Salvage Mission'
@@ -1910,8 +2288,8 @@ export const DestinyActivityDefinition = {
     3631476566: {
       name: 'The Farm'
     },
-    3634044339: {
-      name: 'Activities Teaser Trailer'
+    3642412717: {
+      name: 'Meditation: "Tree of Probabilities"'
     },
     3645117987: {
       name: 'Bad Neighbors'
@@ -1927,9 +2305,6 @@ export const DestinyActivityDefinition = {
     },
     3669054326: {
       name: 'Salvage Mission'
-    },
-    3681513787: {
-      name: 'Quickplay'
     },
     3688464794: {
       name: 'The Importance of Networking'
@@ -1976,8 +2351,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: 'Tower'
     },
+    3906001398: {
+      name: 'Osiris Competitive'
+    },
     3916343513: {
       name: 'Leviathan'
+    },
+    3920569453: {
+      name: 'Bug in the System (Heroic)'
     },
     3920643231: {
       name: 'Nightfall: The Arms Dealer'
@@ -1987,9 +2368,6 @@ export const DestinyActivityDefinition = {
     },
     3966792859: {
       name: 'Nessus, Unstable Centaur'
-    },
-    3969712481: {
-      name: 'Story Teaser Trailer'
     },
     3978357488: {
       name: 'Salvage Mission'
@@ -2021,6 +2399,9 @@ export const DestinyActivityDefinition = {
     4103844069: {
       name: 'Assassination Mission'
     },
+    4119522487: {
+      name: 'Meditation: "Deep Storage"'
+    },
     4159221189: {
       name: 'Io'
     },
@@ -2030,26 +2411,17 @@ export const DestinyActivityDefinition = {
     4174103238: {
       name: 'Salvage Mission'
     },
-    4185964042: {
-      name: 'The Inverted Spire'
-    },
     4209774794: {
       name: 'Salvage Mission'
     },
     4216926874: {
       name: 'Salvage Mission'
     },
-    4221067410: {
-      name: 'Midtown'
-    },
     4231544111: {
       name: 'Survey mission'
     },
     4239233351: {
       name: 'Meditation: "Spark"'
-    },
-    4246755813: {
-      name: 'Competitive'
     },
     4254776501: {
       name: 'Salvage Mission'
@@ -2070,9 +2442,6 @@ export const DestinyActivityDefinition = {
     },
     37050217: {
       name: 'Misión de reconocimiento'
-    },
-    38244167: {
-      name: 'Jabalina-4'
     },
     51408141: {
       name: 'Misión de salvamento'
@@ -2109,6 +2478,9 @@ export const DestinyActivityDefinition = {
     143647473: {
       name: 'Misión de salvamento'
     },
+    145136689: {
+      name: 'Misión de combate'
+    },
     145302664: {
       name: 'Ocaso: El contrabandista de armas'
     },
@@ -2138,6 +2510,9 @@ export const DestinyActivityDefinition = {
     },
     286324446: {
       name: 'Misión de salvamento'
+    },
+    286562305: {
+      name: 'Espira Invertida'
     },
     287649202: {
       name: 'Leviatán'
@@ -2169,6 +2544,9 @@ export const DestinyActivityDefinition = {
     359488722: {
       name: 'Pirateo planetario'
     },
+    373475104: {
+      name: 'Ocaso: Un mundo orgánico'
+    },
     374818561: {
       name: 'Descanso del Emperador'
     },
@@ -2177,9 +2555,6 @@ export const DestinyActivityDefinition = {
     },
     387171436: {
       name: 'Misión de salvamento'
-    },
-    387487590: {
-      name: 'Reservar'
     },
     388289443: {
       name: 'Misión de reconocimiento'
@@ -2195,6 +2570,9 @@ export const DestinyActivityDefinition = {
     },
     435989417: {
       name: 'Misión de análisis'
+    },
+    442671778: {
+      name: 'El contrabandista de armas'
     },
     444087412: {
       name: 'Misión de combate'
@@ -2212,9 +2590,6 @@ export const DestinyActivityDefinition = {
     },
     474380713: {
       name: 'Misión de salvamento'
-    },
-    482312911: {
-      name: 'La Villa'
     },
     539897061: {
       name: 'Revirtiendo la polaridad'
@@ -2236,9 +2611,6 @@ export const DestinyActivityDefinition = {
     585071442: {
       name: 'Ocaso: Canción de Savathûn'
     },
-    586390928: {
-      name: 'La bienvenida'
-    },
     601540706: {
       name: 'Ocaso: El contrabandista de armas'
     },
@@ -2257,11 +2629,20 @@ export const DestinyActivityDefinition = {
     652598202: {
       name: 'Barranco de la Legión'
     },
+    656703508: {
+      name: 'Un mundo orgánico'
+    },
+    661855681: {
+      name: 'Lago de sombras'
+    },
     667604912: {
       name: 'Meditación: "Bucle interdimensional"'
     },
     671904429: {
       name: 'Misión de salvamento'
+    },
+    689927878: {
+      name: 'Un mundo orgánico'
     },
     703311712: {
       name: 'Fragmento del Viajero'
@@ -2271,6 +2652,9 @@ export const DestinyActivityDefinition = {
     },
     719906507: {
       name: 'La tercera espira'
+    },
+    723733266: {
+      name: 'El corredor (Heroico)'
     },
     743100125: {
       name: 'Misión de salvamento'
@@ -2299,14 +2683,26 @@ export const DestinyActivityDefinition = {
     808931822: {
       name: 'Prometeo posmoderno'
     },
+    809170886: {
+      name: 'Leviatán, el Devoramundos'
+    },
+    834864522: {
+      name: 'La maldición de Osiris'
+    },
     837763871: {
       name: 'Misión de salvamento'
+    },
+    840678113: {
+      name: 'Árbol de probabilidades'
     },
     849242583: {
       name: 'Misión de análisis'
     },
     880665770: {
       name: 'Misión de reconocimiento'
+    },
+    903584917: {
+      name: 'Caos'
     },
     919252154: {
       name: 'Alianza oscura'
@@ -2335,11 +2731,23 @@ export const DestinyActivityDefinition = {
     969385987: {
       name: 'Iluminando la oscuridad'
     },
+    989294159: {
+      name: 'Ocaso: Árbol de probabilidades'
+    },
+    991410404: {
+      name: 'Meditación: "Secuestro"'
+    },
     993152361: {
       name: 'Misión de salvamento'
     },
+    1002145272: {
+      name: 'Árbol de probabilidades'
+    },
     1019362992: {
       name: 'Meditación: "La bienvenida"'
+    },
+    1034805570: {
+      name: 'Meditación: "Un mundo orgánico"'
     },
     1035135049: {
       name: 'El Piramidión'
@@ -2347,11 +2755,20 @@ export const DestinyActivityDefinition = {
     1038710420: {
       name: 'Misión de asesinato'
     },
+    1049899965: {
+      name: 'Más allá del infinito'
+    },
     1053141615: {
       name: 'Misión de asesinato'
     },
+    1057017675: {
+      name: 'La entrada'
+    },
     1063969232: {
       name: 'Invitación del emperador'
+    },
+    1073289414: {
+      name: 'Zona de aterrizaje'
     },
     1075152813: {
       name: 'Zona Muerta Europea'
@@ -2377,6 +2794,9 @@ export const DestinyActivityDefinition = {
     1107208644: {
       name: 'Pirateo planetario'
     },
+    1120584691: {
+      name: 'Misión de salvamento'
+    },
     1129066976: {
       name: 'Ocaso: El Piramidión'
     },
@@ -2385,6 +2805,9 @@ export const DestinyActivityDefinition = {
     },
     1164772243: {
       name: 'Misión de salvamento'
+    },
+    1175770231: {
+      name: 'La entrada'
     },
     1206154103: {
       name: 'Misión de asesinato'
@@ -2413,6 +2836,12 @@ export const DestinyActivityDefinition = {
     1265390366: {
       name: 'Mala señal'
     },
+    1278641935: {
+      name: 'Un mundo orgánico'
+    },
+    1279862229: {
+      name: 'Fallo en el sistema'
+    },
     1289867188: {
       name: 'Indestructible'
     },
@@ -2421,6 +2850,9 @@ export const DestinyActivityDefinition = {
     },
     1309646866: {
       name: 'Villa'
+    },
+    1310854805: {
+      name: 'Disputa'
     },
     1331268141: {
       name: 'Misión de reconocimiento'
@@ -2436,6 +2868,12 @@ export const DestinyActivityDefinition = {
     },
     1416597166: {
       name: 'Oferta y demanda'
+    },
+    1418217191: {
+      name: 'Con todas las de la ley (Heroico)'
+    },
+    1426391278: {
+      name: 'Fondo de almacén'
     },
     1428050875: {
       name: 'Mi capitán'
@@ -2458,6 +2896,9 @@ export const DestinyActivityDefinition = {
     1498466193: {
       name: 'Misión de salvamento'
     },
+    1512980468: {
+      name: 'La entrada'
+    },
     1521232506: {
       name: 'Clasificado'
     },
@@ -2466,6 +2907,9 @@ export const DestinyActivityDefinition = {
     },
     1536764325: {
       name: 'Misión de reconocimiento'
+    },
+    1549614516: {
+      name: 'Siniestro del Éxodo'
     },
     1557641249: {
       name: 'Misión de salvamento'
@@ -2476,8 +2920,14 @@ export const DestinyActivityDefinition = {
     1568750156: {
       name: 'Villa'
     },
+    1570598249: {
+      name: 'El corredor'
+    },
     1581219251: {
       name: 'Misión de reconocimiento'
+    },
+    1603374112: {
+      name: 'El Piramidión'
     },
     1614692057: {
       name: 'Misión de salvamento'
@@ -2503,6 +2953,15 @@ export const DestinyActivityDefinition = {
     1720510574: {
       name: 'Fortaleza'
     },
+    1725302079: {
+      name: 'Con todas las de la ley'
+    },
+    1740310101: {
+      name: 'Fallo en el sistema (Heroico)'
+    },
+    1755484011: {
+      name: 'Clasificado'
+    },
     1756055546: {
       name: 'Misión de salvamento'
     },
@@ -2524,6 +2983,12 @@ export const DestinyActivityDefinition = {
     1792985204: {
       name: 'Ocaso: Siniestro del Éxodo'
     },
+    1802930364: {
+      name: 'Guarida de gusanos'
+    },
+    1823921651: {
+      name: 'Con todas las de la ley'
+    },
     1824067376: {
       name: 'Furia en la carretera'
     },
@@ -2532,6 +2997,9 @@ export const DestinyActivityDefinition = {
     },
     1863334927: {
       name: 'Ocaso: Canción de Savathûn'
+    },
+    1874578888: {
+      name: 'Fallo en el sistema (Heroico)'
     },
     1875726950: {
       name: 'Leviatán'
@@ -2560,6 +3028,9 @@ export const DestinyActivityDefinition = {
     1984315274: {
       name: 'Asaltos de la Vanguardia'
     },
+    1987624188: {
+      name: 'Con todas las de la ley (Heroico)'
+    },
     1988701745: {
       name: 'Represalia'
     },
@@ -2572,11 +3043,23 @@ export const DestinyActivityDefinition = {
     2025057095: {
       name: 'Misión de combate'
     },
+    2026037412: {
+      name: 'Lista de juego de Asaltos Heroicos'
+    },
     2033669713: {
       name: 'Jabalina-4'
     },
+    2046332536: {
+      name: 'Ocaso: Árbol de probabilidades'
+    },
     2052289205: {
       name: 'Combustión'
+    },
+    2056035210: {
+      name: 'Clasificado'
+    },
+    2067233851: {
+      name: 'Ni siquiera la Oscuridad'
     },
     2079994698: {
       name: 'Misión de reconocimiento'
@@ -2584,11 +3067,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: 'El contrabandista de armas'
     },
+    2081576589: {
+      name: 'Combustión'
+    },
     2113712124: {
       name: 'Sacrilegio'
     },
     2151274060: {
       name: 'Misión de análisis'
+    },
+    2164432138: {
+      name: 'Leviatán, el Devoramundos'
     },
     2174556965: {
       name: 'Echando las culpas'
@@ -2601,6 +3090,9 @@ export const DestinyActivityDefinition = {
     },
     2187073261: {
       name: 'Misión de análisis'
+    },
+    2199986157: {
+      name: 'Secuestro'
     },
     2231840083: {
       name: 'Canto de sirena'
@@ -2623,6 +3115,12 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: 'Villa'
     },
+    2276204547: {
+      name: 'Omega'
+    },
+    2279197206: {
+      name: 'Prueba mortal'
+    },
     2287222467: {
       name: 'Misión de análisis'
     },
@@ -2638,20 +3136,38 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: 'Misión de reconocimiento'
     },
+    2307090074: {
+      name: 'Señal Luminosa'
+    },
     2318812547: {
       name: 'El Piramidión'
     },
     2319065780: {
       name: 'Estandarte de Hierro: Enfrentamiento'
     },
+    2322829199: {
+      name: 'Ocaso: Un mundo orgánico'
+    },
     2336998357: {
       name: 'A largo plazo'
+    },
+    2351745587: {
+      name: 'La entrada'
     },
     2379494367: {
       name: 'Misión de análisis'
     },
+    2416546450: {
+      name: 'Ocaso: Árbol de probabilidades'
+    },
+    2417088417: {
+      name: 'Pacífica'
+    },
     2420240009: {
       name: 'Misión de salvamento'
+    },
+    2444890541: {
+      name: 'Días Escarlata'
     },
     2445164291: {
       name: 'Misión de asesinato'
@@ -2728,8 +3244,17 @@ export const DestinyActivityDefinition = {
     2667533713: {
       name: 'Vostok'
     },
+    2675435236: {
+      name: 'Fallo en el sistema'
+    },
+    2678510381: {
+      name: 'Árbol de probabilidades'
+    },
     2684479494: {
       name: 'Misión de salvamento'
+    },
+    2688061647: {
+      name: 'Ocaso: Un mundo orgánico'
     },
     2693136600: {
       name: 'Leviatán'
@@ -2779,17 +3304,20 @@ export const DestinyActivityDefinition = {
     2798856614: {
       name: 'Misión de reconocimiento'
     },
-    2830345500: {
-      name: 'La bienvenida'
-    },
     2846775197: {
       name: 'Misión de combate'
+    },
+    2867288098: {
+      name: 'Clasificado'
     },
     2908287325: {
       name: 'Misión de reconocimiento'
     },
     2926767881: {
       name: 'Venganza'
+    },
+    2934103434: {
+      name: 'Clasificado'
     },
     2949941834: {
       name: 'Invitados inesperados'
@@ -2799,6 +3327,9 @@ export const DestinyActivityDefinition = {
     },
     3002511278: {
       name: 'Alianza oscura'
+    },
+    3011963288: {
+      name: 'Juego rápido de Osiris'
     },
     3026637018: {
       name: 'Misión de reconocimiento'
@@ -2814,6 +3345,9 @@ export const DestinyActivityDefinition = {
     },
     3062197616: {
       name: 'Competitivo'
+    },
+    3089205900: {
+      name: 'Leviatán, el Devoramundos'
     },
     3105090879: {
       name: 'Adiós'
@@ -2839,6 +3373,12 @@ export const DestinyActivityDefinition = {
     3173130826: {
       name: 'Misión de combate'
     },
+    3191123858: {
+      name: 'Canción de Savathûn'
+    },
+    3206026167: {
+      name: 'La entrada'
+    },
     3208779612: {
       name: 'Misión de salvamento'
     },
@@ -2848,11 +3388,20 @@ export const DestinyActivityDefinition = {
     3211568383: {
       name: 'Canto de sirena'
     },
+    3215844014: {
+      name: 'Meditación: "Omega"'
+    },
+    3226632017: {
+      name: 'Meditación: "Prueba mortal"'
+    },
     3231065327: {
       name: 'Misión de análisis'
     },
     3243161126: {
       name: 'Juego rápido'
+    },
+    3248193378: {
+      name: 'Con todas las de la ley (Heroico)'
     },
     3268684190: {
       name: 'Misión de salvamento'
@@ -2869,6 +3418,12 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: 'Tripulación perdida'
     },
+    3289842296: {
+      name: 'La maldición de Osiris'
+    },
+    3292523719: {
+      name: 'Meditación: "La entrada"'
+    },
     3298775062: {
       name: 'Misión de reconocimiento'
     },
@@ -2877,6 +3432,9 @@ export const DestinyActivityDefinition = {
     },
     3304835347: {
       name: 'Llámalos a casa'
+    },
+    3306366908: {
+      name: 'Riscos radiantes'
     },
     3336275007: {
       name: 'Meditación: "Seis"'
@@ -2892,6 +3450,12 @@ export const DestinyActivityDefinition = {
     },
     3368226533: {
       name: 'Ocaso: Espira Invertida'
+    },
+    3370527053: {
+      name: 'El corredor (Heroico)'
+    },
+    3376869257: {
+      name: 'Misión de salvamento'
     },
     3379039897: {
       name: 'Misión de salvamento'
@@ -2941,8 +3505,8 @@ export const DestinyActivityDefinition = {
     3631476566: {
       name: 'Villa'
     },
-    3634044339: {
-      name: 'Tráiler de avance de actividades'
+    3642412717: {
+      name: 'Meditación: "Árbol de probabilidades"'
     },
     3645117987: {
       name: 'Malos vecinos'
@@ -2958,9 +3522,6 @@ export const DestinyActivityDefinition = {
     },
     3669054326: {
       name: 'Misión de salvamento'
-    },
-    3681513787: {
-      name: 'Partida rápida'
     },
     3688464794: {
       name: 'La importancia de tener contactos'
@@ -3007,8 +3568,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: 'Torre'
     },
+    3906001398: {
+      name: 'Competitivo de Osiris'
+    },
     3916343513: {
       name: 'Leviatán'
+    },
+    3920569453: {
+      name: 'Fallo en el sistema (Heroico)'
     },
     3920643231: {
       name: 'Ocaso: El contrabandista de armas'
@@ -3018,9 +3585,6 @@ export const DestinyActivityDefinition = {
     },
     3966792859: {
       name: 'Nessus, Centauro Inestable'
-    },
-    3969712481: {
-      name: 'Tráiler de avance de la historia'
     },
     3978357488: {
       name: 'Misión de salvamento'
@@ -3052,6 +3616,9 @@ export const DestinyActivityDefinition = {
     4103844069: {
       name: 'Misión de asesinato'
     },
+    4119522487: {
+      name: 'Meditación: "Fondo de almacén"'
+    },
     4159221189: {
       name: 'Ío'
     },
@@ -3061,26 +3628,17 @@ export const DestinyActivityDefinition = {
     4174103238: {
       name: 'Misión de salvamento'
     },
-    4185964042: {
-      name: 'Espira Invertida'
-    },
     4209774794: {
       name: 'Misión de salvamento'
     },
     4216926874: {
       name: 'Misión de salvamento'
     },
-    4221067410: {
-      name: 'Centro Urbano'
-    },
     4231544111: {
       name: 'Misión de reconocimiento'
     },
     4239233351: {
       name: 'Meditación: "Destello"'
-    },
-    4246755813: {
-      name: 'Competitivo'
     },
     4254776501: {
       name: 'Misión de salvamento'
@@ -3101,9 +3659,6 @@ export const DestinyActivityDefinition = {
     },
     37050217: {
       name: 'Misión de reconocimiento'
-    },
-    38244167: {
-      name: 'Jabalina-4'
     },
     51408141: {
       name: 'Misión de salvamento'
@@ -3140,6 +3695,9 @@ export const DestinyActivityDefinition = {
     143647473: {
       name: 'Misión de salvamento'
     },
+    145136689: {
+      name: 'Misión de combate'
+    },
     145302664: {
       name: 'Ocaso: Traficante de armas'
     },
@@ -3169,6 +3727,9 @@ export const DestinyActivityDefinition = {
     },
     286324446: {
       name: 'Misión de salvamento'
+    },
+    286562305: {
+      name: 'La Espira Invertida'
     },
     287649202: {
       name: 'Leviatán'
@@ -3200,6 +3761,9 @@ export const DestinyActivityDefinition = {
     359488722: {
       name: 'Piratea el planeta'
     },
+    373475104: {
+      name: 'Ocaso: Un mundo jardín'
+    },
     374818561: {
       name: 'Descanso del emperador'
     },
@@ -3208,9 +3772,6 @@ export const DestinyActivityDefinition = {
     },
     387171436: {
       name: 'Misión de salvamento'
-    },
-    387487590: {
-      name: 'Reservar'
     },
     388289443: {
       name: 'Misión de reconocimiento'
@@ -3226,6 +3787,9 @@ export const DestinyActivityDefinition = {
     },
     435989417: {
       name: 'Misión de análisis'
+    },
+    442671778: {
+      name: 'Traficante de armas'
     },
     444087412: {
       name: 'Misión de combate'
@@ -3243,9 +3807,6 @@ export const DestinyActivityDefinition = {
     },
     474380713: {
       name: 'Misión de salvamento'
-    },
-    482312911: {
-      name: 'La Villa'
     },
     539897061: {
       name: 'Revirtiendo la polaridad'
@@ -3267,9 +3828,6 @@ export const DestinyActivityDefinition = {
     585071442: {
       name: 'Ocaso: Canción de Savathûn'
     },
-    586390928: {
-      name: 'La bienvenida'
-    },
     601540706: {
       name: 'Ocaso: Traficante de armas'
     },
@@ -3283,16 +3841,25 @@ export const DestinyActivityDefinition = {
       name: 'Ocaso: Colisión del Éxodo'
     },
     642277473: {
-      name: 'Ocaso: El piramidión'
+      name: 'Ocaso: El Piramidión'
     },
     652598202: {
       name: 'Barranco de la Legión'
+    },
+    656703508: {
+      name: 'Un mundo jardín'
+    },
+    661855681: {
+      name: 'Lago de las sombras'
     },
     667604912: {
       name: 'Meditación: "Circuito"'
     },
     671904429: {
       name: 'Misión de salvamento'
+    },
+    689927878: {
+      name: 'Un mundo jardín'
     },
     703311712: {
       name: 'Fragmento del Viajero'
@@ -3302,6 +3869,9 @@ export const DestinyActivityDefinition = {
     },
     719906507: {
       name: 'La tercera espira'
+    },
+    723733266: {
+      name: 'El corredor (heroica)'
     },
     743100125: {
       name: 'Misión de salvamento'
@@ -3330,14 +3900,26 @@ export const DestinyActivityDefinition = {
     808931822: {
       name: 'Prometeo posmoderno'
     },
+    809170886: {
+      name: 'Leviatán, Devorador de mundos'
+    },
+    834864522: {
+      name: 'Maldición de Osiris'
+    },
     837763871: {
       name: 'Misión de salvamento'
+    },
+    840678113: {
+      name: 'Árbol de probabilidades'
     },
     849242583: {
       name: 'Misión de análisis'
     },
     880665770: {
       name: 'Misión de reconocimiento'
+    },
+    903584917: {
+      name: 'Caos'
     },
     919252154: {
       name: 'Alianza oscura'
@@ -3346,7 +3928,7 @@ export const DestinyActivityDefinition = {
       name: 'Misión de asesinato'
     },
     926940962: {
-      name: 'Ocaso: El piramidión'
+      name: 'Ocaso: El Piramidión'
     },
     938512773: {
       name: 'Irrompible'
@@ -3366,11 +3948,23 @@ export const DestinyActivityDefinition = {
     969385987: {
       name: 'Iluminando la oscuridad'
     },
+    989294159: {
+      name: 'Ocaso: Árbol de probabilidades'
+    },
+    991410404: {
+      name: 'Meditación: “Secuestro”'
+    },
     993152361: {
       name: 'Misión de salvamento'
     },
+    1002145272: {
+      name: 'Árbol de probabilidades'
+    },
     1019362992: {
       name: 'Meditación: "La bienvenida"'
+    },
+    1034805570: {
+      name: 'Meditación: “Un mundo jardín”'
     },
     1035135049: {
       name: 'El Piramidión'
@@ -3378,11 +3972,20 @@ export const DestinyActivityDefinition = {
     1038710420: {
       name: 'Misión de asesinato'
     },
+    1049899965: {
+      name: 'Más allá del infinito'
+    },
     1053141615: {
       name: 'Misión de asesinato'
     },
+    1057017675: {
+      name: 'El portal'
+    },
     1063969232: {
       name: 'Invitación del emperador'
+    },
+    1073289414: {
+      name: 'Zona de aterrizaje'
     },
     1075152813: {
       name: 'Zona Muerta Europea'
@@ -3408,14 +4011,20 @@ export const DestinyActivityDefinition = {
     1107208644: {
       name: 'Piratea el planeta'
     },
+    1120584691: {
+      name: 'Misión de salvamento'
+    },
     1129066976: {
-      name: 'Ocaso: El piramidión'
+      name: 'Ocaso: El Piramidión'
     },
     1159314159: {
       name: 'Mala señal'
     },
     1164772243: {
       name: 'Misión de salvamento'
+    },
+    1175770231: {
+      name: 'El portal'
     },
     1206154103: {
       name: 'Misión de asesinato'
@@ -3444,6 +4053,12 @@ export const DestinyActivityDefinition = {
     1265390366: {
       name: 'Mala señal'
     },
+    1278641935: {
+      name: 'Un mundo jardín'
+    },
+    1279862229: {
+      name: 'Falla en el sistema'
+    },
     1289867188: {
       name: 'Indestructible'
     },
@@ -3452,6 +4067,9 @@ export const DestinyActivityDefinition = {
     },
     1309646866: {
       name: 'La Villa'
+    },
+    1310854805: {
+      name: 'Disputa'
     },
     1331268141: {
       name: 'Misión de reconocimiento'
@@ -3467,6 +4085,12 @@ export const DestinyActivityDefinition = {
     },
     1416597166: {
       name: 'Oferta y demanda'
+    },
+    1418217191: {
+      name: 'Arriba, arriba (heroica)'
+    },
+    1426391278: {
+      name: 'Fondo de almacén'
     },
     1428050875: {
       name: 'Mi capitán'
@@ -3489,6 +4113,9 @@ export const DestinyActivityDefinition = {
     1498466193: {
       name: 'Misión de salvamento'
     },
+    1512980468: {
+      name: 'El portal'
+    },
     1521232506: {
       name: 'Confidencial'
     },
@@ -3497,6 +4124,9 @@ export const DestinyActivityDefinition = {
     },
     1536764325: {
       name: 'Misión de reconocimiento'
+    },
+    1549614516: {
+      name: 'Colisión del Éxodo'
     },
     1557641249: {
       name: 'Misión de salvamento'
@@ -3507,8 +4137,14 @@ export const DestinyActivityDefinition = {
     1568750156: {
       name: 'La Villa'
     },
+    1570598249: {
+      name: 'El corredor'
+    },
     1581219251: {
       name: 'Misión de reconocimiento'
+    },
+    1603374112: {
+      name: 'El Piramidión'
     },
     1614692057: {
       name: 'Misión de salvamento'
@@ -3534,6 +4170,15 @@ export const DestinyActivityDefinition = {
     1720510574: {
       name: 'La fortaleza'
     },
+    1725302079: {
+      name: 'Arriba, arriba'
+    },
+    1740310101: {
+      name: 'Falla en el sistema (heroica)'
+    },
+    1755484011: {
+      name: 'Confidencial'
+    },
     1756055546: {
       name: 'Misión de salvamento'
     },
@@ -3555,6 +4200,12 @@ export const DestinyActivityDefinition = {
     1792985204: {
       name: 'Ocaso: Colisión del Éxodo'
     },
+    1802930364: {
+      name: 'Refugio de los gusanos'
+    },
+    1823921651: {
+      name: 'Arriba, arriba'
+    },
     1824067376: {
       name: 'Furia en la carretera'
     },
@@ -3563,6 +4214,9 @@ export const DestinyActivityDefinition = {
     },
     1863334927: {
       name: 'Ocaso: Canción de Savathûn'
+    },
+    1874578888: {
+      name: 'Falla en el sistema (heroica)'
     },
     1875726950: {
       name: 'Leviatán'
@@ -3591,6 +4245,9 @@ export const DestinyActivityDefinition = {
     1984315274: {
       name: 'Asaltos de la Vanguardia'
     },
+    1987624188: {
+      name: 'Arriba, arriba (heroica)'
+    },
     1988701745: {
       name: 'Venganza'
     },
@@ -3603,11 +4260,23 @@ export const DestinyActivityDefinition = {
     2025057095: {
       name: 'Misión de combate'
     },
+    2026037412: {
+      name: 'Lista de juego de asaltos heroicos'
+    },
     2033669713: {
       name: 'Jabalina-4'
     },
+    2046332536: {
+      name: 'Ocaso: Árbol de probabilidades'
+    },
     2052289205: {
       name: 'Combustión'
+    },
+    2056035210: {
+      name: 'Confidencial'
+    },
+    2067233851: {
+      name: 'Ni siquiera la oscuridad'
     },
     2079994698: {
       name: 'Misión de reconocimiento'
@@ -3615,11 +4284,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: 'Traficante de armas'
     },
+    2081576589: {
+      name: 'Combustión'
+    },
     2113712124: {
       name: 'Sacrilegio'
     },
     2151274060: {
       name: 'Misión de análisis'
+    },
+    2164432138: {
+      name: 'Leviatán, Devorador de mundos'
     },
     2174556965: {
       name: 'Echando las culpas'
@@ -3632,6 +4307,9 @@ export const DestinyActivityDefinition = {
     },
     2187073261: {
       name: 'Misión de análisis'
+    },
+    2199986157: {
+      name: 'Secuestro'
     },
     2231840083: {
       name: 'Canto de sirena'
@@ -3654,6 +4332,12 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: 'La Villa'
     },
+    2276204547: {
+      name: 'Omega'
+    },
+    2279197206: {
+      name: 'Una prueba mortal'
+    },
     2287222467: {
       name: 'Misión de análisis'
     },
@@ -3669,20 +4353,38 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: 'Misión de reconocimiento'
     },
+    2307090074: {
+      name: 'Señal Luminosa'
+    },
     2318812547: {
       name: 'El Piramidión'
     },
     2319065780: {
       name: 'Estandarte de Hierro: Enfrentamiento'
     },
+    2322829199: {
+      name: 'Ocaso: Un mundo jardín'
+    },
     2336998357: {
       name: 'A largo plazo'
+    },
+    2351745587: {
+      name: 'El portal'
     },
     2379494367: {
       name: 'Misión de análisis'
     },
+    2416546450: {
+      name: 'Ocaso: Árbol de probabilidades'
+    },
+    2417088417: {
+      name: 'Pacífica'
+    },
     2420240009: {
       name: 'Misión de salvamento'
+    },
+    2444890541: {
+      name: 'Días Carmesí'
     },
     2445164291: {
       name: 'Misión de asesinato'
@@ -3759,8 +4461,17 @@ export const DestinyActivityDefinition = {
     2667533713: {
       name: 'Vostok'
     },
+    2675435236: {
+      name: 'Falla en el sistema'
+    },
+    2678510381: {
+      name: 'Árbol de probabilidades'
+    },
     2684479494: {
       name: 'Misión de salvamento'
+    },
+    2688061647: {
+      name: 'Ocaso: Un mundo jardín'
     },
     2693136600: {
       name: 'Leviatán'
@@ -3810,17 +4521,20 @@ export const DestinyActivityDefinition = {
     2798856614: {
       name: 'Misión de reconocimiento'
     },
-    2830345500: {
-      name: 'La bienvenida'
-    },
     2846775197: {
       name: 'Misión de combate'
+    },
+    2867288098: {
+      name: 'Confidencial'
     },
     2908287325: {
       name: 'Misión de reconocimiento'
     },
     2926767881: {
       name: 'Venganza'
+    },
+    2934103434: {
+      name: 'Confidencial'
     },
     2949941834: {
       name: 'Invitados inesperados'
@@ -3830,6 +4544,9 @@ export const DestinyActivityDefinition = {
     },
     3002511278: {
       name: 'Alianza oscura'
+    },
+    3011963288: {
+      name: 'Osiris - Juego rápido'
     },
     3026637018: {
       name: 'Misión de reconocimiento'
@@ -3845,6 +4562,9 @@ export const DestinyActivityDefinition = {
     },
     3062197616: {
       name: 'Competitivo'
+    },
+    3089205900: {
+      name: 'Leviatán, Devorador de mundos'
     },
     3105090879: {
       name: 'Adiós'
@@ -3870,6 +4590,12 @@ export const DestinyActivityDefinition = {
     3173130826: {
       name: 'Misión de combate'
     },
+    3191123858: {
+      name: 'Canción de Savathûn'
+    },
+    3206026167: {
+      name: 'El portal'
+    },
     3208779612: {
       name: 'Misión de salvamento'
     },
@@ -3879,11 +4605,20 @@ export const DestinyActivityDefinition = {
     3211568383: {
       name: 'Canto de sirena'
     },
+    3215844014: {
+      name: 'Meditación: “Omega”'
+    },
+    3226632017: {
+      name: 'Meditación “Una prueba mortal”'
+    },
     3231065327: {
       name: 'Misión de análisis'
     },
     3243161126: {
       name: 'Juego rápido'
+    },
+    3248193378: {
+      name: 'Arriba, arriba (heroica)'
     },
     3268684190: {
       name: 'Misión de salvamento'
@@ -3900,6 +4635,12 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: 'Tripulación perdida'
     },
+    3289842296: {
+      name: 'Maldición de Osiris'
+    },
+    3292523719: {
+      name: 'Meditación: “El portal”'
+    },
     3298775062: {
       name: 'Misión de reconocimiento'
     },
@@ -3908,6 +4649,9 @@ export const DestinyActivityDefinition = {
     },
     3304835347: {
       name: 'Llámalos a casa'
+    },
+    3306366908: {
+      name: 'Acantilados radiantes'
     },
     3336275007: {
       name: 'Meditación: "Seis"'
@@ -3923,6 +4667,12 @@ export const DestinyActivityDefinition = {
     },
     3368226533: {
       name: 'Ocaso: La Espira Invertida'
+    },
+    3370527053: {
+      name: 'El corredor (heroica)'
+    },
+    3376869257: {
+      name: 'Misión de salvamento'
     },
     3379039897: {
       name: 'Misión de salvamento'
@@ -3972,8 +4722,8 @@ export const DestinyActivityDefinition = {
     3631476566: {
       name: 'La Villa'
     },
-    3634044339: {
-      name: 'Tráiler de avance de actividades'
+    3642412717: {
+      name: 'Meditación: “Un árbol de posibilidades”'
     },
     3645117987: {
       name: 'Malos vecinos'
@@ -3989,9 +4739,6 @@ export const DestinyActivityDefinition = {
     },
     3669054326: {
       name: 'Misión de salvamento'
-    },
-    3681513787: {
-      name: 'Juego rápido'
     },
     3688464794: {
       name: 'La importancia de las redes'
@@ -4038,8 +4785,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: 'Torre'
     },
+    3906001398: {
+      name: 'Osiris - Competitivo'
+    },
     3916343513: {
       name: 'Leviatán'
+    },
+    3920569453: {
+      name: 'Falla en el sistema (heroica)'
     },
     3920643231: {
       name: 'Ocaso: Traficante de armas'
@@ -4049,9 +4802,6 @@ export const DestinyActivityDefinition = {
     },
     3966792859: {
       name: 'Nessus, Centauro Inestable'
-    },
-    3969712481: {
-      name: 'Tráiler de avance de la historia'
     },
     3978357488: {
       name: 'Misión de salvamento'
@@ -4083,6 +4833,9 @@ export const DestinyActivityDefinition = {
     4103844069: {
       name: 'Misión de asesinato'
     },
+    4119522487: {
+      name: 'Meditación “Fondo de almacén”'
+    },
     4159221189: {
       name: 'Ío'
     },
@@ -4092,26 +4845,17 @@ export const DestinyActivityDefinition = {
     4174103238: {
       name: 'Misión de salvamento'
     },
-    4185964042: {
-      name: 'La Espira Invertida'
-    },
     4209774794: {
       name: 'Misión de salvamento'
     },
     4216926874: {
       name: 'Misión de salvamento'
     },
-    4221067410: {
-      name: 'Centro Urbano'
-    },
     4231544111: {
       name: 'Misión de reconocimiento'
     },
     4239233351: {
       name: 'Meditación: "Chispa"'
-    },
-    4246755813: {
-      name: 'Competitivo'
     },
     4254776501: {
       name: 'Misión de salvamento'
@@ -4132,9 +4876,6 @@ export const DestinyActivityDefinition = {
     },
     37050217: {
       name: 'Mission de relevé'
-    },
-    38244167: {
-      name: 'Javelot-4'
     },
     51408141: {
       name: 'Mission de récupération'
@@ -4171,6 +4912,9 @@ export const DestinyActivityDefinition = {
     143647473: {
       name: 'Mission de récupération'
     },
+    145136689: {
+      name: 'Mission de combat'
+    },
     145302664: {
       name: 'Nuit noire : Le Trafiquant d\'armes'
     },
@@ -4200,6 +4944,9 @@ export const DestinyActivityDefinition = {
     },
     286324446: {
       name: 'Mission de récupération'
+    },
+    286562305: {
+      name: 'La Flèche inversée'
     },
     287649202: {
       name: 'Léviathan'
@@ -4231,6 +4978,9 @@ export const DestinyActivityDefinition = {
     359488722: {
       name: 'Piratage de planète'
     },
+    373475104: {
+      name: 'Nuit noire : Un monde fertile'
+    },
     374818561: {
       name: 'Répit de l\'Empereur'
     },
@@ -4239,9 +4989,6 @@ export const DestinyActivityDefinition = {
     },
     387171436: {
       name: 'Mission de récupération'
-    },
-    387487590: {
-      name: 'Précommander'
     },
     388289443: {
       name: 'Mission de relevé'
@@ -4257,6 +5004,9 @@ export const DestinyActivityDefinition = {
     },
     435989417: {
       name: 'Mission d\'analyse'
+    },
+    442671778: {
+      name: 'Le Trafiquant d\'armes'
     },
     444087412: {
       name: 'Mission de combat'
@@ -4274,9 +5024,6 @@ export const DestinyActivityDefinition = {
     },
     474380713: {
       name: 'Mission de récupération'
-    },
-    482312911: {
-      name: 'Le Domaine'
     },
     539897061: {
       name: 'Inversion de polarité'
@@ -4298,9 +5045,6 @@ export const DestinyActivityDefinition = {
     585071442: {
       name: 'Nuit noire : Chant de Savathûn'
     },
-    586390928: {
-      name: 'De retour'
-    },
     601540706: {
       name: 'Nuit noire : Le Trafiquant d\'armes'
     },
@@ -4319,11 +5063,20 @@ export const DestinyActivityDefinition = {
     652598202: {
       name: 'Ravin de la Légion'
     },
+    656703508: {
+      name: 'Un monde fertile'
+    },
+    661855681: {
+      name: 'Lac de Ténèbres'
+    },
     667604912: {
       name: 'Méditation : « Boucle »'
     },
     671904429: {
       name: 'Mission de récupération'
+    },
+    689927878: {
+      name: 'Un monde fertile'
     },
     703311712: {
       name: 'Fragment du Voyageur'
@@ -4333,6 +5086,9 @@ export const DestinyActivityDefinition = {
     },
     719906507: {
       name: 'La Troisième flèche'
+    },
+    723733266: {
+      name: 'Interception (Épique)'
     },
     743100125: {
       name: 'Mission de récupération'
@@ -4361,14 +5117,26 @@ export const DestinyActivityDefinition = {
     808931822: {
       name: 'Prométhée post-moderne'
     },
+    809170886: {
+      name: 'Léviathan, Dévoreur de mondes'
+    },
+    834864522: {
+      name: 'La Malédiction d\'Osiris'
+    },
     837763871: {
       name: 'Mission de récupération'
+    },
+    840678113: {
+      name: 'Arbre de probabilité'
     },
     849242583: {
       name: 'Mission d\'analyse'
     },
     880665770: {
       name: 'Mission de relevé'
+    },
+    903584917: {
+      name: 'Pagaille'
     },
     919252154: {
       name: 'L\'alliance obscure'
@@ -4397,11 +5165,23 @@ export const DestinyActivityDefinition = {
     969385987: {
       name: 'En allumant les ténèbres'
     },
+    989294159: {
+      name: 'Nuit noire : Arbre de probabilité'
+    },
+    991410404: {
+      name: 'Méditation : « Détournement »'
+    },
     993152361: {
       name: 'Mission de récupération'
     },
+    1002145272: {
+      name: 'Arbre de probabilité'
+    },
     1019362992: {
       name: 'Méditation : « De retour »'
+    },
+    1034805570: {
+      name: 'Méditation « Un monde fertile »'
     },
     1035135049: {
       name: 'Le Pyramidion'
@@ -4409,11 +5189,20 @@ export const DestinyActivityDefinition = {
     1038710420: {
       name: 'Mission d\'assassinat'
     },
+    1049899965: {
+      name: 'Au-delà de l\'infini'
+    },
     1053141615: {
       name: 'Mission d\'assassinat'
     },
+    1057017675: {
+      name: 'Le portail'
+    },
     1063969232: {
       name: 'Une invitation de l\'Empereur'
+    },
+    1073289414: {
+      name: 'Zone d\'atterrissage'
     },
     1075152813: {
       name: 'Zone morte européenne'
@@ -4439,6 +5228,9 @@ export const DestinyActivityDefinition = {
     1107208644: {
       name: 'Piratage de planète'
     },
+    1120584691: {
+      name: 'Mission de récupération'
+    },
     1129066976: {
       name: 'Nuit noire : Le Pyramidion'
     },
@@ -4447,6 +5239,9 @@ export const DestinyActivityDefinition = {
     },
     1164772243: {
       name: 'Mission de récupération'
+    },
+    1175770231: {
+      name: 'Le portail'
     },
     1206154103: {
       name: 'Mission d\'assassinat'
@@ -4475,6 +5270,12 @@ export const DestinyActivityDefinition = {
     1265390366: {
       name: 'Mauvaise réception'
     },
+    1278641935: {
+      name: 'Un monde fertile'
+    },
+    1279862229: {
+      name: 'Un bug dans le système'
+    },
     1289867188: {
       name: 'Incassable'
     },
@@ -4483,6 +5284,9 @@ export const DestinyActivityDefinition = {
     },
     1309646866: {
       name: 'Le Domaine'
+    },
+    1310854805: {
+      name: 'Carnage'
     },
     1331268141: {
       name: 'Mission de relevé'
@@ -4499,6 +5303,12 @@ export const DestinyActivityDefinition = {
     1416597166: {
       name: 'Offre et demande'
     },
+    1418217191: {
+      name: 'En plein essor (Épique)'
+    },
+    1426391278: {
+      name: 'Mémoire enfouie'
+    },
     1428050875: {
       name: 'Mon Capitaine'
     },
@@ -4506,7 +5316,7 @@ export const DestinyActivityDefinition = {
       name: 'Mission de récupération'
     },
     1466550401: {
-      name: 'Dangereux quelque soit la vitesse'
+      name: 'Dangereux quelle que soit la vitesse'
     },
     1490848577: {
       name: 'En boucle'
@@ -4520,6 +5330,9 @@ export const DestinyActivityDefinition = {
     1498466193: {
       name: 'Mission de récupération'
     },
+    1512980468: {
+      name: 'Le portail'
+    },
     1521232506: {
       name: 'Confidentiel'
     },
@@ -4528,6 +5341,9 @@ export const DestinyActivityDefinition = {
     },
     1536764325: {
       name: 'Mission de relevé'
+    },
+    1549614516: {
+      name: 'Crash de l\'Exode'
     },
     1557641249: {
       name: 'Mission de récupération'
@@ -4538,8 +5354,14 @@ export const DestinyActivityDefinition = {
     1568750156: {
       name: 'Le Domaine'
     },
+    1570598249: {
+      name: 'Interception'
+    },
     1581219251: {
       name: 'Mission de relevé'
+    },
+    1603374112: {
+      name: 'Le Pyramidion'
     },
     1614692057: {
       name: 'Mission de récupération'
@@ -4565,6 +5387,15 @@ export const DestinyActivityDefinition = {
     1720510574: {
       name: 'La Forteresse'
     },
+    1725302079: {
+      name: 'En plein essor'
+    },
+    1740310101: {
+      name: 'Un bug dans le système (Épique)'
+    },
+    1755484011: {
+      name: 'Confidentiel'
+    },
     1756055546: {
       name: 'Mission de récupération'
     },
@@ -4586,6 +5417,12 @@ export const DestinyActivityDefinition = {
     1792985204: {
       name: 'Nuit noire : Crash de l\'Exode'
     },
+    1802930364: {
+      name: 'Havre des vers'
+    },
+    1823921651: {
+      name: 'En plein essor'
+    },
     1824067376: {
       name: 'Conduite agressive'
     },
@@ -4594,6 +5431,9 @@ export const DestinyActivityDefinition = {
     },
     1863334927: {
       name: 'Nuit noire : Chant de Savathûn'
+    },
+    1874578888: {
+      name: 'Un bug dans le système (Épique)'
     },
     1875726950: {
       name: 'Léviathan'
@@ -4611,7 +5451,7 @@ export const DestinyActivityDefinition = {
       name: 'Arecibo'
     },
     1971154629: {
-      name: 'Dangereux quelque soit la vitesse'
+      name: 'Dangereux quelle que soit la vitesse'
     },
     1975064760: {
       name: 'Nuit noire : Chant de Savathûn'
@@ -4621,6 +5461,9 @@ export const DestinyActivityDefinition = {
     },
     1984315274: {
       name: 'Assauts de l\'Avant-garde'
+    },
+    1987624188: {
+      name: 'En plein essor (Épique)'
     },
     1988701745: {
       name: 'Représailles'
@@ -4634,11 +5477,23 @@ export const DestinyActivityDefinition = {
     2025057095: {
       name: 'Mission de combat'
     },
+    2026037412: {
+      name: 'Assauts Épiques de l\'Avant-garde'
+    },
     2033669713: {
       name: 'Javelot-4'
     },
+    2046332536: {
+      name: 'Nuit noire : Arbre de probabilité'
+    },
     2052289205: {
       name: 'Combustion'
+    },
+    2056035210: {
+      name: 'Confidentiel'
+    },
+    2067233851: {
+      name: 'Pas même les Ténèbres'
     },
     2079994698: {
       name: 'Mission de relevé'
@@ -4646,11 +5501,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: 'Le Trafiquant d\'armes'
     },
+    2081576589: {
+      name: 'Calciné'
+    },
     2113712124: {
       name: 'Sacrilège'
     },
     2151274060: {
       name: 'Mission d\'analyse'
+    },
+    2164432138: {
+      name: 'Léviathan, Dévoreur de mondes'
     },
     2174556965: {
       name: 'Coup monté'
@@ -4663,6 +5524,9 @@ export const DestinyActivityDefinition = {
     },
     2187073261: {
       name: 'Mission d\'analyse'
+    },
+    2199986157: {
+      name: 'Détournement'
     },
     2231840083: {
       name: 'Le chant des sirènes'
@@ -4685,6 +5549,12 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: 'Le Domaine'
     },
+    2276204547: {
+      name: 'Oméga'
+    },
+    2279197206: {
+      name: 'Jugement fatal'
+    },
     2287222467: {
       name: 'Mission d\'analyse'
     },
@@ -4700,20 +5570,38 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: 'Mission de relevé'
     },
+    2307090074: {
+      name: 'Signal lumineux'
+    },
     2318812547: {
       name: 'Le Pyramidion'
     },
     2319065780: {
       name: 'Bannière de Fer – Choc'
     },
+    2322829199: {
+      name: 'Nuit noire : Un monde fertile'
+    },
     2336998357: {
       name: 'Jeu à long terme'
+    },
+    2351745587: {
+      name: 'Le portail'
     },
     2379494367: {
       name: 'Mission d\'analyse'
     },
+    2416546450: {
+      name: 'Nuit noire : Arbre de probabilité'
+    },
+    2417088417: {
+      name: 'Pacifica'
+    },
     2420240009: {
       name: 'Mission de récupération'
+    },
+    2444890541: {
+      name: 'Jours Garance'
     },
     2445164291: {
       name: 'Mission d\'assassinat'
@@ -4790,8 +5678,17 @@ export const DestinyActivityDefinition = {
     2667533713: {
       name: 'Vostok'
     },
+    2675435236: {
+      name: 'Un bug dans le système'
+    },
+    2678510381: {
+      name: 'Arbre de probabilité'
+    },
     2684479494: {
       name: 'Mission de récupération'
+    },
+    2688061647: {
+      name: 'Nuit noire : Un monde fertile'
     },
     2693136600: {
       name: 'Léviathan'
@@ -4841,17 +5738,20 @@ export const DestinyActivityDefinition = {
     2798856614: {
       name: 'Mission de relevé'
     },
-    2830345500: {
-      name: 'De retour'
-    },
     2846775197: {
       name: 'Mission de combat'
+    },
+    2867288098: {
+      name: 'Confidentiel'
     },
     2908287325: {
       name: 'Mission de relevé'
     },
     2926767881: {
       name: 'Revanche'
+    },
+    2934103434: {
+      name: 'Confidentiel'
     },
     2949941834: {
       name: 'Invités inattendus'
@@ -4861,6 +5761,9 @@ export const DestinyActivityDefinition = {
     },
     3002511278: {
       name: 'L\'alliance obscure'
+    },
+    3011963288: {
+      name: 'Partie rapide - Osiris'
     },
     3026637018: {
       name: 'Mission de relevé'
@@ -4876,6 +5779,9 @@ export const DestinyActivityDefinition = {
     },
     3062197616: {
       name: 'Compétitif'
+    },
+    3089205900: {
+      name: 'Léviathan, Dévoreur de mondes'
     },
     3105090879: {
       name: 'Adieu'
@@ -4901,6 +5807,12 @@ export const DestinyActivityDefinition = {
     3173130826: {
       name: 'Mission de combat'
     },
+    3191123858: {
+      name: 'Chant de Savathûn'
+    },
+    3206026167: {
+      name: 'Le portail'
+    },
     3208779612: {
       name: 'Mission de récupération'
     },
@@ -4910,11 +5822,20 @@ export const DestinyActivityDefinition = {
     3211568383: {
       name: 'Le chant des sirènes'
     },
+    3215844014: {
+      name: 'Méditation : « Oméga »'
+    },
+    3226632017: {
+      name: 'Méditation « Jugement fatal »'
+    },
     3231065327: {
       name: 'Mission d\'analyse'
     },
     3243161126: {
       name: 'Partie rapide'
+    },
+    3248193378: {
+      name: 'En plein essor (Épique)'
     },
     3268684190: {
       name: 'Mission de récupération'
@@ -4931,6 +5852,12 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: 'Équipage perdu'
     },
+    3289842296: {
+      name: 'La Malédiction d\'Osiris'
+    },
+    3292523719: {
+      name: 'Méditation « Le portail »'
+    },
     3298775062: {
       name: 'Mission de relevé'
     },
@@ -4939,6 +5866,9 @@ export const DestinyActivityDefinition = {
     },
     3304835347: {
       name: 'L\'appel de la maison'
+    },
+    3306366908: {
+      name: 'Falaises radieuses'
     },
     3336275007: {
       name: 'Méditation : « Six »'
@@ -4954,6 +5884,12 @@ export const DestinyActivityDefinition = {
     },
     3368226533: {
       name: 'Nuit noire : La Flèche Inversée'
+    },
+    3370527053: {
+      name: 'Interception (Épique)'
+    },
+    3376869257: {
+      name: 'Mission de récupération'
     },
     3379039897: {
       name: 'Mission de récupération'
@@ -5003,8 +5939,8 @@ export const DestinyActivityDefinition = {
     3631476566: {
       name: 'Le Domaine'
     },
-    3634044339: {
-      name: 'Bande-annonce des activités'
+    3642412717: {
+      name: 'Méditation « Arbre de probabilité »'
     },
     3645117987: {
       name: 'Problèmes de voisinage'
@@ -5020,9 +5956,6 @@ export const DestinyActivityDefinition = {
     },
     3669054326: {
       name: 'Mission de récupération'
-    },
-    3681513787: {
-      name: 'Partie rapide'
     },
     3688464794: {
       name: 'Un réseau important'
@@ -5069,8 +6002,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: 'La Tour'
     },
+    3906001398: {
+      name: 'Compétitif - Osiris'
+    },
     3916343513: {
       name: 'Léviathan'
+    },
+    3920569453: {
+      name: 'Un bug dans le système (Épique)'
     },
     3920643231: {
       name: 'Nuit noire : Le Trafiquant d\'armes'
@@ -5080,9 +6019,6 @@ export const DestinyActivityDefinition = {
     },
     3966792859: {
       name: 'Nessos, centaure instable'
-    },
-    3969712481: {
-      name: 'Bande-annonce narrative'
     },
     3978357488: {
       name: 'Mission de récupération'
@@ -5114,6 +6050,9 @@ export const DestinyActivityDefinition = {
     4103844069: {
       name: 'Mission d\'assassinat'
     },
+    4119522487: {
+      name: 'Méditation : « Mémoire enfouie »'
+    },
     4159221189: {
       name: 'Io'
     },
@@ -5123,26 +6062,17 @@ export const DestinyActivityDefinition = {
     4174103238: {
       name: 'Mission de récupération'
     },
-    4185964042: {
-      name: 'La Flèche inversée'
-    },
     4209774794: {
       name: 'Mission de récupération'
     },
     4216926874: {
       name: 'Mission de récupération'
     },
-    4221067410: {
-      name: 'Centre-ville'
-    },
     4231544111: {
       name: 'Mission de relevé'
     },
     4239233351: {
       name: 'Méditation : « Étincelle »'
-    },
-    4246755813: {
-      name: 'Compétitif'
     },
     4254776501: {
       name: 'Mission de récupération'
@@ -5163,9 +6093,6 @@ export const DestinyActivityDefinition = {
     },
     37050217: {
       name: 'Missione di indagine'
-    },
-    38244167: {
-      name: 'Javelin-4'
     },
     51408141: {
       name: 'Missione di recupero'
@@ -5202,6 +6129,9 @@ export const DestinyActivityDefinition = {
     143647473: {
       name: 'Missione di recupero'
     },
+    145136689: {
+      name: 'Missione di combattimento'
+    },
     145302664: {
       name: 'Cala la Notte: Trafficante d\'armi'
     },
@@ -5231,6 +6161,9 @@ export const DestinyActivityDefinition = {
     },
     286324446: {
       name: 'Missione di recupero'
+    },
+    286562305: {
+      name: 'Spirale invertita'
     },
     287649202: {
       name: 'Leviatano'
@@ -5262,6 +6195,9 @@ export const DestinyActivityDefinition = {
     359488722: {
       name: 'Manomissione planetaria'
     },
+    373475104: {
+      name: 'Cala la Notte: Pianeta fertile'
+    },
     374818561: {
       name: 'Tregua dell\'Imperatore'
     },
@@ -5270,9 +6206,6 @@ export const DestinyActivityDefinition = {
     },
     387171436: {
       name: 'Missione di recupero'
-    },
-    387487590: {
-      name: 'Prenota'
     },
     388289443: {
       name: 'Missione di indagine'
@@ -5288,6 +6221,9 @@ export const DestinyActivityDefinition = {
     },
     435989417: {
       name: 'Missione d\'analisi'
+    },
+    442671778: {
+      name: 'Trafficante d\'armi'
     },
     444087412: {
       name: 'Missione di combattimento'
@@ -5305,9 +6241,6 @@ export const DestinyActivityDefinition = {
     },
     474380713: {
       name: 'Missione di recupero'
-    },
-    482312911: {
-      name: 'Il Rifugio'
     },
     539897061: {
       name: 'Polarità invertita'
@@ -5329,9 +6262,6 @@ export const DestinyActivityDefinition = {
     585071442: {
       name: 'Cala la Notte: Canto di Savathûn'
     },
-    586390928: {
-      name: 'Ritorno a casa'
-    },
     601540706: {
       name: 'Cala la Notte: Trafficante d\'armi'
     },
@@ -5350,11 +6280,20 @@ export const DestinyActivityDefinition = {
     652598202: {
       name: 'Gola della Legione'
     },
+    656703508: {
+      name: 'Pianeta fertile'
+    },
+    661855681: {
+      name: 'Lago di ombre'
+    },
     667604912: {
       name: 'Meditazione: "Problemi dimensionali"'
     },
     671904429: {
       name: 'Missione di recupero'
+    },
+    689927878: {
+      name: 'Pianeta fertile'
     },
     703311712: {
       name: 'Frammento del Viaggiatore'
@@ -5364,6 +6303,9 @@ export const DestinyActivityDefinition = {
     },
     719906507: {
       name: 'Il Terzo Pinnacolo'
+    },
+    723733266: {
+      name: 'Il corridore (eroica)'
     },
     743100125: {
       name: 'Missione di recupero'
@@ -5392,14 +6334,26 @@ export const DestinyActivityDefinition = {
     808931822: {
       name: 'Prometeo postmoderno'
     },
+    809170886: {
+      name: 'Leviatano, Divora-mondi'
+    },
+    834864522: {
+      name: 'La maledizione di Osiride'
+    },
     837763871: {
       name: 'Missione di recupero'
+    },
+    840678113: {
+      name: 'Albero delle probabilità'
     },
     849242583: {
       name: 'Missione d\'analisi'
     },
     880665770: {
       name: 'Missione di indagine'
+    },
+    903584917: {
+      name: 'Pandemonio'
     },
     919252154: {
       name: 'Alleanza oscura'
@@ -5428,11 +6382,23 @@ export const DestinyActivityDefinition = {
     969385987: {
       name: 'Luce nel buio'
     },
+    989294159: {
+      name: 'Cala la Notte: Albero delle probabilità'
+    },
+    991410404: {
+      name: 'Meditazione: "Manomissione"'
+    },
     993152361: {
       name: 'Missione di recupero'
     },
+    1002145272: {
+      name: 'Albero delle probabilità'
+    },
     1019362992: {
       name: 'Meditazione: "Ritorno a casa"'
+    },
+    1034805570: {
+      name: 'Meditazione: "Pianeta fertile"'
     },
     1035135049: {
       name: 'Pyramidion'
@@ -5440,11 +6406,20 @@ export const DestinyActivityDefinition = {
     1038710420: {
       name: 'Missione di esecuzione'
     },
+    1049899965: {
+      name: 'Verso l\'infinito'
+    },
     1053141615: {
       name: 'Missione di esecuzione'
     },
+    1057017675: {
+      name: 'Il portale'
+    },
     1063969232: {
       name: 'Invito dell\'Imperatore'
+    },
+    1073289414: {
+      name: 'Zona d\'atterraggio'
     },
     1075152813: {
       name: 'Zona Morta Europea'
@@ -5470,6 +6445,9 @@ export const DestinyActivityDefinition = {
     1107208644: {
       name: 'Manomissione planetaria'
     },
+    1120584691: {
+      name: 'Missione di recupero'
+    },
     1129066976: {
       name: 'Cala la Notte: Pyramidion'
     },
@@ -5478,6 +6456,9 @@ export const DestinyActivityDefinition = {
     },
     1164772243: {
       name: 'Missione di recupero'
+    },
+    1175770231: {
+      name: 'Il portale'
     },
     1206154103: {
       name: 'Missione di esecuzione'
@@ -5506,6 +6487,12 @@ export const DestinyActivityDefinition = {
     1265390366: {
       name: 'Cattiva accoglienza'
     },
+    1278641935: {
+      name: 'Pianeta fertile'
+    },
+    1279862229: {
+      name: 'Bug nel sistema'
+    },
     1289867188: {
       name: 'Indistruttibile'
     },
@@ -5514,6 +6501,9 @@ export const DestinyActivityDefinition = {
     },
     1309646866: {
       name: 'Il Rifugio'
+    },
+    1310854805: {
+      name: 'Rissa'
     },
     1331268141: {
       name: 'Missione di indagine'
@@ -5529,6 +6519,12 @@ export const DestinyActivityDefinition = {
     },
     1416597166: {
       name: 'Domanda e offerta'
+    },
+    1418217191: {
+      name: 'Sempre più su (eroica)'
+    },
+    1426391278: {
+      name: 'Archivio nelle profondità'
     },
     1428050875: {
       name: 'Mio capitano'
@@ -5551,6 +6547,9 @@ export const DestinyActivityDefinition = {
     1498466193: {
       name: 'Missione di recupero'
     },
+    1512980468: {
+      name: 'Il portale'
+    },
     1521232506: {
       name: 'Classificato'
     },
@@ -5559,6 +6558,9 @@ export const DestinyActivityDefinition = {
     },
     1536764325: {
       name: 'Missione di indagine'
+    },
+    1549614516: {
+      name: 'Schianto dell\'Esodo'
     },
     1557641249: {
       name: 'Missione di recupero'
@@ -5569,8 +6571,14 @@ export const DestinyActivityDefinition = {
     1568750156: {
       name: 'Il Rifugio'
     },
+    1570598249: {
+      name: 'Il corridore'
+    },
     1581219251: {
       name: 'Missione di indagine'
+    },
+    1603374112: {
+      name: 'Pyramidion'
     },
     1614692057: {
       name: 'Missione di recupero'
@@ -5596,6 +6604,15 @@ export const DestinyActivityDefinition = {
     1720510574: {
       name: 'Fortezza'
     },
+    1725302079: {
+      name: 'Sempre più su'
+    },
+    1740310101: {
+      name: 'Bug nel sistema (eroica)'
+    },
+    1755484011: {
+      name: 'Classificato'
+    },
     1756055546: {
       name: 'Missione di recupero'
     },
@@ -5617,6 +6634,12 @@ export const DestinyActivityDefinition = {
     1792985204: {
       name: 'Cala la Notte: Schianto dell\'Esodo'
     },
+    1802930364: {
+      name: 'Paradiso Larvale'
+    },
+    1823921651: {
+      name: 'Sempre più su'
+    },
     1824067376: {
       name: 'Rabbia al volante'
     },
@@ -5625,6 +6648,9 @@ export const DestinyActivityDefinition = {
     },
     1863334927: {
       name: 'Cala la Notte: Canto di Savathûn'
+    },
+    1874578888: {
+      name: 'Bug nel sistema (eroica)'
     },
     1875726950: {
       name: 'Leviatano'
@@ -5653,6 +6679,9 @@ export const DestinyActivityDefinition = {
     1984315274: {
       name: 'Assalti dell\'Avanguardia'
     },
+    1987624188: {
+      name: 'Sempre più su (eroica)'
+    },
     1988701745: {
       name: 'Rappresaglia'
     },
@@ -5665,11 +6694,23 @@ export const DestinyActivityDefinition = {
     2025057095: {
       name: 'Missione di combattimento'
     },
+    2026037412: {
+      name: 'Playlist degli assalti eroici'
+    },
     2033669713: {
       name: 'Javelin-4'
     },
+    2046332536: {
+      name: 'Cala la Notte: Albero delle probabilità'
+    },
     2052289205: {
       name: 'Combustione'
+    },
+    2056035210: {
+      name: 'Classificato'
+    },
+    2067233851: {
+      name: 'Nemmeno l\'Oscurità'
     },
     2079994698: {
       name: 'Missione di indagine'
@@ -5677,11 +6718,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: 'Trafficante d\'armi'
     },
+    2081576589: {
+      name: 'Combustione'
+    },
     2113712124: {
       name: 'Sacrilegio'
     },
     2151274060: {
       name: 'Missione d\'analisi'
+    },
+    2164432138: {
+      name: 'Leviatano, Divora-mondi'
     },
     2174556965: {
       name: 'Montatura'
@@ -5694,6 +6741,9 @@ export const DestinyActivityDefinition = {
     },
     2187073261: {
       name: 'Missione d\'analisi'
+    },
+    2199986157: {
+      name: 'Manomissione'
     },
     2231840083: {
       name: 'Canto della sirena'
@@ -5716,6 +6766,12 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: 'Il Rifugio'
     },
+    2276204547: {
+      name: 'Omega'
+    },
+    2279197206: {
+      name: 'Prova mortale'
+    },
     2287222467: {
       name: 'Missione d\'analisi'
     },
@@ -5731,20 +6787,38 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: 'Missione di indagine'
     },
+    2307090074: {
+      name: 'Segnale luminoso'
+    },
     2318812547: {
       name: 'Pyramidion'
     },
     2319065780: {
       name: 'Stendardo di Ferro: Scontro'
     },
+    2322829199: {
+      name: 'Cala la Notte: Pianeta fertile'
+    },
     2336998357: {
       name: 'La lunga partita'
+    },
+    2351745587: {
+      name: 'Il portale'
     },
     2379494367: {
       name: 'Missione d\'analisi'
     },
+    2416546450: {
+      name: 'Cala la Notte: Albero delle probabilità'
+    },
+    2417088417: {
+      name: 'Pacifica'
+    },
     2420240009: {
       name: 'Missione di recupero'
+    },
+    2444890541: {
+      name: 'Giorni Scarlatti'
     },
     2445164291: {
       name: 'Missione di esecuzione'
@@ -5821,8 +6895,17 @@ export const DestinyActivityDefinition = {
     2667533713: {
       name: 'Vostok'
     },
+    2675435236: {
+      name: 'Bug nel sistema'
+    },
+    2678510381: {
+      name: 'Albero delle probabilità'
+    },
     2684479494: {
       name: 'Missione di recupero'
+    },
+    2688061647: {
+      name: 'Cala la Notte: Pianeta fertile'
     },
     2693136600: {
       name: 'Leviatano'
@@ -5872,17 +6955,20 @@ export const DestinyActivityDefinition = {
     2798856614: {
       name: 'Missione di indagine'
     },
-    2830345500: {
-      name: 'Ritorno a casa'
-    },
     2846775197: {
       name: 'Missione di combattimento'
+    },
+    2867288098: {
+      name: 'Classificato'
     },
     2908287325: {
       name: 'Missione di indagine'
     },
     2926767881: {
       name: 'Rivalsa'
+    },
+    2934103434: {
+      name: 'Classificato'
     },
     2949941834: {
       name: 'Ospiti inattesi'
@@ -5892,6 +6978,9 @@ export const DestinyActivityDefinition = {
     },
     3002511278: {
       name: 'Alleanza oscura'
+    },
+    3011963288: {
+      name: 'Partita veloce di Osiride'
     },
     3026637018: {
       name: 'Missione di indagine'
@@ -5907,6 +6996,9 @@ export const DestinyActivityDefinition = {
     },
     3062197616: {
       name: 'Competitiva'
+    },
+    3089205900: {
+      name: 'Leviatano, Divora-mondi'
     },
     3105090879: {
       name: 'Addio'
@@ -5932,6 +7024,12 @@ export const DestinyActivityDefinition = {
     3173130826: {
       name: 'Missione di combattimento'
     },
+    3191123858: {
+      name: 'Canto di Savathûn'
+    },
+    3206026167: {
+      name: 'Il portale'
+    },
     3208779612: {
       name: 'Missione di recupero'
     },
@@ -5941,11 +7039,20 @@ export const DestinyActivityDefinition = {
     3211568383: {
       name: 'Canto della sirena'
     },
+    3215844014: {
+      name: 'Meditazione: "Omega"'
+    },
+    3226632017: {
+      name: 'Meditazione: "Prova mortale"'
+    },
     3231065327: {
       name: 'Missione d\'analisi'
     },
     3243161126: {
       name: 'Partita veloce'
+    },
+    3248193378: {
+      name: 'Sempre più su (eroica)'
     },
     3268684190: {
       name: 'Missione di recupero'
@@ -5962,6 +7069,12 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: 'Equipaggio perduto'
     },
+    3289842296: {
+      name: 'La maledizione di Osiride'
+    },
+    3292523719: {
+      name: 'Meditazione: "Il portale"'
+    },
     3298775062: {
       name: 'Missione di indagine'
     },
@@ -5970,6 +7083,9 @@ export const DestinyActivityDefinition = {
     },
     3304835347: {
       name: 'Richiamo di casa'
+    },
+    3306366908: {
+      name: 'Scogliere Radianti'
     },
     3336275007: {
       name: 'Meditazione: "Sei"'
@@ -5985,6 +7101,12 @@ export const DestinyActivityDefinition = {
     },
     3368226533: {
       name: 'Cala la Notte: Spirale Invertita'
+    },
+    3370527053: {
+      name: 'Il corridore (eroica)'
+    },
+    3376869257: {
+      name: 'Missione di recupero'
     },
     3379039897: {
       name: 'Missione di recupero'
@@ -6034,8 +7156,8 @@ export const DestinyActivityDefinition = {
     3631476566: {
       name: 'Il Rifugio'
     },
-    3634044339: {
-      name: 'Trailer delle attività'
+    3642412717: {
+      name: 'Meditazione: "Albero delle probabilità"'
     },
     3645117987: {
       name: 'Pessimi vicini'
@@ -6051,9 +7173,6 @@ export const DestinyActivityDefinition = {
     },
     3669054326: {
       name: 'Missione di recupero'
-    },
-    3681513787: {
-      name: 'Partita veloce'
     },
     3688464794: {
       name: 'L\'importanza della rete'
@@ -6100,8 +7219,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: 'La Torre'
     },
+    3906001398: {
+      name: 'Competitiva di Osiride'
+    },
     3916343513: {
       name: 'Leviatano'
+    },
+    3920569453: {
+      name: 'Bug nel sistema (eroica)'
     },
     3920643231: {
       name: 'Cala la Notte: Trafficante d\'armi'
@@ -6111,9 +7236,6 @@ export const DestinyActivityDefinition = {
     },
     3966792859: {
       name: 'Nessus, Centauro Instabile'
-    },
-    3969712481: {
-      name: 'Trailer della storia'
     },
     3978357488: {
       name: 'Missione di recupero'
@@ -6145,6 +7267,9 @@ export const DestinyActivityDefinition = {
     4103844069: {
       name: 'Missione di esecuzione'
     },
+    4119522487: {
+      name: 'Meditazione: "Archivio nelle profondità"'
+    },
     4159221189: {
       name: 'Io'
     },
@@ -6154,26 +7279,17 @@ export const DestinyActivityDefinition = {
     4174103238: {
       name: 'Missione di recupero'
     },
-    4185964042: {
-      name: 'Spirale Invertita'
-    },
     4209774794: {
       name: 'Missione di recupero'
     },
     4216926874: {
       name: 'Missione di recupero'
     },
-    4221067410: {
-      name: 'Centro Città'
-    },
     4231544111: {
       name: 'Missione di indagine'
     },
     4239233351: {
       name: 'Meditazione: "Scintilla"'
-    },
-    4246755813: {
-      name: 'Competitiva'
     },
     4254776501: {
       name: 'Missione di recupero'
@@ -6194,9 +7310,6 @@ export const DestinyActivityDefinition = {
     },
     37050217: {
       name: '調査ミッション'
-    },
-    38244167: {
-      name: 'ジャベリン4'
     },
     51408141: {
       name: '回収ミッション'
@@ -6233,6 +7346,9 @@ export const DestinyActivityDefinition = {
     143647473: {
       name: '回収ミッション'
     },
+    145136689: {
+      name: '戦闘ミッション'
+    },
     145302664: {
       name: 'ナイトフォール: 武器商人'
     },
@@ -6262,6 +7378,9 @@ export const DestinyActivityDefinition = {
     },
     286324446: {
       name: '回収ミッション'
+    },
+    286562305: {
+      name: '反転したスパイア'
     },
     287649202: {
       name: 'リヴァイアサン'
@@ -6293,6 +7412,9 @@ export const DestinyActivityDefinition = {
     359488722: {
       name: '惑星のハッキング'
     },
+    373475104: {
+      name: 'ナイトフォール: 庭園の世界'
+    },
     374818561: {
       name: '皇帝の休息'
     },
@@ -6301,9 +7423,6 @@ export const DestinyActivityDefinition = {
     },
     387171436: {
       name: '回収ミッション'
-    },
-    387487590: {
-      name: '先行予約'
     },
     388289443: {
       name: '調査ミッション'
@@ -6319,6 +7438,9 @@ export const DestinyActivityDefinition = {
     },
     435989417: {
       name: '分析ミッション'
+    },
+    442671778: {
+      name: '武器商人'
     },
     444087412: {
       name: '戦闘ミッション'
@@ -6336,9 +7458,6 @@ export const DestinyActivityDefinition = {
     },
     474380713: {
       name: '回収ミッション'
-    },
-    482312911: {
-      name: '奥地'
     },
     539897061: {
       name: '戦況の逆転'
@@ -6360,9 +7479,6 @@ export const DestinyActivityDefinition = {
     585071442: {
       name: 'ナイトフォール: サバスンの歌'
     },
-    586390928: {
-      name: '帰郷'
-    },
     601540706: {
       name: 'ナイトフォール: 武器商人'
     },
@@ -6381,11 +7497,20 @@ export const DestinyActivityDefinition = {
     652598202: {
       name: 'リージョンの渓谷'
     },
+    656703508: {
+      name: '庭園の世界'
+    },
+    661855681: {
+      name: '影の湖'
+    },
     667604912: {
       name: '瞑想: 「ループ」'
     },
     671904429: {
       name: '回収ミッション'
+    },
+    689927878: {
+      name: '庭園の世界'
     },
     703311712: {
       name: 'トラベラーの破片'
@@ -6395,6 +7520,9 @@ export const DestinyActivityDefinition = {
     },
     719906507: {
       name: '3番目のスパイア'
+    },
+    723733266: {
+      name: '逃亡者(英雄)'
     },
     743100125: {
       name: '回収ミッション'
@@ -6423,14 +7551,26 @@ export const DestinyActivityDefinition = {
     808931822: {
       name: '近未来のプロメテウス'
     },
+    809170886: {
+      name: 'リヴァイアサン、世界を食らう船'
+    },
+    834864522: {
+      name: 'オシリスの呪い'
+    },
     837763871: {
       name: '回収ミッション'
+    },
+    840678113: {
+      name: '可能性の木'
     },
     849242583: {
       name: '分析ミッション'
     },
     880665770: {
       name: '調査ミッション'
+    },
+    903584917: {
+      name: 'カオス'
     },
     919252154: {
       name: '闇連合'
@@ -6459,11 +7599,23 @@ export const DestinyActivityDefinition = {
     969385987: {
       name: '闇を照らせ'
     },
+    989294159: {
+      name: 'ナイトフォール: 可能性の木'
+    },
+    991410404: {
+      name: '瞑想: 「ハイジャック」'
+    },
     993152361: {
       name: '回収ミッション'
     },
+    1002145272: {
+      name: '可能性の木'
+    },
     1019362992: {
       name: '瞑想: 「帰郷」'
+    },
+    1034805570: {
+      name: '瞑想: 「庭園の世界」'
     },
     1035135049: {
       name: 'ピラミディオン'
@@ -6471,11 +7623,20 @@ export const DestinyActivityDefinition = {
     1038710420: {
       name: '暗殺ミッション'
     },
+    1049899965: {
+      name: '無限の彼方'
+    },
     1053141615: {
       name: '暗殺ミッション'
     },
+    1057017675: {
+      name: 'ゲートウェイ'
+    },
     1063969232: {
       name: '皇帝からの招待'
+    },
+    1073289414: {
+      name: '着陸地点'
     },
     1075152813: {
       name: 'EDZ'
@@ -6501,6 +7662,9 @@ export const DestinyActivityDefinition = {
     1107208644: {
       name: '惑星のハッキング'
     },
+    1120584691: {
+      name: '回収ミッション'
+    },
     1129066976: {
       name: 'ナイトフォール: ピラミディオン'
     },
@@ -6509,6 +7673,9 @@ export const DestinyActivityDefinition = {
     },
     1164772243: {
       name: '回収ミッション'
+    },
+    1175770231: {
+      name: 'ゲートウェイ'
     },
     1206154103: {
       name: '暗殺ミッション'
@@ -6537,6 +7704,12 @@ export const DestinyActivityDefinition = {
     1265390366: {
       name: '受信障害'
     },
+    1278641935: {
+      name: '庭園の世界'
+    },
+    1279862229: {
+      name: 'システムにバグあり'
+    },
     1289867188: {
       name: '破壊不可'
     },
@@ -6545,6 +7718,9 @@ export const DestinyActivityDefinition = {
     },
     1309646866: {
       name: '奥地'
+    },
+    1310854805: {
+      name: 'ランブル'
     },
     1331268141: {
       name: '調査ミッション'
@@ -6560,6 +7736,12 @@ export const DestinyActivityDefinition = {
     },
     1416597166: {
       name: '需要と供給'
+    },
+    1418217191: {
+      name: '上へ、上へ(英雄)'
+    },
+    1426391278: {
+      name: '膨大なメモリー'
     },
     1428050875: {
       name: '私の船長'
@@ -6582,6 +7764,9 @@ export const DestinyActivityDefinition = {
     1498466193: {
       name: '回収ミッション'
     },
+    1512980468: {
+      name: 'ゲートウェイ'
+    },
     1521232506: {
       name: '機密'
     },
@@ -6590,6 +7775,9 @@ export const DestinyActivityDefinition = {
     },
     1536764325: {
       name: '調査ミッション'
+    },
+    1549614516: {
+      name: 'エクソダスの墜落'
     },
     1557641249: {
       name: '回収ミッション'
@@ -6600,8 +7788,14 @@ export const DestinyActivityDefinition = {
     1568750156: {
       name: '奥地'
     },
+    1570598249: {
+      name: '逃亡者'
+    },
     1581219251: {
       name: '調査ミッション'
+    },
+    1603374112: {
+      name: 'ピラミディオン'
     },
     1614692057: {
       name: '回収ミッション'
@@ -6627,6 +7821,15 @@ export const DestinyActivityDefinition = {
     1720510574: {
       name: '要塞'
     },
+    1725302079: {
+      name: '上へ、上へ'
+    },
+    1740310101: {
+      name: 'システムにバグあり(英雄)'
+    },
+    1755484011: {
+      name: '機密'
+    },
     1756055546: {
       name: '回収ミッション'
     },
@@ -6648,6 +7851,12 @@ export const DestinyActivityDefinition = {
     1792985204: {
       name: 'ナイトフォール: エクソダスの墜落'
     },
+    1802930364: {
+      name: '虫の安息地'
+    },
+    1823921651: {
+      name: '上へ、上へ'
+    },
     1824067376: {
       name: 'イライラの頂点'
     },
@@ -6656,6 +7865,9 @@ export const DestinyActivityDefinition = {
     },
     1863334927: {
       name: 'ナイトフォール: サバスンの歌'
+    },
+    1874578888: {
+      name: 'システムにバグあり(英雄)'
     },
     1875726950: {
       name: 'リヴァイアサン'
@@ -6684,6 +7896,9 @@ export const DestinyActivityDefinition = {
     1984315274: {
       name: 'バンガードストライク'
     },
+    1987624188: {
+      name: '上へ、上へ(英雄)'
+    },
     1988701745: {
       name: '報いの空'
     },
@@ -6696,11 +7911,23 @@ export const DestinyActivityDefinition = {
     2025057095: {
       name: '戦闘ミッション'
     },
+    2026037412: {
+      name: '英雄ストライクプレイリスト'
+    },
     2033669713: {
       name: 'ジャベリン4'
     },
+    2046332536: {
+      name: 'ナイトフォール: 可能性の木'
+    },
     2052289205: {
       name: '激動'
+    },
+    2056035210: {
+      name: '機密'
+    },
+    2067233851: {
+      name: '暗黒でさえも'
     },
     2079994698: {
       name: '調査ミッション'
@@ -6708,11 +7935,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: '武器商人'
     },
+    2081576589: {
+      name: '灼熱'
+    },
     2113712124: {
       name: '冒涜'
     },
     2151274060: {
       name: '分析ミッション'
+    },
+    2164432138: {
+      name: 'リヴァイアサン、世界を食らう船'
     },
     2174556965: {
       name: 'でっち上げ作戦'
@@ -6725,6 +7958,9 @@ export const DestinyActivityDefinition = {
     },
     2187073261: {
       name: '分析ミッション'
+    },
+    2199986157: {
+      name: 'ハイジャック'
     },
     2231840083: {
       name: 'セイレーンの歌'
@@ -6747,6 +7983,12 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: '奥地'
     },
+    2276204547: {
+      name: 'オメガ'
+    },
+    2279197206: {
+      name: '危険な試練'
+    },
     2287222467: {
       name: '分析ミッション'
     },
@@ -6762,20 +8004,38 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: '調査ミッション'
     },
+    2307090074: {
+      name: '信号を送る光'
+    },
     2318812547: {
       name: 'ピラミディオン'
     },
     2319065780: {
       name: 'アイアンバナークラッシュ'
     },
+    2322829199: {
+      name: 'ナイトフォール: 庭園の世界'
+    },
     2336998357: {
       name: '長丁場'
+    },
+    2351745587: {
+      name: 'ゲートウェイ'
     },
     2379494367: {
       name: '分析ミッション'
     },
+    2416546450: {
+      name: 'ナイトフォール: 可能性の木'
+    },
+    2417088417: {
+      name: 'パシフィカ'
+    },
     2420240009: {
       name: '回収ミッション'
+    },
+    2444890541: {
+      name: '真紅の日々'
     },
     2445164291: {
       name: '暗殺ミッション'
@@ -6850,10 +8110,19 @@ export const DestinyActivityDefinition = {
       name: '解放'
     },
     2667533713: {
-      name: 'ボストーク'
+      name: 'ボストック'
+    },
+    2675435236: {
+      name: 'システムにバグあり'
+    },
+    2678510381: {
+      name: '可能性の木'
     },
     2684479494: {
       name: '回収ミッション'
+    },
+    2688061647: {
+      name: 'ナイトフォール: 庭園の世界'
     },
     2693136600: {
       name: 'リヴァイアサン'
@@ -6903,17 +8172,20 @@ export const DestinyActivityDefinition = {
     2798856614: {
       name: '調査ミッション'
     },
-    2830345500: {
-      name: '帰郷'
-    },
     2846775197: {
       name: '戦闘ミッション'
+    },
+    2867288098: {
+      name: '機密'
     },
     2908287325: {
       name: '調査ミッション'
     },
     2926767881: {
       name: '逆襲'
+    },
+    2934103434: {
+      name: '機密'
     },
     2949941834: {
       name: '予想外の客'
@@ -6923,6 +8195,9 @@ export const DestinyActivityDefinition = {
     },
     3002511278: {
       name: '闇連合'
+    },
+    3011963288: {
+      name: 'クイックプレイ - オシリス'
     },
     3026637018: {
       name: '調査ミッション'
@@ -6938,6 +8213,9 @@ export const DestinyActivityDefinition = {
     },
     3062197616: {
       name: '対戦モード'
+    },
+    3089205900: {
+      name: 'リヴァイアサン、世界を食らう船'
     },
     3105090879: {
       name: '別れ'
@@ -6963,6 +8241,12 @@ export const DestinyActivityDefinition = {
     3173130826: {
       name: '戦闘ミッション'
     },
+    3191123858: {
+      name: 'サバスンの歌'
+    },
+    3206026167: {
+      name: 'ゲートウェイ'
+    },
     3208779612: {
       name: '回収ミッション'
     },
@@ -6972,11 +8256,20 @@ export const DestinyActivityDefinition = {
     3211568383: {
       name: 'セイレーンの歌'
     },
+    3215844014: {
+      name: '瞑想: 「オメガ」'
+    },
+    3226632017: {
+      name: '瞑想: 「危険な試練」'
+    },
     3231065327: {
       name: '分析ミッション'
     },
     3243161126: {
       name: 'クイックプレイ'
+    },
+    3248193378: {
+      name: '上へ、上へ(英雄)'
     },
     3268684190: {
       name: '回収ミッション'
@@ -6993,6 +8286,12 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: '行方不明の乗組員'
     },
+    3289842296: {
+      name: 'オシリスの呪い'
+    },
+    3292523719: {
+      name: '瞑想: 「ゲートウェイ」'
+    },
     3298775062: {
       name: '調査ミッション'
     },
@@ -7001,6 +8300,9 @@ export const DestinyActivityDefinition = {
     },
     3304835347: {
       name: '新たな故郷へ'
+    },
+    3306366908: {
+      name: '煌きの崖'
     },
     3336275007: {
       name: '瞑想: 「6」'
@@ -7016,6 +8318,12 @@ export const DestinyActivityDefinition = {
     },
     3368226533: {
       name: 'ナイトフォール: 反転したスパイア'
+    },
+    3370527053: {
+      name: '逃亡者(英雄)'
+    },
+    3376869257: {
+      name: '回収ミッション'
     },
     3379039897: {
       name: '回収ミッション'
@@ -7065,8 +8373,8 @@ export const DestinyActivityDefinition = {
     3631476566: {
       name: '奥地'
     },
-    3634044339: {
-      name: 'アクティビティ公開トレーラー'
+    3642412717: {
+      name: '瞑想: 「可能性の木」'
     },
     3645117987: {
       name: '手のかかる隣人'
@@ -7082,9 +8390,6 @@ export const DestinyActivityDefinition = {
     },
     3669054326: {
       name: '回収ミッション'
-    },
-    3681513787: {
-      name: 'クイックプレイ'
     },
     3688464794: {
       name: 'ネットワークの重要性'
@@ -7131,8 +8436,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: 'タワー'
     },
+    3906001398: {
+      name: '対戦モード - オシリス'
+    },
     3916343513: {
       name: 'リヴァイアサン'
+    },
+    3920569453: {
+      name: 'システムにバグあり(英雄)'
     },
     3920643231: {
       name: 'ナイトフォール: 武器商人'
@@ -7142,9 +8453,6 @@ export const DestinyActivityDefinition = {
     },
     3966792859: {
       name: '不安定なケンタウルス族、ネッスス'
-    },
-    3969712481: {
-      name: 'ストーリー公開トレーラー'
     },
     3978357488: {
       name: '回収ミッション'
@@ -7176,6 +8484,9 @@ export const DestinyActivityDefinition = {
     4103844069: {
       name: '暗殺ミッション'
     },
+    4119522487: {
+      name: '瞑想: 「膨大なメモリー」'
+    },
     4159221189: {
       name: 'イオ'
     },
@@ -7185,26 +8496,17 @@ export const DestinyActivityDefinition = {
     4174103238: {
       name: '回収ミッション'
     },
-    4185964042: {
-      name: '反転したスパイア'
-    },
     4209774794: {
       name: '回収ミッション'
     },
     4216926874: {
       name: '回収ミッション'
     },
-    4221067410: {
-      name: '市街地'
-    },
     4231544111: {
       name: '調査ミッション'
     },
     4239233351: {
       name: '瞑想: 「閃光」'
-    },
-    4246755813: {
-      name: '対戦モード'
     },
     4254776501: {
       name: '回収ミッション'
@@ -7221,13 +8523,10 @@ export const DestinyActivityDefinition = {
       name: 'Misja bojowa'
     },
     30240416: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     37050217: {
       name: 'Misja badawcza'
-    },
-    38244167: {
-      name: 'Oszczep-4'
     },
     51408141: {
       name: 'Misja ratunkowa'
@@ -7264,6 +8563,9 @@ export const DestinyActivityDefinition = {
     143647473: {
       name: 'Misja ratunkowa'
     },
+    145136689: {
+      name: 'Misja bojowa'
+    },
     145302664: {
       name: 'Nocny szturm: Handlarz bronią'
     },
@@ -7277,10 +8579,10 @@ export const DestinyActivityDefinition = {
       name: 'Misja ratunkowa'
     },
     197670945: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     204298081: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     248066530: {
       name: 'Misja ratunkowa'
@@ -7293,6 +8595,9 @@ export const DestinyActivityDefinition = {
     },
     286324446: {
       name: 'Misja ratunkowa'
+    },
+    286562305: {
+      name: 'Odwrócona Iglica'
     },
     287649202: {
       name: 'Lewiatan'
@@ -7319,10 +8624,13 @@ export const DestinyActivityDefinition = {
       name: 'Odwrócona Iglica'
     },
     355984230: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     359488722: {
       name: 'Hakowanie planety'
+    },
+    373475104: {
+      name: 'Nocny szturm: Świat ogrodów'
     },
     374818561: {
       name: 'Zacisze Imperatora'
@@ -7332,9 +8640,6 @@ export const DestinyActivityDefinition = {
     },
     387171436: {
       name: 'Misja ratunkowa'
-    },
-    387487590: {
-      name: 'Kup w przedsprzedaży'
     },
     388289443: {
       name: 'Misja badawcza'
@@ -7349,7 +8654,10 @@ export const DestinyActivityDefinition = {
       name: 'Misja ratunkowa'
     },
     435989417: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
+    },
+    442671778: {
+      name: 'Handlarz bronią'
     },
     444087412: {
       name: 'Misja bojowa'
@@ -7357,7 +8665,7 @@ export const DestinyActivityDefinition = {
     445417088: {
     },
     459955094: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     461203479: {
       name: 'Misja badawcza'
@@ -7367,9 +8675,6 @@ export const DestinyActivityDefinition = {
     },
     474380713: {
       name: 'Misja ratunkowa'
-    },
-    482312911: {
-      name: 'Farma'
     },
     539897061: {
       name: 'Odwracanie polaryzacji'
@@ -7391,9 +8696,6 @@ export const DestinyActivityDefinition = {
     585071442: {
       name: 'Nocny szturm: Pieśń Savathûn'
     },
-    586390928: {
-      name: 'Powrót do domu'
-    },
     601540706: {
       name: 'Nocny szturm: Handlarz bronią'
     },
@@ -7412,11 +8714,20 @@ export const DestinyActivityDefinition = {
     652598202: {
       name: 'Wąwóz Legionu'
     },
+    656703508: {
+      name: 'Świat ogrodów'
+    },
+    661855681: {
+      name: 'Jezioro Cieni'
+    },
     667604912: {
       name: 'Medytacja: „Zapętlenie”'
     },
     671904429: {
       name: 'Misja ratunkowa'
+    },
+    689927878: {
+      name: 'Świat ogrodów'
     },
     703311712: {
       name: 'Odłamek Wędrowca'
@@ -7426,6 +8737,9 @@ export const DestinyActivityDefinition = {
     },
     719906507: {
       name: 'Trzecia iglica'
+    },
+    723733266: {
+      name: 'Goniec (heroiczne)'
     },
     743100125: {
       name: 'Misja ratunkowa'
@@ -7440,7 +8754,7 @@ export const DestinyActivityDefinition = {
       name: 'Martwe Klify'
     },
     782175145: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     782290869: {
       name: 'Misja badawcza'
@@ -7454,20 +8768,32 @@ export const DestinyActivityDefinition = {
     808931822: {
       name: 'Współczesny Prometeusz'
     },
+    809170886: {
+      name: 'Lewiatan, Pożeracz Światów'
+    },
+    834864522: {
+      name: 'Klątwa Ozyrysa'
+    },
     837763871: {
       name: 'Misja ratunkowa'
     },
+    840678113: {
+      name: 'Drzewo prawdopodobieństwa'
+    },
     849242583: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     880665770: {
       name: 'Misja badawcza'
+    },
+    903584917: {
+      name: 'Jatka'
     },
     919252154: {
       name: 'Mroczny sojusz'
     },
     926012363: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     926940962: {
       name: 'Nocny szturm: Piramidion'
@@ -7479,7 +8805,7 @@ export const DestinyActivityDefinition = {
       name: 'ZADANIE: Katastrofa Exodusu'
     },
     955852466: {
-      name: 'Chciwość'
+      name: '1AU'
     },
     963938931: {
       name: 'Głęboka konwersacja'
@@ -7490,47 +8816,71 @@ export const DestinyActivityDefinition = {
     969385987: {
       name: 'Rozjaśnianie ciemności'
     },
+    989294159: {
+      name: 'Nocny szturm: Drzewo prawdopodobieństwa'
+    },
+    991410404: {
+      name: 'Medytacja: „Porwanie”'
+    },
     993152361: {
       name: 'Misja ratunkowa'
     },
+    1002145272: {
+      name: 'Drzewo prawdopodobieństwa'
+    },
     1019362992: {
       name: 'Medytacja: „Powrót do domu”'
+    },
+    1034805570: {
+      name: 'Medytacja: „Świat ogrodów”'
     },
     1035135049: {
       name: 'Piramidion'
     },
     1038710420: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
+    },
+    1049899965: {
+      name: 'Poza nieskończoność'
     },
     1053141615: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
+    },
+    1057017675: {
+      name: 'Wrota'
     },
     1063969232: {
       name: 'Imperialne zaproszenie'
+    },
+    1073289414: {
+      name: 'Strefa lądowania'
     },
     1075152813: {
       name: 'Europejska Martwa Strefa'
     },
     1076851943: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     1085523978: {
       name: 'Misja badawcza'
     },
     1090267699: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     1101792305: {
       name: 'Pieśń Savathûn'
     },
     1102824603: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     1105211124: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     1107208644: {
       name: 'Hakowanie planety'
+    },
+    1120584691: {
+      name: 'Misja ratunkowa'
     },
     1129066976: {
       name: 'Nocny szturm: Piramidion'
@@ -7541,8 +8891,11 @@ export const DestinyActivityDefinition = {
     1164772243: {
       name: 'Misja ratunkowa'
     },
+    1175770231: {
+      name: 'Wrota'
+    },
     1206154103: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     1207505828: {
       name: 'ZADANIE: Handlarz bronią'
@@ -7557,16 +8910,22 @@ export const DestinyActivityDefinition = {
       name: 'Przywłaszczenie'
     },
     1249965655: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     1250426564: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     1254990192: {
       name: 'Wielkie pole rażenia'
     },
     1265390366: {
       name: 'Słaby odbiór'
+    },
+    1278641935: {
+      name: 'Świat ogrodów'
+    },
+    1279862229: {
+      name: 'Błąd w systemie'
     },
     1289867188: {
       name: 'Niezłomność'
@@ -7577,6 +8936,9 @@ export const DestinyActivityDefinition = {
     1309646866: {
       name: 'Farma'
     },
+    1310854805: {
+      name: 'Jazgot'
+    },
     1331268141: {
       name: 'Misja badawcza'
     },
@@ -7584,13 +8946,19 @@ export const DestinyActivityDefinition = {
       name: 'Nocny szturm: Katastrofa Exodusu'
     },
     1375839088: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     1412142789: {
       name: ''
     },
     1416597166: {
       name: 'Popyt i podaż'
+    },
+    1418217191: {
+      name: 'Hen, wysoko (heroiczne)'
+    },
+    1426391278: {
+      name: 'Pamięć wewnętrzna'
     },
     1428050875: {
       name: 'Mój kapitanie'
@@ -7613,14 +8981,20 @@ export const DestinyActivityDefinition = {
     1498466193: {
       name: 'Misja ratunkowa'
     },
+    1512980468: {
+      name: 'Wrota'
+    },
     1521232506: {
-      name: '###Destiny.CLASSIFIED_NAME###'
+      name: 'Tajne'
     },
     1525633702: {
       name: 'Misja ratunkowa'
     },
     1536764325: {
       name: 'Misja badawcza'
+    },
+    1549614516: {
+      name: 'Katastrofa Exodusu'
     },
     1557641249: {
       name: 'Misja ratunkowa'
@@ -7631,8 +9005,14 @@ export const DestinyActivityDefinition = {
     1568750156: {
       name: 'Farma'
     },
+    1570598249: {
+      name: 'Goniec'
+    },
     1581219251: {
       name: 'Misja badawcza'
+    },
+    1603374112: {
+      name: 'Piramidion'
     },
     1614692057: {
       name: 'Misja ratunkowa'
@@ -7650,13 +9030,22 @@ export const DestinyActivityDefinition = {
       name: 'Lewiatan'
     },
     1685237649: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     1699948563: {
       name: 'Lewiatan'
     },
     1720510574: {
       name: 'Twierdza'
+    },
+    1725302079: {
+      name: 'Hen, wysoko'
+    },
+    1740310101: {
+      name: 'Błąd w systemie (heroiczne)'
+    },
+    1755484011: {
+      name: 'Tajne'
     },
     1756055546: {
       name: 'Misja ratunkowa'
@@ -7668,7 +9057,7 @@ export const DestinyActivityDefinition = {
       name: 'Odległy brzeg'
     },
     1778450722: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     1786054751: {
       name: 'Premedytacja'
@@ -7679,6 +9068,12 @@ export const DestinyActivityDefinition = {
     1792985204: {
       name: 'Nocny szturm: Katastrofa Exodusu'
     },
+    1802930364: {
+      name: 'Matecznik czerwi'
+    },
+    1823921651: {
+      name: 'Hen, wysoko'
+    },
     1824067376: {
       name: 'Szał za kółkiem'
     },
@@ -7688,11 +9083,14 @@ export const DestinyActivityDefinition = {
     1863334927: {
       name: 'Nocny szturm: Pieśń Savathûn'
     },
+    1874578888: {
+      name: 'Błąd w systemie (heroiczne)'
+    },
     1875726950: {
       name: 'Lewiatan'
     },
     1949546348: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     1952521609: {
       name: 'Odłamek Wędrowca'
@@ -7715,11 +9113,14 @@ export const DestinyActivityDefinition = {
     1984315274: {
       name: 'Szturmy Straży Przedniej'
     },
+    1987624188: {
+      name: 'Hen, wysoko (heroiczne)'
+    },
     1988701745: {
       name: 'Odwet'
     },
     2001433484: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     2014552458: {
       name: 'Żelazna Chorągiew – supremacja'
@@ -7727,11 +9128,23 @@ export const DestinyActivityDefinition = {
     2025057095: {
       name: 'Misja bojowa'
     },
+    2026037412: {
+      name: 'Playlista heroicznych szturmów'
+    },
     2033669713: {
       name: 'Oszczep-4'
     },
+    2046332536: {
+      name: 'Nocny szturm: Drzewo prawdopodobieństwa'
+    },
     2052289205: {
       name: 'Eksplozja'
+    },
+    2056035210: {
+      name: 'Tajne'
+    },
+    2067233851: {
+      name: 'Nawet w Ciemności'
     },
     2079994698: {
       name: 'Misja badawcza'
@@ -7739,11 +9152,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: 'Handlarz bronią'
     },
+    2081576589: {
+      name: 'Wypalenie'
+    },
     2113712124: {
       name: 'Świętokradztwo'
     },
     2151274060: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
+    },
+    2164432138: {
+      name: 'Lewiatan, Pożeracz Światów'
     },
     2174556965: {
       name: 'Wrobieni'
@@ -7752,10 +9171,13 @@ export const DestinyActivityDefinition = {
       name: 'Farma'
     },
     2184866967: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     2187073261: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
+    },
+    2199986157: {
+      name: 'Porwanie'
     },
     2231840083: {
       name: 'Syreni Śpiew'
@@ -7778,11 +9200,17 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: 'Farma'
     },
+    2276204547: {
+      name: 'Omega'
+    },
+    2279197206: {
+      name: 'Zabójcza próba'
+    },
     2287222467: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     2288260902: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     2291549972: {
       name: 'Wzmocnienie!'
@@ -7793,23 +9221,41 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: 'Misja badawcza'
     },
+    2307090074: {
+      name: 'Sygnał świetlny'
+    },
     2318812547: {
       name: 'Piramidion'
     },
     2319065780: {
       name: 'Żelazna Chorągiew – starcie'
     },
+    2322829199: {
+      name: 'Nocny szturm: Świat ogrodów'
+    },
     2336998357: {
       name: 'Długa rozgrywka'
     },
+    2351745587: {
+      name: 'Wrota'
+    },
     2379494367: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
+    },
+    2416546450: {
+      name: 'Nocny szturm: Drzewo prawdopodobieństwa'
+    },
+    2417088417: {
+      name: 'Pacyfika'
     },
     2420240009: {
       name: 'Misja ratunkowa'
     },
+    2444890541: {
+      name: 'Karmazynowe Dni'
+    },
     2445164291: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     2449714930: {
       name: 'Lewiatan'
@@ -7830,7 +9276,7 @@ export const DestinyActivityDefinition = {
       name: 'Bezkresna Kotlina'
     },
     2519564410: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     2536491635: {
       name: 'Misja badawcza'
@@ -7860,10 +9306,10 @@ export const DestinyActivityDefinition = {
       name: 'Misja badawcza'
     },
     2610112492: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     2619236227: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     2629975203: {
       name: 'Misja bojowa'
@@ -7875,7 +9321,7 @@ export const DestinyActivityDefinition = {
       name: 'Sześć'
     },
     2651851341: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     2665134323: {
       name: 'Zwolnienie'
@@ -7883,8 +9329,17 @@ export const DestinyActivityDefinition = {
     2667533713: {
       name: 'Wostok'
     },
+    2675435236: {
+      name: 'Błąd w systemie'
+    },
+    2678510381: {
+      name: 'Drzewo prawdopodobieństwa'
+    },
     2684479494: {
       name: 'Misja ratunkowa'
+    },
+    2688061647: {
+      name: 'Nocny szturm: Świat ogrodów'
     },
     2693136600: {
       name: 'Lewiatan'
@@ -7917,10 +9372,10 @@ export const DestinyActivityDefinition = {
       name: ''
     },
     2768347363: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     2773222353: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     2776929937: {
       name: 'Diagnoza dyferencyjna'
@@ -7934,17 +9389,20 @@ export const DestinyActivityDefinition = {
     2798856614: {
       name: 'Misja badawcza'
     },
-    2830345500: {
-      name: 'Powrót do domu'
-    },
     2846775197: {
       name: 'Misja bojowa'
+    },
+    2867288098: {
+      name: 'Tajne'
     },
     2908287325: {
       name: 'Misja badawcza'
     },
     2926767881: {
       name: 'Zemsta'
+    },
+    2934103434: {
+      name: 'Tajne'
     },
     2949941834: {
       name: 'Nieoczekiwani goście'
@@ -7955,20 +9413,26 @@ export const DestinyActivityDefinition = {
     3002511278: {
       name: 'Mroczny sojusz'
     },
+    3011963288: {
+      name: 'Ozyrys – szybka gra'
+    },
     3026637018: {
       name: 'Misja badawcza'
     },
     3038694763: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     3049122128: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     3050465729: {
       name: 'Nocny szturm: Odwrócona Iglica'
     },
     3062197616: {
       name: 'Rywalizacja'
+    },
+    3089205900: {
+      name: 'Lewiatan, Pożeracz Światów'
     },
     3105090879: {
       name: 'Adieu'
@@ -7994,6 +9458,12 @@ export const DestinyActivityDefinition = {
     3173130826: {
       name: 'Misja bojowa'
     },
+    3191123858: {
+      name: 'Pieśń Savathûn'
+    },
+    3206026167: {
+      name: 'Wrota'
+    },
     3208779612: {
       name: 'Misja ratunkowa'
     },
@@ -8003,11 +9473,20 @@ export const DestinyActivityDefinition = {
     3211568383: {
       name: 'Syreni Śpiew'
     },
+    3215844014: {
+      name: 'Medytacja: „Omega”'
+    },
+    3226632017: {
+      name: 'Medytacja: „Zabójcza próba”'
+    },
     3231065327: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     3243161126: {
       name: 'Szybka gra'
+    },
+    3248193378: {
+      name: 'Hen, wysoko (heroiczne)'
     },
     3268684190: {
       name: 'Misja ratunkowa'
@@ -8024,6 +9503,12 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: 'Zaginiona załoga'
     },
+    3289842296: {
+      name: 'Klątwa Ozyrysa'
+    },
+    3292523719: {
+      name: 'Medytacja: „Wrota”'
+    },
     3298775062: {
       name: 'Misja badawcza'
     },
@@ -8032,6 +9517,9 @@ export const DestinyActivityDefinition = {
     },
     3304835347: {
       name: 'Wezwanie do domu'
+    },
+    3306366908: {
+      name: 'Promieniste Klify'
     },
     3336275007: {
       name: 'Medytacja: „Sześć”'
@@ -8047,6 +9535,12 @@ export const DestinyActivityDefinition = {
     },
     3368226533: {
       name: 'Nocny szturm: Odwrócona Iglica'
+    },
+    3370527053: {
+      name: 'Goniec (heroiczne)'
+    },
+    3376869257: {
+      name: 'Misja ratunkowa'
     },
     3379039897: {
       name: 'Misja ratunkowa'
@@ -8079,7 +9573,7 @@ export const DestinyActivityDefinition = {
       name: 'Wzrost napięcia'
     },
     3515770727: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     3580793473: {
       name: 'Medytacja: „1AU”'
@@ -8096,8 +9590,8 @@ export const DestinyActivityDefinition = {
     3631476566: {
       name: 'Farma'
     },
-    3634044339: {
-      name: 'Zwiastun aktywności'
+    3642412717: {
+      name: 'Medytacja: „Drzewo prawdopodobieństwa”'
     },
     3645117987: {
       name: 'Sąsiedzi z piekła rodem'
@@ -8113,9 +9607,6 @@ export const DestinyActivityDefinition = {
     },
     3669054326: {
       name: 'Misja ratunkowa'
-    },
-    3681513787: {
-      name: 'Szybka gra'
     },
     3688464794: {
       name: 'Znaczenie połączeń'
@@ -8142,10 +9633,10 @@ export const DestinyActivityDefinition = {
       name: 'Próby Dziewiątki'
     },
     3806583577: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     3834639884: {
-      name: 'Misja analizacyjna/n'
+      name: 'Misja analizacyjna'
     },
     3836086286: {
       name: 'Nieoczekiwani goście'
@@ -8162,8 +9653,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: 'Wieża'
     },
+    3906001398: {
+      name: 'Ozyrys – rywalizacja'
+    },
     3916343513: {
       name: 'Lewiatan'
+    },
+    3920569453: {
+      name: 'Błąd w systemie (heroiczne)'
     },
     3920643231: {
       name: 'Nocny szturm: Handlarz bronią'
@@ -8173,9 +9670,6 @@ export const DestinyActivityDefinition = {
     },
     3966792859: {
       name: 'Nessus, niestabilny centaur'
-    },
-    3969712481: {
-      name: 'Zwiastun fabularny'
     },
     3978357488: {
       name: 'Misja ratunkowa'
@@ -8205,7 +9699,10 @@ export const DestinyActivityDefinition = {
       name: 'Misja ratunkowa'
     },
     4103844069: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
+    },
+    4119522487: {
+      name: 'Medytacja: „Pamięć wewnętrzna”'
     },
     4159221189: {
       name: 'Io'
@@ -8216,17 +9713,11 @@ export const DestinyActivityDefinition = {
     4174103238: {
       name: 'Misja ratunkowa'
     },
-    4185964042: {
-      name: 'Odwrócona Iglica'
-    },
     4209774794: {
       name: 'Misja ratunkowa'
     },
     4216926874: {
       name: 'Misja ratunkowa'
-    },
-    4221067410: {
-      name: 'Śródmieście'
     },
     4231544111: {
       name: 'Misja badawcza'
@@ -8234,14 +9725,11 @@ export const DestinyActivityDefinition = {
     4239233351: {
       name: 'Medytacja: „Iskra”'
     },
-    4246755813: {
-      name: 'Rywalizacja'
-    },
     4254776501: {
       name: 'Misja ratunkowa'
     },
     4283649349: {
-      name: 'Misja związana z zabójstwem/n'
+      name: 'Misja likwidacyjna'
     },
     4291922223: {
       name: 'Nadzieja'
@@ -8249,19 +9737,16 @@ export const DestinyActivityDefinition = {
   },
   ptbr: {
     19982784: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     30240416: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     37050217: {
       name: 'Missão de pesquisa'
     },
-    38244167: {
-      name: 'Javelin-4'
-    },
     51408141: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     53954174: {
       name: 'Antiantiaéreas'
@@ -8284,16 +9769,19 @@ export const DestinyActivityDefinition = {
       name: 'Leviatã'
     },
     104342360: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     116352029: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     122988657: {
       name: 'Legião Vermelha, Óleo Preto'
     },
     143647473: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
+    },
+    145136689: {
+      name: 'Missão de combate'
     },
     145302664: {
       name: 'Anoitecer: O Traficante de Armas'
@@ -8302,40 +9790,43 @@ export const DestinyActivityDefinition = {
       name: 'Uma Nova Fronteira'
     },
     175598161: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     189324537: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     197670945: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     204298081: {
       name: 'Missão de análise'
     },
     248066530: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     255819671: {
       name: 'Fúria'
     },
     261349035: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     286324446: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
+    },
+    286562305: {
+      name: 'O Pináculo Invertido'
     },
     287649202: {
       name: 'Leviatã'
     },
     293858112: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     298747401: {
       name: 'Missão de pesquisa'
     },
     298793060: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     313572698: {
       name: 'Fragmento do Viajante'
@@ -8350,10 +9841,13 @@ export const DestinyActivityDefinition = {
       name: 'O Pináculo Invertido'
     },
     355984230: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     359488722: {
       name: 'Hackear o Planetoide'
+    },
+    373475104: {
+      name: 'Anoitecer: Um Planeta Fértil'
     },
     374818561: {
       name: 'Descanso do Imperador'
@@ -8362,10 +9856,7 @@ export const DestinyActivityDefinition = {
       name: 'Fragmento do Viajante'
     },
     387171436: {
-      name: 'Missão de Coleta'
-    },
-    387487590: {
-      name: 'Reservar'
+      name: 'Missão de coleta'
     },
     388289443: {
       name: 'Missão de pesquisa'
@@ -8377,13 +9868,16 @@ export const DestinyActivityDefinition = {
       name: 'Leviatã'
     },
     429361491: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     435989417: {
       name: 'Missão de análise'
     },
+    442671778: {
+      name: 'O Traficante de Armas'
+    },
     444087412: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     445417088: {
     },
@@ -8397,10 +9891,7 @@ export const DestinyActivityDefinition = {
       name: 'Escolhido'
     },
     474380713: {
-      name: 'Missão de Coleta'
-    },
-    482312911: {
-      name: 'A Chácara'
+      name: 'Missão de coleta'
     },
     539897061: {
       name: 'Revertendo a Polaridade'
@@ -8422,9 +9913,6 @@ export const DestinyActivityDefinition = {
     585071442: {
       name: 'Anoitecer: Canção de Savathûn'
     },
-    586390928: {
-      name: 'De Volta ao Lar'
-    },
     601540706: {
       name: 'Anoitecer: O Traficante de Armas'
     },
@@ -8443,26 +9931,38 @@ export const DestinyActivityDefinition = {
     652598202: {
       name: 'Ravina da Legião'
     },
+    656703508: {
+      name: 'Um Planeta Fértil'
+    },
+    661855681: {
+      name: 'Lago das Sombras'
+    },
     667604912: {
       name: 'Meditação: "Enrolado"'
     },
     671904429: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
+    },
+    689927878: {
+      name: 'Um Planeta Fértil'
     },
     703311712: {
       name: 'Fragmento do Viajante'
     },
     715306877: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     719906507: {
       name: 'O Terceiro Pináculo'
     },
+    723733266: {
+      name: 'O Fugitivo (Heroico)'
+    },
     743100125: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     750649238: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     757116822: {
       name: 'Leviatã'
@@ -8471,7 +9971,7 @@ export const DestinyActivityDefinition = {
       name: 'Os Penhascos Mortos'
     },
     782175145: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     782290869: {
       name: 'Missão de pesquisa'
@@ -8480,13 +9980,22 @@ export const DestinyActivityDefinition = {
       name: 'Ladrão de Ladrões'
     },
     798143184: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     808931822: {
       name: 'Prometeu pós-moderno'
     },
+    809170886: {
+      name: 'Leviatã, Devorador de Mundos'
+    },
+    834864522: {
+      name: 'Maldição de Osíris'
+    },
     837763871: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
+    },
+    840678113: {
+      name: 'Árvore das Probabilidades'
     },
     849242583: {
       name: 'Missão de análise'
@@ -8494,11 +10003,14 @@ export const DestinyActivityDefinition = {
     880665770: {
       name: 'Missão de pesquisa'
     },
+    903584917: {
+      name: 'Caos'
+    },
     919252154: {
       name: 'Aliança Sombria'
     },
     926012363: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     926940962: {
       name: 'Anoitecer: O Pyramidion'
@@ -8516,52 +10028,76 @@ export const DestinyActivityDefinition = {
       name: 'Conversa Profunda'
     },
     964196803: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     969385987: {
       name: 'Iluminando a Escuridão'
     },
+    989294159: {
+      name: 'Anoitecer: Árvore das Probabilidades'
+    },
+    991410404: {
+      name: 'Meditação: "Sequestro"'
+    },
     993152361: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
+    },
+    1002145272: {
+      name: 'Árvore das Probabilidades'
     },
     1019362992: {
       name: 'Meditação: "De Volta ao Lar"'
+    },
+    1034805570: {
+      name: 'Meditação: "Um Planeta Fértil"'
     },
     1035135049: {
       name: 'O Pyramidion'
     },
     1038710420: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
+    },
+    1049899965: {
+      name: 'Além do Infinito'
     },
     1053141615: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
+    },
+    1057017675: {
+      name: 'O Portal'
     },
     1063969232: {
       name: 'Convite do Imperador'
+    },
+    1073289414: {
+      name: 'Zona de Aterrissagem'
     },
     1075152813: {
       name: 'Zona Morta Europeia'
     },
     1076851943: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     1085523978: {
       name: 'Missão de pesquisa'
     },
     1090267699: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     1101792305: {
       name: 'Canção de Savathûn'
     },
     1102824603: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     1105211124: {
       name: 'Missão de análise'
     },
     1107208644: {
       name: 'Hackear o Planetoide'
+    },
+    1120584691: {
+      name: 'Missão de coleta'
     },
     1129066976: {
       name: 'Anoitecer: O Pyramidion'
@@ -8570,10 +10106,13 @@ export const DestinyActivityDefinition = {
       name: 'Sinal Ruim'
     },
     1164772243: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
+    },
+    1175770231: {
+      name: 'O Portal'
     },
     1206154103: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     1207505828: {
       name: 'JORNADA: O Traficante de Armas'
@@ -8591,13 +10130,19 @@ export const DestinyActivityDefinition = {
       name: 'Missão de análise'
     },
     1250426564: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     1254990192: {
       name: 'Nenhuma Distância é Segura'
     },
     1265390366: {
       name: 'Sinal Ruim'
+    },
+    1278641935: {
+      name: 'Um Planeta Fértil'
+    },
+    1279862229: {
+      name: 'Bug no Sistema'
     },
     1289867188: {
       name: 'Indestrutível'
@@ -8607,6 +10152,9 @@ export const DestinyActivityDefinition = {
     },
     1309646866: {
       name: 'A Chácara'
+    },
+    1310854805: {
+      name: 'Briga'
     },
     1331268141: {
       name: 'Missão de pesquisa'
@@ -8623,11 +10171,17 @@ export const DestinyActivityDefinition = {
     1416597166: {
       name: 'Oferta e Procura'
     },
+    1418217191: {
+      name: 'Acima e Acima (Heroico)'
+    },
+    1426391278: {
+      name: 'Armazenamento Profundo'
+    },
     1428050875: {
       name: 'Meu Capitão'
     },
     1451946951: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     1466550401: {
       name: 'Velocidade Máxima'
@@ -8642,19 +10196,25 @@ export const DestinyActivityDefinition = {
       name: 'Lago das Sombras'
     },
     1498466193: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
+    },
+    1512980468: {
+      name: 'O Portal'
     },
     1521232506: {
       name: 'Confidencial'
     },
     1525633702: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     1536764325: {
       name: 'Missão de pesquisa'
     },
+    1549614516: {
+      name: 'Acidente da Êxodo'
+    },
     1557641249: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     1563393783: {
       name: 'Acidente da Êxodo'
@@ -8662,11 +10222,17 @@ export const DestinyActivityDefinition = {
     1568750156: {
       name: 'A Chácara'
     },
+    1570598249: {
+      name: 'O Fugitivo'
+    },
     1581219251: {
       name: 'Missão de pesquisa'
     },
+    1603374112: {
+      name: 'O Pyramidion'
+    },
     1614692057: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     1646219807: {
       name: 'Furto'
@@ -8681,7 +10247,7 @@ export const DestinyActivityDefinition = {
       name: 'Leviatã'
     },
     1685237649: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     1699948563: {
       name: 'Leviatã'
@@ -8689,8 +10255,17 @@ export const DestinyActivityDefinition = {
     1720510574: {
       name: 'A Fortaleza'
     },
+    1725302079: {
+      name: 'Acima e Acima'
+    },
+    1740310101: {
+      name: 'Bug no Sistema (Heroico)'
+    },
+    1755484011: {
+      name: 'Confidencial'
+    },
     1756055546: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     1773400654: {
       name: 'Convite do Imperador'
@@ -8710,6 +10285,12 @@ export const DestinyActivityDefinition = {
     1792985204: {
       name: 'Anoitecer: Acidente da Êxodo'
     },
+    1802930364: {
+      name: 'Paraíso do Verme'
+    },
+    1823921651: {
+      name: 'Acima e Acima'
+    },
     1824067376: {
       name: 'Fúria motorizada'
     },
@@ -8719,11 +10300,14 @@ export const DestinyActivityDefinition = {
     1863334927: {
       name: 'Anoitecer: Canção de Savathûn'
     },
+    1874578888: {
+      name: 'Bug no Sistema (Heroico)'
+    },
     1875726950: {
       name: 'Leviatã'
     },
     1949546348: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     1952521609: {
       name: 'Fragmento do Viajante'
@@ -8746,23 +10330,38 @@ export const DestinyActivityDefinition = {
     1984315274: {
       name: 'Assaltos da Vanguarda'
     },
+    1987624188: {
+      name: 'Acima e Acima (Heroico)'
+    },
     1988701745: {
       name: 'Retribuição'
     },
     2001433484: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     2014552458: {
       name: 'Bandeira de Ferro – Supremacia'
     },
     2025057095: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
+    },
+    2026037412: {
+      name: 'Lista de Assaltos Heroicos'
     },
     2033669713: {
       name: 'Javelin-4'
     },
+    2046332536: {
+      name: 'Anoitecer: Árvore das Probabilidades'
+    },
     2052289205: {
       name: 'Combustão'
+    },
+    2056035210: {
+      name: 'Confidencial'
+    },
+    2067233851: {
+      name: 'Nem Mesmo a Treva'
     },
     2079994698: {
       name: 'Missão de pesquisa'
@@ -8770,11 +10369,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: 'O Traficante de Armas'
     },
+    2081576589: {
+      name: 'Combusto'
+    },
     2113712124: {
       name: 'Sacrilégio'
     },
     2151274060: {
       name: 'Missão de análise'
+    },
+    2164432138: {
+      name: 'Leviatã, Devorador de Mundos'
     },
     2174556965: {
       name: 'Plano Elaborado'
@@ -8788,6 +10393,9 @@ export const DestinyActivityDefinition = {
     2187073261: {
       name: 'Missão de análise'
     },
+    2199986157: {
+      name: 'Sequestro'
+    },
     2231840083: {
       name: 'Canto da Sereia'
     },
@@ -8795,7 +10403,7 @@ export const DestinyActivityDefinition = {
       name: 'Eternidade'
     },
     2243336789: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     2250935166: {
       name: 'Imortal'
@@ -8809,11 +10417,17 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: 'A Chácara'
     },
+    2276204547: {
+      name: 'Ômega'
+    },
+    2279197206: {
+      name: 'Um Teste Fatal'
+    },
     2287222467: {
       name: 'Missão de análise'
     },
     2288260902: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     2291549972: {
       name: 'Fortificação'
@@ -8824,23 +10438,41 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: 'Missão de pesquisa'
     },
+    2307090074: {
+      name: 'Sinal da Luz'
+    },
     2318812547: {
       name: 'O Pyramidion'
     },
     2319065780: {
       name: 'Bandeira de Ferro – Enfrentamento'
     },
+    2322829199: {
+      name: 'Anoitecer: Um Planeta Fértil'
+    },
     2336998357: {
       name: 'Estratégia de Longo Prazo'
+    },
+    2351745587: {
+      name: 'O Portal'
     },
     2379494367: {
       name: 'Missão de análise'
     },
+    2416546450: {
+      name: 'Anoitecer: Árvore das Probabilidades'
+    },
+    2417088417: {
+      name: 'Pacífica'
+    },
     2420240009: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
+    },
+    2444890541: {
+      name: 'Dias Carmesins'
     },
     2445164291: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     2449714930: {
       name: 'Leviatã'
@@ -8861,7 +10493,7 @@ export const DestinyActivityDefinition = {
       name: 'Vale Sem Fim'
     },
     2519564410: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     2536491635: {
       name: 'Missão de pesquisa'
@@ -8876,13 +10508,13 @@ export const DestinyActivityDefinition = {
       name: 'Missão de pesquisa'
     },
     2573702057: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     2574607799: {
       name: 'Péssimos Vizinhos'
     },
     2575990417: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     2580713007: {
       name: 'Missão de pesquisa'
@@ -8897,10 +10529,10 @@ export const DestinyActivityDefinition = {
       name: 'Missão de análise'
     },
     2629975203: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     2629998776: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     2642769170: {
       name: 'Seis'
@@ -8914,8 +10546,17 @@ export const DestinyActivityDefinition = {
     2667533713: {
       name: 'Vostok'
     },
+    2675435236: {
+      name: 'Bug no Sistema'
+    },
+    2678510381: {
+      name: 'Árvore das Probabilidades'
+    },
     2684479494: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
+    },
+    2688061647: {
+      name: 'Anoitecer: Um Planeta Fértil'
     },
     2693136600: {
       name: 'Leviatã'
@@ -8948,7 +10589,7 @@ export const DestinyActivityDefinition = {
       name: ''
     },
     2768347363: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     2773222353: {
       name: 'Missão de análise'
@@ -8957,25 +10598,28 @@ export const DestinyActivityDefinition = {
       name: 'Diagnóstico Diferencial'
     },
     2782300570: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     2784803584: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     2798856614: {
       name: 'Missão de pesquisa'
     },
-    2830345500: {
-      name: 'De Volta ao Lar'
-    },
     2846775197: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
+    },
+    2867288098: {
+      name: 'Confidencial'
     },
     2908287325: {
       name: 'Missão de pesquisa'
     },
     2926767881: {
       name: 'Retaliação'
+    },
+    2934103434: {
+      name: 'Confidencial'
     },
     2949941834: {
       name: 'Visitas inesperadas'
@@ -8986,11 +10630,14 @@ export const DestinyActivityDefinition = {
     3002511278: {
       name: 'Aliança Sombria'
     },
+    3011963288: {
+      name: 'Osíris – Jogo Rápido'
+    },
     3026637018: {
       name: 'Missão de pesquisa'
     },
     3038694763: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     3049122128: {
       name: 'Missão de análise'
@@ -9000,6 +10647,9 @@ export const DestinyActivityDefinition = {
     },
     3062197616: {
       name: 'Competitivo'
+    },
+    3089205900: {
+      name: 'Leviatã, Devorador de Mundos'
     },
     3105090879: {
       name: 'Adeus'
@@ -9023,16 +10673,28 @@ export const DestinyActivityDefinition = {
       name: 'Fragmento do Viajante'
     },
     3173130826: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
+    },
+    3191123858: {
+      name: 'Canção de Savathûn'
+    },
+    3206026167: {
+      name: 'O Portal'
     },
     3208779612: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     3211303924: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     3211568383: {
       name: 'Canto da Sereia'
+    },
+    3215844014: {
+      name: 'Meditação: "Ômega"'
+    },
+    3226632017: {
+      name: 'Meditação: "Um Teste Fatal"'
     },
     3231065327: {
       name: 'Missão de análise'
@@ -9040,8 +10702,11 @@ export const DestinyActivityDefinition = {
     3243161126: {
       name: 'Jogo Rápido'
     },
+    3248193378: {
+      name: 'Acima e Acima (Heroico)'
+    },
     3268684190: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     3272002712: {
       name: 'Esperança'
@@ -9055,20 +10720,29 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: 'Tripulação Perdida'
     },
+    3289842296: {
+      name: 'Maldição de Osíris'
+    },
+    3292523719: {
+      name: 'Meditação: "O Portal"'
+    },
     3298775062: {
       name: 'Missão de pesquisa'
     },
     3303685562: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     3304835347: {
       name: 'Chamando para Casa'
+    },
+    3306366908: {
+      name: 'Penhascos Radiantes'
     },
     3336275007: {
       name: 'Meditação: "Seis"'
     },
     3337731612: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     3346345105: {
       name: 'Tratamento Experimental'
@@ -9079,8 +10753,14 @@ export const DestinyActivityDefinition = {
     3368226533: {
       name: 'Anoitecer: O Pináculo Invertido'
     },
+    3370527053: {
+      name: 'O Fugitivo (Heroico)'
+    },
+    3376869257: {
+      name: 'Missão de coleta'
+    },
     3379039897: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     3410530777: {
       name: 'Ação Calculada'
@@ -9092,7 +10772,7 @@ export const DestinyActivityDefinition = {
       name: 'Leviatã'
     },
     3479544154: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     3481058226: {
       name: 'Missão de pesquisa'
@@ -9122,13 +10802,13 @@ export const DestinyActivityDefinition = {
       name: 'Bandeira de Ferro – Controle'
     },
     3627094182: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     3631476566: {
       name: 'A Chácara'
     },
-    3634044339: {
-      name: 'Trailer de Atividades'
+    3642412717: {
+      name: 'Meditação: "Árvore das Probabilidades"'
     },
     3645117987: {
       name: 'Péssimos Vizinhos'
@@ -9143,10 +10823,7 @@ export const DestinyActivityDefinition = {
       name: 'Legião Vermelha, Óleo Preto'
     },
     3669054326: {
-      name: 'Missão de Coleta'
-    },
-    3681513787: {
-      name: 'Jogo Rápido'
+      name: 'Missão de coleta'
     },
     3688464794: {
       name: 'É Importante Manter o Contato'
@@ -9167,13 +10844,13 @@ export const DestinyActivityDefinition = {
       name: 'Blecaute'
     },
     3792746061: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     3799743268: {
       name: 'Desafios dos Nove'
     },
     3806583577: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     3834639884: {
       name: 'Missão de análise'
@@ -9193,8 +10870,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: 'Torre'
     },
+    3906001398: {
+      name: 'Osíris – Competitivo'
+    },
     3916343513: {
       name: 'Leviatã'
+    },
+    3920569453: {
+      name: 'Bug no Sistema (Heroico)'
     },
     3920643231: {
       name: 'Anoitecer: O Traficante de Armas'
@@ -9205,11 +10888,8 @@ export const DestinyActivityDefinition = {
     3966792859: {
       name: 'Nesso, Centauro Instável'
     },
-    3969712481: {
-      name: 'Trailer Narrativo'
-    },
     3978357488: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     3982474534: {
       name: 'Retaliação'
@@ -9224,7 +10904,7 @@ export const DestinyActivityDefinition = {
       name: 'Missão de pesquisa'
     },
     4047570705: {
-      name: 'Missão de Combate'
+      name: 'Missão de combate'
     },
     4050886070: {
       name: 'Missão de pesquisa'
@@ -9233,10 +10913,13 @@ export const DestinyActivityDefinition = {
       name: 'Anoitecer: O Pináculo Invertido'
     },
     4095207117: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     4103844069: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
+    },
+    4119522487: {
+      name: 'Meditação: "Armazenamento Profundo"'
     },
     4159221189: {
       name: 'Io'
@@ -9245,19 +10928,13 @@ export const DestinyActivityDefinition = {
       name: 'Titã'
     },
     4174103238: {
-      name: 'Missão de Coleta'
-    },
-    4185964042: {
-      name: 'O Pináculo Invertido'
+      name: 'Missão de coleta'
     },
     4209774794: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     4216926874: {
-      name: 'Missão de Coleta'
-    },
-    4221067410: {
-      name: 'Centro da Cidade'
+      name: 'Missão de coleta'
     },
     4231544111: {
       name: 'Missão de pesquisa'
@@ -9265,14 +10942,11 @@ export const DestinyActivityDefinition = {
     4239233351: {
       name: 'Meditação: "Faísca"'
     },
-    4246755813: {
-      name: 'Competitivo'
-    },
     4254776501: {
-      name: 'Missão de Coleta'
+      name: 'Missão de coleta'
     },
     4283649349: {
-      name: 'Missão de Assassinato'
+      name: 'Missão de assassinato'
     },
     4291922223: {
       name: 'Esperança'
@@ -9287,9 +10961,6 @@ export const DestinyActivityDefinition = {
     },
     37050217: {
       name: 'Разведывательная миссия'
-    },
-    38244167: {
-      name: 'Джевелин-4'
     },
     51408141: {
       name: 'Миссия по спасению'
@@ -9326,6 +10997,9 @@ export const DestinyActivityDefinition = {
     143647473: {
       name: 'Миссия по спасению'
     },
+    145136689: {
+      name: 'Боевая миссия'
+    },
     145302664: {
       name: 'Сумрачный налет: "Торговец оружием"'
     },
@@ -9355,6 +11029,9 @@ export const DestinyActivityDefinition = {
     },
     286324446: {
       name: 'Миссия по спасению'
+    },
+    286562305: {
+      name: 'Вывернутый шпиль'
     },
     287649202: {
       name: 'Левиафан'
@@ -9386,6 +11063,9 @@ export const DestinyActivityDefinition = {
     359488722: {
       name: 'Взломать планету'
     },
+    373475104: {
+      name: 'Сумрачный налет: "Сад"'
+    },
     374818561: {
       name: 'Отсрочка Императора'
     },
@@ -9394,9 +11074,6 @@ export const DestinyActivityDefinition = {
     },
     387171436: {
       name: 'Миссия по спасению'
-    },
-    387487590: {
-      name: 'Оформить предзаказ'
     },
     388289443: {
       name: 'Разведывательная миссия'
@@ -9412,6 +11089,9 @@ export const DestinyActivityDefinition = {
     },
     435989417: {
       name: 'Аналитическая миссия'
+    },
+    442671778: {
+      name: 'Торговец оружием'
     },
     444087412: {
       name: 'Боевая миссия'
@@ -9429,9 +11109,6 @@ export const DestinyActivityDefinition = {
     },
     474380713: {
       name: 'Миссия по спасению'
-    },
-    482312911: {
-      name: 'Ферма'
     },
     539897061: {
       name: 'Смена полярности'
@@ -9451,10 +11128,7 @@ export const DestinyActivityDefinition = {
       name: 'Разведывательная миссия'
     },
     585071442: {
-      name: 'Сумрачный налет: Песнь Саватуна'
-    },
-    586390928: {
-      name: 'Возвращение домой'
+      name: 'Сумрачный налет: Песнь Саватун'
     },
     601540706: {
       name: 'Сумрачный налет: "Торговец оружием"'
@@ -9466,7 +11140,7 @@ export const DestinyActivityDefinition = {
       name: 'Скалолаз'
     },
     642256373: {
-      name: 'Сумрачный налет: Место крушения "Исхода"'
+      name: 'Сумрачный налет: Крушение "Исхода"'
     },
     642277473: {
       name: 'Сумрачный налет: Пирамидион'
@@ -9474,11 +11148,20 @@ export const DestinyActivityDefinition = {
     652598202: {
       name: 'Ущелье Легиона'
     },
+    656703508: {
+      name: 'Сад'
+    },
+    661855681: {
+      name: 'Озеро теней'
+    },
     667604912: {
       name: 'Медитация: "В петле"'
     },
     671904429: {
       name: 'Миссия по спасению'
+    },
+    689927878: {
+      name: 'Сад'
     },
     703311712: {
       name: 'Осколок Странника'
@@ -9488,6 +11171,9 @@ export const DestinyActivityDefinition = {
     },
     719906507: {
       name: 'Третий шпиль'
+    },
+    723733266: {
+      name: 'Бегун (Героическое)'
     },
     743100125: {
       name: 'Миссия по спасению'
@@ -9516,14 +11202,26 @@ export const DestinyActivityDefinition = {
     808931822: {
       name: 'Прометей эпохи постмодерна'
     },
+    809170886: {
+      name: 'Левиафан, пожиратель миров'
+    },
+    834864522: {
+      name: 'Проклятие Осириса'
+    },
     837763871: {
       name: 'Миссия по спасению'
+    },
+    840678113: {
+      name: 'Древо вероятностей'
     },
     849242583: {
       name: 'Аналитическая миссия'
     },
     880665770: {
       name: 'Разведывательная миссия'
+    },
+    903584917: {
+      name: 'Хаос'
     },
     919252154: {
       name: 'Темный союз'
@@ -9538,7 +11236,7 @@ export const DestinyActivityDefinition = {
       name: 'Несломленный'
     },
     940394831: {
-      name: 'ПОРУЧЕНИЕ: Место крушения "Исхода"'
+      name: 'ПОРУЧЕНИЕ: Крушение "Исхода"'
     },
     955852466: {
       name: '1 а.е.д.'
@@ -9552,11 +11250,23 @@ export const DestinyActivityDefinition = {
     969385987: {
       name: 'Свет во тьме'
     },
+    989294159: {
+      name: 'Сумрачный налет: "Древо вероятностей"'
+    },
+    991410404: {
+      name: 'Медитация: "Похищение"'
+    },
     993152361: {
       name: 'Миссия по спасению'
     },
+    1002145272: {
+      name: 'Древо вероятностей'
+    },
     1019362992: {
       name: 'Медитация: "Возвращение домой"'
+    },
+    1034805570: {
+      name: 'Медитация: "Сад"'
     },
     1035135049: {
       name: 'Пирамидион'
@@ -9564,11 +11274,20 @@ export const DestinyActivityDefinition = {
     1038710420: {
       name: 'Миссия по ликвидации'
     },
+    1049899965: {
+      name: 'Бесконечность не предел'
+    },
     1053141615: {
       name: 'Миссия по ликвидации'
     },
+    1057017675: {
+      name: 'Врата'
+    },
     1063969232: {
       name: 'Приглашение от императора'
+    },
+    1073289414: {
+      name: 'Зона высадки'
     },
     1075152813: {
       name: 'Европейская Мертвая зона'
@@ -9583,7 +11302,7 @@ export const DestinyActivityDefinition = {
       name: 'Миссия по ликвидации'
     },
     1101792305: {
-      name: 'Песнь Саватуна'
+      name: 'Песнь Саватун'
     },
     1102824603: {
       name: 'Миссия по ликвидации'
@@ -9594,6 +11313,9 @@ export const DestinyActivityDefinition = {
     1107208644: {
       name: 'Взломать планету'
     },
+    1120584691: {
+      name: 'Миссия по спасению'
+    },
     1129066976: {
       name: 'Сумрачный налет: Пирамидион'
     },
@@ -9602,6 +11324,9 @@ export const DestinyActivityDefinition = {
     },
     1164772243: {
       name: 'Миссия по спасению'
+    },
+    1175770231: {
+      name: 'Врата'
     },
     1206154103: {
       name: 'Миссия по ликвидации'
@@ -9630,6 +11355,12 @@ export const DestinyActivityDefinition = {
     1265390366: {
       name: 'Плохой прием'
     },
+    1278641935: {
+      name: 'Сад'
+    },
+    1279862229: {
+      name: 'Баг в системе'
+    },
     1289867188: {
       name: 'Неразрушимость'
     },
@@ -9639,11 +11370,14 @@ export const DestinyActivityDefinition = {
     1309646866: {
       name: 'Ферма'
     },
+    1310854805: {
+      name: 'Стычка'
+    },
     1331268141: {
       name: 'Разведывательная миссия'
     },
     1357019430: {
-      name: 'Сумрачный налет: Место крушения "Исхода"'
+      name: 'Сумрачный налет: Крушение "Исхода"'
     },
     1375839088: {
       name: 'Аналитическая миссия'
@@ -9653,6 +11387,12 @@ export const DestinyActivityDefinition = {
     },
     1416597166: {
       name: 'Спрос и предложение'
+    },
+    1418217191: {
+      name: 'Вверх и снова вверх (Героическое)'
+    },
+    1426391278: {
+      name: 'Глубокое хранилище'
     },
     1428050875: {
       name: 'Мой капитан'
@@ -9675,6 +11415,9 @@ export const DestinyActivityDefinition = {
     1498466193: {
       name: 'Миссия по спасению'
     },
+    1512980468: {
+      name: 'Врата'
+    },
     1521232506: {
       name: 'Засекречено'
     },
@@ -9684,17 +11427,26 @@ export const DestinyActivityDefinition = {
     1536764325: {
       name: 'Разведывательная миссия'
     },
+    1549614516: {
+      name: 'Крушение "Исхода"'
+    },
     1557641249: {
       name: 'Миссия по спасению'
     },
     1563393783: {
-      name: 'Место крушения "Исхода"'
+      name: 'Крушение "Исхода"'
     },
     1568750156: {
       name: 'Ферма'
     },
+    1570598249: {
+      name: 'Бегун'
+    },
     1581219251: {
       name: 'Разведывательная миссия'
+    },
+    1603374112: {
+      name: 'Пирамидион'
     },
     1614692057: {
       name: 'Миссия по спасению'
@@ -9720,6 +11472,15 @@ export const DestinyActivityDefinition = {
     1720510574: {
       name: 'Крепость'
     },
+    1725302079: {
+      name: 'Вверх и снова вверх'
+    },
+    1740310101: {
+      name: 'Баг в системе (Героическое)'
+    },
+    1755484011: {
+      name: 'Засекречено'
+    },
     1756055546: {
       name: 'Миссия по спасению'
     },
@@ -9739,7 +11500,13 @@ export const DestinyActivityDefinition = {
       name: 'Осколок Странника'
     },
     1792985204: {
-      name: 'Сумрачный налет: Место крушения "Исхода"'
+      name: 'Сумрачный налет: Крушение "Исхода"'
+    },
+    1802930364: {
+      name: 'Червеприбежище'
+    },
+    1823921651: {
+      name: 'Вверх и снова вверх'
     },
     1824067376: {
       name: 'Дорожная ярость'
@@ -9748,7 +11515,10 @@ export const DestinyActivityDefinition = {
       name: 'Придется запачкать руки'
     },
     1863334927: {
-      name: 'Сумрачный налет: Песнь Саватуна'
+      name: 'Сумрачный налет: Песнь Саватун'
+    },
+    1874578888: {
+      name: 'Баг в системе (Героическое)'
     },
     1875726950: {
       name: 'Левиафан'
@@ -9769,13 +11539,16 @@ export const DestinyActivityDefinition = {
       name: 'Безопасной скорости нет'
     },
     1975064760: {
-      name: 'Сумрачный налет: Песнь Саватуна'
+      name: 'Сумрачный налет: Песнь Саватун'
     },
     1981289329: {
       name: 'Осада "Исхода"'
     },
     1984315274: {
-      name: '"Авангард" наносит удар'
+      name: 'Налеты "Авангарда"'
+    },
+    1987624188: {
+      name: 'Вверх и снова вверх (Героическое)'
     },
     1988701745: {
       name: 'Возмездие'
@@ -9789,11 +11562,23 @@ export const DestinyActivityDefinition = {
     2025057095: {
       name: 'Боевая миссия'
     },
+    2026037412: {
+      name: 'Плейлист героических налетов'
+    },
     2033669713: {
       name: '"Джевелин"-4'
     },
+    2046332536: {
+      name: 'Сумрачный налет: "Древо вероятностей"'
+    },
     2052289205: {
       name: 'Воспламенение'
+    },
+    2056035210: {
+      name: 'Засекречено'
+    },
+    2067233851: {
+      name: 'Тьма не властна'
     },
     2079994698: {
       name: 'Разведывательная миссия'
@@ -9801,11 +11586,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: 'Торговец оружием'
     },
+    2081576589: {
+      name: 'Пепелище'
+    },
     2113712124: {
       name: 'Святотатство'
     },
     2151274060: {
       name: 'Аналитическая миссия'
+    },
+    2164432138: {
+      name: 'Левиафан, пожиратель миров'
     },
     2174556965: {
       name: 'Подстава'
@@ -9818,6 +11609,9 @@ export const DestinyActivityDefinition = {
     },
     2187073261: {
       name: 'Аналитическая миссия'
+    },
+    2199986157: {
+      name: 'Похищение'
     },
     2231840083: {
       name: 'Песнь сирены'
@@ -9840,6 +11634,12 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: 'Ферма'
     },
+    2276204547: {
+      name: 'Омега'
+    },
+    2279197206: {
+      name: 'Смертельное испытание'
+    },
     2287222467: {
       name: 'Аналитическая миссия'
     },
@@ -9855,20 +11655,38 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: 'Разведывательная миссия'
     },
+    2307090074: {
+      name: 'Сигнальный свет'
+    },
     2318812547: {
       name: 'Пирамидион'
     },
     2319065780: {
       name: 'Железное знамя: столкновение'
     },
+    2322829199: {
+      name: 'Сумрачный налет: "Сад"'
+    },
     2336998357: {
       name: 'Долгая игра'
+    },
+    2351745587: {
+      name: 'Врата'
     },
     2379494367: {
       name: 'Аналитическая миссия'
     },
+    2416546450: {
+      name: 'Сумрачный налет: "Древо вероятностей"'
+    },
+    2417088417: {
+      name: 'Пасифика'
+    },
     2420240009: {
       name: 'Миссия по спасению'
+    },
+    2444890541: {
+      name: 'Багряные дни'
     },
     2445164291: {
       name: 'Миссия по ликвидации'
@@ -9945,8 +11763,17 @@ export const DestinyActivityDefinition = {
     2667533713: {
       name: 'Восток'
     },
+    2675435236: {
+      name: 'Баг в системе'
+    },
+    2678510381: {
+      name: 'Древо вероятностей'
+    },
     2684479494: {
       name: 'Миссия по спасению'
+    },
+    2688061647: {
+      name: 'Сумрачный налет: "Сад"'
     },
     2693136600: {
       name: 'Левиафан'
@@ -9996,17 +11823,20 @@ export const DestinyActivityDefinition = {
     2798856614: {
       name: 'Разведывательная миссия'
     },
-    2830345500: {
-      name: 'Возвращение домой'
-    },
     2846775197: {
       name: 'Боевая миссия'
+    },
+    2867288098: {
+      name: 'Засекречено'
     },
     2908287325: {
       name: 'Разведывательная миссия'
     },
     2926767881: {
       name: 'Расплата'
+    },
+    2934103434: {
+      name: 'Засекречено'
     },
     2949941834: {
       name: 'Нежданные гости'
@@ -10016,6 +11846,9 @@ export const DestinyActivityDefinition = {
     },
     3002511278: {
       name: 'Темный союз'
+    },
+    3011963288: {
+      name: 'Осирис: Быстрая игра'
     },
     3026637018: {
       name: 'Разведывательная миссия'
@@ -10031,6 +11864,9 @@ export const DestinyActivityDefinition = {
     },
     3062197616: {
       name: 'Состязательная игра'
+    },
+    3089205900: {
+      name: 'Левиафан, пожиратель миров'
     },
     3105090879: {
       name: 'Адью'
@@ -10056,6 +11892,12 @@ export const DestinyActivityDefinition = {
     3173130826: {
       name: 'Боевая миссия'
     },
+    3191123858: {
+      name: 'Песнь Саватун'
+    },
+    3206026167: {
+      name: 'Врата'
+    },
     3208779612: {
       name: 'Миссия по спасению'
     },
@@ -10065,11 +11907,20 @@ export const DestinyActivityDefinition = {
     3211568383: {
       name: 'Песнь сирены'
     },
+    3215844014: {
+      name: 'Медитация: "Омега"'
+    },
+    3226632017: {
+      name: 'Медитация: "Смертельное испытание"'
+    },
     3231065327: {
       name: 'Аналитическая миссия'
     },
     3243161126: {
       name: 'Быстрая игра'
+    },
+    3248193378: {
+      name: 'Вверх и снова вверх (Героическое)'
     },
     3268684190: {
       name: 'Миссия по спасению'
@@ -10086,6 +11937,12 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: 'Пропавший экипаж'
     },
+    3289842296: {
+      name: 'Проклятие Осириса'
+    },
+    3292523719: {
+      name: 'Медитация: "Врата"'
+    },
     3298775062: {
       name: 'Разведывательная миссия'
     },
@@ -10094,6 +11951,9 @@ export const DestinyActivityDefinition = {
     },
     3304835347: {
       name: 'Пора домой'
+    },
+    3306366908: {
+      name: 'Сияющие скалы'
     },
     3336275007: {
       name: 'Медитация: "Шесть"'
@@ -10109,6 +11969,12 @@ export const DestinyActivityDefinition = {
     },
     3368226533: {
       name: 'Сумрачный налет: Вывернутый шпиль'
+    },
+    3370527053: {
+      name: 'Бегун (Героическое)'
+    },
+    3376869257: {
+      name: 'Миссия по спасению'
     },
     3379039897: {
       name: 'Миссия по спасению'
@@ -10158,8 +12024,8 @@ export const DestinyActivityDefinition = {
     3631476566: {
       name: 'Ферма'
     },
-    3634044339: {
-      name: 'Видеоролик о заданиях'
+    3642412717: {
+      name: 'Медитация: "Древо вероятностей"'
     },
     3645117987: {
       name: 'Плохое соседство'
@@ -10175,9 +12041,6 @@ export const DestinyActivityDefinition = {
     },
     3669054326: {
       name: 'Миссия по спасению'
-    },
-    3681513787: {
-      name: 'Быстрая игра'
     },
     3688464794: {
       name: 'Значение связей'
@@ -10224,8 +12087,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: 'Башня'
     },
+    3906001398: {
+      name: 'Осирис: Состязательная игра'
+    },
     3916343513: {
       name: 'Левиафан'
+    },
+    3920569453: {
+      name: 'Баг в системе (Героическое)'
     },
     3920643231: {
       name: 'Сумрачный налет: "Торговец оружием"'
@@ -10235,9 +12104,6 @@ export const DestinyActivityDefinition = {
     },
     3966792859: {
       name: 'Несс, нестабильный кентавр'
-    },
-    3969712481: {
-      name: 'Видеоролик о сюжете'
     },
     3978357488: {
       name: 'Миссия по спасению'
@@ -10269,6 +12135,9 @@ export const DestinyActivityDefinition = {
     4103844069: {
       name: 'Миссия по ликвидации'
     },
+    4119522487: {
+      name: 'Медитация: "Глубокое хранилище"'
+    },
     4159221189: {
       name: 'Ио'
     },
@@ -10278,26 +12147,17 @@ export const DestinyActivityDefinition = {
     4174103238: {
       name: 'Миссия по спасению'
     },
-    4185964042: {
-      name: 'Вывернутый шпиль'
-    },
     4209774794: {
       name: 'Миссия по спасению'
     },
     4216926874: {
       name: 'Миссия по спасению'
     },
-    4221067410: {
-      name: 'Центр города'
-    },
     4231544111: {
       name: 'Разведывательная миссия'
     },
     4239233351: {
       name: 'Медитация: "Искра"'
-    },
-    4246755813: {
-      name: 'Состязательная игра'
     },
     4254776501: {
       name: 'Миссия по спасению'
@@ -10318,9 +12178,6 @@ export const DestinyActivityDefinition = {
     },
     37050217: {
       name: '探勘任務'
-    },
-    38244167: {
-      name: '賈弗林4號'
     },
     51408141: {
       name: '搶救任務'
@@ -10357,6 +12214,9 @@ export const DestinyActivityDefinition = {
     143647473: {
       name: '搶救任務'
     },
+    145136689: {
+      name: '戰鬥任務'
+    },
     145302664: {
       name: '日暮任務：軍火商'
     },
@@ -10386,6 +12246,9 @@ export const DestinyActivityDefinition = {
     },
     286324446: {
       name: '搶救任務'
+    },
+    286562305: {
+      name: '倒置尖塔'
     },
     287649202: {
       name: '利維坦'
@@ -10417,6 +12280,9 @@ export const DestinyActivityDefinition = {
     359488722: {
       name: '行星駭客'
     },
+    373475104: {
+      name: '日暮任務：「花園世界」'
+    },
     374818561: {
       name: '帝王喘息'
     },
@@ -10425,9 +12291,6 @@ export const DestinyActivityDefinition = {
     },
     387171436: {
       name: '搶救任務'
-    },
-    387487590: {
-      name: '預購'
     },
     388289443: {
       name: '探勘任務'
@@ -10443,6 +12306,9 @@ export const DestinyActivityDefinition = {
     },
     435989417: {
       name: '分析任務'
+    },
+    442671778: {
+      name: '軍火商'
     },
     444087412: {
       name: '戰鬥任務'
@@ -10461,11 +12327,8 @@ export const DestinyActivityDefinition = {
     474380713: {
       name: '搶救任務'
     },
-    482312911: {
-      name: '農莊'
-    },
     539897061: {
-      name: '南轅北徹'
+      name: '南轅北轍'
     },
     545240418: {
       name: '探勘任務'
@@ -10483,9 +12346,6 @@ export const DestinyActivityDefinition = {
     },
     585071442: {
       name: '日暮任務：薩瓦森之曲'
-    },
-    586390928: {
-      name: '回歸之戰'
     },
     601540706: {
       name: '日暮任務：軍火商'
@@ -10505,11 +12365,20 @@ export const DestinyActivityDefinition = {
     652598202: {
       name: '軍團峽谷'
     },
+    656703508: {
+      name: '花園世界'
+    },
+    661855681: {
+      name: '暗影之湖'
+    },
     667604912: {
       name: '冥想：「周而復始」'
     },
     671904429: {
       name: '搶救任務'
+    },
+    689927878: {
+      name: '花園世界'
     },
     703311712: {
       name: '旅者碎塊'
@@ -10519,6 +12388,9 @@ export const DestinyActivityDefinition = {
     },
     719906507: {
       name: '第三尖塔區'
+    },
+    723733266: {
+      name: '追緝逃犯（英雄）'
     },
     743100125: {
       name: '搶救任務'
@@ -10547,14 +12419,26 @@ export const DestinyActivityDefinition = {
     808931822: {
       name: '後現代普羅米修斯'
     },
+    809170886: {
+      name: '利維坦：噬界者'
+    },
+    834864522: {
+      name: '《冥王詛咒》'
+    },
     837763871: {
       name: '搶救任務'
+    },
+    840678113: {
+      name: '概率之樹'
     },
     849242583: {
       name: '分析任務'
     },
     880665770: {
       name: '探勘任務'
+    },
+    903584917: {
+      name: '激戰模式'
     },
     919252154: {
       name: '黑暗聯盟'
@@ -10583,11 +12467,23 @@ export const DestinyActivityDefinition = {
     969385987: {
       name: '點亮黑暗'
     },
+    989294159: {
+      name: '日暮任務：「概率之樹」'
+    },
+    991410404: {
+      name: '冥想：「中途攔截」'
+    },
     993152361: {
       name: '搶救任務'
     },
+    1002145272: {
+      name: '概率之樹'
+    },
     1019362992: {
       name: '冥想：「回歸之戰」'
+    },
+    1034805570: {
+      name: '冥想：「花園世界」'
     },
     1035135049: {
       name: '金字塔'
@@ -10595,11 +12491,20 @@ export const DestinyActivityDefinition = {
     1038710420: {
       name: '暗殺任務'
     },
+    1049899965: {
+      name: '超越無盡'
+    },
     1053141615: {
       name: '暗殺任務'
     },
+    1057017675: {
+      name: '傳送門'
+    },
     1063969232: {
       name: '大帝的邀請'
+    },
+    1073289414: {
+      name: '登陸區'
     },
     1075152813: {
       name: '歐洲死區'
@@ -10625,6 +12530,9 @@ export const DestinyActivityDefinition = {
     1107208644: {
       name: '行星駭客'
     },
+    1120584691: {
+      name: '搶救任務'
+    },
     1129066976: {
       name: '日暮任務：金字塔'
     },
@@ -10633,6 +12541,9 @@ export const DestinyActivityDefinition = {
     },
     1164772243: {
       name: '搶救任務'
+    },
+    1175770231: {
+      name: '傳送門'
     },
     1206154103: {
       name: '暗殺任務'
@@ -10661,6 +12572,12 @@ export const DestinyActivityDefinition = {
     1265390366: {
       name: '招待不周'
     },
+    1278641935: {
+      name: '花園世界'
+    },
+    1279862229: {
+      name: '系統臭蟲'
+    },
     1289867188: {
       name: '金剛不壞'
     },
@@ -10669,6 +12586,9 @@ export const DestinyActivityDefinition = {
     },
     1309646866: {
       name: '農莊'
+    },
+    1310854805: {
+      name: '混戰模式'
     },
     1331268141: {
       name: '探勘任務'
@@ -10684,6 +12604,12 @@ export const DestinyActivityDefinition = {
     },
     1416597166: {
       name: '供給與需求'
+    },
+    1418217191: {
+      name: '人上之人（英雄）'
+    },
+    1426391278: {
+      name: '深層儲存'
     },
     1428050875: {
       name: '我的艦長'
@@ -10706,8 +12632,11 @@ export const DestinyActivityDefinition = {
     1498466193: {
       name: '搶救任務'
     },
+    1512980468: {
+      name: '傳送門'
+    },
     1521232506: {
-      name: '###Destiny.CLASSIFIED_NAME###'
+      name: '機密'
     },
     1525633702: {
       name: '搶救任務'
@@ -10715,17 +12644,26 @@ export const DestinyActivityDefinition = {
     1536764325: {
       name: '探勘任務'
     },
+    1549614516: {
+      name: '移民號殞落'
+    },
     1557641249: {
       name: '搶救任務'
     },
     1563393783: {
-      name: '移民號墜落'
+      name: '移民號殞落'
     },
     1568750156: {
       name: '農莊'
     },
+    1570598249: {
+      name: '追緝逃犯'
+    },
     1581219251: {
       name: '探勘任務'
+    },
+    1603374112: {
+      name: '金字塔'
     },
     1614692057: {
       name: '搶救任務'
@@ -10751,6 +12689,15 @@ export const DestinyActivityDefinition = {
     1720510574: {
       name: '堡壘'
     },
+    1725302079: {
+      name: '人上之人'
+    },
+    1740310101: {
+      name: '系統臭蟲（英雄）'
+    },
+    1755484011: {
+      name: '機密'
+    },
     1756055546: {
       name: '搶救任務'
     },
@@ -10772,14 +12719,23 @@ export const DestinyActivityDefinition = {
     1792985204: {
       name: '日暮任務：移民號殞落'
     },
+    1802930364: {
+      name: '蟲蟲天堂'
+    },
+    1823921651: {
+      name: '人上之人'
+    },
     1824067376: {
       name: '公路暴走'
     },
     1829866365: {
-      name: '弄髒你的手'
+      name: '親力而為'
     },
     1863334927: {
       name: '日暮任務：薩瓦森之曲'
+    },
+    1874578888: {
+      name: '系統臭蟲（英雄）'
     },
     1875726950: {
       name: '利維坦'
@@ -10806,7 +12762,10 @@ export const DestinyActivityDefinition = {
       name: '圍攻移民號'
     },
     1984315274: {
-      name: '先鋒菁英隊出擊'
+      name: '先鋒突擊任務'
+    },
+    1987624188: {
+      name: '人上之人（英雄）'
     },
     1988701745: {
       name: '復仇戰艦'
@@ -10820,11 +12779,23 @@ export const DestinyActivityDefinition = {
     2025057095: {
       name: '戰鬥任務'
     },
+    2026037412: {
+      name: '英雄突擊任務遊戲清單'
+    },
     2033669713: {
       name: '賈弗林4號'
     },
+    2046332536: {
+      name: '日暮任務：「概率之樹」'
+    },
     2052289205: {
       name: '助燃'
+    },
+    2056035210: {
+      name: '機密'
+    },
+    2067233851: {
+      name: '黯黑未果'
     },
     2079994698: {
       name: '探勘任務'
@@ -10832,11 +12803,17 @@ export const DestinyActivityDefinition = {
     2080275457: {
       name: '軍火商'
     },
+    2081576589: {
+      name: '遺落燎原'
+    },
     2113712124: {
       name: '褻瀆'
     },
     2151274060: {
       name: '分析任務'
+    },
+    2164432138: {
+      name: '利維坦：噬界者'
     },
     2174556965: {
       name: '整人專家'
@@ -10849,6 +12826,9 @@ export const DestinyActivityDefinition = {
     },
     2187073261: {
       name: '分析任務'
+    },
+    2199986157: {
+      name: '中途攔截'
     },
     2231840083: {
       name: '海妖之歌'
@@ -10871,6 +12851,12 @@ export const DestinyActivityDefinition = {
     2266954523: {
       name: '農莊'
     },
+    2276204547: {
+      name: '終結未來'
+    },
+    2279197206: {
+      name: '致命試煉'
+    },
     2287222467: {
       name: '分析任務'
     },
@@ -10886,20 +12872,38 @@ export const DestinyActivityDefinition = {
     2301390667: {
       name: '探勘任務'
     },
+    2307090074: {
+      name: '訊號之光'
+    },
     2318812547: {
       name: '金字塔'
     },
     2319065780: {
       name: '鋼鐵旗幟死鬥模式'
     },
+    2322829199: {
+      name: '日暮任務：「花園世界」'
+    },
     2336998357: {
       name: '一人戰隊'
+    },
+    2351745587: {
+      name: '傳送門'
     },
     2379494367: {
       name: '分析任務'
     },
+    2416546450: {
+      name: '日暮任務：「概率之樹」'
+    },
+    2417088417: {
+      name: '浪濤基地'
+    },
     2420240009: {
       name: '搶救任務'
+    },
+    2444890541: {
+      name: '緋紅之日'
     },
     2445164291: {
       name: '暗殺任務'
@@ -10971,13 +12975,22 @@ export const DestinyActivityDefinition = {
       name: '分析任務'
     },
     2665134323: {
-      name: '釋放'
+      name: '越獄風雲'
     },
     2667533713: {
       name: '沃斯托克島'
     },
+    2675435236: {
+      name: '系統臭蟲'
+    },
+    2678510381: {
+      name: '概率之樹'
+    },
     2684479494: {
       name: '搶救任務'
+    },
+    2688061647: {
+      name: '日暮任務：「花園世界」'
     },
     2693136600: {
       name: '利維坦'
@@ -11027,17 +13040,20 @@ export const DestinyActivityDefinition = {
     2798856614: {
       name: '探勘任務'
     },
-    2830345500: {
-      name: '回歸之戰'
-    },
     2846775197: {
       name: '戰鬥任務'
+    },
+    2867288098: {
+      name: '機密'
     },
     2908287325: {
       name: '探勘任務'
     },
     2926767881: {
       name: '報復'
+    },
+    2934103434: {
+      name: '機密'
     },
     2949941834: {
       name: '不速之客'
@@ -11047,6 +13063,9 @@ export const DestinyActivityDefinition = {
     },
     3002511278: {
       name: '黑暗聯盟'
+    },
+    3011963288: {
+      name: '歐西里斯快速遊戲'
     },
     3026637018: {
       name: '探勘任務'
@@ -11063,6 +13082,9 @@ export const DestinyActivityDefinition = {
     3062197616: {
       name: '競賽對戰'
     },
+    3089205900: {
+      name: '利維坦：噬界者'
+    },
     3105090879: {
       name: '再會'
     },
@@ -11076,7 +13098,7 @@ export const DestinyActivityDefinition = {
       name: '激流'
     },
     3148431353: {
-      name: '弄髒你的手'
+      name: '親力而為'
     },
     3150153711: {
       name: '機會與選擇'
@@ -11087,6 +13109,12 @@ export const DestinyActivityDefinition = {
     3173130826: {
       name: '戰鬥任務'
     },
+    3191123858: {
+      name: '薩瓦森之曲'
+    },
+    3206026167: {
+      name: '傳送門'
+    },
     3208779612: {
       name: '搶救任務'
     },
@@ -11096,11 +13124,20 @@ export const DestinyActivityDefinition = {
     3211568383: {
       name: '海妖之歌'
     },
+    3215844014: {
+      name: '冥想：「終結未來」'
+    },
+    3226632017: {
+      name: '冥想：「致命試煉」'
+    },
     3231065327: {
       name: '分析任務'
     },
     3243161126: {
       name: '快速遊戲'
+    },
+    3248193378: {
+      name: '人上之人（英雄）'
     },
     3268684190: {
       name: '搶救任務'
@@ -11117,6 +13154,12 @@ export const DestinyActivityDefinition = {
     3289681664: {
       name: '失蹤乘員'
     },
+    3289842296: {
+      name: '《冥王詛咒》'
+    },
+    3292523719: {
+      name: '冥想：「傳送門」'
+    },
     3298775062: {
       name: '探勘任務'
     },
@@ -11125,6 +13168,9 @@ export const DestinyActivityDefinition = {
     },
     3304835347: {
       name: '倦鳥知還'
+    },
+    3306366908: {
+      name: '光輝峭壁'
     },
     3336275007: {
       name: '冥想：「六號」'
@@ -11140,6 +13186,12 @@ export const DestinyActivityDefinition = {
     },
     3368226533: {
       name: '日暮任務：倒置尖塔'
+    },
+    3370527053: {
+      name: '追緝逃犯（英雄）'
+    },
+    3376869257: {
+      name: '搶救任務'
     },
     3379039897: {
       name: '搶救任務'
@@ -11189,8 +13241,8 @@ export const DestinyActivityDefinition = {
     3631476566: {
       name: '農莊'
     },
-    3634044339: {
-      name: '活動前導預告片'
+    3642412717: {
+      name: '冥想：「概率之樹」'
     },
     3645117987: {
       name: '惡鄰纏身'
@@ -11207,14 +13259,11 @@ export const DestinyActivityDefinition = {
     3669054326: {
       name: '搶救任務'
     },
-    3681513787: {
-      name: '快速遊戲'
-    },
     3688464794: {
       name: '網路的重要'
     },
     3700722865: {
-      name: '釋放'
+      name: '越獄風雲'
     },
     3702064261: {
       name: '數據請求'
@@ -11223,7 +13272,7 @@ export const DestinyActivityDefinition = {
       name: '不屈'
     },
     3752039537: {
-      name: '南轅北徹'
+      name: '南轅北轍'
     },
     3780356141: {
       name: '時行時止'
@@ -11255,8 +13304,14 @@ export const DestinyActivityDefinition = {
     3903562779: {
       name: '高塔'
     },
+    3906001398: {
+      name: '歐西里斯競賽對戰'
+    },
     3916343513: {
       name: '利維坦'
+    },
+    3920569453: {
+      name: '系統臭蟲（英雄）'
     },
     3920643231: {
       name: '日暮任務：軍火商'
@@ -11266,9 +13321,6 @@ export const DestinyActivityDefinition = {
     },
     3966792859: {
       name: '不穩定的半人馬小行星：涅索斯'
-    },
-    3969712481: {
-      name: '劇情前導預告片'
     },
     3978357488: {
       name: '搶救任務'
@@ -11300,6 +13352,9 @@ export const DestinyActivityDefinition = {
     4103844069: {
       name: '暗殺任務'
     },
+    4119522487: {
+      name: '冥想：「深層儲存」'
+    },
     4159221189: {
       name: '木衛一'
     },
@@ -11309,26 +13364,17 @@ export const DestinyActivityDefinition = {
     4174103238: {
       name: '搶救任務'
     },
-    4185964042: {
-      name: '倒置尖塔'
-    },
     4209774794: {
       name: '搶救任務'
     },
     4216926874: {
       name: '搶救任務'
     },
-    4221067410: {
-      name: '市中心'
-    },
     4231544111: {
       name: '探勘任務'
     },
     4239233351: {
       name: '冥想：「花火」'
-    },
-    4246755813: {
-      name: '競賽對戰'
     },
     4254776501: {
       name: '搶救任務'
@@ -11342,43 +13388,39 @@ export const DestinyActivityDefinition = {
   },
   data: {
     19982784: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     30240416: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     37050217: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
-    38244167: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
-    },
     51408141: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     53954174: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     57103244: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     60002467: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_sacrilege.jpg'
     },
     78673128: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     80726883: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     82913930: {
@@ -11386,1191 +13428,1447 @@ export const DestinyActivityDefinition = {
       pgcrImage: 'undefined'
     },
     89727599: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     104342360: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     116352029: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     122988657: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     143647473: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
+    145136689: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     145302664: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_arms_dealer.jpg'
     },
     153537894: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     175598161: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     189324537: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     197670945: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     204298081: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     248066530: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     255819671: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_fury.jpg'
     },
     261349035: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     286324446: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    286562305: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/strike_inverted_spire.jpg'
+    },
     287649202: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     293858112: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     298747401: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     298793060: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     313572698: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     320680002: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     330545737: {
-      icon: '/common/destiny2_content/icons/d6f7734ffb49b3f929b96d28f743490d.png',
+      icon: '/common/destiny2_content/icons/3b4fe9f527301e06f2af62d45f86df02.png',
       pgcrImage: '/img/destiny_content/pgcr/social_farm.jpg'
     },
     338662534: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_inverted_spire.jpg'
     },
     355984230: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     359488722: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    373475104: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_a_garden_world.jpg'
+    },
     374818561: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_katana.jpg'
     },
     379330092: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     387171436: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
-    387487590: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
-    },
     388289443: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     415388387: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     417231112: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     429361491: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     435989417: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
+    442671778: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/strike_the_arms_dealer.jpg'
+    },
     444087412: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     445417088: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: 'undefined'
     },
     459955094: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     461203479: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     464789944: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_chosen.jpg'
     },
     474380713: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
-    482312911: {
-      icon: '/common/destiny2_content/icons/d6f7734ffb49b3f929b96d28f743490d.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
-    },
     539897061: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     545240418: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     549123191: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     553537971: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_chosen.jpg'
     },
     564863404: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: 'undefined'
     },
     581323290: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     585071442: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_savanthuns_song.jpg'
     },
-    586390928: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
-    },
     601540706: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_arms_dealer.jpg'
     },
     622895925: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     632790902: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     642256373: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_exodus_crash.jpg'
     },
     642277473: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_pyramdion.jpg'
     },
     652598202: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_slag.jpg'
     },
+    656703508: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_a_garden_world.jpg'
+    },
+    661855681: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/strike_lake_of_shadows.jpg'
+    },
     667604912: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_looped.jpg'
     },
     671904429: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
+    689927878: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_a_garden_world.jpg'
+    },
     703311712: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     715306877: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     719906507: {
-      icon: '/common/destiny2_content/icons/d6f7734ffb49b3f929b96d28f743490d.png',
+      icon: '/common/destiny2_content/icons/3b4fe9f527301e06f2af62d45f86df02.png',
       pgcrImage: '/img/destiny_content/pgcr/social_spire.jpg'
     },
+    723733266: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     743100125: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     750649238: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     757116822: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     760130722: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_cliffside.jpg'
     },
     782175145: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     782290869: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     789332628: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     798143184: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     808931822: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
+    809170886: {
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
+      pgcrImage: '/img/destiny_content/pgcr/raids_leviathan_eater_of_worlds.jpg'
+    },
+    834864522: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     837763871: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    840678113: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_tree_of_probabilities.jpg'
+    },
     849242583: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     880665770: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    903584917: {
+      icon: '/common/destiny2_content/icons/8d64cc5a6ba6cc367a3373860ab9433c.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     919252154: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     926012363: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     926940962: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_pyramdion.jpg'
     },
     938512773: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_unbroken.jpg'
     },
     940394831: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_exodus_crash.jpg'
     },
     955852466: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_1AU.jpg'
     },
     963938931: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     964196803: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     969385987: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
+    989294159: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_tree_of_probabilities.jpg'
+    },
+    991410404: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_meditation_hijacked.jpg'
+    },
     993152361: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
+    1002145272: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/campaign_tree_of_probabilities.jpg'
+    },
     1019362992: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_homecoming.jpg'
     },
+    1034805570: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/campaign_a_garden_world.jpg'
+    },
     1035135049: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_pyramdion.jpg'
     },
     1038710420: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
+    1049899965: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     1053141615: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
+    },
+    1057017675: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     1063969232: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    1073289414: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     1075152813: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1076851943: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1085523978: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1090267699: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1101792305: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_savanthuns_song.jpg'
     },
     1102824603: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1105211124: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     1107208644: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    1120584691: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     1129066976: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_pyramdion.jpg'
     },
     1159314159: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1164772243: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    1175770231: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     1206154103: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1207505828: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_arms_dealer.jpg'
     },
     1225970098: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1228327586: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1243390694: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_larceny.jpg'
     },
     1249965655: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1250426564: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1254990192: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1265390366: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    1278641935: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/campaign_a_garden_world.jpg'
+    },
+    1279862229: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     1289867188: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1290744998: {
-      icon: '/common/destiny2_content/icons/d6f7734ffb49b3f929b96d28f743490d.png',
+      icon: '/common/destiny2_content/icons/3b4fe9f527301e06f2af62d45f86df02.png',
       pgcrImage: '/img/destiny_content/pgcr/social_farm.jpg'
     },
     1309646866: {
-      icon: '/common/destiny2_content/icons/d6f7734ffb49b3f929b96d28f743490d.png',
+      icon: '/common/destiny2_content/icons/3b4fe9f527301e06f2af62d45f86df02.png',
       pgcrImage: '/img/destiny_content/pgcr/social_farm.jpg'
     },
+    1310854805: {
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     1331268141: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     1357019430: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_exodus_crash.jpg'
     },
     1375839088: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1412142789: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     1416597166: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    1418217191: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
+    1426391278: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_deep_storage.jpg'
+    },
     1428050875: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1451946951: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1466550401: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1490848577: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_looped.jpg'
     },
     1491022087: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1495993294: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_lake_of_shadows.jpg'
     },
     1498466193: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    1512980468: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/campaign_the_gateway.jpg'
+    },
     1521232506: {
-      icon: 'undefined',
+      icon: '/img/misc/missing_icon_d2.png',
       pgcrImage: 'undefined'
     },
     1525633702: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1536764325: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    1549614516: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/strike_exodus_crash.jpg'
+    },
     1557641249: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     1563393783: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_exodus_crash.jpg'
     },
     1568750156: {
-      icon: '/common/destiny2_content/icons/d6f7734ffb49b3f929b96d28f743490d.png',
+      icon: '/common/destiny2_content/icons/3b4fe9f527301e06f2af62d45f86df02.png',
       pgcrImage: '/img/destiny_content/pgcr/social_farm.jpg'
     },
+    1570598249: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     1581219251: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    1603374112: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/strike_the_pyramdion.jpg'
+    },
     1614692057: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1646219807: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_larceny.jpg'
     },
     1651979106: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     1658347443: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_homecoming.jpg'
     },
     1685065161: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     1685237649: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1699948563: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     1720510574: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_hull.jpg'
     },
+    1725302079: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
+    1740310101: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
+    1755484011: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: 'undefined'
+    },
     1756055546: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1773400654: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1773567660: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     1778450722: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     1786054751: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     1790343591: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     1792985204: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_exodus_crash.jpg'
     },
+    1802930364: {
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
+      pgcrImage: '/img/destiny_content/pgcr/pvp_wormhaven.jpg'
+    },
+    1823921651: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     1824067376: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     1829866365: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1863334927: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_savanthuns_song.jpg'
     },
+    1874578888: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     1875726950: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     1949546348: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1952521609: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     1956541147: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1969800443: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     1971154629: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     1975064760: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_savanthuns_song.jpg'
     },
     1981289329: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     1984315274: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_exodus_crash.jpg'
     },
+    1987624188: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     1988701745: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_elevator.jpg'
     },
     2001433484: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     2014552458: {
       icon: '/common/destiny2_content/icons/0ee91b79ba1366243832cf810afc3b75.jpg',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+      pgcrImage: '/img/destiny_content/pgcr/conceptual_iron_banner.jpg'
     },
     2025057095: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
+    2026037412: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     2033669713: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_shaft.jpg'
     },
+    2046332536: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_tree_of_probabilities.jpg'
+    },
     2052289205: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_combustion.jpg'
     },
+    2056035210: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: 'undefined'
+    },
+    2067233851: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     2079994698: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     2080275457: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_arms_dealer.jpg'
     },
+    2081576589: {
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
+      pgcrImage: '/img/destiny_content/pgcr/pvp_the_burnout.jpg'
+    },
     2113712124: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_sacrilege.jpg'
     },
     2151274060: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    2164432138: {
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
+      pgcrImage: '/img/destiny_content/pgcr/raids_leviathan_eater_of_worlds.jpg'
+    },
     2174556965: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2183066491: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/social_farm.jpg'
     },
     2184866967: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     2187073261: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    2199986157: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_meditation_hijacked.jpg'
+    },
     2231840083: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     2236648719: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_glaive.jpg'
     },
     2243336789: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     2250935166: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     2259811067: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     2264636552: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_combustion.jpg'
     },
     2266954523: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/social_farm.jpg'
     },
+    2276204547: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/campaign_omega.jpg'
+    },
+    2279197206: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_a_deadly_trial.jpg'
+    },
     2287222467: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     2288260902: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2291549972: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2297638408: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_fury.jpg'
     },
     2301390667: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    2307090074: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     2318812547: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_pyramdion.jpg'
     },
     2319065780: {
       icon: '/common/destiny2_content/icons/0ee91b79ba1366243832cf810afc3b75.jpg',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+      pgcrImage: '/img/destiny_content/pgcr/conceptual_iron_banner.jpg'
+    },
+    2322829199: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_a_garden_world.jpg'
     },
     2336998357: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
+    2351745587: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     2379494367: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
+    },
+    2416546450: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_tree_of_probabilities.jpg'
+    },
+    2417088417: {
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
+      pgcrImage: '/img/destiny_content/pgcr/pvp_pacifica.jpg'
     },
     2420240009: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    2444890541: {
+      icon: '/common/destiny2_content/icons/eb3fce6e8ea4d9748d7b67aae6ee735e.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     2445164291: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2449714930: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     2464834848: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_midtown.jpg'
     },
     2468202005: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     2478782573: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     2517540332: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2519458964: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_grove.jpg'
     },
     2519564410: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     2536491635: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2558926634: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     2559514952: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_utopia.jpg'
     },
     2561308143: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     2573702057: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     2574607799: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     2575990417: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     2580713007: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2588220738: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     2610112492: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2619236227: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2629975203: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     2629998776: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2642769170: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_six.jpg'
     },
     2651851341: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2665134323: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     2667533713: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_observatory.jpg'
     },
+    2675435236: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
+    2678510381: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_tree_of_probabilities.jpg'
+    },
     2684479494: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    2688061647: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_a_garden_world.jpg'
+    },
     2693136600: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     2693136601: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     2693136602: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     2693136603: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     2693136604: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     2693136605: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     2702476101: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/social_traveler.jpg'
     },
     2708828207: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_utopia.jpg'
     },
     2737739053: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     2759086913: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     2768347363: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     2773222353: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2776929937: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2782300570: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2784803584: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     2798856614: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
-    },
-    2830345500: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     2846775197: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    2867288098: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: 'undefined'
+    },
     2908287325: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     2926767881: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_payback.jpg'
     },
+    2934103434: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: 'undefined'
+    },
     2949941834: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     2969403085: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     3002511278: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    3011963288: {
+      icon: '/common/destiny2_content/icons/cc81be3b83da04d9d01afc8cd18159ee.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     3026637018: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3038694763: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3049122128: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     3050465729: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_inverted_spire.jpg'
     },
     3062197616: {
-      icon: '/common/destiny2_content/icons/01535b7b52e9cbe1826f30b013594e04.png',
+      icon: '/common/destiny2_content/icons/eb3fce6e8ea4d9748d7b67aae6ee735e.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
+    3089205900: {
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
+      pgcrImage: '/img/destiny_content/pgcr/raids_leviathan_eater_of_worlds.jpg'
+    },
     3105090879: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_adieu.jpg'
     },
     3140524926: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3143798436: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3147707814: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_riptide.jpg'
     },
     3148431353: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3150153711: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     3172367001: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     3173130826: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
+    3191123858: {
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
+      pgcrImage: '/img/destiny_content/pgcr/strike_savanthuns_song.jpg'
+    },
+    3206026167: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     3208779612: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3211303924: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     3211568383: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
+    3215844014: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/campaign_omega.jpg'
+    },
+    3226632017: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_a_deadly_trial.jpg'
+    },
     3231065327: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3243161126: {
-      icon: '/common/destiny2_content/icons/1afe3ddfc3e40a28335986648014fc83.png',
+      icon: '/common/destiny2_content/icons/cc81be3b83da04d9d01afc8cd18159ee.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
+    3248193378: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     3268684190: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3272002712: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_hope.jpg'
     },
     3277510674: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     3283790633: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3289681664: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    3289842296: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
+    3292523719: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/campaign_the_gateway.jpg'
+    },
     3298775062: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3303685562: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3304835347: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    3306366908: {
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
+      pgcrImage: '/img/destiny_content/pgcr/pvp_radiant_cliffs.jpg'
+    },
     3336275007: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_six.jpg'
     },
     3337731612: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3346345105: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3359466010: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_spark.jpg'
     },
     3368226533: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_inverted_spire.jpg'
     },
+    3370527053: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
+    3376869257: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     3379039897: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3410530777: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     3417504239: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_riptide.jpg'
     },
     3446541099: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     3479544154: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3481058226: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3485876484: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     3487576414: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3489692681: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     3500791146: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     3515770727: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3580793473: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_1AU.jpg'
     },
     3612741503: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3616746132: {
       icon: '/common/destiny2_content/icons/0ee91b79ba1366243832cf810afc3b75.jpg',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+      pgcrImage: '/img/destiny_content/pgcr/conceptual_iron_banner.jpg'
     },
     3627094182: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3631476566: {
-      icon: '/common/destiny2_content/icons/d6f7734ffb49b3f929b96d28f743490d.png',
+      icon: '/common/destiny2_content/icons/3b4fe9f527301e06f2af62d45f86df02.png',
       pgcrImage: '/img/destiny_content/pgcr/social_farm.jpg'
     },
-    3634044339: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    3642412717: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/campaign_tree_of_probabilities.jpg'
     },
     3645117987: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     3652531274: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     3662124488: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     3664915501: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3669054326: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
-    3681513787: {
-      icon: '/img/misc/missing_icon_d2.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
-    },
     3688464794: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3700722865: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3702064261: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     3738159218: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_unbroken.jpg'
     },
     3752039537: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3780356141: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3792746061: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3799743268: {
@@ -12578,143 +14876,139 @@ export const DestinyActivityDefinition = {
       pgcrImage: '/img/destiny_content/pgcr/conceptual_trials_of_the_nine.jpg'
     },
     3806583577: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3834639884: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3836086286: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     3839751954: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
+      icon: '/common/destiny2_content/icons/f031fda82b45c59c61e7e22a6afd491d.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_ness.jpg'
     },
     3872525353: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3879860661: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     3903562779: {
-      icon: '/common/destiny2_content/icons/d6f7734ffb49b3f929b96d28f743490d.png',
+      icon: '/common/destiny2_content/icons/3b4fe9f527301e06f2af62d45f86df02.png',
       pgcrImage: '/img/destiny_content/pgcr/social_traveler.jpg'
     },
+    3906001398: {
+      icon: '/common/destiny2_content/icons/eb3fce6e8ea4d9748d7b67aae6ee735e.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     3916343513: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
+    3920569453: {
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
+      pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
     3920643231: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_arms_dealer.jpg'
     },
     3958400416: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     3966792859: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
-    3969712481: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
-    },
     3978357488: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     3982474534: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_payback.jpg'
     },
     4034557395: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_homecoming.jpg'
     },
     4039317196: {
-      icon: '/common/destiny2_content/icons/d7952968742fe350f04b129a23c25059.png',
+      icon: '/common/destiny2_content/icons/9e98866f102a3f41bea77c2985a52dcf.png',
       pgcrImage: '/img/destiny_content/pgcr/raid_gluttony.jpg'
     },
     4043714237: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     4047570705: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     4050886070: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     4054968718: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
+      icon: '/common/destiny2_content/icons/3856a00c4be76df4cfc00abb032ad3cb.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_inverted_spire.jpg'
     },
     4095207117: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     4103844069: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
+    4119522487: {
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
+      pgcrImage: '/img/destiny_content/pgcr/rituals_deep_storage.jpg'
+    },
     4159221189: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     4166562681: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
     4174103238: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
-    4185964042: {
-      icon: '/common/destiny2_content/icons/192e6117600f4744b62b5d0cc7f41768.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
-    },
     4209774794: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
     4216926874: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
-    4221067410: {
-      icon: '/common/destiny2_content/icons/442d2848f9bd59b60c8375b06fb01040.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
-    },
     4231544111: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     4239233351: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_spark.jpg'
     },
-    4246755813: {
-      icon: '/img/misc/missing_icon_d2.png',
-      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
-    },
     4254776501: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
     4283649349: {
-      icon: '/common/destiny2_content/icons/e1993eda3b5980379b672efcf5cf12e6.png',
+      icon: '/common/destiny2_content/icons/900ca4193ba82dc6f224e1d7eeccb561.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
     4291922223: {
-      icon: '/common/destiny2_content/icons/983193aa00c5d14b5e9786d2de8cea31.png',
+      icon: '/common/destiny2_content/icons/884d5624c29a7222f1e585830dfb0d9d.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_hope.jpg'
     },
   },
