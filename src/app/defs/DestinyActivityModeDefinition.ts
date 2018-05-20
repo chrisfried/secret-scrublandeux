@@ -1,7 +1,19 @@
 export const DestinyActivityModeDefinition = {
   de: {
+    56: {
+      name: 'Privatmatches: Hexenkessel'
+    },
+    32: {
+      name: 'Privatmatches'
+    },
+    54: {
+      name: 'Privatmatches: Countdown'
+    },
     48: {
       name: 'Rumble'
+    },
+    58: {
+      name: 'Heroisches Abenteuer'
     },
     42: {
       name: 'Prüfungen der Neun: Überleben'
@@ -11,6 +23,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: 'Score-Dämmerungs-Strikes'
+    },
+    51: {
+      name: 'Privatmatches: Konflikt'
     },
     0: {
       name: 'Alle'
@@ -66,8 +81,14 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Strikes'
     },
+    57: {
+      name: 'Privatmatches: Rumble'
+    },
     43: {
       name: 'Eisenbanner: Kontrolle'
+    },
+    52: {
+      name: 'Privatmatches: Kontrolle'
     },
     10: {
       name: 'Kontrolle'
@@ -78,11 +99,17 @@ export const DestinyActivityModeDefinition = {
     6: {
       name: 'Erkunden'
     },
+    55: {
+      name: 'Privatmatches: Überleben'
+    },
     16: {
       name: 'Dämmerung-Strikes'
     },
     50: {
       name: 'Doppel'
+    },
+    53: {
+      name: 'Privatmatches: Vorherrschaft'
     },
     3: {
       name: 'Normale Strikes'
@@ -92,8 +119,20 @@ export const DestinyActivityModeDefinition = {
     },
   },
   en: {
+    56: {
+      name: 'Private Matches Mayhem'
+    },
+    32: {
+      name: 'Private Matches'
+    },
+    54: {
+      name: 'Private Matches Countdown'
+    },
     48: {
       name: 'Rumble'
+    },
+    58: {
+      name: 'Heroic Adventure'
     },
     42: {
       name: 'Trials of the Nine Survival'
@@ -103,6 +142,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: 'Scored Nightfall Strikes'
+    },
+    51: {
+      name: 'Private Matches Clash'
     },
     0: {
       name: 'All'
@@ -158,8 +200,14 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Strikes'
     },
+    57: {
+      name: 'Private Matches Rumble'
+    },
     43: {
       name: 'Iron Banner Control'
+    },
+    52: {
+      name: 'Private Matches Control'
     },
     10: {
       name: 'Control'
@@ -170,11 +218,17 @@ export const DestinyActivityModeDefinition = {
     6: {
       name: 'Explore'
     },
+    55: {
+      name: 'Private Matches Survival'
+    },
     16: {
       name: 'Nightfall Strikes'
     },
     50: {
       name: 'Doubles'
+    },
+    53: {
+      name: 'Private Matches Supremacy'
     },
     3: {
       name: 'Normal Strikes'
@@ -184,8 +238,20 @@ export const DestinyActivityModeDefinition = {
     },
   },
   es: {
+    56: {
+      name: 'Partidas privadas Caos'
+    },
+    32: {
+      name: 'Partidas privadas'
+    },
+    54: {
+      name: 'Partidas privadas Cuenta atrás'
+    },
     48: {
       name: 'Disputa'
+    },
+    58: {
+      name: 'Operación heroica'
     },
     42: {
       name: 'Pruebas de los Nueve: Supervivencia'
@@ -195,6 +261,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: 'Asaltos Ocaso con puntuación'
+    },
+    51: {
+      name: 'Partidas privadas Enfrentamiento'
     },
     0: {
       name: 'Todo'
@@ -250,8 +319,14 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Asaltos'
     },
+    57: {
+      name: 'Partidas privadas Disputa'
+    },
     43: {
       name: 'Estandarte de Hierro: Control'
+    },
+    52: {
+      name: 'Partidas privadas Control'
     },
     10: {
       name: 'Control'
@@ -262,11 +337,17 @@ export const DestinyActivityModeDefinition = {
     6: {
       name: 'Explorar'
     },
+    55: {
+      name: 'Partidas privadas Supervivencia'
+    },
     16: {
       name: 'Asaltos de Ocaso'
     },
     50: {
       name: 'Dobles'
+    },
+    53: {
+      name: 'Partidas privadas Supremacía'
     },
     3: {
       name: 'Asaltos normales'
@@ -276,8 +357,20 @@ export const DestinyActivityModeDefinition = {
     },
   },
   esmx: {
+    56: {
+      name: 'Partidas privadas Caos'
+    },
+    32: {
+      name: 'Partidas privadas'
+    },
+    54: {
+      name: 'Partidas privadas Cuenta regresiva'
+    },
     48: {
       name: 'Disputa'
+    },
+    58: {
+      name: 'Operación Heroica'
     },
     42: {
       name: 'Pruebas de los Nueve Supervivencia'
@@ -287,6 +380,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: 'Asaltos Ocaso con puntuación'
+    },
+    51: {
+      name: 'Partidas privadas Enfrentamiento'
     },
     0: {
       name: 'Todo'
@@ -342,8 +438,14 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Asaltos'
     },
+    57: {
+      name: 'Partidas privadas Disputa'
+    },
     43: {
       name: 'Estandarte de Hierro Control'
+    },
+    52: {
+      name: 'Partidas privadas Control'
     },
     10: {
       name: 'Control'
@@ -352,13 +454,19 @@ export const DestinyActivityModeDefinition = {
       name: 'Estandarte de Hierro Enfrentamiento'
     },
     6: {
-      name: 'Exploración'
+      name: 'Explorar'
+    },
+    55: {
+      name: 'Partidas privadas Supervivencia'
     },
     16: {
       name: 'Asaltos de Ocaso'
     },
     50: {
       name: 'Dobles'
+    },
+    53: {
+      name: 'Partidas privadas Supremacía'
     },
     3: {
       name: 'Asaltos normales'
@@ -368,8 +476,20 @@ export const DestinyActivityModeDefinition = {
     },
   },
   fr: {
+    56: {
+      name: 'Parties privées - Pagaille'
+    },
+    32: {
+      name: 'Parties privées'
+    },
+    54: {
+      name: 'Parties privées - Explosif'
+    },
     48: {
       name: 'Carnage'
+    },
+    58: {
+      name: 'Aventure Épique'
     },
     42: {
       name: 'Jugement des Neuf - Survie'
@@ -379,6 +499,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: 'Nuit noire avec score'
+    },
+    51: {
+      name: 'Parties privées - Choc'
     },
     0: {
       name: 'Toutes les activités'
@@ -434,8 +557,14 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Assauts'
     },
+    57: {
+      name: 'Parties privées - Carnage'
+    },
     43: {
-      name: 'Bannière de Fer -Domination'
+      name: 'Bannière de Fer - Domination'
+    },
+    52: {
+      name: 'Parties privées - Domination'
     },
     10: {
       name: 'Domination'
@@ -446,11 +575,17 @@ export const DestinyActivityModeDefinition = {
     6: {
       name: 'Exploration'
     },
+    55: {
+      name: 'Parties privées - Survie'
+    },
     16: {
       name: 'Nuit noire'
     },
     50: {
       name: 'En tandem'
+    },
+    53: {
+      name: 'Parties privées - Suprématie'
     },
     3: {
       name: 'Assauts normaux'
@@ -460,8 +595,20 @@ export const DestinyActivityModeDefinition = {
     },
   },
   it: {
+    56: {
+      name: 'Partite private: Pandemonio'
+    },
+    32: {
+      name: 'Partite private'
+    },
+    54: {
+      name: 'Partite private: Detonazione'
+    },
     48: {
       name: 'Rissa'
+    },
+    58: {
+      name: 'Avventura eroica'
     },
     42: {
       name: 'Prove dei Nove: Sopravvivenza'
@@ -471,6 +618,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: 'Cala la Notte a punti'
+    },
+    51: {
+      name: 'Partite private: Scontro'
     },
     0: {
       name: 'Tutte'
@@ -526,8 +676,14 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Assalti'
     },
+    57: {
+      name: 'Partite private: Rissa'
+    },
     43: {
       name: 'Stendardo di Ferro: Controllo'
+    },
+    52: {
+      name: 'Partite private: Controllo'
     },
     10: {
       name: 'Controllo'
@@ -538,11 +694,17 @@ export const DestinyActivityModeDefinition = {
     6: {
       name: 'Esplora'
     },
+    55: {
+      name: 'Partite private: Sopravvivenza'
+    },
     16: {
       name: 'Assalti Cala la Notte'
     },
     50: {
       name: 'Doppietta'
+    },
+    53: {
+      name: 'Partite private: Supremazia'
     },
     3: {
       name: 'Assalti normali'
@@ -552,8 +714,20 @@ export const DestinyActivityModeDefinition = {
     },
   },
   ja: {
+    56: {
+      name: 'プライベート対戦(カオス)'
+    },
+    32: {
+      name: '非公開対戦'
+    },
+    54: {
+      name: 'プライベート対戦(カウントダウン)'
+    },
     48: {
       name: 'ランブル'
+    },
+    58: {
+      name: '英雄アドベンチャー'
     },
     42: {
       name: 'ナインの試練「ライフリミット」'
@@ -563,6 +737,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: 'スコア付きナイトフォールストライク'
+    },
+    51: {
+      name: 'プライベート対戦(クラッシュ)'
     },
     0: {
       name: '全て'
@@ -618,8 +795,14 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'ストライク'
     },
+    57: {
+      name: 'プライベート対戦(ランブル)'
+    },
     43: {
       name: 'アイアンバナー「コントロール」'
+    },
+    52: {
+      name: 'プライベート対戦(コントロール)'
     },
     10: {
       name: 'コントロール'
@@ -630,11 +813,17 @@ export const DestinyActivityModeDefinition = {
     6: {
       name: '探索'
     },
+    55: {
+      name: 'プライベート対戦(ライフリミット)'
+    },
     16: {
       name: 'ナイトフォールストライク'
     },
     50: {
       name: 'ダブル'
+    },
+    53: {
+      name: 'プライベート対戦(闘魂)'
     },
     3: {
       name: '普通のストライク'
@@ -644,8 +833,20 @@ export const DestinyActivityModeDefinition = {
     },
   },
   pl: {
+    56: {
+      name: 'Mecze prywatne – Jatka'
+    },
+    32: {
+      name: 'Mecze prywatne'
+    },
+    54: {
+      name: 'Mecze prywatne – Odliczanie'
+    },
     48: {
       name: 'Jazgot'
+    },
+    58: {
+      name: 'Heroiczna przygoda'
     },
     42: {
       name: 'Przetrwanie – Próby Dziewiątki'
@@ -655,6 +856,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: 'Punktowane nocne szturmy'
+    },
+    51: {
+      name: 'Mecze prywatne – Starcie'
     },
     0: {
       name: 'Wszystko'
@@ -710,8 +914,14 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Szturmy'
     },
+    57: {
+      name: 'Mecze prywatne – Jazgot'
+    },
     43: {
       name: 'Żelazna Chorągiew – Kontrola'
+    },
+    52: {
+      name: 'Mecze prywatne – Kontrola'
     },
     10: {
       name: 'Kontrola'
@@ -722,11 +932,17 @@ export const DestinyActivityModeDefinition = {
     6: {
       name: 'Eksploracja'
     },
+    55: {
+      name: 'Mecze prywatne – Przetrwanie'
+    },
     16: {
       name: 'Nocne szturmy'
     },
     50: {
       name: 'Debel'
+    },
+    53: {
+      name: 'Mecze prywatne – Supremacja'
     },
     3: {
       name: 'Zwykłe szturmy'
@@ -736,8 +952,20 @@ export const DestinyActivityModeDefinition = {
     },
   },
   ptbr: {
+    56: {
+      name: 'Partidas privadas – Caos'
+    },
+    32: {
+      name: 'Partidas privadas'
+    },
+    54: {
+      name: 'Partidas privadas – Detonação'
+    },
     48: {
       name: 'Briga'
+    },
+    58: {
+      name: 'Aventura Heroica'
     },
     42: {
       name: 'Desafios dos Nove – Sobrevivência'
@@ -747,6 +975,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: 'Assaltos do Anoitecer Pontuados'
+    },
+    51: {
+      name: 'Partidas privadas – Enfrentamento'
     },
     0: {
       name: 'Tudo'
@@ -802,17 +1033,26 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Assaltos'
     },
+    57: {
+      name: 'Partidas privadas – Briga'
+    },
     43: {
-      name: 'Bandeira de Ferro – Controle'
+      name: 'Bandeira de Ferro – Controle'
+    },
+    52: {
+      name: 'Partidas privadas – Controle'
     },
     10: {
       name: 'Controle'
     },
     44: {
-      name: 'Bandeira de Ferro – Enfrentamento'
+      name: 'Bandeira de Ferro – Enfrentamento'
     },
     6: {
       name: 'Explore'
+    },
+    55: {
+      name: 'Partidas privadas – Sobrevivência'
     },
     16: {
       name: 'Assaltos do Anoitecer'
@@ -820,16 +1060,31 @@ export const DestinyActivityModeDefinition = {
     50: {
       name: 'Duplas'
     },
+    53: {
+      name: 'Partidas privadas – Supremacia'
+    },
     3: {
       name: 'Assaltos normais'
     },
     45: {
-      name: 'Bandeira de Ferro – Supremacia'
+      name: 'Bandeira de Ferro – Supremacia'
     },
   },
   ru: {
+    56: {
+      name: 'Закрытые матчи: "Хаос"'
+    },
+    32: {
+      name: 'Закрытые матчи'
+    },
+    54: {
+      name: 'Закрытые матчи: "Обратный отсчет"'
+    },
     48: {
       name: 'Стычка'
+    },
+    58: {
+      name: 'Героическое приключение'
     },
     42: {
       name: 'Испытания Девяти: Выживание'
@@ -839,6 +1094,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: 'Сумрачные налеты с подсчетом очков'
+    },
+    51: {
+      name: 'Закрытые матчи: "Столкновение"'
     },
     0: {
       name: 'Все'
@@ -894,8 +1152,14 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Налеты'
     },
+    57: {
+      name: 'Закрытые матчи: "Стычка"'
+    },
     43: {
       name: 'Железное знамя: Контроль'
+    },
+    52: {
+      name: 'Закрытые матчи: "Контроль"'
     },
     10: {
       name: 'Контроль'
@@ -906,11 +1170,17 @@ export const DestinyActivityModeDefinition = {
     6: {
       name: 'Режим исследования'
     },
+    55: {
+      name: 'Закрытые матчи: "Выживание"'
+    },
     16: {
       name: 'Сумрачные налеты'
     },
     50: {
       name: 'Напарники'
+    },
+    53: {
+      name: 'Закрытые матчи: "Превосходство"'
     },
     3: {
       name: 'Обычные налеты'
@@ -920,8 +1190,20 @@ export const DestinyActivityModeDefinition = {
     },
   },
   zhcht: {
+    56: {
+      name: '私人對戰激戰模式'
+    },
+    32: {
+      name: '私人對戰'
+    },
+    54: {
+      name: '私人對戰分秒必爭'
+    },
     48: {
       name: '混戰模式'
+    },
+    58: {
+      name: '英雄探險任務'
     },
     42: {
       name: '九巨頭試煉生存模式'
@@ -931,6 +1213,9 @@ export const DestinyActivityModeDefinition = {
     },
     46: {
       name: '計分日暮突擊任務'
+    },
+    51: {
+      name: '私人對戰死鬥模式'
     },
     0: {
       name: '全部'
@@ -986,8 +1271,14 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: '突擊任務'
     },
+    57: {
+      name: '私人對戰混戰模式'
+    },
     43: {
       name: '鋼鐵旗幟佔領模式'
+    },
+    52: {
+      name: '私人對戰攻佔模式'
     },
     10: {
       name: '佔領模式'
@@ -998,11 +1289,17 @@ export const DestinyActivityModeDefinition = {
     6: {
       name: '探索'
     },
+    55: {
+      name: '私人對戰生存模式'
+    },
     16: {
       name: '日暮突擊任務'
     },
     50: {
       name: '雙打'
+    },
+    53: {
+      name: '私人對戰奪寶模式'
     },
     3: {
       name: '普通突擊任務'
@@ -1012,10 +1309,30 @@ export const DestinyActivityModeDefinition = {
     },
   },
   data: {
-    157639802: {
+    116827562: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_mayhem.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
+    122250361: {
       icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
+    },
+    152599670: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
+    157639802: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_rumble.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
+    175275639: {
+      icon: '/img/theme/destiny/icons/game_modes/strike_heroic.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_story_1.jpg',
+      category: '1'
     },
     470484296: {
       icon: '/img/theme/destiny/icons/game_modes/trials_of_the_nine.png',
@@ -1031,6 +1348,11 @@ export const DestinyActivityModeDefinition = {
       icon: '/img/theme/destiny/icons/game_modes/strike_nightfall.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
+    },
+    575409284: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_clash.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
     },
     748895195: {
       icon: '/img/theme/destiny/icons/game_modes/allmodes.png',
@@ -1122,7 +1444,17 @@ export const DestinyActivityModeDefinition = {
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
     },
+    2553544158: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_rumble.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
     2843684868: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_ironbanner.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
+    3024701316: {
       icon: '/img/theme/destiny/icons/game_modes/crucible_control.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
@@ -1133,7 +1465,7 @@ export const DestinyActivityModeDefinition = {
       category: '2'
     },
     3479216388: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_supremacy.png',
+      icon: '/img/theme/destiny/icons/game_modes/crucible_ironbanner.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
@@ -1141,6 +1473,11 @@ export const DestinyActivityModeDefinition = {
       icon: '/img/theme/destiny/icons/game_modes/free_roam.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_patrol_1.jpg',
       category: '1'
+    },
+    3780759439: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
     },
     3789021730: {
       icon: '/img/theme/destiny/icons/game_modes/strike_nightfall.png',
@@ -1152,13 +1489,18 @@ export const DestinyActivityModeDefinition = {
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
+    3862044762: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_supremacy.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
     4110605575: {
       icon: '/img/theme/destiny/icons/game_modes/strike_default.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
     },
     4212882650: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_supremacy.png',
+      icon: '/img/theme/destiny/icons/game_modes/crucible_ironbanner.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },

@@ -14,6 +14,8 @@ export class MilestonePipe implements PipeTransform {
           case '2017-10-24':
           case '2017-12-5':
           case '2017-12-05':
+          case '2018-5-8':
+          case '2018-05-08':
             return 'milestone';
           default:
             return '';
@@ -28,6 +30,9 @@ export class MilestonePipe implements PipeTransform {
           case '2017-12-5':
           case '2017-12-05':
             return ' | Curse of Osiris';
+          case '2018-5-8':
+          case '2018-05-08':
+            return ' | Warmind';
           default:
             return '';
         }
