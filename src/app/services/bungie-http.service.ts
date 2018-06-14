@@ -1,16 +1,15 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import { BehaviorSubject } from 'rxjs/Rx';
+import { ServerResponse } from 'bungie-api-ts/common';
+import { BehaviorSubject, Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class BungieHttpService {
   private _origin: string;
   private _apiKey: string;
-  public error: BehaviorSubject<bungie.Response>;
+  public error: BehaviorSubject<ServerResponse<any>>;
 
-  constructor(
-    private http: Http
-  ) {
+  constructor(private http: HttpClient) {
     this.error = new BehaviorSubject(null);
     this._origin = window.location.protocol + '//' + window.location.hostname;
     switch (this._origin) {
@@ -24,15 +23,13 @@ export class BungieHttpService {
     }
   }
 
-  createAuthorizationHeader(headers: Headers) {
-    headers.append('x-api-key', this._apiKey);
-  }
+  get(url): Observable<ServerResponse<any>> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'x-api-key': this._apiKey
+      })
+    };
 
-  get(url) {
-    const headers = new Headers();
-    this.createAuthorizationHeader(headers);
-    return this.http.get(url, {
-      headers: headers
-    });
+    return this.http.get<ServerResponse<any>>(url, httpOptions);
   }
 }

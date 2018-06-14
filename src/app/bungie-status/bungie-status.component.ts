@@ -1,6 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ServerResponse } from 'bungie-api-ts/destiny2';
+import { throwError as observableThrowError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { BehaviorSubject, Subscription } from 'rxjs/Rx';
 import { BungieHttpService } from '../services/bungie-http.service';
-import { Subscription, Observable, BehaviorSubject } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-bungie-status',
@@ -11,20 +14,21 @@ export class BungieStatusComponent implements OnInit {
   public bungieSub: Subscription;
   public bungieStatus: BehaviorSubject<{}[]>;
 
-  constructor(private bHttp: BungieHttpService) {
-
-  }
+  constructor(private bHttp: BungieHttpService) {}
 
   ngOnInit() {
     this.bungieStatus = new BehaviorSubject([]);
-    this.bungieSub = this.bHttp.get('https://www.bungie.net/Platform/GlobalAlerts/')
-      .map((res: any) => res.json())
-      .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
-      .subscribe(res => {
+    this.bungieSub = this.bHttp
+      .get('https://www.bungie.net/Platform/GlobalAlerts/')
+      .pipe(
+        catchError((error: any) =>
+          observableThrowError(error.json().error || 'Server error')
+        )
+      )
+      .subscribe((res: ServerResponse<any>) => {
         try {
           this.bungieStatus.next(res.Response);
-        } catch (e) { }
+        } catch (e) {}
       });
   }
-
 }

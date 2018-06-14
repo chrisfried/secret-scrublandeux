@@ -1,7 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
-import { Observable, BehaviorSubject, Subscription } from 'rxjs/Rx';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ServerResponse, UserInfoCard } from 'bungie-api-ts/user';
+import { empty as observableEmpty, throwError as observableThrowError } from 'rxjs';
+import { catchError, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
+import { BehaviorSubject, Subscription } from 'rxjs/Rx';
 import { BungieHttpService } from '../services/bungie-http.service';
+
 
 @Component({
   selector: 'app-search',
@@ -10,7 +14,7 @@ import { BungieHttpService } from '../services/bungie-http.service';
 })
 export class SearchComponent implements OnInit, OnDestroy {
   public searching: boolean;
-  public searchResults: bungie.SearchDestinyPlayerResult[];
+  public searchResults: UserInfoCard[];
 
   private searchName: BehaviorSubject<string>;
   private searchResponse: Subscription;
@@ -20,44 +24,57 @@ export class SearchComponent implements OnInit, OnDestroy {
     private bHttp: BungieHttpService,
     private router: Router,
     private activatedRoute: ActivatedRoute
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.searchName = new BehaviorSubject('');
     this.searching = true;
 
-    this.params$ = this.activatedRoute.params
-      .subscribe((params: Params) => {
-        this.searchResults = null;
-        if (params['guardian']) {
-          this.searchName.next(params['guardian']);
-        }
-      });
+    this.params$ = this.activatedRoute.params.subscribe((params: Params) => {
+      this.searchResults = null;
+      if (params['guardian']) {
+        this.searchName.next(params['guardian']);
+      }
+    });
 
     this.searchResponse = this.searchName
-      .map((searchName) => {
-        this.searching = true;
-        if (searchName.length) {
-          return 'https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/-1/' + encodeURIComponent(searchName) + '/';
-        } else {
-          return '';
-        }
-      })
-      .distinctUntilChanged()
-      .switchMap((url) => {
-        if (url.length) {
-          return this.bHttp.get(url)
-            .map((res: any) => res.json())
-            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
-        } else {
-          return Observable.empty();
-        }
-      })
-      .subscribe((res: bungie.SearchDestinyPlayerResponse) => {
+      .pipe(
+        map(searchName => {
+          this.searching = true;
+          if (searchName.length) {
+            return (
+              'https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/-1/' +
+              encodeURIComponent(searchName) +
+              '/'
+            );
+          } else {
+            return '';
+          }
+        }),
+        distinctUntilChanged(),
+        switchMap(url => {
+          if (url.length) {
+            return this.bHttp
+              .get(url)
+              .pipe(
+                catchError((error: any) =>
+                  observableThrowError(error.json().error || 'Server error')
+                )
+              );
+          } else {
+            return observableEmpty();
+          }
+        })
+      )
+      .subscribe((res: ServerResponse<UserInfoCard[]>) => {
         this.searchResults = res.Response;
         if (this.searchResults.length === 1) {
           const result = this.searchResults[0];
-          this.router.navigate(['/guardian', result.membershipType, result.membershipId]);
+          this.router.navigate([
+            '/guardian',
+            result.membershipType,
+            result.membershipId
+          ]);
         }
         this.searching = false;
       });
@@ -71,5 +88,4 @@ export class SearchComponent implements OnInit, OnDestroy {
   route(route: any[]) {
     this.router.navigate(route);
   }
-
 }

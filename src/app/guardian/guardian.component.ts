@@ -1,26 +1,32 @@
-import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
-import { Subscription, BehaviorSubject, Observable } from 'rxjs/Rx';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
 import { ActivatedRoute, Params } from '@angular/router';
-import { BungieHttpService } from '../services/bungie-http.service';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { DayModalComponent } from './day-modal/day-modal.component';
+import { ServerResponse } from 'bungie-api-ts/common';
+import { DestinyActivityHistoryResults, DestinyCharacterComponent, DestinyProfileResponse } from 'bungie-api-ts/destiny2';
+import { combineLatest as observableCombineLatest, empty as observableEmpty, throwError as observableThrowError } from 'rxjs';
+import { catchError, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
+import { BehaviorSubject, Observable, Subscription } from 'rxjs/Rx';
 import { DestinyActivityModeDefinition } from '../defs/DestinyActivityModeDefinition';
+import { scrubland } from '../scrubland.typings';
+import { BungieHttpService } from '../services/bungie-http.service';
+import { DayModalComponent } from './day-modal/day-modal.component';
+
 
 @Component({
   selector: 'app-guardian',
   templateUrl: './guardian.component.html',
-  styleUrls: ['./guardian.component.scss'],
+  styleUrls: ['./guardian.component.scss']
 })
 export class GuardianComponent implements OnInit, OnDestroy {
   private subs: Subscription[];
   private membershipType: Observable<string>;
   private membershipId: Observable<string>;
-  private accountResponse: Observable<bungie.AccountResponse>;
+  private accountResponse: Observable<ServerResponse<DestinyProfileResponse>>;
   private flatDaysBS: BehaviorSubject<any[]>;
   public displayName: Observable<string>;
-  public characters: Observable<bungie.Character[]>;
+  public characters: Observable<DestinyCharacterComponent[]>;
   public minutesPlayedTotal: Observable<number>;
-  public activities: bungie.Activity[];
+  public activities: scrubland.Activity[];
   public days: {};
   public flatDays: any[][];
   public yearKeys: string[];
@@ -52,7 +58,9 @@ export class GuardianComponent implements OnInit, OnDestroy {
     if (!this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()]) {
       this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()] = [];
     }
-    this.flatDays.push(this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()]);
+    this.flatDays.push(
+      this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()]
+    );
   }
 
   ngOnInit() {
@@ -96,79 +104,107 @@ export class GuardianComponent implements OnInit, OnDestroy {
       });
     });
 
-    this.membershipId = this.activatedRoute.params.map((params: Params) => {
-      return params['membershipId'];
-    });
-    this.membershipType = this.activatedRoute.params.map((params: Params) => {
-      return params['membershipType'];
-    });
+    this.membershipId = this.activatedRoute.params.pipe(
+      map((params: Params) => {
+        return params['membershipId'];
+      })
+    );
+    this.membershipType = this.activatedRoute.params.pipe(
+      map((params: Params) => {
+        return params['membershipType'];
+      })
+    );
 
-    this.accountResponse = Observable.combineLatest(
+    this.accountResponse = observableCombineLatest(
       this.membershipId,
       this.membershipType
-    ).map(([membershipId, membershipType]) => {
-      try {
-        if (membershipType && membershipId) {
-          return 'https://www.bungie.net/Platform/Destiny2/' + membershipType + '/Profile/' + membershipId + '/?components=100,200';
-        } else {
+    ).pipe(
+      map(([membershipId, membershipType]) => {
+        try {
+          if (membershipType && membershipId) {
+            return (
+              'https://www.bungie.net/Platform/Destiny2/' +
+              membershipType +
+              '/Profile/' +
+              membershipId +
+              '/?components=100,200'
+            );
+          } else {
+            return '';
+          }
+        } catch (e) {
           return '';
         }
-      } catch (e) {
-        return '';
-      }
-    })
-      .distinctUntilChanged()
-      .switchMap((url) => {
+      }),
+      distinctUntilChanged(),
+      switchMap(url => {
         if (url.length) {
-          return this.bHttp.get(url)
-            .map((res: any) => res.json())
-            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+          return this.bHttp
+            .get(url)
+            .pipe(
+              catchError((error: any) =>
+                observableThrowError(error.json().error || 'Server error')
+              )
+            );
         } else {
-          return Observable.empty();
+          return observableEmpty();
         }
-      });
+      })
+    );
 
-    this.displayName = this.accountResponse.map(res => {
-      if (res.ErrorCode !== 1 && res.ErrorStatus) {
-        this.errorStatus = res.ErrorStatus;
-        this.errorMessage = res.Message;
-      }
-      return res.Response.profile.data.userInfo.displayName;
-    });
-    this.characters = this.accountResponse.map(res => {
-      if (res.ErrorCode !== 1 && res.ErrorStatus) {
-        this.errorStatus = res.ErrorStatus;
-        this.errorMessage = res.Message;
-      }
-      const characters = [];
-      try {
-        Object.keys(res.Response.characters.data).forEach(key => {
-          characters.push(res.Response.characters.data[key]);
+    this.displayName = this.accountResponse.pipe(
+      map(res => {
+        if (res.ErrorCode !== 1 && res.ErrorStatus) {
+          this.errorStatus = res.ErrorStatus;
+          this.errorMessage = res.Message;
+        }
+        return res.Response.profile.data.userInfo.displayName;
+      })
+    );
+    this.characters = this.accountResponse.pipe(
+      map(res => {
+        if (res.ErrorCode !== 1 && res.ErrorStatus) {
+          this.errorStatus = res.ErrorStatus;
+          this.errorMessage = res.Message;
+        }
+        const characters = [];
+        try {
+          Object.keys(res.Response.characters.data).forEach(key => {
+            characters.push(res.Response.characters.data[key]);
+          });
+        } catch (e) {}
+        return characters;
+      })
+    );
+
+    this.minutesPlayedTotal = this.characters.pipe(
+      map(characters => {
+        let minutesPlayed = 0;
+        characters.forEach(character => {
+          minutesPlayed += +character.minutesPlayedTotal;
         });
-      } catch (e) { }
-      return characters;
-    });
-
-    this.minutesPlayedTotal = this.characters.map(characters => {
-      let minutesPlayed = 0;
-      characters.forEach(character => {
-        minutesPlayed += +character.minutesPlayedTotal;
-      });
-      return minutesPlayed;
-    });
+        return minutesPlayed;
+      })
+    );
 
     this.subs.push(
-      Observable.combineLatest(
+      observableCombineLatest(
         this.membershipId,
         this.membershipType,
         this.characters
       )
-        .distinctUntilChanged()
+        .pipe(distinctUntilChanged())
         .subscribe(([membershipId, membershipType, characters]) => {
           this.activities = [];
           characters.forEach(character => {
-            const url = 'https://www.bungie.net/Platform/Destiny2/' + membershipType + '/Account/' + membershipId
-              + '/Character/' + character.characterId + '/Stats/Activities/?mode=None&count=250&page=';
+            const url =
+              'https://www.bungie.net/Platform/Destiny2/' +
+              membershipType +
+              '/Account/' +
+              membershipId +
+              '/Character/' +
+              character.characterId +
+              '/Stats/Activities/?mode=None&count=250&page=';
             this.addHistorySub(url, 0);
             this.addHistorySub(url, 1);
             this.addHistorySub(url, 2);
@@ -182,25 +218,37 @@ export class GuardianComponent implements OnInit, OnDestroy {
     this.loadingArray.push(loading);
 
     this.subs.push(
-      this.bHttp.get(url + page)
-        .map((res: any) => res.json())
-        .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
-        .subscribe((res: bungie.ActivityHistoryResponse) => {
+      this.bHttp
+        .get(url + page)
+        .pipe(
+          catchError((error: any) =>
+            observableThrowError(error.json().error || 'Server error')
+          )
+        )
+        .subscribe((res: ServerResponse<DestinyActivityHistoryResults>) => {
           if (res.ErrorCode !== 1 && res.ErrorStatus) {
             this.errorStatus = res.ErrorStatus;
             this.errorMessage = res.Message;
           }
           if (res.Response.activities && res.Response.activities.length) {
             this.addHistorySub(url, page + 3);
-            res.Response.activities.forEach(activity => {
+            res.Response.activities.forEach((activity: scrubland.Activity) => {
               activity.startDate = new Date(activity.period);
-              activity.startDate.setSeconds(activity.startDate.getSeconds() + activity.values.startSeconds.basic.value);
+              activity.startDate.setSeconds(
+                activity.startDate.getSeconds() +
+                  activity.values.startSeconds.basic.value
+              );
               activity.endDate = new Date(activity.startDate.getTime());
-              activity.endDate.setSeconds(activity.startDate.getSeconds() + activity.values.timePlayedSeconds.basic.value);
+              activity.endDate.setSeconds(
+                activity.startDate.getSeconds() +
+                  activity.values.timePlayedSeconds.basic.value
+              );
               this.activities.push(activity);
               try {
-                this.days[activity.startDate.getFullYear()][activity.startDate.getMonth() + 1][activity.startDate.getDate()].push(activity);
-              } catch (e) { }
+                this.days[activity.startDate.getFullYear()][
+                  activity.startDate.getMonth() + 1
+                ][activity.startDate.getDate()].push(activity);
+              } catch (e) {}
               this.flatDaysBS.next(this.flatDays);
             });
           }
@@ -222,5 +270,4 @@ export class GuardianComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subs.forEach(sub => sub.unsubscribe());
   }
-
 }
