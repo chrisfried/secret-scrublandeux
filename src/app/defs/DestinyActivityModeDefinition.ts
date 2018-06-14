@@ -81,6 +81,9 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Strikes'
     },
+    59: {
+      name: 'Showdown'
+    },
     57: {
       name: 'Privatmatches: Rumble'
     },
@@ -199,6 +202,9 @@ export const DestinyActivityModeDefinition = {
     },
     18: {
       name: 'Strikes'
+    },
+    59: {
+      name: 'Showdown'
     },
     57: {
       name: 'Private Matches Rumble'
@@ -319,6 +325,9 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Asaltos'
     },
+    59: {
+      name: 'Showdown'
+    },
     57: {
       name: 'Partidas privadas Disputa'
     },
@@ -437,6 +446,9 @@ export const DestinyActivityModeDefinition = {
     },
     18: {
       name: 'Asaltos'
+    },
+    59: {
+      name: 'Showdown'
     },
     57: {
       name: 'Partidas privadas Disputa'
@@ -557,6 +569,9 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Assauts'
     },
+    59: {
+      name: 'Confrontation'
+    },
     57: {
       name: 'Parties privées - Carnage'
     },
@@ -675,6 +690,9 @@ export const DestinyActivityModeDefinition = {
     },
     18: {
       name: 'Assalti'
+    },
+    59: {
+      name: 'Prova di forza'
     },
     57: {
       name: 'Partite private: Rissa'
@@ -795,6 +813,9 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'ストライク'
     },
+    59: {
+      name: 'Showdown'
+    },
     57: {
       name: 'プライベート対戦(ランブル)'
     },
@@ -913,6 +934,9 @@ export const DestinyActivityModeDefinition = {
     },
     18: {
       name: 'Szturmy'
+    },
+    59: {
+      name: 'Showdown'
     },
     57: {
       name: 'Mecze prywatne – Jazgot'
@@ -1033,6 +1057,9 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Assaltos'
     },
+    59: {
+      name: 'Showdown'
+    },
     57: {
       name: 'Partidas privadas – Briga'
     },
@@ -1152,6 +1179,9 @@ export const DestinyActivityModeDefinition = {
     18: {
       name: 'Налеты'
     },
+    59: {
+      name: 'Showdown'
+    },
     57: {
       name: 'Закрытые матчи: "Стычка"'
     },
@@ -1263,13 +1293,16 @@ export const DestinyActivityModeDefinition = {
       name: '掠奪任務'
     },
     37: {
-      name: '生存'
+      name: '生存模式'
     },
     41: {
       name: '九巨頭試煉分秒必爭模式'
     },
     18: {
       name: '突擊任務'
+    },
+    59: {
+      name: 'Showdown'
     },
     57: {
       name: '私人對戰混戰模式'
@@ -1443,6 +1476,11 @@ export const DestinyActivityModeDefinition = {
       icon: '/img/theme/destiny/icons/game_modes/strike_default.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
+    },
+    2546784302: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
     },
     2553544158: {
       icon: '/img/theme/destiny/icons/game_modes/crucible_rumble.png',
