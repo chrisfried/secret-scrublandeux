@@ -2,15 +2,29 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ServerResponse } from 'bungie-api-ts/common';
-import { DestinyActivityHistoryResults, DestinyCharacterComponent, DestinyProfileResponse } from 'bungie-api-ts/destiny2';
-import { combineLatest as observableCombineLatest, empty as observableEmpty, throwError as observableThrowError } from 'rxjs';
-import { catchError, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
-import { BehaviorSubject, Observable, Subscription } from 'rxjs/Rx';
+import {
+  DestinyActivityHistoryResults,
+  DestinyCharacterComponent,
+  DestinyProfileResponse
+} from 'bungie-api-ts/destiny2';
+import {
+  BehaviorSubject,
+  combineLatest as observableCombineLatest,
+  empty as observableEmpty,
+  Observable,
+  Subscription,
+  throwError as observableThrowError
+} from 'rxjs';
+import {
+  catchError,
+  distinctUntilChanged,
+  map,
+  switchMap
+} from 'rxjs/operators';
 import { DestinyActivityModeDefinition } from '../defs/DestinyActivityModeDefinition';
 import { scrubland } from '../scrubland.typings';
 import { BungieHttpService } from '../services/bungie-http.service';
 import { DayModalComponent } from './day-modal/day-modal.component';
-
 
 @Component({
   selector: 'app-guardian',

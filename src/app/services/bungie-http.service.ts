@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ServerResponse } from 'bungie-api-ts/common';
-import { BehaviorSubject, Observable } from 'rxjs/Rx';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
 export class BungieHttpService {

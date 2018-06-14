@@ -1,11 +1,19 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ServerResponse, UserInfoCard } from 'bungie-api-ts/user';
-import { empty as observableEmpty, throwError as observableThrowError } from 'rxjs';
-import { catchError, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
-import { BehaviorSubject, Subscription } from 'rxjs/Rx';
+import {
+  BehaviorSubject,
+  empty as observableEmpty,
+  Subscription,
+  throwError as observableThrowError
+} from 'rxjs';
+import {
+  catchError,
+  distinctUntilChanged,
+  map,
+  switchMap
+} from 'rxjs/operators';
 import { BungieHttpService } from '../services/bungie-http.service';
-
 
 @Component({
   selector: 'app-search',

@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerResponse } from 'bungie-api-ts/destiny2';
-import { throwError as observableThrowError } from 'rxjs';
+import {
+  BehaviorSubject,
+  Subscription,
+  throwError as observableThrowError
+} from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { BehaviorSubject, Subscription } from 'rxjs/Rx';
 import { BungieHttpService } from '../services/bungie-http.service';
 
 @Component({
