@@ -51,6 +51,9 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: 'Prüfungen der Neun'
     },
+    62: {
+      name: 'Team Versengt'
+    },
     38: {
       name: 'Countdown'
     },
@@ -59,6 +62,9 @@ export const DestinyActivityModeDefinition = {
     },
     40: {
       name: 'Treffpunkt'
+    },
+    61: {
+      name: 'Versengt'
     },
     2: {
       name: 'Story'
@@ -71,6 +77,9 @@ export const DestinyActivityModeDefinition = {
     },
     4: {
       name: 'Raid'
+    },
+    60: {
+      name: 'Bergung'
     },
     37: {
       name: 'Überleben'
@@ -173,6 +182,9 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: 'Trials of the Nine'
     },
+    62: {
+      name: 'Team Scorched'
+    },
     38: {
       name: 'Countdown'
     },
@@ -181,6 +193,9 @@ export const DestinyActivityModeDefinition = {
     },
     40: {
       name: 'Social'
+    },
+    61: {
+      name: 'Scorched'
     },
     2: {
       name: 'Story'
@@ -191,8 +206,14 @@ export const DestinyActivityModeDefinition = {
     19: {
       name: 'Iron Banner'
     },
+    63: {
+      name: 'Gambit'
+    },
     4: {
       name: 'Raid'
+    },
+    60: {
+      name: 'Salvage'
     },
     37: {
       name: 'Survival'
@@ -202,6 +223,9 @@ export const DestinyActivityModeDefinition = {
     },
     18: {
       name: 'Strikes'
+    },
+    64: {
+      name: 'PvE Competitive'
     },
     59: {
       name: 'Showdown'
@@ -295,6 +319,9 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: 'Pruebas de los Nueve'
     },
+    62: {
+      name: 'Equipo calcinado'
+    },
     38: {
       name: 'Cuenta atrás'
     },
@@ -303,6 +330,9 @@ export const DestinyActivityModeDefinition = {
     },
     40: {
       name: 'Social'
+    },
+    61: {
+      name: 'Calcinado'
     },
     2: {
       name: 'Historia'
@@ -316,6 +346,9 @@ export const DestinyActivityModeDefinition = {
     4: {
       name: 'Incursión'
     },
+    60: {
+      name: 'Rescate'
+    },
     37: {
       name: 'Supervivencia'
     },
@@ -326,7 +359,7 @@ export const DestinyActivityModeDefinition = {
       name: 'Asaltos'
     },
     59: {
-      name: 'Showdown'
+      name: 'Duelo'
     },
     57: {
       name: 'Partidas privadas Disputa'
@@ -417,6 +450,9 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: 'Pruebas de los Nueve'
     },
+    62: {
+      name: 'Equipo calcinado'
+    },
     38: {
       name: 'Cuenta regresiva'
     },
@@ -425,6 +461,9 @@ export const DestinyActivityModeDefinition = {
     },
     40: {
       name: 'Social'
+    },
+    61: {
+      name: 'Calcinado'
     },
     2: {
       name: 'Historia'
@@ -438,6 +477,9 @@ export const DestinyActivityModeDefinition = {
     4: {
       name: 'Incursión'
     },
+    60: {
+      name: 'Rescate'
+    },
     37: {
       name: 'Supervivencia'
     },
@@ -448,7 +490,7 @@ export const DestinyActivityModeDefinition = {
       name: 'Asaltos'
     },
     59: {
-      name: 'Showdown'
+      name: 'Confrontación'
     },
     57: {
       name: 'Partidas privadas Disputa'
@@ -539,6 +581,9 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: 'Jugement des Neuf'
     },
+    62: {
+      name: 'Équipe brûlante'
+    },
     38: {
       name: 'Explosif'
     },
@@ -547,6 +592,9 @@ export const DestinyActivityModeDefinition = {
     },
     40: {
       name: 'Social'
+    },
+    61: {
+      name: 'Brûlant'
     },
     2: {
       name: 'Histoire'
@@ -559,6 +607,9 @@ export const DestinyActivityModeDefinition = {
     },
     4: {
       name: 'Raid'
+    },
+    60: {
+      name: 'Défense'
     },
     37: {
       name: 'Survie'
@@ -661,6 +712,9 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: 'Prove dei Nove'
     },
+    62: {
+      name: 'Squadra ardente'
+    },
     38: {
       name: 'Detonazione'
     },
@@ -669,6 +723,9 @@ export const DestinyActivityModeDefinition = {
     },
     40: {
       name: 'Social'
+    },
+    61: {
+      name: 'Ardente'
     },
     2: {
       name: 'Storia'
@@ -681,6 +738,9 @@ export const DestinyActivityModeDefinition = {
     },
     4: {
       name: 'Incursione'
+    },
+    60: {
+      name: 'Recupero'
     },
     37: {
       name: 'Sopravvivenza'
@@ -783,6 +843,9 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: 'ナインの試練'
     },
+    62: {
+      name: '焼け焦げチーム'
+    },
     38: {
       name: 'カウントダウン'
     },
@@ -791,6 +854,9 @@ export const DestinyActivityModeDefinition = {
     },
     40: {
       name: 'ソーシャル'
+    },
+    61: {
+      name: '焼け焦げ'
     },
     2: {
       name: 'ストーリー'
@@ -804,6 +870,9 @@ export const DestinyActivityModeDefinition = {
     4: {
       name: 'レイド'
     },
+    60: {
+      name: 'サルベージ'
+    },
     37: {
       name: 'ライフリミット'
     },
@@ -814,7 +883,7 @@ export const DestinyActivityModeDefinition = {
       name: 'ストライク'
     },
     59: {
-      name: 'Showdown'
+      name: 'ショーダウン'
     },
     57: {
       name: 'プライベート対戦(ランブル)'
@@ -905,6 +974,9 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: 'Próby Dziewiątki'
     },
+    62: {
+      name: 'Spopielona drużyna'
+    },
     38: {
       name: 'Odliczanie'
     },
@@ -913,6 +985,9 @@ export const DestinyActivityModeDefinition = {
     },
     40: {
       name: 'Społecznościowe'
+    },
+    61: {
+      name: 'Spopielenie'
     },
     2: {
       name: 'Fabuła'
@@ -926,6 +1001,9 @@ export const DestinyActivityModeDefinition = {
     4: {
       name: 'Najazd'
     },
+    60: {
+      name: 'Odzyskanie'
+    },
     37: {
       name: 'Przetrwanie'
     },
@@ -936,7 +1014,7 @@ export const DestinyActivityModeDefinition = {
       name: 'Szturmy'
     },
     59: {
-      name: 'Showdown'
+      name: 'Rozstrzygnięcie'
     },
     57: {
       name: 'Mecze prywatne – Jazgot'
@@ -1027,6 +1105,9 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: 'Desafios dos Nove'
     },
+    62: {
+      name: 'Team Scorched'
+    },
     38: {
       name: 'Detonação'
     },
@@ -1035,6 +1116,9 @@ export const DestinyActivityModeDefinition = {
     },
     40: {
       name: 'Social'
+    },
+    61: {
+      name: 'Scorched'
     },
     2: {
       name: 'História'
@@ -1048,6 +1132,9 @@ export const DestinyActivityModeDefinition = {
     4: {
       name: 'Incursão'
     },
+    60: {
+      name: 'Recuperação'
+    },
     37: {
       name: 'Sobrevivência'
     },
@@ -1058,7 +1145,7 @@ export const DestinyActivityModeDefinition = {
       name: 'Assaltos'
     },
     59: {
-      name: 'Showdown'
+      name: 'Confronto'
     },
     57: {
       name: 'Partidas privadas – Briga'
@@ -1149,6 +1236,9 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: 'Испытания Девяти'
     },
+    62: {
+      name: 'Команда "Ожог"'
+    },
     38: {
       name: 'Обратный отсчет'
     },
@@ -1157,6 +1247,9 @@ export const DestinyActivityModeDefinition = {
     },
     40: {
       name: 'Общение'
+    },
+    61: {
+      name: 'Ожог'
     },
     2: {
       name: 'Сюжет'
@@ -1170,6 +1263,9 @@ export const DestinyActivityModeDefinition = {
     4: {
       name: 'Рейды'
     },
+    60: {
+      name: 'Спасение'
+    },
     37: {
       name: 'Выживание'
     },
@@ -1180,7 +1276,7 @@ export const DestinyActivityModeDefinition = {
       name: 'Налеты'
     },
     59: {
-      name: 'Showdown'
+      name: 'Поединок'
     },
     57: {
       name: 'Закрытые матчи: "Стычка"'
@@ -1271,8 +1367,11 @@ export const DestinyActivityModeDefinition = {
     39: {
       name: '九巨頭試煉'
     },
+    62: {
+      name: 'Team Scorched'
+    },
     38: {
-      name: '定時炸彈'
+      name: '分秒必爭'
     },
     12: {
       name: '死鬥模式'
@@ -1280,8 +1379,11 @@ export const DestinyActivityModeDefinition = {
     40: {
       name: '社交'
     },
+    61: {
+      name: 'Scorched'
+    },
     2: {
-      name: '故事'
+      name: '主線'
     },
     49: {
       name: '所有雙打'
@@ -1291,6 +1393,9 @@ export const DestinyActivityModeDefinition = {
     },
     4: {
       name: '掠奪任務'
+    },
+    60: {
+      name: '搶救模式'
     },
     37: {
       name: '生存模式'
@@ -1302,19 +1407,19 @@ export const DestinyActivityModeDefinition = {
       name: '突擊任務'
     },
     59: {
-      name: 'Showdown'
+      name: '正面對決'
     },
     57: {
       name: '私人對戰混戰模式'
     },
     43: {
-      name: '鋼鐵旗幟佔領模式'
+      name: '鋼鐵旗幟攻佔模式'
     },
     52: {
       name: '私人對戰攻佔模式'
     },
     10: {
-      name: '佔領模式'
+      name: '攻佔模式'
     },
     44: {
       name: '鋼鐵旗幟死鬥模式'
@@ -1427,6 +1532,11 @@ export const DestinyActivityModeDefinition = {
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
+    1372032677: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
     1505888634: {
       icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
@@ -1441,6 +1551,11 @@ export const DestinyActivityModeDefinition = {
       icon: '/img/theme/destiny/icons/game_modes/allmodes.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '0'
+    },
+    1668923154: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
     },
     1686739444: {
       icon: '/img/theme/destiny/icons/game_modes/story.png',
@@ -1457,10 +1572,20 @@ export const DestinyActivityModeDefinition = {
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
+    1848252830: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '3'
+    },
     2043403989: {
       icon: '/img/theme/destiny/icons/game_modes/raid.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_raid_1.jpg',
       category: '1'
+    },
+    2096553452: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
     },
     2239249083: {
       icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
@@ -1476,6 +1601,11 @@ export const DestinyActivityModeDefinition = {
       icon: '/img/theme/destiny/icons/game_modes/strike_default.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
+    },
+    2449176354: {
+      icon: '/img/theme/destiny/icons/game_modes/story.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_story_1.jpg',
+      category: '3'
     },
     2546784302: {
       icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
