@@ -33,6 +33,8 @@ export class MilestonePipe implements PipeTransform {
           case '2018-5-8':
           case '2018-05-08':
             return ' | Warmind';
+          case '2018-09-04':
+            return ' | Forsaken';
           default:
             return '';
         }
