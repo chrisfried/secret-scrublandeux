@@ -4,7 +4,6 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'milestone'
 })
 export class MilestonePipe implements PipeTransform {
-
   transform(date: any, args?: any): any {
     switch (args) {
       case 'class':
@@ -16,6 +15,10 @@ export class MilestonePipe implements PipeTransform {
           case '2017-12-05':
           case '2018-5-8':
           case '2018-05-08':
+          case '2018-9-4':
+          case '2018-09-04':
+          case '2018-12-4':
+          case '2018-12-04':
             return 'milestone';
           default:
             return '';
@@ -33,6 +36,12 @@ export class MilestonePipe implements PipeTransform {
           case '2018-5-8':
           case '2018-05-08':
             return ' | Warmind';
+          case '2018-9-4':
+          case '2018-09-04':
+            return ' | Forsaken';
+          case '2018-12-4':
+          case '2018-12-04':
+            return ' | Black Armory';
           default:
             return '';
         }
@@ -40,5 +49,4 @@ export class MilestonePipe implements PipeTransform {
         return '';
     }
   }
-
 }

@@ -161,6 +161,9 @@ export const DestinyActivityModeDefinition = {
     0: {
       name: 'All'
     },
+    66: {
+      name: 'Forge'
+    },
     31: {
       name: 'Supremacy'
     },
@@ -175,6 +178,9 @@ export const DestinyActivityModeDefinition = {
     },
     25: {
       name: 'Mayhem'
+    },
+    68: {
+      name: '###ActivityModes.ironBannerSalvage_NAME###'
     },
     17: {
       name: 'Prestige Nightfall'
@@ -259,6 +265,12 @@ export const DestinyActivityModeDefinition = {
     },
     53: {
       name: 'Private Matches Supremacy'
+    },
+    67: {
+      name: 'Salvage'
+    },
+    65: {
+      name: 'Breakthrough'
     },
     3: {
       name: 'Normal Strikes'
@@ -1497,6 +1509,11 @@ export const DestinyActivityModeDefinition = {
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_allmodes.jpg',
       category: '0'
     },
+    803838459: {
+      icon: '/img/theme/destiny/icons/game_modes/black_armory.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
+      category: '1'
+    },
     910991990: {
       icon: '/img/theme/destiny/icons/game_modes/crucible_supremacy.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
@@ -1519,6 +1536,11 @@ export const DestinyActivityModeDefinition = {
     },
     1264443021: {
       icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
+    1317961215: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_ironbanner.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
@@ -1573,7 +1595,7 @@ export const DestinyActivityModeDefinition = {
       category: '2'
     },
     1848252830: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/img/theme/destiny/icons/fireteams/fireteamGambit.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '3'
     },
@@ -1659,6 +1681,16 @@ export const DestinyActivityModeDefinition = {
     },
     3862044762: {
       icon: '/img/theme/destiny/icons/game_modes/crucible_supremacy.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
+    3904624892: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
+    4033000329: {
+      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
