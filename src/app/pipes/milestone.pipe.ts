@@ -42,6 +42,9 @@ export class MilestonePipe implements PipeTransform {
           case '2018-12-4':
           case '2018-12-04':
             return ' | Black Armory';
+          case '2018-3-5':
+          case '2018-03-05':
+            return ' | Season of the Drifter';
           default:
             return '';
         }

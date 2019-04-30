@@ -146,6 +146,9 @@ export const DestinyActivityModeDefinition = {
     58: {
       name: 'Heroic Adventure'
     },
+    71: {
+      name: 'Clash: Quickplay'
+    },
     42: {
       name: 'Trials of the Nine Survival'
     },
@@ -180,7 +183,10 @@ export const DestinyActivityModeDefinition = {
       name: 'Mayhem'
     },
     68: {
-      name: '###ActivityModes.ironBannerSalvage_NAME###'
+      name: 'Iron Banner Salvage'
+    },
+    74: {
+      name: 'Control: Competitive'
     },
     17: {
       name: 'Prestige Nightfall'
@@ -190,6 +196,9 @@ export const DestinyActivityModeDefinition = {
     },
     62: {
       name: 'Team Scorched'
+    },
+    75: {
+      name: 'Gambit Prime'
     },
     38: {
       name: 'Countdown'
@@ -231,7 +240,10 @@ export const DestinyActivityModeDefinition = {
       name: 'Strikes'
     },
     64: {
-      name: 'PvE Competitive'
+      name: 'Competitive Co-Op'
+    },
+    69: {
+      name: 'Competitive PvP'
     },
     59: {
       name: 'Showdown'
@@ -248,11 +260,17 @@ export const DestinyActivityModeDefinition = {
     10: {
       name: 'Control'
     },
+    70: {
+      name: 'Quickplay PvP'
+    },
     44: {
       name: 'Iron Banner Clash'
     },
     6: {
       name: 'Explore'
+    },
+    73: {
+      name: 'Control: Quickplay'
     },
     55: {
       name: 'Private Matches Survival'
@@ -266,11 +284,17 @@ export const DestinyActivityModeDefinition = {
     53: {
       name: 'Private Matches Supremacy'
     },
+    76: {
+      name: 'The Reckoning'
+    },
     67: {
       name: 'Salvage'
     },
     65: {
       name: 'Breakthrough'
+    },
+    72: {
+      name: 'Clash: Competitive'
     },
     3: {
       name: 'Normal Strikes'
@@ -1460,247 +1484,287 @@ export const DestinyActivityModeDefinition = {
   },
   data: {
     116827562: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_mayhem.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_52f64830161b33289d36edc03f6d2ea6.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     122250361: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     152599670: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     157639802: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_rumble.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_5b371fef4ecafe733ad487a8fae3b9f5.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     175275639: {
-      icon: '/img/theme/destiny/icons/game_modes/strike_heroic.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_abf5e799b91b9a4dea7f8a7e00106d41.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_story_1.jpg',
       category: '1'
     },
+    244324567: {
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
     470484296: {
-      icon: '/img/theme/destiny/icons/game_modes/trials_of_the_nine.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_f4b12d402bb36270cd911f4e1fa8bb0c.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     532484583: {
-      icon: '/img/theme/destiny/icons/game_modes/strike_heroic.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_abf5e799b91b9a4dea7f8a7e00106d41.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
     },
     547513715: {
-      icon: '/img/theme/destiny/icons/game_modes/strike_nightfall.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_234e7e18549d5eae2ddb012f2bcb203a.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
     },
     575409284: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_clash.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_cf348b63307220263eff699dc56bd081.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     748895195: {
-      icon: '/img/theme/destiny/icons/game_modes/allmodes.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_f6de6d95f600f199c9a674c73cbefbcc.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_allmodes.jpg',
       category: '0'
     },
     803838459: {
-      icon: '/img/theme/destiny/icons/game_modes/black_armory.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_d08435f6d51f7ff593c92e7f1394e933.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
     },
     910991990: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_supremacy.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_ca750af7ed2f0ec3c8e2f019c85f7bab.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     946648766: {
-      icon: '/img/theme/destiny/icons/game_modes/Crimson_Playlist.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_f9d1438e0536f36e868e691eb0acfc4d.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     1164760493: {
-      icon: '/img/theme/destiny/icons/game_modes/story.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_5f8a923a0d0ac1e4289ae3be03f94aa2.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_story_1.jpg',
       category: '1'
     },
     1164760504: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     1264443021: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     1317961215: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_ironbanner.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fe57052d7cf971f7502daa75a2ca2437.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
+    1340118533: {
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_922ae83203f6134bae00937d12eab3a2.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     1350109474: {
-      icon: '/img/theme/destiny/icons/game_modes/strike_heroic.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_abf5e799b91b9a4dea7f8a7e00106d41.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
     },
     1370326378: {
-      icon: '/img/theme/destiny/icons/game_modes/trials_of_the_nine.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_f4b12d402bb36270cd911f4e1fa8bb0c.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     1372032677: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
+    1418469392: {
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_1e392d102336226d85cc12bc5dbe1ff0.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '3'
+    },
     1505888634: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     1585787840: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     1589650888: {
-      icon: '/img/theme/destiny/icons/game_modes/allmodes.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_f6de6d95f600f199c9a674c73cbefbcc.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '0'
     },
     1668923154: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     1686739444: {
-      icon: '/img/theme/destiny/icons/game_modes/story.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_5f8a923a0d0ac1e4289ae3be03f94aa2.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_story_1.jpg',
       category: '1'
     },
     1703282980: {
-      icon: '/img/theme/destiny/icons/game_modes/Crimson_Playlist.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_f9d1438e0536f36e868e691eb0acfc4d.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     1826469369: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_ironbanner.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fe57052d7cf971f7502daa75a2ca2437.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     1848252830: {
-      icon: '/img/theme/destiny/icons/fireteams/fireteamGambit.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_96f7e9009d4f26e30cfd60564021925e.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '3'
     },
     2043403989: {
-      icon: '/img/theme/destiny/icons/game_modes/raid.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_bfe80e3dafe6686a9dc42df0606bdc9b.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_raid_1.jpg',
       category: '1'
     },
     2096553452: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     2239249083: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     2263766091: {
-      icon: '/img/theme/destiny/icons/game_modes/trials_of_the_nine.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_f4b12d402bb36270cd911f4e1fa8bb0c.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     2394616003: {
-      icon: '/img/theme/destiny/icons/game_modes/strike_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_38e26baf417d26bb3548d97bf4872b54.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
     },
     2449176354: {
-      icon: '/img/theme/destiny/icons/game_modes/story.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_5f8a923a0d0ac1e4289ae3be03f94aa2.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_story_1.jpg',
       category: '3'
     },
+    2486723318: {
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
     2546784302: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     2553544158: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_rumble.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_5b371fef4ecafe733ad487a8fae3b9f5.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     2843684868: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_ironbanner.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fe57052d7cf971f7502daa75a2ca2437.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     3024701316: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_control.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_922ae83203f6134bae00937d12eab3a2.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     3199098480: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_control.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_922ae83203f6134bae00937d12eab3a2.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
+    3425110680: {
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     3479216388: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_ironbanner.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fe57052d7cf971f7502daa75a2ca2437.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     3497767639: {
-      icon: '/img/theme/destiny/icons/game_modes/free_roam.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_0aa1d7b0e0ac2c6820036b6b3dde3e5b.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_patrol_1.jpg',
       category: '1'
     },
+    3673334631: {
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_922ae83203f6134bae00937d12eab3a2.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
     3780759439: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     3789021730: {
-      icon: '/img/theme/destiny/icons/game_modes/strike_nightfall.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_234e7e18549d5eae2ddb012f2bcb203a.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
     },
     3821502017: {
-      icon: '/img/theme/destiny/icons/game_modes/Crimson_Playlist.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_f9d1438e0536f36e868e691eb0acfc4d.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     3862044762: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_supremacy.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_ca750af7ed2f0ec3c8e2f019c85f7bab.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
+    3894474826: {
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_e74b3385c5269da226372df8ae7f500d.png',
+      pgcrImage: '/img/destiny_content/pgcr/reckoning.jpg',
+      category: '1'
+    },
     3904624892: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     4033000329: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
+      pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
+      category: '2'
+    },
+    4052075509: {
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },
     4110605575: {
-      icon: '/img/theme/destiny/icons/game_modes/strike_default.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_38e26baf417d26bb3548d97bf4872b54.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_strikes_1.jpg',
       category: '1'
     },
     4212882650: {
-      icon: '/img/theme/destiny/icons/game_modes/crucible_ironbanner.png',
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fe57052d7cf971f7502daa75a2ca2437.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
     },

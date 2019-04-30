@@ -1677,6 +1677,9 @@ export const DestinyActivityDefinition = {
     74501540: {
       name: 'The Whisper'
     },
+    74956570: {
+      name: 'New Arcadia'
+    },
     78673128: {
       name: 'Thief of Thieves'
     },
@@ -1753,6 +1756,9 @@ export const DestinyActivityDefinition = {
     },
     234065414: {
       name: 'Spark'
+    },
+    244166221: {
+      name: 'Kell\'s Grave'
     },
     248066530: {
       name: 'Salvage Mission'
@@ -1918,6 +1924,9 @@ export const DestinyActivityDefinition = {
     498220076: {
       name: 'Salvage Mission'
     },
+    501703034: {
+      name: 'The Reckoning'
+    },
     504444892: {
       name: 'Doubles'
     },
@@ -2028,6 +2037,9 @@ export const DestinyActivityDefinition = {
     671904429: {
       name: 'Salvage Mission'
     },
+    673053667: {
+      name: 'Deep Six'
+    },
     689927878: {
       name: 'A Garden World'
     },
@@ -2038,7 +2050,10 @@ export const DestinyActivityDefinition = {
       name: 'Firewalled Haunted Forest'
     },
     709854835: {
-      name: 'Classified'
+      name: 'Niobe\'s Torment'
+    },
+    712032579: {
+      name: 'Deep Six'
     },
     715306877: {
       name: 'Combat Mission'
@@ -2129,6 +2144,9 @@ export const DestinyActivityDefinition = {
     851841785: {
       name: 'The Machinist'
     },
+    854211606: {
+      name: 'New Arcadia'
+    },
     855989781: {
       name: 'Reignite the Izanami Forge'
     },
@@ -2192,6 +2210,9 @@ export const DestinyActivityDefinition = {
     940394831: {
       name: 'QUEST: Exodus Crash'
     },
+    952725781: {
+      name: 'Legion\'s Folly'
+    },
     952862146: {
       name: 'Target: The Hangman'
     },
@@ -2203,6 +2224,9 @@ export const DestinyActivityDefinition = {
     },
     958578340: {
       name: 'Nightfall: Will of the Thousands: Normal'
+    },
+    962547783: {
+      name: 'Emerald Coast'
     },
     963938931: {
       name: 'Deep Conversation'
@@ -2276,6 +2300,9 @@ export const DestinyActivityDefinition = {
     1023966646: {
       name: 'Daily Heroic Story Mission: Payback'
     },
+    1031809538: {
+      name: 'Kell\'s Grave'
+    },
     1034003646: {
       name: 'Nightfall: The Insight Terminus'
     },
@@ -2285,11 +2312,17 @@ export const DestinyActivityDefinition = {
     1035135049: {
       name: 'The Pyramidion'
     },
+    1037070105: {
+      name: 'Cathedral of Scars'
+    },
     1038710420: {
       name: 'Assassination Mission'
     },
     1042784002: {
       name: 'Target: The Trickster'
+    },
+    1043946881: {
+      name: 'New Arcadia'
     },
     1049899965: {
       name: 'Beyond Infinity'
@@ -2390,6 +2423,9 @@ export const DestinyActivityDefinition = {
     1182517645: {
       name: 'Legacy Strikes'
     },
+    1183187383: {
+      name: 'Gambit Prime'
+    },
     1183575934: {
     },
     1189683657: {
@@ -2473,6 +2509,9 @@ export const DestinyActivityDefinition = {
     1279862229: {
       name: 'Bug in the System'
     },
+    1281404748: {
+      name: 'The Reckoning'
+    },
     1282886582: {
       name: 'Nightfall: Exodus Crash'
     },
@@ -2481,6 +2520,9 @@ export const DestinyActivityDefinition = {
     },
     1290744998: {
       name: 'The Farm'
+    },
+    1292137709: {
+      name: 'New Arcadia'
     },
     1294490226: {
       name: 'Deathly Tremors'
@@ -2527,6 +2569,9 @@ export const DestinyActivityDefinition = {
     1357019430: {
       name: 'Nightfall: Exodus Crash: Normal'
     },
+    1358255449: {
+      name: 'Crimson Days'
+    },
     1360385764: {
       name: 'Warden of Nothing'
     },
@@ -2537,7 +2582,7 @@ export const DestinyActivityDefinition = {
       name: 'Warden of Nothing'
     },
     1367215417: {
-      name: 'Classified'
+      name: 'Lost Souvenir'
     },
     1375839088: {
       name: 'Analysis Mission'
@@ -2570,10 +2615,13 @@ export const DestinyActivityDefinition = {
       name: 'Unidentified Frame: The Pyramidion'
     },
     1434072700: {
-      name: 'Classified'
+      name: 'Bergusia Forge'
     },
     1435054848: {
       name: 'Midtown'
+    },
+    1446606128: {
+      name: 'The Reckoning: Tier III'
     },
     1448435553: {
       name: 'Emperor\'s Respite'
@@ -2905,6 +2953,9 @@ export const DestinyActivityDefinition = {
     1895583727: {
       name: 'Vanguard Strikes: Level 30'
     },
+    1899006128: {
+      name: 'Emerald Coast'
+    },
     1903826490: {
       name: 'Survey mission'
     },
@@ -2968,6 +3019,9 @@ export const DestinyActivityDefinition = {
     1996247142: {
       name: 'Field Assignment: Salvage'
     },
+    1998911089: {
+      name: 'Dead Drop'
+    },
     2000185095: {
       name: 'Daily Heroic Story Mission: Fury'
     },
@@ -2976,6 +3030,9 @@ export const DestinyActivityDefinition = {
     },
     2014552458: {
       name: 'Iron Banner Supremacy'
+    },
+    2022812188: {
+      name: 'Deep Six'
     },
     2025057095: {
       name: 'Combat Mission'
@@ -3000,6 +3057,9 @@ export const DestinyActivityDefinition = {
     },
     2056035210: {
       name: 'Classified'
+    },
+    2062544704: {
+      name: 'Mystery and Potential'
     },
     2063575880: {
       name: 'Doubles'
@@ -3076,6 +3136,9 @@ export const DestinyActivityDefinition = {
     2199986157: {
       name: 'Hijacked'
     },
+    2205768006: {
+      name: 'New Arcadia'
+    },
     2207037656: {
       name: 'Assassination Mission'
     },
@@ -3114,6 +3177,9 @@ export const DestinyActivityDefinition = {
     },
     2245202378: {
       name: '(Heroic) Anti-Anti-Air'
+    },
+    2249739266: {
+      name: 'The Reckoning'
     },
     2250935166: {
       name: 'Deathless'
@@ -3235,6 +3301,9 @@ export const DestinyActivityDefinition = {
     2383858990: {
       name: 'Nightfall: Will of the Thousands: Prestige'
     },
+    2397821612: {
+      name: 'Deep Six'
+    },
     2400231344: {
       name: 'The Frozen God'
     },
@@ -3247,14 +3316,23 @@ export const DestinyActivityDefinition = {
     2420240009: {
       name: 'Salvage Mission'
     },
+    2421741347: {
+      name: 'The Chasm of Screams'
+    },
     2427944384: {
       name: 'Meditation: "Offworld Recovery"'
+    },
+    2428492447: {
+      name: 'Emerald Coast'
     },
     2428721124: {
       name: 'Salvage Mission'
     },
     2431838030: {
       name: 'WANTED: Arcadian Chord'
+    },
+    2436539922: {
+      name: 'Kell\'s Grave'
     },
     2444890541: {
       name: 'Crimson Days'
@@ -3266,6 +3344,9 @@ export const DestinyActivityDefinition = {
       name: 'Leviathan: Prestige'
     },
     2459350930: {
+      name: 'Private Match'
+    },
+    2461888874: {
       name: 'Private Match'
     },
     2468202005: {
@@ -3300,6 +3381,9 @@ export const DestinyActivityDefinition = {
     },
     2519564410: {
       name: 'Assassination Mission'
+    },
+    2524369154: {
+      name: 'Firewalled Verdant Forest'
     },
     2536491635: {
       name: 'Survey mission'
@@ -3349,6 +3433,9 @@ export const DestinyActivityDefinition = {
     2619236227: {
       name: 'Analysis Mission'
     },
+    2624692004: {
+      name: 'Private Match'
+    },
     2629975203: {
       name: 'Combat Mission'
     },
@@ -3372,6 +3459,9 @@ export const DestinyActivityDefinition = {
     },
     2651851341: {
       name: 'Analysis Mission'
+    },
+    2653420456: {
+      name: 'Deep Six'
     },
     2656947700: {
       name: 'Izanami Forge'
@@ -3526,6 +3616,9 @@ export const DestinyActivityDefinition = {
     2903879783: {
       name: 'Private Match'
     },
+    2904672719: {
+      name: 'Deep Six'
+    },
     2905427653: {
       name: 'Salvage Mission'
     },
@@ -3640,6 +3733,9 @@ export const DestinyActivityDefinition = {
     3140524926: {
       name: 'Unbreakable'
     },
+    3143659188: {
+      name: 'The Reckoning: Tier I'
+    },
     3143798436: {
       name: 'European Dead Zone'
     },
@@ -3730,6 +3826,9 @@ export const DestinyActivityDefinition = {
     3255524827: {
       name: '(Heroic) Cliffhanger'
     },
+    3264501078: {
+      name: 'The Reckoning: Tier II'
+    },
     3268684190: {
       name: 'Salvage Mission'
     },
@@ -3793,6 +3892,9 @@ export const DestinyActivityDefinition = {
     3349246768: {
       name: 'Solitude'
     },
+    3352425710: {
+      name: 'Looking for a Lead'
+    },
     3359466010: {
       name: 'Spark'
     },
@@ -3801,6 +3903,9 @@ export const DestinyActivityDefinition = {
     },
     3370527053: {
       name: 'The Runner (Heroic)'
+    },
+    3370944873: {
+      name: 'Legion\'s Folly'
     },
     3371785215: {
       name: 'Collect Hive Tablets'
@@ -3910,6 +4015,9 @@ export const DestinyActivityDefinition = {
     3580793473: {
       name: 'Meditation: "1AU"'
     },
+    3585977417: {
+      name: 'Legion\'s Folly'
+    },
     3601218952: {
       name: 'The Rifleman (Heroic)'
     },
@@ -3936,6 +4044,9 @@ export const DestinyActivityDefinition = {
     },
     3631476566: {
       name: 'The Farm'
+    },
+    3633867161: {
+      name: 'Cathedral of Scars'
     },
     3634370598: {
       name: 'Field Assignment: Active Duty'
@@ -4081,6 +4192,9 @@ export const DestinyActivityDefinition = {
     3834639884: {
       name: 'Analysis Mission'
     },
+    3835150701: {
+      name: 'The Verdant Forest'
+    },
     3836086286: {
       name: 'Unexpected Guests'
     },
@@ -4162,6 +4276,9 @@ export const DestinyActivityDefinition = {
     3982474534: {
       name: 'Payback'
     },
+    3996138539: {
+      name: 'New Arcadia'
+    },
     4002737048: {
       name: 'Kell\'s Grave'
     },
@@ -4220,6 +4337,9 @@ export const DestinyActivityDefinition = {
     },
     4159221189: {
       name: 'Io'
+    },
+    4163641477: {
+      name: 'Cathedral of Scars'
     },
     4166562681: {
       name: 'Titan'
@@ -19049,6 +19169,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
+    74956570: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_hold.jpg'
+    },
     78673128: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
@@ -19152,6 +19276,10 @@ export const DestinyActivityDefinition = {
     234065414: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
+    244166221: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_scrap.jpg'
     },
     248066530: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -19373,6 +19501,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/free_roam_tangled_shore.jpg'
     },
+    501703034: {
+      icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     504444892: {
       icon: '/common/destiny2_content/icons/1c17984345f393e728dc8d2b898eca66.png',
       pgcrImage: '/img/destiny_content/pgcr/playlist_doubles.jpg'
@@ -19411,7 +19543,7 @@ export const DestinyActivityDefinition = {
     },
     548750096: {
       icon: '/common/destiny2_content/icons/8b1bfd1c1ce1cab51d23c78235a6e067.png',
-      pgcrImage: 'raids.1305rh0093145r13t5hn10tnz.raid_sunset.jpg'
+      pgcrImage: '/img/destiny_content/pgcr/raids.1305rh0093145r13t5hn10tnz.raid_sunset.jpg'
     },
     549123191: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -19471,7 +19603,7 @@ export const DestinyActivityDefinition = {
     },
     619321468: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
-      pgcrImage: 'black_armory-gunslinger.hive_ritual.jpg'
+      pgcrImage: '/img/destiny_content/pgcr/black_armory-gunslinger.hive_ritual.jpg'
     },
     622895925: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -19521,6 +19653,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_titan.jpg'
     },
+    673053667: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_trinity.jpg'
+    },
     689927878: {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/destiny_content/pgcr/rituals_a_garden_world.jpg'
@@ -19534,8 +19670,12 @@ export const DestinyActivityDefinition = {
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     709854835: {
-      icon: '/img/misc/missing_icon_d2.png',
-      pgcrImage: 'undefined'
+      icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
+      pgcrImage: '/img/destiny_content/pgcr/black_armory-ba_quests.nux_cinematic.jpg'
+    },
+    712032579: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_trinity.jpg'
     },
     715306877: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -19657,6 +19797,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/destiny_content/pgcr/mission_toxic.jpg'
     },
+    854211606: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_hold.jpg'
+    },
     855989781: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/destiny_content/pgcr/black_armory-ba_quests.nux_cinematic.jpg'
@@ -19741,6 +19885,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_exodus_crash.jpg'
     },
+    952725781: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_ledge.jpg'
+    },
     952862146: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
@@ -19751,11 +19899,15 @@ export const DestinyActivityDefinition = {
     },
     957727787: {
       icon: '/common/destiny2_content/icons/3d6f2e60f279b7cbf3d55b900b5c7379.png',
-      pgcrImage: 'black_armory-bars.playlist_crash-89fh135na1-_forge.jpg'
+      pgcrImage: '/img/destiny_content/pgcr/black_armory-bars.playlist_crash-89fh135na1-_forge.jpg'
     },
     958578340: {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_xol.jpg'
+    },
+    962547783: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_badlands.jpg'
     },
     963938931: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -19853,6 +20005,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
+    1031809538: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_scrap.jpg'
+    },
     1034003646: {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_glee.jpg'
@@ -19865,6 +20021,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_the_pyramdion.jpg'
     },
+    1037070105: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_dreamycliffs.jpg'
+    },
     1038710420: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
@@ -19872,6 +20032,10 @@ export const DestinyActivityDefinition = {
     1042784002: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
+    1043946881: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_hold.jpg'
     },
     1049899965: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
@@ -20005,6 +20169,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
+    1183187383: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     1183575934: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: 'undefined'
@@ -20117,6 +20285,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
     },
+    1281404748: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     1282886582: {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_exodus_crash.jpg'
@@ -20128,6 +20300,10 @@ export const DestinyActivityDefinition = {
     1290744998: {
       icon: '/common/destiny2_content/icons/0fa52de77ac582dd8d1ce976c32bfb5b.png',
       pgcrImage: '/img/destiny_content/pgcr/social_farm.jpg'
+    },
+    1292137709: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_hold.jpg'
     },
     1294490226: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -20189,6 +20365,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_exodus_crash.jpg'
     },
+    1358255449: {
+      icon: '/common/destiny2_content/icons/1c17984345f393e728dc8d2b898eca66.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     1360385764: {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_aries.jpg'
@@ -20202,8 +20382,8 @@ export const DestinyActivityDefinition = {
       pgcrImage: '/img/destiny_content/pgcr/strike_aries.jpg'
     },
     1367215417: {
-      icon: '/img/misc/missing_icon_d2.png',
-      pgcrImage: 'undefined'
+      icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
+      pgcrImage: '/img/destiny_content/pgcr/black_armory-ba_quests.nux_cinematic.jpg'
     },
     1375839088: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -20246,12 +20426,16 @@ export const DestinyActivityDefinition = {
       pgcrImage: '/img/destiny_content/pgcr/black_armory-ba_quests.nux_cinematic.jpg'
     },
     1434072700: {
-      icon: '/img/misc/missing_icon_d2.png',
-      pgcrImage: 'undefined'
+      icon: '/common/destiny2_content/icons/3d6f2e60f279b7cbf3d55b900b5c7379.png',
+      pgcrImage: '/img/destiny_content/pgcr/black_armory-bars.playlist_edz_oldtown_forge-35a17r14q.jpg'
     },
     1435054848: {
       icon: '/common/destiny2_content/icons/843744b6902d8672635e3232984cbe29.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_midtown.jpg'
+    },
+    1446606128: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/destiny_content/pgcr/reckoning.jpg'
     },
     1448435553: {
       icon: '/common/destiny2_content/icons/843744b6902d8672635e3232984cbe29.png',
@@ -20339,7 +20523,7 @@ export const DestinyActivityDefinition = {
     },
     1506080581: {
       icon: '/common/destiny2_content/icons/3d6f2e60f279b7cbf3d55b900b5c7379.png',
-      pgcrImage: 'black_armory-bars.1583h7905n-playlist_edz_crack_forge.jpg'
+      pgcrImage: '/img/destiny_content/pgcr/black_armory-bars.1583h7905n-playlist_edz_crack_forge.jpg'
     },
     1512980468: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
@@ -20693,6 +20877,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
+    1899006128: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_badlands.jpg'
+    },
     1903826490: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/free_roam_tangled_shore.jpg'
@@ -20777,6 +20965,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/free_roam_dreaming_city.jpg'
     },
+    1998911089: {
+      icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     2000185095: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
@@ -20788,6 +20980,10 @@ export const DestinyActivityDefinition = {
     2014552458: {
       icon: '/common/destiny2_content/icons/0ee91b79ba1366243832cf810afc3b75.jpg',
       pgcrImage: '/img/destiny_content/pgcr/conceptual_iron_banner.jpg'
+    },
+    2022812188: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_trinity.jpg'
     },
     2025057095: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -20820,6 +21016,10 @@ export const DestinyActivityDefinition = {
     2056035210: {
       icon: '/img/misc/missing_icon_d2.png',
       pgcrImage: 'undefined'
+    },
+    2062544704: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     2063575880: {
       icon: '/common/destiny2_content/icons/1c17984345f393e728dc8d2b898eca66.png',
@@ -20921,6 +21121,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/destiny_content/pgcr/rituals_meditation_hijacked.jpg'
     },
+    2205768006: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_hold.jpg'
+    },
     2207037656: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/free_roam_tangled_shore.jpg'
@@ -20972,6 +21176,10 @@ export const DestinyActivityDefinition = {
     2245202378: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
+    },
+    2249739266: {
+      icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     2250935166: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -21133,6 +21341,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
       pgcrImage: '/img/destiny_content/pgcr/strike_xol.jpg'
     },
+    2397821612: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_trinity.jpg'
+    },
     2400231344: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
@@ -21149,9 +21361,17 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    2421741347: {
+      icon: '/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png',
+      pgcrImage: '/img/destiny_content/pgcr/strike_savanthuns_song.jpg'
+    },
     2427944384: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_jalapeno.jpg'
+    },
+    2428492447: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_badlands.jpg'
     },
     2428721124: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -21160,6 +21380,10 @@ export const DestinyActivityDefinition = {
     2431838030: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
+    },
+    2436539922: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_scrap.jpg'
     },
     2444890541: {
       icon: '/common/destiny2_content/icons/1c17984345f393e728dc8d2b898eca66.png',
@@ -21175,6 +21399,10 @@ export const DestinyActivityDefinition = {
     },
     2459350930: {
       icon: '/common/destiny2_content/icons/0018aabd711beb5535092deb75fef0f5.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
+    2461888874: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
     },
     2468202005: {
@@ -21220,6 +21448,10 @@ export const DestinyActivityDefinition = {
     2519564410: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
+    },
+    2524369154: {
+      icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
+      pgcrImage: '/img/destiny_content/pgcr/verdant_forest.jpg'
     },
     2536491635: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -21285,6 +21517,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    2624692004: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     2629975203: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
@@ -21317,9 +21553,13 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    2653420456: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_trinity.jpg'
+    },
     2656947700: {
       icon: '/common/destiny2_content/icons/3d6f2e60f279b7cbf3d55b900b5c7379.png',
-      pgcrImage: 'black_armory-bb13850n235.playlist_sewer_forge.jpg'
+      pgcrImage: '/img/destiny_content/pgcr/black_armory-bb13850n235.playlist_sewer_forge.jpg'
     },
     2660895412: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
@@ -21471,7 +21711,7 @@ export const DestinyActivityDefinition = {
     },
     2812525063: {
       icon: '/common/destiny2_content/icons/8b1bfd1c1ce1cab51d23c78235a6e067.png',
-      pgcrImage: 'raids.1305rh0093145r13t5hn10tnz.raid_sunset.jpg'
+      pgcrImage: '/img/destiny_content/pgcr/raids.1305rh0093145r13t5hn10tnz.raid_sunset.jpg'
     },
     2814410372: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -21520,6 +21760,10 @@ export const DestinyActivityDefinition = {
     2903879783: {
       icon: '/common/destiny2_content/icons/0018aabd711beb5535092deb75fef0f5.png',
       pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
+    2904672719: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_trinity.jpg'
     },
     2905427653: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -21673,6 +21917,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_nessus.jpg'
     },
+    3143659188: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/destiny_content/pgcr/reckoning.jpg'
+    },
     3143798436: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
@@ -21793,6 +22041,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
     },
+    3264501078: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/destiny_content/pgcr/reckoning.jpg'
+    },
     3268684190: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
@@ -21877,6 +22129,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/843744b6902d8672635e3232984cbe29.png',
       pgcrImage: '/img/destiny_content/pgcr/crucible_solitude.jpg'
     },
+    3352425710: {
+      icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
+      pgcrImage: '/img/theme/destiny/bgs/pgcrs/placeholder.jpg'
+    },
     3359466010: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_spark.jpg'
@@ -21888,6 +22144,10 @@ export const DestinyActivityDefinition = {
     3370527053: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/freeroam_mercury.jpg'
+    },
+    3370944873: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_ledge.jpg'
     },
     3371785215: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -22033,6 +22293,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_1AU.jpg'
     },
+    3585977417: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_ledge.jpg'
+    },
     3601218952: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/free_roam_tangled_shore.jpg'
@@ -22063,11 +22327,15 @@ export const DestinyActivityDefinition = {
     },
     3628257792: {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
-      pgcrImage: 'black_armory-gunslinger.boss_battle.jpg'
+      pgcrImage: '/img/destiny_content/pgcr/black_armory-gunslinger.boss_battle.jpg'
     },
     3631476566: {
       icon: '/common/destiny2_content/icons/0fa52de77ac582dd8d1ce976c32bfb5b.png',
       pgcrImage: '/img/destiny_content/pgcr/social_farm.jpg'
+    },
+    3633867161: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_dreamycliffs.jpg'
     },
     3634370598: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
@@ -22261,6 +22529,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_edz.jpg'
     },
+    3835150701: {
+      icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
+      pgcrImage: '/img/destiny_content/pgcr/verdant_forest.jpg'
+    },
     3836086286: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
@@ -22369,6 +22641,10 @@ export const DestinyActivityDefinition = {
       icon: '/common/destiny2_content/icons/a6ce21a766375f5bcfb6cc01b093a383.png',
       pgcrImage: '/img/destiny_content/pgcr/campaign_payback.jpg'
     },
+    3996138539: {
+      icon: '/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_hold.jpg'
+    },
     4002737048: {
       icon: '/img/misc/missing_icon_d2.png',
       pgcrImage: '/img/destiny_content/pgcr/gambit_scrap.jpg'
@@ -22448,6 +22724,10 @@ export const DestinyActivityDefinition = {
     4159221189: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
       pgcrImage: '/img/destiny_content/pgcr/patrol_Io.jpg'
+    },
+    4163641477: {
+      icon: '/img/misc/missing_icon_d2.png',
+      pgcrImage: '/img/destiny_content/pgcr/gambit_dreamycliffs.jpg'
     },
     4166562681: {
       icon: '/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png',
