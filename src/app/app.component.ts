@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics) { }
+  constructor(angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics) {
+    angulartics2GoogleAnalytics.startTracking();
+   }
 }

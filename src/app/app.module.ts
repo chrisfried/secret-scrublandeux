@@ -71,7 +71,7 @@ import { BungieHttpService } from './services/bungie-http.service';
     FormsModule,
     HttpClientModule,
     RoutesModule,
-    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics])
+    Angulartics2Module.forRoot()
   ],
   entryComponents: [DayModalComponent],
   providers: [BungieHttpService],

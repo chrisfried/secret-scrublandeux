@@ -149,6 +149,9 @@ export const DestinyActivityModeDefinition = {
     71: {
       name: 'Clash: Quickplay'
     },
+    77: {
+      name: 'The Menagerie'
+    },
     42: {
       name: 'Trials of the Nine Survival'
     },
@@ -228,7 +231,7 @@ export const DestinyActivityModeDefinition = {
       name: 'Raid'
     },
     60: {
-      name: 'Salvage'
+      name: 'Lockdown'
     },
     37: {
       name: 'Survival'
@@ -1512,6 +1515,11 @@ export const DestinyActivityModeDefinition = {
       icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_fb3e9149c43f7a2e8f8b66cbea7845fe.png',
       pgcrImage: '/img/theme/destiny/bgs/stats/banner_crucible_1.jpg',
       category: '2'
+    },
+    400075666: {
+      icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_1cdc631c83cebd284aa692800b375544.png',
+      pgcrImage: '/img/destiny_content/pgcr/menagerie.jpg',
+      category: '1'
     },
     470484296: {
       icon: '/common/destiny2_content/icons/DestinyActivityModeDefinition_f4b12d402bb36270cd911f4e1fa8bb0c.png',
