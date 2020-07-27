@@ -7,6 +7,7 @@ import {
 } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { BungieHttpService } from '../services/bungie-http.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-bungie-status',
@@ -24,8 +25,8 @@ export class BungieStatusComponent implements OnInit {
     this.bungieSub = this.bHttp
       .get('https://www.bungie.net/Platform/GlobalAlerts/')
       .pipe(
-        catchError((error: any) =>
-          observableThrowError(error.json().error || 'Server error')
+        catchError((error: HttpErrorResponse) =>
+          observableThrowError(error.error || 'Server error')
         )
       )
       .subscribe((res: ServerResponse<any>) => {

@@ -25,6 +25,7 @@ import { DestinyActivityModeDefinition } from '../defs/DestinyActivityModeDefini
 import { scrubland } from '../scrubland.typings';
 import { BungieHttpService } from '../services/bungie-http.service';
 import { DayModalComponent } from './day-modal/day-modal.component';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-guardian',
@@ -156,8 +157,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
           return this.bHttp
             .get(url)
             .pipe(
-              catchError((error: any) =>
-                observableThrowError(error.json().error || 'Server error')
+              catchError((error: HttpErrorResponse) =>
+                observableThrowError(error.error || 'Server error')
               )
             );
         } else {
@@ -235,8 +236,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
       this.bHttp
         .get(url + page)
         .pipe(
-          catchError((error: any) =>
-            observableThrowError(error.json().error || 'Server error')
+          catchError((error: HttpErrorResponse) =>
+            observableThrowError(error.error || 'Server error')
           )
         )
         .subscribe((res: ServerResponse<DestinyActivityHistoryResults>) => {

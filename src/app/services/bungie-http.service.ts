@@ -1,7 +1,8 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { ServerResponse } from 'bungie-api-ts/common';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { ServerResponse } from "bungie-api-ts/common";
+import { BehaviorSubject, Observable } from "rxjs";
+import { environment } from "../../environments/environment";
 
 @Injectable()
 export class BungieHttpService {
@@ -11,23 +12,14 @@ export class BungieHttpService {
 
   constructor(private http: HttpClient) {
     this.error = new BehaviorSubject(null);
-    this._origin = window.location.protocol + '//' + window.location.hostname;
-    switch (this._origin) {
-      case 'http://dev.guardian.theater':
-        this._apiKey = '4da0bc9d76774c5696ea2703b129a2cd';
-        break;
-
-      case 'https://chrisfried.github.io':
-        this._apiKey = '83c21174d7ed4292884fed250a383fee';
-        break;
-    }
+    this._origin = window.location.protocol + "//" + window.location.hostname;
   }
 
   get(url): Observable<ServerResponse<any>> {
     const httpOptions = {
       headers: new HttpHeaders({
-        'x-api-key': this._apiKey
-      })
+        "x-api-key": environment.bungie.apiKey,
+      }),
     };
 
     return this.http.get<ServerResponse<any>>(url, httpOptions);

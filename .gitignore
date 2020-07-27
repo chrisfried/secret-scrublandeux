@@ -42,3 +42,4 @@ testem.log
 Thumbs.db
 
 /utils/defs/*
+src/environments/keys.ts

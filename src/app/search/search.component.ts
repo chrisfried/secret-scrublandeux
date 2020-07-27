@@ -14,6 +14,7 @@ import {
   switchMap
 } from 'rxjs/operators';
 import { BungieHttpService } from '../services/bungie-http.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-search',
@@ -62,13 +63,12 @@ export class SearchComponent implements OnInit, OnDestroy {
         distinctUntilChanged(),
         switchMap(url => {
           if (url.length) {
-            return this.bHttp
-              .get(url)
-              .pipe(
-                catchError((error: any) =>
-                  observableThrowError(error.json().error || 'Server error')
-                )
-              );
+            return this.bHttp.get(url).pipe(
+              catchError((error: HttpErrorResponse) => {
+                console.log(error);
+                return observableThrowError(error.error || 'Server error');
+              })
+            );
           } else {
             return observableEmpty();
           }
