@@ -25,6 +25,12 @@ export class MilestonePipe implements PipeTransform {
           case '2019-06-04':
           case '2019-9-17':
           case '2019-09-17':
+          case '2019-12-10':
+          case '2020-3-10':
+          case '2020-03-10':
+          case '2020-6-9':
+          case '2020-06-09':
+          case '2020-11-10':
             return 'release';
           case '2017-9-13':
           case '2017-09-13':
@@ -38,6 +44,7 @@ export class MilestonePipe implements PipeTransform {
           case '2018-12-07':
           case '2019-6-4':
           case '2019-06-04':
+          case '2020-11-21':
             return 'raid';
           case '2018-7-8':
           case '2018-07-08':
@@ -89,6 +96,39 @@ export class MilestonePipe implements PipeTransform {
           case '2019-07-09':
           case '2019-7-30':
           case '2019-07-30':
+          case '2019-12-17':
+          case '2020-1-7':
+          case '2020-01-07':
+          case '2020-1-28':
+          case '2020-01-28':
+          case '2020-2-4':
+          case '2020-02-04':
+          case '2020-2-11':
+          case '2020-02-11':
+          case '2020-3-13':
+          case '2020-03-13':
+          case '2020-3-17':
+          case '2020-03-17':
+          case '2020-3-24':
+          case '2020-03-24':
+          case '2020-4-7':
+          case '2020-04-07':
+          case '2020-4-21':
+          case '2020-04-21':
+          case '2020-6-6':
+          case '2020-06-06':
+          case '2020-7-7':
+          case '2020-07-07':
+          case '2020-8-11':
+          case '2020-08-11':
+          case '2020-9-8':
+          case '2020-09-08':
+          case '2020-10-6':
+          case '2020-10-06':
+          case '2020-11-9':
+          case '2020-11-09':
+          case '2020-11-17':
+          case '2020-12-15':
             return 'event';
           default:
             return '';
@@ -200,6 +240,69 @@ export class MilestonePipe implements PipeTransform {
           case '2019-9-17':
           case '2019-09-17':
             return ' | Shadowkeep';
+          case '2019-12-10':
+            return ' | Season of Dawn';
+          case '2019-12-17':
+            return ' | The Dawning';
+          case '2020-1-7':
+          case '2020-01-07':
+            return ' | Exotic Quest: Devil\'s Ruin';
+          case '2020-1-28':
+          case '2020-01-28':
+            return ' | Exotic Quest: Bastion';
+          case '2020-2-4':
+          case '2020-02-04':
+            return ' | Empyrean Foundation';
+          case '2020-2-11':
+          case '2020-02-11':
+            return ' | Crimson Days';
+          case '2020-3-10':
+          case '2020-03-10':
+            return ' | Season of the Worthy | Seraph Bunker: EDZ';
+          case '2020-3-13':
+          case '2020-03-13':
+            return ' | Trials of Osiris Returns';
+          case '2020-3-17':
+          case '2020-03-17':
+            return ' | Exotic Quest: The Fourth Horseman';
+          case '2020-3-24':
+          case '2020-03-24':
+            return ' | Seraph Bunker: Moon';
+          case '2020-4-7':
+          case '2020-04-07':
+            return ' | Seraph Bunker: Io';
+          case '2020-4-21':
+          case '2020-04-21':
+            return ' | Guardian Games | Grandmaster Ordeal';
+          case '2020-6-6':
+          case '2020-06-06':
+            return ' | Live Event: Almighty\'s Destruction';
+          case '2020-6-9':
+          case '2020-06-09':
+            return ' | Season of Arrivals | Contact Event: Io | Prophecy Dungeon';
+          case '2020-7-7':
+          case '2020-07-07':
+            return ' | Moments of Triumph | Exotic Quest: Ruinous Effigy | Contact Event: Titan';
+          case '2020-8-11':
+          case '2020-08-11':
+            return ' | Solstice of Heroes';
+          case '2020-9-8':
+          case '2020-09-08':
+            return ' | Exotic Quest: Traveler\'s Chosen';
+          case '2020-10-6':
+          case '2020-10-06':
+            return ' | Festival of the Lost';
+          case '2020-11-9':
+          case '2020-11-09':
+            return ' | Live Event: Traveler Reforged';
+          case '2020-11-10':
+            return ' | Launch: Beyond Light';
+          case '2020-11-17':
+            return ' | Wrathborn Hunts';
+          case '2020-11-21':
+            return ' | Deep Stone Crypt Raid';
+          case '2020-12-15':
+            return ' | The Dawning';
           default:
             return '';
         }
