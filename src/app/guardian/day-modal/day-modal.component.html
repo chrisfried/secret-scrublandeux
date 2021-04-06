@@ -1,26 +1,46 @@
-<h2 mat-dialog-title>{{ data.date + (data.date | milestone:'text') + ': ' + Math.floor((data.activities | addTime:'0') / 86400 * 24) + 'h ' + Math.floor((data.activities | addTime:'0') % 3600 / 60) + 'm'}}</h2>
+<h2 mat-dialog-title>
+  {{
+    data.date +
+      (data.date | milestone: 'text') +
+      ': ' +
+      Math.floor(((data.activities | addTime: '0') / 86400) * 24) +
+      'h ' +
+      Math.floor(((data.activities | addTime: '0') % 3600) / 60) +
+      'm'
+  }}
+</h2>
 <mat-dialog-content>
-  <div class="timelineBase">
-    <div *ngFor="let hour of ['12am', '1am', '2am', '3am', '4am', '5am', 
-                           '6am', '7am', '8am', '9am', '10am', '11am',
-                           '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', 
-                           '6pm', '7pm', '8pm', '9pm', '10pm', '11pm']; let i = index"
+  <div
+    class="timelineBase"
+    [ngStyle]="{
+      height: modalHeight + 'px'
+    }"
+  >
+    <div
+      *ngFor="let hour of gameHourKeys"
       class="timelineLabels"
       [ngStyle]="{
-        'top': 60 * i + 'px'
-      }">
-      <span class="time mat-caption">{{ hour }}</span>
+        top: gameHours[hour].offset + 'px'
+      }"
+    >
+      <span class="time mat-caption">{{ gameHours[hour].display }}</span>
     </div>
-    <a *ngFor="let activity of data.activities"
+    <a
+      *ngFor="let activity of data.activities"
       class="timelineActivity"
       [ngClass]="'mode-' + activity.activityDetails.mode"
       [ngStyle]="{
-        'height': Math.floor(activity.values.timePlayedSeconds.basic.value / 60) + 'px',
-        'top': getOffset(activity) + 'px'
+        height: (Math.floor(activity.values.timePlayedSeconds.basic.value / 60) || 1) + 'px',
+        top: activity.offset + 'px'
       }"
-      [matTooltip]="(activity.activityDetails.mode | destinyHash:'activityMode') + ' | ' + (activity.activityDetails.referenceId | destinyHash:'activityName')"
+      [matTooltip]="
+        (activity.activityDetails.mode | manifest: 'activityMode' | async) +
+        ' | ' +
+        (activity.activityDetails.referenceId | manifest: 'activityName' | async)
+      "
       matTooltipPosition="after"
       target="_blank"
-      [href]="'http://destinytracker.com/d2/pgcr/' + activity.activityDetails.instanceId"></a>      
+      [href]="'https://www.bungie.net/en/PGCR/' + activity.activityDetails.instanceId + '?character=' + activity.characterId"
+    ></a>
   </div>
 </mat-dialog-content>

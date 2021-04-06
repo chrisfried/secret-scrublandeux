@@ -1,0 +1,17 @@
+{
+  "cSpell.words": [
+    "Bungie",
+    "indexeddb",
+    "minmax",
+    "pgcr",
+    "pgcrs",
+    "twitchtv"
+  ],
+  "editor.autoIndent": "full",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+  "editor.formatOnSave": true,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on"
+}

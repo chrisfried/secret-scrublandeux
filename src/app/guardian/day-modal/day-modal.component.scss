@@ -1,17 +1,15 @@
 .timelineBase {
   width: 59px;
-  height: 1441px;
   display: block;
   position: relative;
-  background-color: rgb(230, 230, 230);
   margin-left: 3em;
 }
 .timelineLabels {
   display: block;
   position: absolute;
-  height: 60px;
+  height: 59px;
   width: 60px;
-  border-bottom: solid 1px white;
+  background-color: rgb(230, 230, 230);
 
   .time {
     margin-left: -3.5em;

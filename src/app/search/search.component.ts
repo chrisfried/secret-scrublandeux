@@ -1,39 +1,25 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ServerResponse, UserInfoCard } from 'bungie-api-ts/user';
-import {
-  BehaviorSubject,
-  empty as observableEmpty,
-  Subscription,
-  throwError as observableThrowError
-} from 'rxjs';
-import {
-  catchError,
-  distinctUntilChanged,
-  map,
-  switchMap
-} from 'rxjs/operators';
-import { BungieHttpService } from '../services/bungie-http.service';
-import { HttpErrorResponse } from '@angular/common/http';
+import { BehaviorSubject, empty as observableEmpty, Subscription, throwError as observableThrowError, EMPTY } from 'rxjs';
+import { catchError, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
+import { HttpErrorResponse, HttpClient } from '@angular/common/http';
+import { searchDestinyPlayer, SearchDestinyPlayerParams } from 'bungie-api-ts/destiny2';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent implements OnInit, OnDestroy {
   public searching: boolean;
   public searchResults: UserInfoCard[];
 
-  private searchName: BehaviorSubject<string>;
+  public searchName: BehaviorSubject<string>;
   private searchResponse: Subscription;
   private params$: Subscription;
 
-  constructor(
-    private bHttp: BungieHttpService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(private http: HttpClient, private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     this.searchName = new BehaviorSubject('');
@@ -48,41 +34,38 @@ export class SearchComponent implements OnInit, OnDestroy {
 
     this.searchResponse = this.searchName
       .pipe(
-        map(searchName => {
-          this.searching = true;
+        switchMap((searchName) => {
           if (searchName.length) {
-            return (
-              'https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/-1/' +
-              encodeURIComponent(searchName) +
-              '/'
-            );
+            this.searching = true;
+            const behaviorSubject: BehaviorSubject<ServerResponse<UserInfoCard[]>> = new BehaviorSubject(undefined);
+            const params: SearchDestinyPlayerParams = {
+              displayName: searchName,
+              membershipType: -1,
+              returnOriginalProfile: false,
+            };
+            searchDestinyPlayer(
+              (config: { url: string; method: 'GET' | 'POST'; params: any; body: any }) =>
+                this.http
+                  .request(config.method, config.url, {
+                    params: config.params,
+                    body: config.body,
+                  })
+                  .toPromise(),
+              params
+            ).then((res) => {
+              behaviorSubject.next(res);
+            });
+            return behaviorSubject;
           } else {
-            return '';
-          }
-        }),
-        distinctUntilChanged(),
-        switchMap(url => {
-          if (url.length) {
-            return this.bHttp.get(url).pipe(
-              catchError((error: HttpErrorResponse) => {
-                console.log(error);
-                return observableThrowError(error.error || 'Server error');
-              })
-            );
-          } else {
-            return observableEmpty();
+            return EMPTY;
           }
         })
       )
       .subscribe((res: ServerResponse<UserInfoCard[]>) => {
-        this.searchResults = res.Response;
-        if (this.searchResults.length === 1) {
+        this.searchResults = res?.Response;
+        if (this.searchResults && this.searchResults?.length === 1) {
           const result = this.searchResults[0];
-          this.router.navigate([
-            '/guardian',
-            result.membershipType,
-            result.membershipId
-          ]);
+          this.router.navigate(['/guardian', result.membershipType, result.membershipId]);
         }
         this.searching = false;
       });

@@ -1,7 +1,14 @@
 <div *ngIf="searching" class="profile-spinner-wrapper">
   <div class="fi-widget spinner profile-spinner" title="Fetching Bungie Profile..."></div>
 </div>
-<div *ngIf="!searching && !searchResults.length">Guardian {{ searchName | async }} not found.</div>
+<div *ngIf="!searching && searchResults && !searchResults?.length">Guardian {{ searchName | async }} not found.</div>
 <div class="results">
-  <button mat-raised-button class="resultButton" (click)="route(['/guardian', result.membershipType, result.membershipId])" *ngFor="let result of searchResults"><img class="resultConsoleIcon" [src]="'https://www.bungie.net' + result.iconPath"> {{ result.displayName }}</button>
+  <button
+    mat-raised-button
+    class="resultButton"
+    (click)="route(['/guardian', result.membershipType, result.membershipId])"
+    *ngFor="let result of searchResults"
+  >
+    <img class="resultConsoleIcon" [src]="'https://www.bungie.net' + result.iconPath" /> {{ result.displayName }}
+  </button>
 </div>

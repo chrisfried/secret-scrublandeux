@@ -1,8 +1,6 @@
 <div class="appWrapper">
   <app-bungie-status class="bungieStatus"></app-bungie-status>
   <app-nav class="nav"></app-nav>
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
+  <app-guardian *ngIf="bungieAuth.hasValidAccessToken$ | async"></app-guardian>
   <app-footer class="footer"></app-footer>
 </div>

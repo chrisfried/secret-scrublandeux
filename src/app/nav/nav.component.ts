@@ -1,26 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core'
+import { BungieAuthService } from '../bungie-auth/bungie-auth.service'
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  public searchString: string;
+  public searchString: string
 
-  constructor(
-    private router: Router
-  ) { }
+  constructor(public bungieAuth: BungieAuthService) {}
 
   ngOnInit() {
-    this.searchString = '';
+    this.searchString = ''
   }
 
-  search() {
-    if (this.searchString.length) {
-      this.router.navigate(['/search', this.searchString]);
-    }
+  login(): void {
+    this.bungieAuth.login()
   }
 
+  logout(): void {
+    this.bungieAuth.logout()
+  }
 }

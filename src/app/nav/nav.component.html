@@ -1,12 +1,10 @@
 <span class="mat-headline headline">Destiny 2 Historical Heatmap</span>
 <a mat-raised-button class="switch-game" href="https://chrisfried.github.io/secret-scrubland/">Switch to Destiny 1</a>
-<form class="search-form" (ngSubmit)="search()">
-  <div class="search-bar">
-    <mat-form-field>
-      <input matInput [(ngModel)]="searchString" name="searchString" text="quick-links" class=" search-box" type="search" placeholder="Guardian" autofocus="true">
-    </mat-form-field>
-    <button mat-icon-button color="primary" type="submit" class="button search-button">
-      <mat-icon aria-label="Search for Guardian">search</mat-icon>
-    </button>
-  </div>
-</form>
+<div style="margin-bottom: 1em">
+  <button *ngIf="(bungieAuth.hasValidAccessToken$ | async) === false" mat-raised-button color="primary" class="button" (click)="login()">
+    Login with Bungie <mat-icon aria-label="Login with Bungie">login</mat-icon>
+  </button>
+  <button *ngIf="bungieAuth.hasValidAccessToken$ | async" mat-raised-button class="button" (click)="logout()">
+    Logout <mat-icon aria-label="Logout">logout</mat-icon>
+  </button>
+</div>

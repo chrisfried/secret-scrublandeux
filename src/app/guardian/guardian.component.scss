@@ -26,6 +26,10 @@
   cursor: pointer;
 }
 
+.loading>.calDay {
+  cursor: progress
+}
+
 .yearLabel {
   display: flex;
   align-items: center;
