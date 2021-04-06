@@ -1,17 +1,17 @@
-import { Injectable } from '@angular/core'
-import _ from 'lodash'
-import { get, set, del } from 'idb-keyval'
-import { deepEqual } from 'fast-equals'
-import { BehaviorSubject, Subject, from, EMPTY } from 'rxjs'
-import { switchMap, map, catchError } from 'rxjs/operators'
 import { HttpClient } from '@angular/common/http'
+import { Injectable } from '@angular/core'
 import {
   DestinyActivityDefinition,
   DestinyActivityModeDefinition,
-  getDestinyManifest,
   DestinyManifest,
+  getDestinyManifest,
   ServerResponse,
 } from 'bungie-api-ts/destiny2'
+import { deepEqual } from 'fast-equals'
+import { del, get, set } from 'idb-keyval'
+import _ from 'lodash'
+import { BehaviorSubject, EMPTY, from, Subject } from 'rxjs'
+import { catchError, map, switchMap } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root',

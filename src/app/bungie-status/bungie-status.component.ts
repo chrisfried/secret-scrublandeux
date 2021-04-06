@@ -1,8 +1,8 @@
+import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { Component, OnInit } from '@angular/core'
 import { ServerResponse } from 'bungie-api-ts/destiny2'
 import { BehaviorSubject, Subscription, throwError as observableThrowError } from 'rxjs'
 import { catchError } from 'rxjs/operators'
-import { HttpErrorResponse, HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-bungie-status',

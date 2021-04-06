@@ -7,8 +7,8 @@
 .calMonth {
   display: flex;
   flex-direction: column;
-  margin-right: .5em;
-  margin-bottom: .5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .dayWrapper {
@@ -26,8 +26,8 @@
   cursor: pointer;
 }
 
-.loading>.calDay {
-  cursor: progress
+.loading > .calDay {
+  cursor: progress;
 }
 
 .yearLabel {
@@ -52,7 +52,8 @@
   border: solid 2px white;
 }
 
-.raid, .event {
+.raid,
+.event {
   border: solid 1px white;
 }
 
@@ -63,7 +64,7 @@
   width: 1em;
   display: inline-block;
   line-height: 1em;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 @keyframes spin {
@@ -85,5 +86,5 @@
 }
 
 .errorStatus {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }

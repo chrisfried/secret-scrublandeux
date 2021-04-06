@@ -1,4 +1,4 @@
-import { bungieDev } from './keys';
+import { bungieDev } from './keys'
 
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
@@ -7,5 +7,5 @@ import { bungieDev } from './keys';
 
 export const environment = {
   production: false,
-  bungie: bungieDev
-};
+  bungie: bungieDev,
+}

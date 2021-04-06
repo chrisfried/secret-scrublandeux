@@ -1,12 +1,12 @@
-import { Injectable, Inject } from '@angular/core'
+import { DOCUMENT } from '@angular/common'
+import { Inject, Injectable } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 import { OAuthService } from 'angular-oauth2-oidc'
 import { JwksValidationHandler } from 'angular-oauth2-oidc-jwks'
+import { BehaviorSubject } from 'rxjs'
+import { environment } from '../../environments/environment'
 import { OAuthBungieService } from './bungie-auth.module'
 import { BungieOAuthStorage } from './bungie-auth.storage'
-import { DOCUMENT } from '@angular/common'
-import { BehaviorSubject } from 'rxjs'
-import { ActivatedRoute } from '@angular/router'
-import { environment } from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root',

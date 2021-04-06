@@ -14,6 +14,11 @@
     "manifest": "node ./utils/update-definitions.js && node ./utils/parse-definitions.js"
   },
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "git-format-staged -f 'prettier --ignore-unknown --stdin --stdin-filepath \"{}\"' ."
+    }
+  },
   "dependencies": {
     "@angular/animations": "10.0.5",
     "@angular/cdk": "^10.1.1",
@@ -45,6 +50,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~12.6.8",
     "codelyzer": "~5.1.0",
+    "husky": "^6.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.2.0",
@@ -53,6 +59,7 @@
     "karma-coverage-istanbul-reporter": "^2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.0.0",
+    "pretty-quick": "^3.1.0",
     "protractor": "~5.4.2",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",

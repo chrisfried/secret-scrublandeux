@@ -22,32 +22,44 @@
   display: block;
   width: 60px;
   position: absolute;
-  left: .5em;
-  background-color: rgb(50, 50, 150)
+  left: 0.5em;
+  background-color: rgb(50, 50, 150);
 }
 // Trials
-.mode-42, .mode-39, .mode-41 {
-  background-color: #00DED1;
+.mode-42,
+.mode-39,
+.mode-41 {
+  background-color: #00ded1;
 }
 // Crucible
-.mode-31, .mode-5, .mode-38, .mode-12, .mode-37, .mode-10 {
-  background-color: #CA1C1B;
+.mode-31,
+.mode-5,
+.mode-38,
+.mode-12,
+.mode-37,
+.mode-10 {
+  background-color: #ca1c1b;
 }
 // Iron Banner
-.mode-45, .mode-44, .mode-43, .mode-19 {
+.mode-45,
+.mode-44,
+.mode-43,
+.mode-19 {
   background-color: #485537;
 }
 // Strikes
-.mode-3, .mode-18 {
-  background-color: #3D526F;
+.mode-3,
+.mode-18 {
+  background-color: #3d526f;
 }
 // Nightfall
-.mode-17, .mode-16 {
-  background-color: #1F3043;
+.mode-17,
+.mode-16 {
+  background-color: #1f3043;
 }
 // Story
 .mode-2 {
-  background-color: #ED8129;
+  background-color: #ed8129;
 }
 // Social
 .mode-40 {
@@ -55,7 +67,7 @@
 }
 // Patrol
 .mode-6 {
-  background-color: #CACACA;
+  background-color: #cacaca;
 }
 // Raid
 .mode-4 {
@@ -63,5 +75,5 @@
 }
 // Gambit
 .mode-63 {
-  background-color: #2B8E69;
+  background-color: #2b8e69;
 }

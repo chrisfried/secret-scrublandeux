@@ -1,26 +1,25 @@
+import { HttpClient } from '@angular/common/http'
 import { Component, OnDestroy, OnInit } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
-import { ActivatedRoute, Params } from '@angular/router'
-import { ServerResponse, BungieMembershipType } from 'bungie-api-ts/common'
+import { ServerResponse } from 'bungie-api-ts/common'
 import {
   DestinyActivityHistoryResults,
   DestinyCharacterComponent,
-  DestinyProfileResponse,
-  GetProfileParams,
   DestinyComponentType,
-  getProfile,
+  DestinyProfileResponse,
   getActivityHistory,
   GetActivityHistoryParams,
+  getProfile,
+  GetProfileParams,
 } from 'bungie-api-ts/destiny2'
-import { BehaviorSubject, Observable, Subscription, throwError, of, combineLatest, EMPTY, forkJoin } from 'rxjs'
-import { catchError, distinctUntilChanged, map, mergeMap, switchMap, tap } from 'rxjs/operators'
-import { scrubland } from '../scrubland.typings'
-import { DayModalComponent } from './day-modal/day-modal.component'
-import { HttpErrorResponse, HttpClient } from '@angular/common/http'
-import { ManifestService } from '../manifest/manifest.service'
-import { BungieQueueService } from '../services/queue.service'
-import { BungieAuthService } from '../bungie-auth/bungie-auth.service'
 import { getMembershipDataForCurrentUser, UserMembershipData } from 'bungie-api-ts/user'
+import { BehaviorSubject, EMPTY, forkJoin, Observable, Subscription } from 'rxjs'
+import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators'
+import { BungieAuthService } from '../bungie-auth/bungie-auth.service'
+import { ManifestService } from '../manifest/manifest.service'
+import { scrubland } from '../scrubland.typings'
+import { BungieQueueService } from '../services/queue.service'
+import { DayModalComponent } from './day-modal/day-modal.component'
 
 @Component({
   selector: 'app-guardian',

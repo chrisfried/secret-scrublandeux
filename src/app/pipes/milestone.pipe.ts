@@ -1,7 +1,7 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core'
 
 @Pipe({
-  name: 'milestone'
+  name: 'milestone',
 })
 export class MilestonePipe implements PipeTransform {
   transform(date: any, args?: any): any {
@@ -23,15 +23,15 @@ export class MilestonePipe implements PipeTransform {
           case '2019-03-05':
           case '2019-6-4':
           case '2019-06-04':
-          case '2019-9-17':
-          case '2019-09-17':
+          case '2019-10-1':
+          case '2019-10-01':
           case '2019-12-10':
           case '2020-3-10':
           case '2020-03-10':
           case '2020-6-9':
           case '2020-06-09':
           case '2020-11-10':
-            return 'release';
+            return 'release'
           case '2017-9-13':
           case '2017-09-13':
           case '2017-12-6':
@@ -45,7 +45,7 @@ export class MilestonePipe implements PipeTransform {
           case '2019-6-4':
           case '2019-06-04':
           case '2020-11-21':
-            return 'raid';
+            return 'raid'
           case '2018-7-8':
           case '2018-07-08':
           case '2018-7-20':
@@ -129,185 +129,185 @@ export class MilestonePipe implements PipeTransform {
           case '2020-11-09':
           case '2020-11-17':
           case '2020-12-15':
-            return 'event';
+            return 'event'
           default:
-            return '';
+            return ''
         }
       case 'text':
         switch (date) {
           case '2017-9-6':
           case '2017-09-06':
-            return ' | Destiny 2 Console';
+            return ' | Destiny 2 Console'
           case '2017-9-13':
           case '2017-09-13':
-            return ' | Leviathan Raid';
+            return ' | Leviathan Raid'
           case '2017-10-24':
-            return ' | Destiny 2 PC';
+            return ' | Destiny 2 PC'
           case '2017-12-5':
           case '2017-12-05':
-            return ' | Curse of Osiris';
+            return ' | Curse of Osiris'
           case '2017-12-6':
           case '2017-12-06':
-            return ' | Eater of Worlds Raid Lair';
+            return ' | Eater of Worlds Raid Lair'
           case '2018-5-8':
           case '2018-05-08':
-            return ' | Warmind';
+            return ' | Warmind'
           case '2018-5-11':
           case '2018-05-11':
-            return ' | Spire of Stars Raid Lair';
+            return ' | Spire of Stars Raid Lair'
           case '2018-7-8':
           case '2018-07-08':
-            return ' | Moments of Triumph';
+            return ' | Moments of Triumph'
           case '2018-7-20':
           case '2018-07-20':
-            return ' | The Whisper';
+            return ' | The Whisper'
           case '2018-7-31':
           case '2018-07-31':
-            return ' | Solstice of Heroes';
+            return ' | Solstice of Heroes'
           case '2018-9-4':
           case '2018-09-04':
-            return ' | Forsaken';
+            return ' | Forsaken'
           case '2018-9-14':
           case '2018-09-14':
-            return ' | Last Wish Raid';
+            return ' | Last Wish Raid'
           case '2018-12-4':
           case '2018-12-04':
-            return ' | Season of the Forge | Volundr Forge';
+            return ' | Season of the Forge | Volundr Forge'
           case '2018-12-7':
           case '2018-12-07':
-            return ' | Gofannon Forge & Scourge of the Past Raid';
+            return ' | Gofannon Forge & Scourge of the Past Raid'
           case '2018-12-11':
-            return ' | The Dawning';
+            return ' | The Dawning'
           case '2018-12-18':
-            return ' | Izanami Forge';
+            return ' | Izanami Forge'
           case '2019-1-8':
           case '2019-01-08':
-            return ' | Niobe Labs';
+            return ' | Niobe Labs'
           case '2019-1-29':
           case '2019-01-29':
-            return ' | The Draw Quest';
+            return ' | The Draw Quest'
           case '2019-2-5':
           case '2019-02-05':
-            return ' | Crimson Days';
+            return ' | Crimson Days'
           case '2019-3-5':
           case '2019-03-05':
-            return ' | Season of the Drifter | Gambit Prime: New Arcadia & Reckoning Tier 1';
+            return ' | Season of the Drifter | Gambit Prime: New Arcadia & Reckoning Tier 1'
           case '2019-3-8':
           case '2019-03-08':
-            return ' | Reckoning Tier 2';
+            return ' | Reckoning Tier 2'
           case '2019-3-12':
           case '2019-03-12':
-            return ' | Gambit Prime: Deep Six & Thorn Quest';
+            return ' | Gambit Prime: Deep Six & Thorn Quest'
           case '2019-3-15':
           case '2019-03-15':
-            return ' | Invitations of the Nine & Reckoning Tier 3';
+            return ' | Invitations of the Nine & Reckoning Tier 3'
           case '2019-3-19':
           case '2019-03-19':
-            return ' | Gambit Prime: Legion\'s Folly';
+            return " | Gambit Prime: Legion's Folly"
           case '2019-3-26':
           case '2019-03-26':
-            return ' | Gambit Prime: Emerald Coast';
+            return ' | Gambit Prime: Emerald Coast'
           case '2019-4-2':
           case '2019-04-02':
-            return ' | Gambit Prime: All Maps';
+            return ' | Gambit Prime: All Maps'
           case '2019-4-9':
           case '2019-04-09':
-            return ' | Arc Week';
+            return ' | Arc Week'
           case '2019-4-16':
           case '2019-04-16':
-            return ' | The Revelry';
+            return ' | The Revelry'
           case '2019-6-4':
           case '2019-06-04':
-            return ' | Season of Opulence | Menagerie & Crown of Sorrow Raid';
+            return ' | Season of Opulence | Menagerie & Crown of Sorrow Raid'
           case '2019-6-11':
           case '2019-06-11':
-            return ' | New Menagerie Boss & Truth Quest';
+            return ' | New Menagerie Boss & Truth Quest'
           case '2019-6-18':
           case '2019-06-18':
-            return ' | New Menagerie Boss & Iron Banner Quest';
+            return ' | New Menagerie Boss & Iron Banner Quest'
           case '2019-6-25':
           case '2019-06-25':
-            return ' | Menagerie Heroic Mode';
+            return ' | Menagerie Heroic Mode'
           case '2019-7-2':
           case '2019-07-02':
-            return ' | Lumina Quest';
+            return ' | Lumina Quest'
           case '2019-7-9':
           case '2019-07-09':
-            return ' | Tribute Hall & Moments of Triumph';
+            return ' | Tribute Hall & Moments of Triumph'
           case '2019-7-30':
           case '2019-07-30':
-            return ' | Solstice of Heroes';
-          case '2019-9-17':
-          case '2019-09-17':
-            return ' | Shadowkeep';
+            return ' | Solstice of Heroes'
+          case '2019-10-1':
+          case '2019-10-01':
+            return ' | Shadowkeep'
           case '2019-12-10':
-            return ' | Season of Dawn';
+            return ' | Season of Dawn'
           case '2019-12-17':
-            return ' | The Dawning';
+            return ' | The Dawning'
           case '2020-1-7':
           case '2020-01-07':
-            return ' | Exotic Quest: Devil\'s Ruin';
+            return " | Exotic Quest: Devil's Ruin"
           case '2020-1-28':
           case '2020-01-28':
-            return ' | Exotic Quest: Bastion';
+            return ' | Exotic Quest: Bastion'
           case '2020-2-4':
           case '2020-02-04':
-            return ' | Empyrean Foundation';
+            return ' | Empyrean Foundation'
           case '2020-2-11':
           case '2020-02-11':
-            return ' | Crimson Days';
+            return ' | Crimson Days'
           case '2020-3-10':
           case '2020-03-10':
-            return ' | Season of the Worthy | Seraph Bunker: EDZ';
+            return ' | Season of the Worthy | Seraph Bunker: EDZ'
           case '2020-3-13':
           case '2020-03-13':
-            return ' | Trials of Osiris Returns';
+            return ' | Trials of Osiris Returns'
           case '2020-3-17':
           case '2020-03-17':
-            return ' | Exotic Quest: The Fourth Horseman';
+            return ' | Exotic Quest: The Fourth Horseman'
           case '2020-3-24':
           case '2020-03-24':
-            return ' | Seraph Bunker: Moon';
+            return ' | Seraph Bunker: Moon'
           case '2020-4-7':
           case '2020-04-07':
-            return ' | Seraph Bunker: Io';
+            return ' | Seraph Bunker: Io'
           case '2020-4-21':
           case '2020-04-21':
-            return ' | Guardian Games | Grandmaster Ordeal';
+            return ' | Guardian Games | Grandmaster Ordeal'
           case '2020-6-6':
           case '2020-06-06':
-            return ' | Live Event: Almighty\'s Destruction';
+            return " | Live Event: Almighty's Destruction"
           case '2020-6-9':
           case '2020-06-09':
-            return ' | Season of Arrivals | Contact Event: Io | Prophecy Dungeon';
+            return ' | Season of Arrivals | Contact Event: Io | Prophecy Dungeon'
           case '2020-7-7':
           case '2020-07-07':
-            return ' | Moments of Triumph | Exotic Quest: Ruinous Effigy | Contact Event: Titan';
+            return ' | Moments of Triumph | Exotic Quest: Ruinous Effigy | Contact Event: Titan'
           case '2020-8-11':
           case '2020-08-11':
-            return ' | Solstice of Heroes';
+            return ' | Solstice of Heroes'
           case '2020-9-8':
           case '2020-09-08':
-            return ' | Exotic Quest: Traveler\'s Chosen';
+            return " | Exotic Quest: Traveler's Chosen"
           case '2020-10-6':
           case '2020-10-06':
-            return ' | Festival of the Lost';
+            return ' | Festival of the Lost'
           case '2020-11-9':
           case '2020-11-09':
-            return ' | Live Event: Traveler Reforged';
+            return ' | Live Event: Traveler Reforged'
           case '2020-11-10':
-            return ' | Launch: Beyond Light';
+            return ' | Launch: Beyond Light'
           case '2020-11-17':
-            return ' | Wrathborn Hunts';
+            return ' | Wrathborn Hunts'
           case '2020-11-21':
-            return ' | Deep Stone Crypt Raid';
+            return ' | Deep Stone Crypt Raid'
           case '2020-12-15':
-            return ' | The Dawning';
+            return ' | The Dawning'
           default:
-            return '';
+            return ''
         }
       default:
-        return '';
+        return ''
     }
   }
 }

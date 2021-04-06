@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core'
-import { BehaviorSubject } from 'rxjs'
-import { take, debounceTime } from 'rxjs/operators'
 import { HttpClient } from '@angular/common/http'
-import { ServerResponse } from 'bungie-api-ts/user'
+import { Injectable } from '@angular/core'
 import { GetPostGameCarnageReportParams } from 'bungie-api-ts/destiny2'
+import { ServerResponse } from 'bungie-api-ts/user'
+import { BehaviorSubject } from 'rxjs'
+import { debounceTime, take } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root',
