@@ -3,10 +3,10 @@ import { env } from 'process'
 export const environment = {
   production: true,
   bungie: {
-    apiKey: env.apiKey,
-    authUrl: env.authUrl,
-    clientId: env.clientId,
-    clientSecret: env.clientSecret,
-    redirect: env.redirect,
+    apiKey: env.BAK,
+    authUrl: env.BAU,
+    clientId: env.BCI,
+    clientSecret: env.BCS,
+    redirect: env.BR,
   },
 }
