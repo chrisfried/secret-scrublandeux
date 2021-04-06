@@ -14,6 +14,12 @@ jobs:
         run: |
           npm install
           npm run build:ghp
+        env:
+          apiKey: '25cec645b08c40a393deccc37749b2c6'
+          authUrl: 'https://www.bungie.net/en/OAuth/Authorize'
+          clientId: '30141'
+          clientSecret: 'Qh0txds-DSzcPNS6kl6RVBFqtMxVkQK7Cs40wbB3C78'
+          redirect: 'https://chrisfried.github.io/secret-scrublandeux'
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
