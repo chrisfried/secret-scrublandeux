@@ -16,7 +16,7 @@ jobs:
           npm run build:ghp
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
           folder: dist
