@@ -3,7 +3,6 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/c
 import { Observable } from 'rxjs'
 import { BungieOAuthStorage } from './bungie-auth.storage'
 import { environment } from '../../environments/environment'
-import { env } from 'process'
 
 @Injectable({
   providedIn: 'root',
@@ -26,7 +25,7 @@ export class BungieAuthInterceptor implements HttpInterceptor {
     let headers = req.headers
     if (url.indexOf('common/destiny2_content') > 0) {
     } else {
-      headers = headers.set('X-API-Key', environment.bungie.apiKey || env.BAK)
+      headers = headers.set('X-API-Key', environment.bungie.apiKey)
       if (url === 'https://www.bungie.net/platform/app/oauth/token/' || url.indexOf('getmembershipsbyid') > 0) {
       } else {
         if (this.authStorage.getItem('access_token')) {
