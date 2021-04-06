@@ -7,6 +7,7 @@ import { DOCUMENT } from '@angular/common'
 import { BehaviorSubject } from 'rxjs'
 import { ActivatedRoute } from '@angular/router'
 import { environment } from '../../environments/environment'
+import { env } from 'process'
 
 @Injectable({
   providedIn: 'root',
@@ -24,9 +25,9 @@ export class BungieAuthService {
       issuer: 'https://www.bungie.net/en/OAuth/Authorize',
       loginUrl: 'https://www.bungie.net/en/OAuth/Authorize',
       tokenEndpoint: 'https://www.bungie.net/Platform/App/OAuth/token/',
-      redirectUri: environment.bungie.redirect,
-      clientId: environment.bungie.clientId,
-      dummyClientSecret: environment.bungie.clientSecret,
+      redirectUri: environment.bungie.redirect || env.BR,
+      clientId: environment.bungie.clientId || env.BCI,
+      dummyClientSecret: environment.bungie.clientSecret || env.BCS,
       responseType: 'code',
       scope: '',
     })
@@ -49,7 +50,7 @@ export class BungieAuthService {
   async login() {
     await this.oAuthService.createAndSaveNonce()
     this.document.location.href = `https://www.bungie.net/en/OAuth/Authorize?response_type=code&client_id=${
-      environment.bungie.clientId
+      environment.bungie.clientId || env.BCI
     }&state=${localStorage.getItem('bungie-nonce')}`
   }
 
