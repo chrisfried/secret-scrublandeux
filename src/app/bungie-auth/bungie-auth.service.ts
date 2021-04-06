@@ -26,7 +26,6 @@ export class BungieAuthService {
       tokenEndpoint: 'https://www.bungie.net/Platform/App/OAuth/token/',
       redirectUri: environment.bungie.redirect,
       clientId: environment.bungie.clientId,
-      dummyClientSecret: environment.bungie.clientSecret,
       responseType: 'code',
       scope: '',
     })
