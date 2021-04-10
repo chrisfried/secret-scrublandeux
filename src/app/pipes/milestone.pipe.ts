@@ -129,6 +129,10 @@ export class MilestonePipe implements PipeTransform {
           case '2020-11-09':
           case '2020-11-17':
           case '2020-12-15':
+          case '2021-2-9':
+          case '2021-02-09':
+          case '2021-4-20':
+          case '2021-04-20':
             return 'event'
           default:
             return ''
@@ -296,13 +300,19 @@ export class MilestonePipe implements PipeTransform {
           case '2020-11-09':
             return ' | Live Event: Traveler Reforged'
           case '2020-11-10':
-            return ' | Launch: Beyond Light'
+            return ' | Launch: Beyond Light | Season of the Hunt'
           case '2020-11-17':
             return ' | Wrathborn Hunts'
           case '2020-11-21':
             return ' | Deep Stone Crypt Raid'
           case '2020-12-15':
             return ' | The Dawning'
+          case '2021-2-9':
+          case '2021-02-09':
+            return ' | Season of the Chosen'
+          case '2021-4-20':
+          case '2021-04-20':
+            return ' | Guardian Games'
           default:
             return ''
         }
