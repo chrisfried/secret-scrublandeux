@@ -261,7 +261,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Shadowkeep'
           case '2019-10-5':
           case '2019-10-05':
-            return ' | Deep Stone Crypt | Vex Offensive'
+            return ' | Garden of Salvation | Vex Offensive'
           case '2019-10-22':
             return ' | Exotic Quest: Leviathan\'s Breath | Master Nightmare Hunts'
           case '2019-10-29':
