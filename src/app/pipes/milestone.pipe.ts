@@ -31,6 +31,8 @@ export class MilestonePipe implements PipeTransform {
           case '2020-6-9':
           case '2020-06-09':
           case '2020-11-10':
+          case '2021-2-9':
+          case '2020-02-09':
             return 'release'
           case '2017-9-13':
           case '2017-09-13':
@@ -44,6 +46,8 @@ export class MilestonePipe implements PipeTransform {
           case '2018-12-07':
           case '2019-6-4':
           case '2019-06-04':
+          case '2019-10-5':
+          case '2019-10-05':
           case '2020-11-21':
             return 'raid'
           case '2018-7-8':
@@ -96,6 +100,11 @@ export class MilestonePipe implements PipeTransform {
           case '2019-07-09':
           case '2019-7-30':
           case '2019-07-30':
+          case '2019-10-5':
+          case '2019-10-05':
+          case '2019-10-22':
+          case '2019-10-29':
+          case '2019-11-19':
           case '2019-12-17':
           case '2020-1-7':
           case '2020-01-07':
@@ -129,10 +138,16 @@ export class MilestonePipe implements PipeTransform {
           case '2020-11-09':
           case '2020-11-17':
           case '2020-12-15':
-          case '2021-2-9':
-          case '2021-02-09':
+          case '2021-2-16':
+          case '2021-02-16':
+          case '2021-2-23':
+          case '2021-02-23':
+          case '2021-3-23':
+          case '2021-03-23':
           case '2021-4-20':
           case '2021-04-20':
+          case '2021-5-7':
+          case '2021-05-07':
             return 'event'
           default:
             return ''
@@ -244,6 +259,15 @@ export class MilestonePipe implements PipeTransform {
           case '2019-10-1':
           case '2019-10-01':
             return ' | Shadowkeep'
+          case '2019-10-5':
+          case '2019-10-05':
+            return ' | Garden of Salvation | Vex Offensive'
+          case '2019-10-22':
+            return ' | Exotic Quest: Leviathan\'s Breath | Master Nightmare Hunts'
+          case '2019-10-29':
+            return ' | Festival of the Lost | Pit of Heresy Dungeon | Exotic Quest: Xenophage'
+          case '2019-11-19':
+            return ' | Vex Offensive: Final Assault'
           case '2019-12-10':
             return ' | Season of Dawn'
           case '2019-12-17':
@@ -309,10 +333,22 @@ export class MilestonePipe implements PipeTransform {
             return ' | The Dawning'
           case '2021-2-9':
           case '2021-02-09':
-            return ' | Season of the Chosen'
+            return ' | Season of the Chosen | H.E.L.M. Opens | Behemoth and Hailstone Battlegrounds'
+          case '2021-2-16':
+          case '2021-02-16':
+            return ' | Foothold Battleground'
+          case '2021-2-23':
+          case '2021-02-23':
+            return ' | Oracle Battleground'
+          case '2021-3-23':
+          case '2021-03-23':
+            return ' | Proving Grounds Strike'
           case '2021-4-20':
           case '2021-04-20':
             return ' | Guardian Games'
+          case '2021-5-7':
+          case '2021-05-07':
+            return ' | Guardian Games Closing Ceremony'
           default:
             return ''
         }
