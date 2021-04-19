@@ -324,7 +324,7 @@ export class MilestonePipe implements PipeTransform {
           case '2020-11-09':
             return ' | Live Event: Traveler Reforged'
           case '2020-11-10':
-            return ' | Launch: Beyond Light'
+            return ' | Launch: Beyond Light | Season of the Hunt'
           case '2020-11-17':
             return ' | Wrathborn Hunts'
           case '2020-11-21':
