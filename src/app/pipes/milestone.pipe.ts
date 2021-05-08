@@ -49,6 +49,8 @@ export class MilestonePipe implements PipeTransform {
           case '2019-10-5':
           case '2019-10-05':
           case '2020-11-21':
+          case '2021-5-22':
+          case '2021-05-22':
             return 'raid'
           case '2018-7-8':
           case '2018-07-08':
@@ -148,6 +150,16 @@ export class MilestonePipe implements PipeTransform {
           case '2021-04-20':
           case '2021-5-7':
           case '2021-05-07':
+          case '2021-5-11':
+          case '2021-05-11':
+          case '2021-5-18':
+          case '2021-05-18':
+          case '2021-5-25':
+          case '2021-05-25':
+          case '2021-7-6':
+          case '2021-07-06':
+          case '2021-8-10':
+          case '2021-08-10':
             return 'event'
           default:
             return ''
@@ -185,7 +197,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Solstice of Heroes'
           case '2018-9-4':
           case '2018-09-04':
-            return ' | Forsaken'
+            return ' | Forsaken | Season of the Outlaw'
           case '2018-9-14':
           case '2018-09-14':
             return ' | Last Wish Raid'
@@ -194,7 +206,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Forge | Volundr Forge'
           case '2018-12-7':
           case '2018-12-07':
-            return ' | Gofannon Forge & Scourge of the Past Raid'
+            return ' | Scourge of the Past Raid | Gofannon Forge'
           case '2018-12-11':
             return ' | The Dawning'
           case '2018-12-18':
@@ -216,10 +228,10 @@ export class MilestonePipe implements PipeTransform {
             return ' | Reckoning Tier 2'
           case '2019-3-12':
           case '2019-03-12':
-            return ' | Gambit Prime: Deep Six & Thorn Quest'
+            return ' | Gambit Prime: Deep Six | Exotic Quest: Thorn'
           case '2019-3-15':
           case '2019-03-15':
-            return ' | Invitations of the Nine & Reckoning Tier 3'
+            return ' | Invitations of the Nine | Reckoning Tier 3'
           case '2019-3-19':
           case '2019-03-19':
             return " | Gambit Prime: Legion's Folly"
@@ -240,25 +252,25 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of Opulence | Menagerie & Crown of Sorrow Raid'
           case '2019-6-11':
           case '2019-06-11':
-            return ' | New Menagerie Boss & Truth Quest'
+            return ' | New Menagerie Boss | Exotic Quest: Truth'
           case '2019-6-18':
           case '2019-06-18':
-            return ' | New Menagerie Boss & Iron Banner Quest'
+            return ' | New Menagerie Boss | Iron Banner Quest'
           case '2019-6-25':
           case '2019-06-25':
             return ' | Menagerie Heroic Mode'
           case '2019-7-2':
           case '2019-07-02':
-            return ' | Lumina Quest'
+            return ' | Exotic Quest: Lumina'
           case '2019-7-9':
           case '2019-07-09':
-            return ' | Tribute Hall & Moments of Triumph'
+            return ' | Tribute Hall | Moments of Triumph'
           case '2019-7-30':
           case '2019-07-30':
             return ' | Solstice of Heroes'
           case '2019-10-1':
           case '2019-10-01':
-            return ' | Shadowkeep'
+            return ' | Shadowkeep | Season of Undying'
           case '2019-10-5':
           case '2019-10-05':
             return ' | Garden of Salvation | Vex Offensive'
@@ -336,7 +348,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Chosen | H.E.L.M. Opens | Behemoth and Hailstone Battlegrounds'
           case '2021-2-16':
           case '2021-02-16':
-            return ' | Foothold Battleground'
+            return ' | Foothold Battleground | Exotic Quest: Presage'
           case '2021-2-23':
           case '2021-02-23':
             return ' | Oracle Battleground'
@@ -349,6 +361,24 @@ export class MilestonePipe implements PipeTransform {
           case '2021-5-7':
           case '2021-05-07':
             return ' | Guardian Games Closing Ceremony'
+          case '2021-5-11':
+          case '2021-05-11':
+            return ' | Season of the Splicer | Override: Europa'
+          case '2021-5-18':
+          case '2021-05-18':
+            return ' | Override: Moon'
+          case '2021-5-22':
+          case '2021-05-22':
+            return ' | Vault of Glass Raid'
+          case '2021-5-25':
+          case '2021-05-25':
+            return ' | Override: Tangled Shore'
+          case '2021-7-6':
+          case '2021-07-06':
+            return ' | Solstice of Heroes'
+          case '2021-8-10':
+          case '2021-08-10':
+            return ' | Season of the Splicer Epilogue'
           default:
             return ''
         }
