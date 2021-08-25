@@ -156,6 +156,12 @@ export class MilestonePipe implements PipeTransform {
           case '2021-05-18':
           case '2021-5-25':
           case '2021-05-25':
+          case '2021-6-1':
+          case '2021-06-01':
+          case '2021-6-8':
+          case '2021-06-08':
+          case '2021-6-29':
+          case '2021-06-29':
           case '2021-7-6':
           case '2021-07-06':
           case '2021-8-10':
@@ -372,7 +378,16 @@ export class MilestonePipe implements PipeTransform {
             return ' | Vault of Glass Raid'
           case '2021-5-25':
           case '2021-05-25':
-            return ' | Override: Tangled Shore'
+            return ' | Override: Tangled Shore | Expunge: Labyrinth'
+          case '2021-6-1':
+          case '2021-06-01':
+            return ' | Expunge: Styx'
+          case '2021-6-8':
+          case '2021-06-08':
+            return ' | Expunge: Tartarus'
+          case '2021-6-29':
+          case '2021-06-29':
+            return ' | Expunge: Delphi'
           case '2021-7-6':
           case '2021-07-06':
             return ' | Solstice of Heroes'
