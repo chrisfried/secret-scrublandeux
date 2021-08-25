@@ -32,11 +32,13 @@ export class MilestonePipe implements PipeTransform {
           case '2020-06-09':
           case '2020-11-10':
           case '2021-2-9':
-          case '2020-02-09':
+          case '2021-02-09':
           case '2021-5-11':
           case '2021-05-11':
-          case '2021-8-24':
-          case '2021-08-24':
+          case '2021-8-25':
+          case '2021-08-25':
+          case '2021-2-22':
+          case '2021-02-22':
             return 'release'
           case '2017-9-13':
           case '2017-09-13':
@@ -158,6 +160,12 @@ export class MilestonePipe implements PipeTransform {
           case '2021-05-18':
           case '2021-5-25':
           case '2021-05-25':
+          case '2021-6-1':
+          case '2021-06-01':
+          case '2021-6-8':
+          case '2021-06-08':
+          case '2021-6-29':
+          case '2021-06-29':
           case '2021-7-6':
           case '2021-07-06':
           case '2021-8-10':
@@ -347,7 +355,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | The Dawning'
           case '2021-2-9':
           case '2021-02-09':
-            return ' | Season of the Chosen | H.E.L.M. Opens | Behemoth and Hailstone Battlegrounds'
+            return ' | Season of the Chosen | H.E.L.M. Opens | Behemoth & Hailstone Battlegrounds'
           case '2021-2-16':
           case '2021-02-16':
             return ' | Foothold Battleground | Exotic Quest: Presage'
@@ -374,7 +382,16 @@ export class MilestonePipe implements PipeTransform {
             return ' | Vault of Glass Raid'
           case '2021-5-25':
           case '2021-05-25':
-            return ' | Override: Tangled Shore'
+            return ' | Override: Tangled Shore | Expunge: Labyrinth'
+          case '2021-6-1':
+          case '2021-06-01':
+            return ' | Expunge: Styx'
+          case '2021-6-8':
+          case '2021-06-08':
+            return ' | Expunge: Tartarus'
+          case '2021-6-29':
+          case '2021-06-29':
+            return ' | Expunge: Delphi'
           case '2021-7-6':
           case '2021-07-06':
             return ' | Solstice of Heroes'
@@ -383,7 +400,10 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Splicer Epilogue'
           case '2021-8-24':
           case '2021-08-24':
-            return ' | Season of the Lost'
+            return ' | Season of the Lost | Exotic Quest: Ager\'s Scepter | Shattered Realm: Forest of Echoes'
+          case '2022-2-22':
+          case '2021-02-22':
+            return ' | Launch: The Witch Queen'
           default:
             return ''
         }
