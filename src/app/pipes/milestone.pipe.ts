@@ -37,6 +37,8 @@ export class MilestonePipe implements PipeTransform {
           case '2021-05-11':
           case '2021-8-25':
           case '2021-08-25':
+          case '2021-2-22':
+          case '2021-02-22':
             return 'release'
           case '2017-9-13':
           case '2017-09-13':
@@ -399,6 +401,9 @@ export class MilestonePipe implements PipeTransform {
           case '2021-8-24':
           case '2021-08-24':
             return ' | Season of the Lost | Exotic Quest: Ager\'s Scepter | Shattered Realm: Forest of Echoes'
+          case '2022-2-22':
+          case '2021-02-22':
+            return ' | Launch: The Witch Queen'
           default:
             return ''
         }
