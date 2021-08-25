@@ -33,6 +33,10 @@ export class MilestonePipe implements PipeTransform {
           case '2020-11-10':
           case '2021-2-9':
           case '2020-02-09':
+          case '2021-5-11':
+          case '2021-05-11':
+          case '2021-8-24':
+          case '2021-08-24':
             return 'release'
           case '2017-9-13':
           case '2017-09-13':
@@ -150,8 +154,6 @@ export class MilestonePipe implements PipeTransform {
           case '2021-04-20':
           case '2021-5-7':
           case '2021-05-07':
-          case '2021-5-11':
-          case '2021-05-11':
           case '2021-5-18':
           case '2021-05-18':
           case '2021-5-25':
@@ -379,6 +381,9 @@ export class MilestonePipe implements PipeTransform {
           case '2021-8-10':
           case '2021-08-10':
             return ' | Season of the Splicer Epilogue'
+          case '2021-8-24':
+          case '2021-08-24':
+            return ' | Season of the Lost'
           default:
             return ''
         }
