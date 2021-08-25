@@ -35,6 +35,8 @@ export class MilestonePipe implements PipeTransform {
           case '2021-02-09':
           case '2021-5-11':
           case '2021-05-11':
+          case '2021-8-25':
+          case '2021-08-25':
             return 'release'
           case '2017-9-13':
           case '2017-09-13':
@@ -351,7 +353,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | The Dawning'
           case '2021-2-9':
           case '2021-02-09':
-            return ' | Season of the Chosen | H.E.L.M. Opens | Behemoth and Hailstone Battlegrounds'
+            return ' | Season of the Chosen | H.E.L.M. Opens | Behemoth & Hailstone Battlegrounds'
           case '2021-2-16':
           case '2021-02-16':
             return ' | Foothold Battleground | Exotic Quest: Presage'
@@ -394,6 +396,9 @@ export class MilestonePipe implements PipeTransform {
           case '2021-8-10':
           case '2021-08-10':
             return ' | Season of the Splicer Epilogue'
+          case '2021-8-24':
+          case '2021-08-24':
+            return ' | Season of the Lost | Exotic Quest: Ager\'s Scepter | Shattered Realm: Forest of Echoes'
           default:
             return ''
         }
