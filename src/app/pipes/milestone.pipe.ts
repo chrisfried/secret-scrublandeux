@@ -170,6 +170,10 @@ export class MilestonePipe implements PipeTransform {
           case '2021-07-06':
           case '2021-8-10':
           case '2021-08-10':
+          case '2021-8-31':
+          case '2021-08-31':
+          case '2021-9-7':
+          case '2021-09-07':
             return 'event'
           default:
             return ''
@@ -186,13 +190,13 @@ export class MilestonePipe implements PipeTransform {
             return ' | Destiny 2 PC'
           case '2017-12-5':
           case '2017-12-05':
-            return ' | Curse of Osiris'
+            return ' | Launch: Curse of Osiris'
           case '2017-12-6':
           case '2017-12-06':
             return ' | Eater of Worlds Raid Lair'
           case '2018-5-8':
           case '2018-05-08':
-            return ' | Warmind'
+            return ' | Launch: Warmind'
           case '2018-5-11':
           case '2018-05-11':
             return ' | Spire of Stars Raid Lair'
@@ -207,7 +211,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Solstice of Heroes'
           case '2018-9-4':
           case '2018-09-04':
-            return ' | Forsaken | Season of the Outlaw'
+            return ' | Launch: Forsaken | Season of the Outlaw'
           case '2018-9-14':
           case '2018-09-14':
             return ' | Last Wish Raid'
@@ -280,7 +284,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Solstice of Heroes'
           case '2019-10-1':
           case '2019-10-01':
-            return ' | Shadowkeep | Season of Undying'
+            return ' | Launch: Shadowkeep | Season of Undying'
           case '2019-10-5':
           case '2019-10-05':
             return ' | Garden of Salvation | Vex Offensive'
@@ -401,6 +405,12 @@ export class MilestonePipe implements PipeTransform {
           case '2021-8-24':
           case '2021-08-24':
             return ' | Season of the Lost | Exotic Quest: Ager\'s Scepter | Shattered Realm: Forest of Echoes'
+          case '2021-8-31':
+          case '2021-08-31':
+            return ' | Shattered Realm: Debris of Dreams'
+          case '2021-9-7':
+          case '2021-09-07':
+            return ' | Shattered Realm: Ruins of Wrath'
           case '2022-2-22':
           case '2021-02-22':
             return ' | Launch: The Witch Queen'
