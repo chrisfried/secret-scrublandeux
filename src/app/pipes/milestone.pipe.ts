@@ -190,13 +190,13 @@ export class MilestonePipe implements PipeTransform {
             return ' | Destiny 2 PC'
           case '2017-12-5':
           case '2017-12-05':
-            return ' | Curse of Osiris'
+            return ' | Launch: Curse of Osiris'
           case '2017-12-6':
           case '2017-12-06':
             return ' | Eater of Worlds Raid Lair'
           case '2018-5-8':
           case '2018-05-08':
-            return ' | Warmind'
+            return ' | Launch: Warmind'
           case '2018-5-11':
           case '2018-05-11':
             return ' | Spire of Stars Raid Lair'
@@ -211,7 +211,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Solstice of Heroes'
           case '2018-9-4':
           case '2018-09-04':
-            return ' | Forsaken | Season of the Outlaw'
+            return ' | Launch: Forsaken | Season of the Outlaw'
           case '2018-9-14':
           case '2018-09-14':
             return ' | Last Wish Raid'
@@ -284,7 +284,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Solstice of Heroes'
           case '2019-10-1':
           case '2019-10-01':
-            return ' | Shadowkeep | Season of Undying'
+            return ' | Launch: Shadowkeep | Season of Undying'
           case '2019-10-5':
           case '2019-10-05':
             return ' | Garden of Salvation | Vex Offensive'
