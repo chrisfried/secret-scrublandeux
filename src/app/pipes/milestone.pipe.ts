@@ -170,6 +170,10 @@ export class MilestonePipe implements PipeTransform {
           case '2021-07-06':
           case '2021-8-10':
           case '2021-08-10':
+          case '2021-8-31':
+          case '2021-08-31':
+          case '2021-9-7':
+          case '2021-09-07':
             return 'event'
           default:
             return ''
@@ -401,6 +405,12 @@ export class MilestonePipe implements PipeTransform {
           case '2021-8-24':
           case '2021-08-24':
             return ' | Season of the Lost | Exotic Quest: Ager\'s Scepter | Shattered Realm: Forest of Echoes'
+          case '2021-8-31':
+          case '2021-08-31':
+            return ' | Shattered Realm: Debris of Dreams'
+          case '2021-9-7':
+          case '2021-09-07':
+            return ' | Shattered Realm: Ruins of Wrath'
           case '2022-2-22':
           case '2021-02-22':
             return ' | Launch: The Witch Queen'
