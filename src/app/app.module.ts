@@ -31,14 +31,14 @@ import { LongestStreaksPipe } from './pipes/longest-streaks.pipe'
 import { MilestonePipe } from './pipes/milestone.pipe'
 import { ParseMinutesPlayedPipe } from './pipes/parse-minutes-played.pipe'
 import { RoutesModule } from './routes/routes.module'
-import { SearchComponent } from './search/search.component'
+// import { SearchComponent } from './search/search.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     FrontPageComponent,
-    SearchComponent,
+//     SearchComponent,
     GuardianComponent,
     AddTimePipe,
     DayModalComponent,
