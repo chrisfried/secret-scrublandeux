@@ -1,5 +1,4 @@
-import { HttpClient } from '@angular/common/http'
-import { Component, OnDestroy, OnInit } from '@angular/core'
+import { Component, NgZone, OnDestroy, OnInit } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
 import { ServerResponse } from 'bungie-api-ts/common'
 import {
@@ -20,6 +19,11 @@ import { ManifestService } from '../manifest/manifest.service'
 import { scrubland } from '../scrubland.typings'
 import { BungieQueueService } from '../services/queue.service'
 import { DayModalComponent } from './day-modal/day-modal.component'
+import * as THREE from 'three'
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
+import { STLExporter } from 'three/examples/jsm/exporters/STLExporter'
+import { CSG } from 'three-csg-ts'
 
 @Component({
   selector: 'app-guardian',
@@ -42,7 +46,13 @@ export class GuardianComponent implements OnInit, OnDestroy {
       }
     }
   }
-  public flatDays: any[][]
+  public flatDays: scrubland.Activity[][]
+  public seasons: {
+    number: number,
+    name: string,
+    days: scrubland.Activity[][],
+    startDate: Date
+  }[]
   public yearKeys: string[]
   public monthKeys: {
     [year: number]: number[]
@@ -59,13 +69,14 @@ export class GuardianComponent implements OnInit, OnDestroy {
   public loadingArray: { loading: boolean }[]
   public errorStatus: string
   public errorMessage: string
+  public threeLaunched = false
 
   constructor(
-    private http: HttpClient,
     public dialog: MatDialog,
     private manifestService: ManifestService,
     private bungieQueue: BungieQueueService,
-    private bungieAuth: BungieAuthService
+    private bungieAuth: BungieAuthService,
+    private readonly zone: NgZone
   ) {
     this.Math = Math
   }
@@ -80,6 +91,12 @@ export class GuardianComponent implements OnInit, OnDestroy {
     if (!this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()]) {
       this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()] = []
     }
+    this.seasons.some(season => {
+      if (day >= season.startDate) {
+        season.days.push(this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()])
+        return true
+      }
+    })
     this.flatDays.push(this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()])
   }
 
@@ -90,6 +107,98 @@ export class GuardianComponent implements OnInit, OnDestroy {
     this.activities = []
     this.days = {}
     this.flatDays = []
+    this.seasons = [
+      {
+        number: 15,
+        name: 'Season of the Lost',
+        days: [],
+        startDate: new Date('2021-8-24'),
+      },
+      {
+        number: 14,
+        name: 'Season of the Splicer',
+        days: [],
+        startDate: new Date('2021-5-11'),
+      },
+      {
+        number: 13,
+        name: 'Season of the Chosen',
+        days: [],
+        startDate: new Date('2021-2-9'),
+      },
+      {
+        number: 12,
+        name: 'Season of the Hunt',
+        days: [],
+        startDate: new Date('2020-11-10'),
+      },
+      {
+        number: 11,
+        name: 'Season of Arrivals',
+        days: [],
+        startDate: new Date('2020-6-9'),
+      },
+      {
+        number: 10,
+        name: 'Season of the Worthy',
+        days: [],
+        startDate: new Date('2020-3-10'),
+      },
+      {
+        number: 9,
+        name: 'Season of Dawn',
+        days: [],
+        startDate: new Date('2019-12-10'),
+      },
+      {
+        number: 8,
+        name: 'Season of Undying',
+        days: [],
+        startDate: new Date('2019-10-1'),
+      },
+      {
+        number: 7,
+        name: 'Season of Opulence',
+        days: [],
+        startDate: new Date('2019-6-4'),
+      },
+      {
+        number: 6,
+        name: 'Season of the Drifter',
+        days: [],
+        startDate: new Date('2019-3-5'),
+      },
+      {
+        number: 5,
+        name: 'Season of the Forge',
+        days: [],
+        startDate: new Date('2018-12-4'),
+      },
+      {
+        number: 4,
+        name: 'Season of the Outlaw',
+        days: [],
+        startDate: new Date('2018-9-4'),
+      },
+      {
+        number: 3,
+        name: 'Warmind',
+        days: [],
+        startDate: new Date('2018-5-8'),
+      },
+      {
+        number: 2,
+        name: 'Curse of Osiris',
+        days: [],
+        startDate: new Date('2017-12-5'),
+      },
+      {
+        number: 1,
+        name: 'Destiny 2',
+        days: [],
+        startDate: new Date('2017-9-5'),
+      },
+    ]
     this.flatDaysBS = new BehaviorSubject([])
     this.manifestService.state$.subscribe((state) => {
       if (state.loaded) {
@@ -204,7 +313,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
               }
               characters.push(res.Response.characters.data[key])
             })
-          } catch (e) {}
+          } catch (e) { }
         }
         return characters
       })
@@ -237,6 +346,16 @@ export class GuardianComponent implements OnInit, OnDestroy {
         })
       })
     )
+
+    this.flatDaysBS.subscribe(days => {
+      if (this.loadingArray.length && !this.loadingArray.some((loading) => loading.loading) && !this.threeLaunched) {
+        this.threeLaunched = true
+        this.seasons.forEach((season, i) => {
+          setTimeout(() => this.three(season), 1000 * i)
+        })
+      }
+    })
+
   }
 
   addHistorySub(params: GetActivityHistoryParams) {
@@ -270,12 +389,13 @@ export class GuardianComponent implements OnInit, OnDestroy {
             this.activities.push(activity)
             try {
               this.days[activity.startDate.getFullYear()][activity.startDate.getMonth() + 1][activity.startDate.getDate()].push(activity)
-            } catch (e) {}
+            } catch (e) { }
             this.flatDaysBS.next(this.flatDays)
           })
         }
         if (res) {
           loading.loading = false
+          this.flatDaysBS.next(this.flatDays)
         }
       })
     )
@@ -283,7 +403,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
 
   openDay(date: Date, day: scrubland.Activity[]) {
     if (this.loadingArray.length && !this.loadingArray.some((loading) => loading.loading)) {
-      const dialogRef = this.dialog.open(DayModalComponent, {
+      this.dialog.open(DayModalComponent, {
         data: {
           date: date,
           activities: day,
@@ -295,5 +415,116 @@ export class GuardianComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subs.forEach((sub) => sub.unsubscribe())
+  }
+
+  three(season: {
+    number: number,
+    name: string,
+    days: scrubland.Activity[][],
+    startDate: Date
+  }) {
+    console.log(season.name)
+    this.zone.runOutsideAngular(_ => {
+      let scene
+      let geometry, material, mesh, newMesh
+      let x, y, z
+
+      init()
+
+      function init() {
+
+        scene = new THREE.Scene()
+
+        x = Math.ceil((season.days.length + 2) / 7) * 4
+        y = 2 * 4
+        z = 7 * 4
+        geometry = new THREE.BoxGeometry(x, y, z)
+
+        material = new THREE.MeshStandardMaterial()
+        mesh = new THREE.Mesh(geometry, material)
+
+        x = (Math.ceil((season.days.length + 2) / 7) / 2 - .5) * 4
+        y = -1 * 4
+        z = 3 * 4
+        mesh.position.set(x, y, z)
+
+        mesh.updateMatrix()
+
+        const loader = new FontLoader()
+
+        loader.load('assets/fonts/helvetiker_bold.typeface.json', function (font) {
+
+          y = .8 * 4
+          z = .25 * 4
+          geometry = new TextGeometry(season.name, {
+            font: font,
+            size: y,
+            height: z,
+            curveSegments: 12,
+            bevelEnabled: true,
+            bevelThickness: 0,
+            bevelSize: 0,
+            bevelOffset: 0,
+            bevelSegments: 0
+          })
+          newMesh = new THREE.Mesh(geometry, material)
+
+          x = 0 * 4
+          y = -1.3 * 4
+          z = 6.25 * 4
+          newMesh.position.set(x, y, z)
+
+          mesh.updateMatrix()
+          newMesh.updateMatrix()
+          mesh = CSG.subtract(mesh, newMesh)
+
+          for (let i = 0; i < season.days.length; i++) {
+            const j = i + 2
+            const day = season.days[i]
+            if (day.length) {
+              const time = day.reduce((prev, activity) => prev + activity.values.timePlayedSeconds.basic.value, 0)
+              const height = time / 86400 * 24
+
+              x = 1 * 4
+              y = height * 4
+              z = 1 * 4
+              geometry = new THREE.BoxGeometry(x, y, z)
+
+              newMesh = new THREE.Mesh(geometry, material)
+
+              x = (Math.floor(j / 7) - Math.floor(j / 364) * 52) * 4
+              y = height / 2 * 4
+              z = (j % 7 + Math.floor(j / 364) * 7) * 4
+              newMesh.position.set(x, y, z)
+
+              mesh.updateMatrix()
+              newMesh.updateMatrix()
+              mesh = CSG.union(mesh, newMesh)
+            }
+          }
+          scene.add(mesh)
+
+          // Instantiate a exporter
+          const exporter = new STLExporter()
+          // Parse the input and generate the glTF output
+          const link = document.createElement('a')
+          link.style.display = 'none'
+          document.body.appendChild(link)
+          const stl = exporter.parse(scene)
+          link.href = URL.createObjectURL(new Blob([stl], { type: 'text/plain' }))
+          link.download = `${season.name}.stl`
+          link.click()
+        })
+      }
+
+      // function animation(time) {
+
+      //   // mesh.rotation.x = time / 2000;
+      //   // mesh.rotation.y = time / 1000;
+
+      //   renderer.render(scene, camera);
+
+      // }
+    })
   }
 }
