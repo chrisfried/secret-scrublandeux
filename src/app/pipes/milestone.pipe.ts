@@ -37,10 +37,10 @@ export class MilestonePipe implements PipeTransform {
           case '2021-05-11':
           case '2021-8-24':
           case '2021-08-24':
-          case '2021-2-22':
-          case '2021-02-22':
           case '2021-12-7':
           case '2021-12-07':
+          case '2022-2-22':
+          case '2022-02-22':
             return 'release'
           case '2017-9-13':
           case '2017-09-13':
@@ -420,7 +420,7 @@ export class MilestonePipe implements PipeTransform {
           case '2021-12-07':
             return ' | Bungie 30th Anniversary Expansion'
           case '2022-2-22':
-          case '2021-02-22':
+          case '2022-02-22':
             return ' | Launch: The Witch Queen'
           default:
             return ''
