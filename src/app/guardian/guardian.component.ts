@@ -12,7 +12,7 @@ import {
   GetProfileParams,
 } from 'bungie-api-ts/destiny2'
 import { getMembershipDataForCurrentUser, UserMembershipData } from 'bungie-api-ts/user'
-import { BehaviorSubject, EMPTY, forkJoin, Observable, Subscription } from 'rxjs'
+import { BehaviorSubject, combineLatest, EMPTY, forkJoin, Observable, Subscription } from 'rxjs'
 import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators'
 import { BungieAuthService } from '../bungie-auth/bungie-auth.service'
 import { ManifestService } from '../manifest/manifest.service'
@@ -24,6 +24,7 @@ import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { STLExporter } from 'three/examples/jsm/exporters/STLExporter'
 import { CSG } from 'three-csg-ts'
+import { formatDate } from '@angular/common'
 
 @Component({
   selector: 'app-guardian',
@@ -35,7 +36,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
   private membershipDataForCurrentUser$: BehaviorSubject<ServerResponse<UserMembershipData>> = new BehaviorSubject(undefined)
   private accountResponse$: BehaviorSubject<ServerResponse<DestinyProfileResponse>[]> = new BehaviorSubject([])
   private flatDaysBS: BehaviorSubject<any[]>
-  public displayName: Observable<string>
+  public displayName$: Observable<string>
   public characters$: Observable<DestinyCharacterComponent[]>
   public minutesPlayedTotal: Observable<number>
   public activities: scrubland.Activity[]
@@ -51,7 +52,9 @@ export class GuardianComponent implements OnInit, OnDestroy {
     number: number,
     name: string,
     days: scrubland.Activity[][],
-    startDate: Date
+    startDate: Date,
+    startDateString?: string,
+    endDateString?: string,
   }[]
   public yearKeys: string[]
   public monthKeys: {
@@ -210,18 +213,25 @@ export class GuardianComponent implements OnInit, OnDestroy {
     this.errorStatus = ''
     this.errorMessage = ''
 
-    const day = new Date('Sept 1, 2017')
+    const day = new Date('2017-09-05T17:00:00Z')
     const now = new Date()
     while (day <= now) {
       this.addDay(day)
       day.setDate(day.getDate() + 1)
     }
+    this.seasons.reverse()
+    this.seasons.forEach((season, index) => {
+      season.startDateString = formatDate(season.startDate, 'shortDate', navigator.language || 'en-US')
+      if (this.seasons[index + 1]) {
+        season.endDateString = formatDate(this.seasons[index + 1].startDate, 'shortDate', navigator.language || 'en-US')
+      }
+    })
     this.flatDaysBS.next(this.flatDays)
     this.yearKeys = Object.keys(this.days)
     this.monthKeys = {}
-    this.monthOffsets = { 2017: { 9: 5 } }
-    let previousOffset = 5
-    let previousCount = 30
+    this.monthOffsets = { 2017: { 9: 0 } }
+    let previousOffset = 0
+    let previousCount = 28
     this.dayKeys = {}
     this.yearKeys.forEach((year) => {
       this.monthKeys[year] = Object.keys(this.days[year])
@@ -285,8 +295,9 @@ export class GuardianComponent implements OnInit, OnDestroy {
         .subscribe()
     )
 
-    this.displayName = this.accountResponse$.pipe(
+    this.displayName$ = this.accountResponse$.pipe(
       distinctUntilChanged(),
+      tap(r => console.log('accountResponse', r)),
       map((responses) => responses[0]),
       map((res) => {
         if (res?.ErrorCode !== 1 && res?.ErrorStatus) {
@@ -347,12 +358,14 @@ export class GuardianComponent implements OnInit, OnDestroy {
       })
     )
 
-    this.flatDaysBS.subscribe(days => {
+    combineLatest([this.flatDaysBS, this.displayName$]).subscribe(([flatDays, displayName]) => {
       if (this.loadingArray.length && !this.loadingArray.some((loading) => loading.loading) && !this.threeLaunched) {
         this.threeLaunched = true
-        this.seasons.forEach((season, i) => {
-          setTimeout(() => this.three(season), 1000 * i)
-        })
+        this.three(this.seasons[Math.floor(Math.random() * this.seasons.length)], displayName)
+        // this.three(this.seasons[7], displayName)
+        // this.seasons.forEach((season, i) => {
+        //   setTimeout(() => this.three(season, displayName), 10 * i)
+        // })
       }
     })
 
@@ -381,14 +394,14 @@ export class GuardianComponent implements OnInit, OnDestroy {
           this.addHistorySub({ ...params, page: page + 3 })
           res.Response.activities.forEach((activity: scrubland.Activity) => {
             activity.characterId = params.characterId
-            const period = new Date(activity.period)
+            const period = new Date(new Date(activity.period).getTime() - 17 * 60 * 60 * 1000)
             const startDate = period.getTime() / 1000 + activity.values.startSeconds.basic.value
             const endDate = startDate + activity.values.timePlayedSeconds.basic.value
             activity.startDate = new Date(startDate * 1000)
             activity.endDate = new Date(endDate * 1000)
             this.activities.push(activity)
             try {
-              this.days[activity.startDate.getFullYear()][activity.startDate.getMonth() + 1][activity.startDate.getDate()].push(activity)
+              this.days[activity.startDate.getUTCFullYear()][activity.startDate.getUTCMonth() + 1][activity.startDate.getUTCDate()].push(activity)
             } catch (e) { }
             this.flatDaysBS.next(this.flatDays)
           })
@@ -421,87 +434,169 @@ export class GuardianComponent implements OnInit, OnDestroy {
     number: number,
     name: string,
     days: scrubland.Activity[][],
-    startDate: Date
-  }) {
+    startDate: Date,
+    startDateString?: string,
+    endDateString?: string,
+  }, displayName: string) {
     console.log(season.name)
     this.zone.runOutsideAngular(_ => {
-      let scene
-      let geometry, material, mesh, newMesh
-      let x, y, z
+      let geometry: THREE.BufferGeometry, mesh: THREE.Mesh, newMesh: THREE.Mesh
+      let x, y, z, textHeight, textDepth
+      const m = 2.5
 
       init()
 
       function init() {
 
-        scene = new THREE.Scene()
+        const scene = new THREE.Scene()
 
-        x = Math.ceil((season.days.length + 2) / 7) * 4
-        y = 2 * 4
-        z = 7 * 4
+        const baseHeight = 2.5
+
+        const a = Math.sqrt(1 + baseHeight * baseHeight - 2 * baseHeight * Math.cos(Math.PI / 2))
+        const rotation = Math.acos((a * a + baseHeight * baseHeight - 1) / (2 * a * baseHeight))
+
+        x = Math.ceil((season.days.length) / 7 + 2) * m
+        y = baseHeight * m
+        z = 9 * m
         geometry = new THREE.BoxGeometry(x, y, z)
 
-        material = new THREE.MeshStandardMaterial()
+        const material = new THREE.MeshStandardMaterial()
         mesh = new THREE.Mesh(geometry, material)
+        const position = mesh.geometry.getAttribute('position')
+        position.setXYZ(2, position.getX(2) + m, position.getY(2), position.getZ(2) + m)
+        position.setXYZ(3, position.getX(3) + m, position.getY(3), position.getZ(3) - m)
+        position.setXYZ(6, position.getX(6) - m, position.getY(6), position.getZ(6) - m)
+        position.setXYZ(7, position.getX(7) - m, position.getY(7), position.getZ(7) + m)
+        position.setXYZ(12, position.getX(12) - m, position.getY(12), position.getZ(12) + m)
+        position.setXYZ(13, position.getX(13) + m, position.getY(13), position.getZ(13) + m)
+        position.setXYZ(14, position.getX(14) - m, position.getY(14), position.getZ(14) - m)
+        position.setXYZ(15, position.getX(15) + m, position.getY(15), position.getZ(15) - m)
+        position.setXYZ(18, position.getX(18) - m, position.getY(18), position.getZ(18) + m)
+        position.setXYZ(19, position.getX(19) + m, position.getY(19), position.getZ(19) + m)
+        position.setXYZ(22, position.getX(22) + m, position.getY(22), position.getZ(22) - m)
+        position.setXYZ(23, position.getX(23) - m, position.getY(23), position.getZ(23) - m)
 
-        x = (Math.ceil((season.days.length + 2) / 7) / 2 - .5) * 4
-        y = -1 * 4
-        z = 3 * 4
+        x = (Math.ceil((season.days.length) / 7 + 2) / 2 - 1.5) * m
+        y = -y / 2
+        z = 3 * m
         mesh.position.set(x, y, z)
 
         mesh.updateMatrix()
+
+        for (let i = 0; i < season.days.length; i++) {
+          const j = i
+          const day = season.days[i]
+          if (day.length) {
+            const time = day.reduce((prev, activity) => prev + activity.values.timePlayedSeconds.basic.value, 0)
+            const height = time / 86400 * 24
+
+            x = 1 * m
+            y = height * m
+            z = 1 * m
+            geometry = new THREE.BoxGeometry(x, y, z)
+
+            newMesh = new THREE.Mesh(geometry, material)
+
+            x = (Math.floor(j / 7) - Math.floor(j / 364) * 52) * m
+            y = height / 2 * m
+            z = (j % 7 + Math.floor(j / 364) * 7) * m
+            newMesh.position.set(x, y, z)
+
+            newMesh.updateMatrix()
+            mesh = CSG.union(mesh, newMesh)
+          }
+        }
 
         const loader = new FontLoader()
 
         loader.load('assets/fonts/helvetiker_bold.typeface.json', function (font) {
 
-          y = .8 * 4
-          z = .25 * 4
+          textHeight = 1 * m
+          textDepth = .25 * m
           geometry = new TextGeometry(season.name, {
             font: font,
-            size: y,
-            height: z,
-            curveSegments: 12,
-            bevelEnabled: true,
-            bevelThickness: 0,
-            bevelSize: 0,
-            bevelOffset: 0,
-            bevelSegments: 0
+            size: textHeight,
+            height: textDepth,
+          })
+          geometry.computeBoundingBox()
+
+          x = ((Math.ceil((season.days.length) / 7) - geometry.boundingBox.max.x / m) / 2 - .5) * m
+          y = textHeight * -1.75
+          z = 8.2 * m
+          newMesh = new THREE.Mesh(geometry, material)
+          newMesh.position.set(x, y, z)
+          newMesh.rotateX(-rotation)
+
+          newMesh.updateMatrix()
+          mesh = CSG.union(mesh, newMesh)
+          newMesh.geometry.dispose()
+
+          geometry = new TextGeometry(displayName, {
+            font: font,
+            size: textHeight,
+            height: textDepth
           })
           newMesh = new THREE.Mesh(geometry, material)
+          geometry.computeBoundingBox()
 
-          x = 0 * 4
-          y = -1.3 * 4
-          z = 6.25 * 4
+          x = ((Math.ceil((season.days.length) / 7) - geometry.boundingBox.max.x / m) / 2 - .5 + geometry.boundingBox.max.x / m) * m
+          y = textHeight * -1.75
+          z = -2.2 * m
           newMesh.position.set(x, y, z)
+          newMesh.rotateX(rotation)
+          newMesh.rotateY(Math.PI)
 
-          mesh.updateMatrix()
           newMesh.updateMatrix()
-          mesh = CSG.subtract(mesh, newMesh)
+          mesh = CSG.union(mesh, newMesh)
 
-          for (let i = 0; i < season.days.length; i++) {
-            const j = i + 2
-            const day = season.days[i]
-            if (day.length) {
-              const time = day.reduce((prev, activity) => prev + activity.values.timePlayedSeconds.basic.value, 0)
-              const height = time / 86400 * 24
+          if (season.startDateString) {
+            geometry = new TextGeometry(season.startDateString, {
+              font: font,
+              size: textHeight,
+              height: textDepth
+            })
+            newMesh = new THREE.Mesh(geometry, material)
+            geometry.computeBoundingBox()
 
-              x = 1 * 4
-              y = height * 4
-              z = 1 * 4
-              geometry = new THREE.BoxGeometry(x, y, z)
+            x = -2.2 * m
+            y = textHeight * -1.75
+            z = ((7 - geometry.boundingBox.max.x / m) / 2 - .5) * m
+            newMesh.position.set(x, y, z)
+            newMesh.rotateZ(-rotation)
+            newMesh.rotateY(-Math.PI / 2)
 
-              newMesh = new THREE.Mesh(geometry, material)
-
-              x = (Math.floor(j / 7) - Math.floor(j / 364) * 52) * 4
-              y = height / 2 * 4
-              z = (j % 7 + Math.floor(j / 364) * 7) * 4
-              newMesh.position.set(x, y, z)
-
-              mesh.updateMatrix()
-              newMesh.updateMatrix()
-              mesh = CSG.union(mesh, newMesh)
-            }
+            newMesh.updateMatrix()
+            mesh = CSG.union(mesh, newMesh)
           }
+
+          if (season.endDateString) {
+            geometry = new TextGeometry(season.endDateString, {
+              font: font,
+              size: textHeight,
+              height: textDepth,
+              curveSegments: 12,
+              bevelEnabled: true,
+              bevelThickness: 0,
+              bevelSize: 0,
+              bevelOffset: 0,
+              bevelSegments: 0
+            })
+            newMesh = new THREE.Mesh(geometry, material)
+            geometry.computeBoundingBox()
+
+            x = (Math.ceil((season.days.length) / 7) + 1.2) * m
+            y = textHeight * -1.75
+            z = ((7 - geometry.boundingBox.max.x / m) / 2 - .5 + geometry.boundingBox.max.x / m) * m
+            newMesh.position.set(x, y, z)
+            newMesh.rotateZ(rotation)
+            newMesh.rotateY(Math.PI / 2)
+
+            newMesh.updateMatrix()
+            mesh = CSG.union(mesh, newMesh)
+          }
+          mesh.geometry.rotateX(Math.PI / 2)
+          // mesh.rotateX(Math.PI / 2)
+          mesh.updateMatrix()
           scene.add(mesh)
 
           // Instantiate a exporter
@@ -514,8 +609,22 @@ export class GuardianComponent implements OnInit, OnDestroy {
           link.href = URL.createObjectURL(new Blob([stl], { type: 'text/plain' }))
           link.download = `${season.name}.stl`
           link.click()
+
+          scene.remove(mesh)
+          mesh.geometry.dispose()
         })
       }
+
+      // scene.add(mesh)
+      // const exporter = new STLExporter()
+      // // Parse the input and generate the glTF output
+      // const link = document.createElement('a')
+      // link.style.display = 'none'
+      // document.body.appendChild(link)
+      // const stl = exporter.parse(scene)
+      // link.href = URL.createObjectURL(new Blob([stl], { type: 'text/plain' }))
+      // link.download = `${season.name}.stl`
+      // link.click()
 
       // function animation(time) {
 

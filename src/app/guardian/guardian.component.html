@@ -3,7 +3,7 @@
   <mat-card-subtitle>{{ errorMessage }}</mat-card-subtitle>
 </mat-card>
 <div class="mat-body-1">
-  Name: <span class="mat-body-2">{{ displayName | async }}</span> <br />
+  Name: <span class="mat-body-2">{{ displayName$ | async }}</span> <br />
   Total Time in Destiny 2: <span class="mat-body-2">{{ minutesPlayedTotal | async | hoursPlayed }}</span> =
   <span class="mat-body-2">{{ minutesPlayedTotal | async | parseMinutesPlayed }}</span> <br />
   Total Time in Activities: <span class="mat-body-2">{{ activities | activitiesTotalHours }}</span> =
@@ -21,44 +21,26 @@
     </mat-select>
   </mat-form-field>
 </div>
-<div *ngFor="let year of yearKeys" class="calYear">
-  <div class="yearLabel mat-caption">
-    <span>{{ year }}</span>
-  </div>
-  <div *ngFor="let month of monthKeys[year]" class="calMonth"
-    [ngStyle]="{ width: Math.ceil((dayKeys[year][month].length + monthOffsets[year][month]) / 7) + 'em' }">
-    <div class="monthLabel mat-caption">{{ month }}</div>
+<div class="calYear">
+  <div *ngFor="let season of seasons" class="calMonth"
+    [ngStyle]="{ width: Math.ceil((season['days'].length) / 7) + 'em' }">
+    <div class="monthLabel mat-caption">{{ season.name }}</div>
     <div class="dayWrapper" [ngClass]="(loadingArray | loadingReduce) ? 'loading' : ''">
-      <div class="monthSpacer" [ngStyle]="{ height: monthOffsets[year][month] + 'em' }"></div>
-      <div *ngFor="let day of dayKeys[year][month]" class="calDay"
-        [ngClass]="year + '-' + month + '-' + day | milestone: 'class'"
-        (click)="openDay(year + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day, days[year][month][day])"
-        [ngStyle]="{
+      <!-- <div class="monthSpacer" [ngStyle]="{ height: monthOffsets[year][month] + 'em' }"></div> -->
+      <div *ngFor="let day of season['days']" class="calDay" [ngStyle]="{
           'background-color':
             'hsl(' +
-            (((100 - (days[year][month][day] | addTime: calendarFilter) / 864) * 120) / 50 - 120) +
+            (((100 - (day | addTime: calendarFilter) / 864) * 120) / 50 - 120) +
             ', ' +
-            ((days[year][month][day] | addTime: calendarFilter) / 86400 > 0 ? '100%' : '0%') +
+            ((day | addTime: calendarFilter) / 86400 > 0 ? '100%' : '0%') +
             ', ' +
-            ((days[year][month][day] | addTime: calendarFilter) / 86400 > 0
-              ? (days[year][month][day] | addTime: calendarFilter) / 864 > 50
-                ? 100 - (days[year][month][day] | addTime) / 864 + '%'
+            ((day | addTime: calendarFilter) / 86400 > 0
+              ? (day | addTime: calendarFilter) / 864 > 50
+                ? 100 - (day | addTime) / 864 + '%'
                 : '50%'
               : '90%') +
             ')'
-        }" [matTooltip]="
-          year +
-          '-' +
-          month +
-          '-' +
-          day +
-          (year + '-' + month + '-' + day | milestone: 'text') +
-          ': ' +
-          Math.floor(((days[year][month][day] | addTime: calendarFilter) / 86400) * 24) +
-          'h ' +
-          Math.floor(((days[year][month][day] | addTime: calendarFilter) % 3600) / 60) +
-          'm'
-        " matTooltipPosition="after"></div>
+        }"></div>
     </div>
   </div>
 </div>
