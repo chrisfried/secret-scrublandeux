@@ -13,13 +13,14 @@ import {
 } from 'bungie-api-ts/destiny2'
 import { getMembershipDataForCurrentUser, UserMembershipData } from 'bungie-api-ts/user'
 import { BehaviorSubject, combineLatest, EMPTY, forkJoin, Observable, Subscription } from 'rxjs'
-import { distinctUntilChanged, map, switchMap, tap } from 'rxjs/operators'
+import { distinctUntilChanged, map, switchMap, tap, take } from 'rxjs/operators'
 import { BungieAuthService } from '../bungie-auth/bungie-auth.service'
 import { ManifestService } from '../manifest/manifest.service'
 import { scrubland } from '../scrubland.typings'
 import { BungieQueueService } from '../services/queue.service'
 import { DayModalComponent } from './day-modal/day-modal.component'
 import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { STLExporter } from 'three/examples/jsm/exporters/STLExporter'
@@ -36,7 +37,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
   private membershipDataForCurrentUser$: BehaviorSubject<ServerResponse<UserMembershipData>> = new BehaviorSubject(undefined)
   private accountResponse$: BehaviorSubject<ServerResponse<DestinyProfileResponse>[]> = new BehaviorSubject([])
   private flatDaysBS: BehaviorSubject<any[]>
-  public displayName$: Observable<string>
+  public displayName = ''
+  public downloadLink = ''
   public characters$: Observable<DestinyCharacterComponent[]>
   public minutesPlayedTotal: Observable<number>
   public activities: scrubland.Activity[]
@@ -49,12 +51,12 @@ export class GuardianComponent implements OnInit, OnDestroy {
   }
   public flatDays: scrubland.Activity[][]
   public seasons: {
-    number: number,
-    name: string,
-    days: scrubland.Activity[][],
-    startDate: Date,
-    startDateString?: string,
-    endDateString?: string,
+    number: number
+    name: string
+    days: scrubland.Activity[][]
+    startDate: Date
+    startDateString?: string
+    endDateString?: string
   }[]
   public yearKeys: string[]
   public monthKeys: {
@@ -94,7 +96,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
     if (!this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()]) {
       this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()] = []
     }
-    this.seasons.some(season => {
+    this.seasons.some((season) => {
       if (day >= season.startDate) {
         season.days.push(this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()])
         return true
@@ -295,18 +297,20 @@ export class GuardianComponent implements OnInit, OnDestroy {
         .subscribe()
     )
 
-    this.displayName$ = this.accountResponse$.pipe(
-      distinctUntilChanged(),
-      tap(r => console.log('accountResponse', r)),
-      map((responses) => responses[0]),
-      map((res) => {
-        if (res?.ErrorCode !== 1 && res?.ErrorStatus) {
-          this.errorStatus = res.ErrorStatus
-          this.errorMessage = res.Message
-        }
-        return res?.Response?.profile.data.userInfo.displayName
-      })
-    )
+    this.accountResponse$
+      .pipe(
+        distinctUntilChanged(),
+        tap((r) => console.log('accountResponse', r)),
+        map((responses) => responses[0]),
+        map((res) => {
+          if (res?.ErrorCode !== 1 && res?.ErrorStatus) {
+            this.errorStatus = res.ErrorStatus
+            this.errorMessage = res.Message
+          }
+          this.displayName = res?.Response?.profile?.data?.userInfo?.displayName
+        })
+      )
+      .subscribe()
     this.characters$ = this.accountResponse$.pipe(
       distinctUntilChanged(),
       map((responses) => {
@@ -324,7 +328,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
               }
               characters.push(res.Response.characters.data[key])
             })
-          } catch (e) { }
+          } catch (e) {}
         }
         return characters
       })
@@ -357,18 +361,6 @@ export class GuardianComponent implements OnInit, OnDestroy {
         })
       })
     )
-
-    combineLatest([this.flatDaysBS, this.displayName$]).subscribe(([flatDays, displayName]) => {
-      if (this.loadingArray.length && !this.loadingArray.some((loading) => loading.loading) && !this.threeLaunched) {
-        this.threeLaunched = true
-        this.three(this.seasons[Math.floor(Math.random() * this.seasons.length)], displayName)
-        // this.three(this.seasons[7], displayName)
-        // this.seasons.forEach((season, i) => {
-        //   setTimeout(() => this.three(season, displayName), 10 * i)
-        // })
-      }
-    })
-
   }
 
   addHistorySub(params: GetActivityHistoryParams) {
@@ -401,8 +393,10 @@ export class GuardianComponent implements OnInit, OnDestroy {
             activity.endDate = new Date(endDate * 1000)
             this.activities.push(activity)
             try {
-              this.days[activity.startDate.getUTCFullYear()][activity.startDate.getUTCMonth() + 1][activity.startDate.getUTCDate()].push(activity)
-            } catch (e) { }
+              this.days[activity.startDate.getUTCFullYear()][activity.startDate.getUTCMonth() + 1][activity.startDate.getUTCDate()].push(
+                activity
+              )
+            } catch (e) {}
             this.flatDaysBS.next(this.flatDays)
           })
         }
@@ -430,16 +424,26 @@ export class GuardianComponent implements OnInit, OnDestroy {
     this.subs.forEach((sub) => sub.unsubscribe())
   }
 
-  three(season: {
-    number: number,
-    name: string,
-    days: scrubland.Activity[][],
-    startDate: Date,
-    startDateString?: string,
-    endDateString?: string,
-  }, displayName: string) {
-    console.log(season.name)
-    this.zone.runOutsideAngular(_ => {
+  three(
+    season: {
+      number: number
+      name: string
+      days: scrubland.Activity[][]
+      startDate: Date
+      startDateString?: string
+      endDateString?: string
+    },
+    displayName,
+    seasonCount: number
+  ) {
+    this.zone.runOutsideAngular((_) => {
+      let button
+      for (let i = 1; i <= seasonCount; i++) {
+        button = document.getElementById('download' + i)
+        button.setAttribute('disabled', 'true')
+      }
+      button = document.getElementById('download' + season.number)
+      button.innerHTML = 'Generating...'
       let geometry: THREE.BufferGeometry, mesh: THREE.Mesh, newMesh: THREE.Mesh
       let x, y, z, textHeight, textDepth
       const m = 2.5
@@ -447,15 +451,13 @@ export class GuardianComponent implements OnInit, OnDestroy {
       init()
 
       function init() {
-
         const scene = new THREE.Scene()
-
         const baseHeight = 2.5
 
         const a = Math.sqrt(1 + baseHeight * baseHeight - 2 * baseHeight * Math.cos(Math.PI / 2))
         const rotation = Math.acos((a * a + baseHeight * baseHeight - 1) / (2 * a * baseHeight))
 
-        x = Math.ceil((season.days.length) / 7 + 2) * m
+        x = Math.ceil(season.days.length / 7 + 2) * m
         y = baseHeight * m
         z = 9 * m
         geometry = new THREE.BoxGeometry(x, y, z)
@@ -476,7 +478,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
         position.setXYZ(22, position.getX(22) + m, position.getY(22), position.getZ(22) - m)
         position.setXYZ(23, position.getX(23) - m, position.getY(23), position.getZ(23) - m)
 
-        x = (Math.ceil((season.days.length) / 7 + 2) / 2 - 1.5) * m
+        x = (Math.ceil(season.days.length / 7 + 2) / 2 - 1.5) * m
         y = -y / 2
         z = 3 * m
         mesh.position.set(x, y, z)
@@ -488,7 +490,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
           const day = season.days[i]
           if (day.length) {
             const time = day.reduce((prev, activity) => prev + activity.values.timePlayedSeconds.basic.value, 0)
-            const height = time / 86400 * 24
+            const height = (time / 86400) * 24
 
             x = 1 * m
             y = height * m
@@ -498,8 +500,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
             newMesh = new THREE.Mesh(geometry, material)
 
             x = (Math.floor(j / 7) - Math.floor(j / 364) * 52) * m
-            y = height / 2 * m
-            z = (j % 7 + Math.floor(j / 364) * 7) * m
+            y = (height / 2) * m
+            z = ((j % 7) + Math.floor(j / 364) * 7) * m
             newMesh.position.set(x, y, z)
 
             newMesh.updateMatrix()
@@ -510,9 +512,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
         const loader = new FontLoader()
 
         loader.load('assets/fonts/helvetiker_bold.typeface.json', function (font) {
-
           textHeight = 1 * m
-          textDepth = .25 * m
+          textDepth = 0.25 * m
           geometry = new TextGeometry(season.name, {
             font: font,
             size: textHeight,
@@ -520,7 +521,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
           })
           geometry.computeBoundingBox()
 
-          x = ((Math.ceil((season.days.length) / 7) - geometry.boundingBox.max.x / m) / 2 - .5) * m
+          x = ((Math.ceil(season.days.length / 7) - geometry.boundingBox.max.x / m) / 2 - 0.5) * m
           y = textHeight * -1.75
           z = 8.2 * m
           newMesh = new THREE.Mesh(geometry, material)
@@ -534,12 +535,12 @@ export class GuardianComponent implements OnInit, OnDestroy {
           geometry = new TextGeometry(displayName, {
             font: font,
             size: textHeight,
-            height: textDepth
+            height: textDepth,
           })
           newMesh = new THREE.Mesh(geometry, material)
           geometry.computeBoundingBox()
 
-          x = ((Math.ceil((season.days.length) / 7) - geometry.boundingBox.max.x / m) / 2 - .5 + geometry.boundingBox.max.x / m) * m
+          x = ((Math.ceil(season.days.length / 7) - geometry.boundingBox.max.x / m) / 2 - 0.5 + geometry.boundingBox.max.x / m) * m
           y = textHeight * -1.75
           z = -2.2 * m
           newMesh.position.set(x, y, z)
@@ -553,14 +554,14 @@ export class GuardianComponent implements OnInit, OnDestroy {
             geometry = new TextGeometry(season.startDateString, {
               font: font,
               size: textHeight,
-              height: textDepth
+              height: textDepth,
             })
             newMesh = new THREE.Mesh(geometry, material)
             geometry.computeBoundingBox()
 
             x = -2.2 * m
             y = textHeight * -1.75
-            z = ((7 - geometry.boundingBox.max.x / m) / 2 - .5) * m
+            z = ((7 - geometry.boundingBox.max.x / m) / 2 - 0.5) * m
             newMesh.position.set(x, y, z)
             newMesh.rotateZ(-rotation)
             newMesh.rotateY(-Math.PI / 2)
@@ -579,14 +580,14 @@ export class GuardianComponent implements OnInit, OnDestroy {
               bevelThickness: 0,
               bevelSize: 0,
               bevelOffset: 0,
-              bevelSegments: 0
+              bevelSegments: 0,
             })
             newMesh = new THREE.Mesh(geometry, material)
             geometry.computeBoundingBox()
 
-            x = (Math.ceil((season.days.length) / 7) + 1.2) * m
+            x = (Math.ceil(season.days.length / 7) + 1.2) * m
             y = textHeight * -1.75
-            z = ((7 - geometry.boundingBox.max.x / m) / 2 - .5 + geometry.boundingBox.max.x / m) * m
+            z = ((7 - geometry.boundingBox.max.x / m) / 2 - 0.5 + geometry.boundingBox.max.x / m) * m
             newMesh.position.set(x, y, z)
             newMesh.rotateZ(rotation)
             newMesh.rotateY(Math.PI / 2)
@@ -612,6 +613,12 @@ export class GuardianComponent implements OnInit, OnDestroy {
 
           scene.remove(mesh)
           mesh.geometry.dispose()
+
+          button.innerHTML = 'Download STL'
+          for (let i = 1; i <= seasonCount; i++) {
+            button = document.getElementById('download' + i)
+            button.removeAttribute('disabled')
+          }
         })
       }
 
