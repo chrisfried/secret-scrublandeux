@@ -14,8 +14,8 @@
   Current Streak: {{ flatDays | currentStreak }}<br />
   Longest Streaks: {{ flatDays | longestStreaks }}<br />
   STL Download Buttons: <mat-checkbox [(ngModel)]="downloadButtons"></mat-checkbox><br />
-  Season Times: <mat-checkbox [(ngModel)]="seasonTimes"></mat-checkbox><br />
   Points of Interest: <mat-checkbox [(ngModel)]="poi"></mat-checkbox><br />
+  Seasonal Times: <mat-checkbox [(ngModel)]="seasonTimes"></mat-checkbox><br />
   Filter Heatmap:
   <mat-form-field>
     <mat-select [(ngModel)]="calendarFilter">
@@ -27,9 +27,9 @@
 <div class="calYear">
   <div *ngFor="let season of seasons" class="calMonth"
     [ngStyle]="{ width: Math.ceil((season['days'].length) / 7) + 'em' }">
-    <div class="monthLabel mat-caption">{{ season.name }}{{ seasonTimes ? ': ' + (seasonActivities(season.days) |
-      activitiesTotalTime) : ''}}
-    </div>
+    <div class="monthLabel mat-caption">{{ season.name }}</div>
+    <div class="monthLabel mat-caption" *ngIf="seasonTimes">{{ seasonActivities(season.days) |
+      activitiesTotalTime}}</div>
     <div class="dayWrapper" [ngClass]="(loadingArray | loadingReduce) ? 'loading' : ''">
       <!-- <div class="monthSpacer" [ngStyle]="{ height: monthOffsets[year][month] + 'em' }"></div> -->
       <div *ngFor="let day of season['days']" class="calDay"

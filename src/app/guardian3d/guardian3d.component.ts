@@ -50,10 +50,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
       }
     }
   }
-  public flatDays: {
-    date: Date
-    activities: scrubland.Activity[]
-  }[]
+  public flatDays: scrubland.Activity[][]
   public seasons: {
     number: number
     name: string
@@ -111,7 +108,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
         return true
       }
     })
-    this.flatDays.push(this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()])
+    this.flatDays.push(this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()].activities)
   }
 
   ngOnInit() {
