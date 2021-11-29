@@ -7,5 +7,9 @@ import { BungieAuthService } from './bungie-auth/bungie-auth.service'
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  calendar: 'gregorian' | 'bungie'
+  calendarChange(calendar: 'gregorian' | 'bungie') {
+    this.calendar = calendar
+  }
   constructor(public bungieAuth: BungieAuthService) {}
 }

@@ -2,6 +2,8 @@ import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { MatButtonModule } from '@angular/material/button'
+import { MatButtonToggleModule } from '@angular/material/button-toggle'
+import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatCardModule } from '@angular/material/card'
 import { MatDialogModule } from '@angular/material/dialog'
 import { MatIconModule } from '@angular/material/icon'
@@ -19,6 +21,7 @@ import { FooterComponent } from './footer/footer.component'
 import { FrontPageComponent } from './front-page/front-page.component'
 import { DayModalComponent } from './guardian/day-modal/day-modal.component'
 import { GuardianComponent } from './guardian/guardian.component'
+import { Guardian3DComponent } from './guardian3d/guardian3d.component'
 import { ManifestPipe } from './manifest/manifest.pipe'
 import { NavComponent } from './nav/nav.component'
 import { ActivitiesTotalHoursPipe } from './pipes/activities-total-hours.pipe'
@@ -38,8 +41,8 @@ import { RoutesModule } from './routes/routes.module'
     AppComponent,
     NavComponent,
     FrontPageComponent,
-//     SearchComponent,
     GuardianComponent,
+    Guardian3DComponent,
     AddTimePipe,
     DayModalComponent,
     ManifestPipe,
@@ -59,6 +62,8 @@ import { RoutesModule } from './routes/routes.module'
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
+    MatButtonToggleModule,
+    MatCheckboxModule,
     MatIconModule,
     MatTooltipModule,
     MatDialogModule,

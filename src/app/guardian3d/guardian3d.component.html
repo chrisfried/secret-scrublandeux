@@ -1,0 +1,49 @@
+<mat-card *ngIf="errorStatus" class="errorStatus">
+  <mat-card-title>{{ errorStatus }}</mat-card-title>
+  <mat-card-subtitle>{{ errorMessage }}</mat-card-subtitle>
+</mat-card>
+<div class="mat-body-1">
+  Name: <span class="mat-body-2">{{ displayName }}</span> <br />
+  Total Time in Destiny 2: <span class="mat-body-2">{{ minutesPlayedTotal | async | hoursPlayed }}</span> =
+  <span class="mat-body-2">{{ minutesPlayedTotal | async | parseMinutesPlayed }}</span> <br />
+  Total Time in Activities: <span class="mat-body-2">{{ activities | activitiesTotalHours }}</span> =
+  <span class="mat-body-2">{{ activities | activitiesTotalTime }}</span> <br />
+  Destiny 2 Activity Count: <span class="mat-body-2">{{ activities.length }}</span>
+  <mat-icon *ngIf="loadingArray | loadingReduce" aria-label="Search for Guardian" class="spinner">settings</mat-icon>
+  <br />
+  Current Streak: {{ flatDays | currentStreak }}<br />
+  Longest Streaks: {{ flatDays | longestStreaks }}<br />
+  Hide Download Buttons: <mat-checkbox [(ngModel)]="hideDownloadButtons"></mat-checkbox><br />
+  Filter Heatmap:
+  <mat-form-field>
+    <mat-select [(ngModel)]="calendarFilter">
+      <mat-option *ngFor="let option of modeOptions" [value]="option">{{ option | manifest: 'activityMode' | async }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div class="calYear">
+  <div *ngFor="let season of seasons" class="calMonth"
+    [ngStyle]="{ width: Math.ceil((season['days'].length) / 7) + 'em' }">
+    <div class="monthLabel mat-caption">{{ season.name }}</div>
+    <div class="dayWrapper" [ngClass]="(loadingArray | loadingReduce) ? 'loading' : ''">
+      <!-- <div class="monthSpacer" [ngStyle]="{ height: monthOffsets[year][month] + 'em' }"></div> -->
+      <div *ngFor="let day of season['days']" class="calDay" [ngStyle]="{
+          'background-color':
+            'hsl(' +
+            (((100 - (day | addTime: calendarFilter) / 864) * 120) / 50 - 120) +
+            ', ' +
+            ((day | addTime: calendarFilter) / 86400 > 0 ? '100%' : '0%') +
+            ', ' +
+            ((day | addTime: calendarFilter) / 86400 > 0
+              ? (day | addTime: calendarFilter) / 864 > 50
+                ? 100 - (day | addTime) / 864 + '%'
+                : '50%'
+              : '90%') +
+            ')'
+        }"></div>
+    </div>
+    <button *ngIf="!hideDownloadButtons" [disabled]="loadingArray | loadingReduce"
+      (click)="three(season, displayName, seasons.length)" [id]="'download' + season.number">Download STL</button>
+  </div>
+</div>
