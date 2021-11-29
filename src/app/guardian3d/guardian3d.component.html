@@ -13,7 +13,9 @@
   <br />
   Current Streak: {{ flatDays | currentStreak }}<br />
   Longest Streaks: {{ flatDays | longestStreaks }}<br />
-  Hide Download Buttons: <mat-checkbox [(ngModel)]="hideDownloadButtons"></mat-checkbox><br />
+  STL Download Buttons: <mat-checkbox [(ngModel)]="downloadButtons"></mat-checkbox><br />
+  Season Times: <mat-checkbox [(ngModel)]="seasonTimes"></mat-checkbox><br />
+  Points of Interest: <mat-checkbox [(ngModel)]="poi"></mat-checkbox><br />
   Filter Heatmap:
   <mat-form-field>
     <mat-select [(ngModel)]="calendarFilter">
@@ -25,25 +27,36 @@
 <div class="calYear">
   <div *ngFor="let season of seasons" class="calMonth"
     [ngStyle]="{ width: Math.ceil((season['days'].length) / 7) + 'em' }">
-    <div class="monthLabel mat-caption">{{ season.name }}</div>
+    <div class="monthLabel mat-caption">{{ season.name }}{{ seasonTimes ? ': ' + (seasonActivities(season.days) |
+      activitiesTotalTime) : ''}}
+    </div>
     <div class="dayWrapper" [ngClass]="(loadingArray | loadingReduce) ? 'loading' : ''">
       <!-- <div class="monthSpacer" [ngStyle]="{ height: monthOffsets[year][month] + 'em' }"></div> -->
-      <div *ngFor="let day of season['days']" class="calDay" [ngStyle]="{
+      <div *ngFor="let day of season['days']" class="calDay"
+        [ngClass]="poi ? (day.date | date:'y-M-d' | milestone: 'class') : ''" [ngStyle]="{
           'background-color':
             'hsl(' +
-            (((100 - (day | addTime: calendarFilter) / 864) * 120) / 50 - 120) +
+            (((100 - (day.activities | addTime: calendarFilter) / 864) * 120) / 50 - 120) +
             ', ' +
-            ((day | addTime: calendarFilter) / 86400 > 0 ? '100%' : '0%') +
+            ((day.activities | addTime: calendarFilter) / 86400 > 0 ? '100%' : '0%') +
             ', ' +
-            ((day | addTime: calendarFilter) / 86400 > 0
-              ? (day | addTime: calendarFilter) / 864 > 50
-                ? 100 - (day | addTime) / 864 + '%'
+            ((day.activities | addTime: calendarFilter) / 86400 > 0
+              ? (day.activities | addTime: calendarFilter) / 864 > 50
+                ? 100 - (day.activities | addTime) / 864 + '%'
                 : '50%'
               : '90%') +
             ')'
-        }"></div>
+        }" [matTooltip]="
+        (day.date | date:'y-M-d') +
+        (day.date | date:'y-M-d' | milestone: 'text') +
+        ': ' +
+        Math.floor(((day.activities | addTime: calendarFilter) / 86400) * 24) +
+        'h ' +
+        Math.floor(((day.activities | addTime: calendarFilter) % 3600) / 60) +
+        'm'
+        "></div>
     </div>
-    <button *ngIf="!hideDownloadButtons" [disabled]="loadingArray | loadingReduce"
+    <button *ngIf="downloadButtons" [disabled]="loadingArray | loadingReduce"
       (click)="three(season, displayName, seasons.length)" [id]="'download' + season.number">Download STL</button>
   </div>
 </div>

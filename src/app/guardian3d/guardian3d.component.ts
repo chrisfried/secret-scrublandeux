@@ -43,15 +43,24 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
   public days: {
     [year: number]: {
       [month: number]: {
-        [day: number]: scrubland.Activity[]
+        [day: number]: {
+          date: Date
+          activities: scrubland.Activity[]
+        }
       }
     }
   }
-  public flatDays: scrubland.Activity[][]
+  public flatDays: {
+    date: Date
+    activities: scrubland.Activity[]
+  }[]
   public seasons: {
     number: number
     name: string
-    days: scrubland.Activity[][]
+    days: {
+      date: Date
+      activities: scrubland.Activity[]
+    }[]
     startDate: Date
     startDateString?: string
     endDateString?: string
@@ -72,7 +81,9 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
   public loadingArray: { loading: boolean }[]
   public errorStatus: string
   public errorMessage: string
-  public hideDownloadButtons = false
+  public downloadButtons = true
+  public seasonTimes = true
+  public poi = true
 
   constructor(
     public dialog: MatDialog,
@@ -92,7 +103,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
       this.days[day.getFullYear()][day.getMonth() + 1] = {}
     }
     if (!this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()]) {
-      this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()] = []
+      this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()] = { date: new Date(day), activities: [] }
     }
     this.seasons.some((season) => {
       if (day >= season.startDate) {
@@ -391,9 +402,9 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
             activity.endDate = new Date(endDate * 1000)
             this.activities.push(activity)
             try {
-              this.days[activity.startDate.getUTCFullYear()][activity.startDate.getUTCMonth() + 1][activity.startDate.getUTCDate()].push(
-                activity
-              )
+              this.days[activity.startDate.getUTCFullYear()][activity.startDate.getUTCMonth() + 1][
+                activity.startDate.getUTCDate()
+              ].activities.push(activity)
             } catch (e) {}
             this.flatDaysBS.next(this.flatDays)
           })
@@ -410,11 +421,20 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     this.subs.forEach((sub) => sub.unsubscribe())
   }
 
+  seasonActivities(
+    days: {
+      date: Date
+      activities: scrubland.Activity[]
+    }[]
+  ) {
+    return days.reduce((s, d) => s.concat(d.activities), [])
+  }
+
   three(
     season: {
       number: number
       name: string
-      days: scrubland.Activity[][]
+      days: { date: Date; activities: scrubland.Activity[] }[]
       startDate: Date
       startDateString?: string
       endDateString?: string
@@ -474,8 +494,8 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
         for (let i = 0; i < season.days.length; i++) {
           const j = i
           const day = season.days[i]
-          if (day.length) {
-            const time = day.reduce((prev, activity) => prev + activity.values.timePlayedSeconds.basic.value, 0)
+          if (day.activities.length) {
+            const time = day.activities.reduce((prev, activity) => prev + activity.values.timePlayedSeconds.basic.value, 0)
             const height = (time / 86400) * 24
 
             x = 1 * m
