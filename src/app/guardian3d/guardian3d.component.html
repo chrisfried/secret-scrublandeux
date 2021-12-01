@@ -33,7 +33,7 @@
     <div class="dayWrapper" [ngClass]="(loadingArray | loadingReduce) ? 'loading' : ''">
       <!-- <div class="monthSpacer" [ngStyle]="{ height: monthOffsets[year][month] + 'em' }"></div> -->
       <div *ngFor="let day of season['days']" class="calDay"
-        [ngClass]="poi ? (day.date | date:'y-M-d' | milestone: 'class') : ''" [ngStyle]="{
+        [ngClass]="poi ? (day.date | date:'y-M-d':'GMT' | milestone: 'class') : ''" [ngStyle]="{
           'background-color':
             'hsl(' +
             (((100 - (day.activities | addTime: calendarFilter) / 864) * 120) / 50 - 120) +
@@ -47,8 +47,8 @@
               : '90%') +
             ')'
         }" [matTooltip]="
-        (day.date | date:'y-M-d') +
-        (day.date | date:'y-M-d' | milestone: 'text') +
+        (day.date | date:'shortDate':'GMT') +
+        (day.date | date:'y-M-d':'GMT' | milestone: 'text') +
         ': ' +
         Math.floor(((day.activities | addTime: calendarFilter) / 86400) * 24) +
         'h ' +

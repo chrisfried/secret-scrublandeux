@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http'
-import { NgModule } from '@angular/core'
+import { LOCALE_ID, NgModule } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { MatButtonModule } from '@angular/material/button'
 import { MatButtonToggleModule } from '@angular/material/button-toggle'
@@ -34,7 +34,105 @@ import { LongestStreaksPipe } from './pipes/longest-streaks.pipe'
 import { MilestonePipe } from './pipes/milestone.pipe'
 import { ParseMinutesPlayedPipe } from './pipes/parse-minutes-played.pipe'
 import { RoutesModule } from './routes/routes.module'
+import { registerLocaleData } from '@angular/common'
+import localeEn from '@angular/common/locales/en'
+import localeFr from '@angular/common/locales/fr'
+import localeEs from '@angular/common/locales/es'
+import localePtBr from '@angular/common/locales/pt'
+import localeZhCht from '@angular/common/locales/zh'
+import localeZhChs from '@angular/common/locales/zh'
+import localeDe from '@angular/common/locales/de'
+import localeJa from '@angular/common/locales/ja'
+import localeKo from '@angular/common/locales/ko'
+import localeIt from '@angular/common/locales/it'
+import localeRu from '@angular/common/locales/ru'
+import localePl from '@angular/common/locales/pl'
 // import { SearchComponent } from './search/search.component'
+
+let lang = 'en'
+registerLocaleData(localeEn)
+navigator.languages.some((l) => {
+  switch (l.toLowerCase()) {
+    case 'pt-br':
+      registerLocaleData(localePtBr)
+      lang = l
+      return true
+    case 'zh-cht':
+      registerLocaleData(localeZhCht)
+      lang = l
+      return true
+    case 'zh-chs':
+      registerLocaleData(localeZhChs)
+      lang = l
+      return true
+    case 'fr':
+      registerLocaleData(localeFr)
+      lang = l
+      return true
+    case 'es':
+      registerLocaleData(localeEs)
+      lang = l
+      return true
+    case 'de':
+      registerLocaleData(localeDe)
+      lang = l
+      return true
+    case 'it':
+      registerLocaleData(localeIt)
+      lang = l
+      return true
+    case 'ja':
+      registerLocaleData(localeJa)
+      lang = 'ja'
+      return true
+    case 'ru':
+      registerLocaleData(localeRu)
+      lang = l
+      return true
+    case 'pl':
+      registerLocaleData(localePl)
+      lang = l
+      return true
+    case 'ko':
+      registerLocaleData(localeKo)
+      lang = l
+      return true
+  }
+  switch (l.toLowerCase().split('-')[0]) {
+    case 'fr':
+      registerLocaleData(localeFr)
+      lang = l
+      return true
+    case 'es':
+      registerLocaleData(localeEs)
+      lang = l
+      return true
+    case 'de':
+      registerLocaleData(localeDe)
+      lang = l
+      return true
+    case 'it':
+      registerLocaleData(localeIt)
+      lang = l
+      return true
+    case 'ja':
+      registerLocaleData(localeJa)
+      lang = 'ja'
+      return true
+    case 'ru':
+      registerLocaleData(localeRu)
+      lang = l
+      return true
+    case 'pl':
+      registerLocaleData(localePl)
+      lang = l
+      return true
+    case 'ko':
+      registerLocaleData(localeKo)
+      lang = l
+      return true
+  }
+})
 
 @NgModule({
   declarations: [
@@ -112,7 +210,7 @@ import { RoutesModule } from './routes/routes.module'
     }),
   ],
   entryComponents: [DayModalComponent],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: lang }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,4 +1,4 @@
-import { Component, NgZone, OnDestroy, OnInit } from '@angular/core'
+import { Component, Inject, LOCALE_ID, NgZone, OnDestroy, OnInit } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
 import { ServerResponse } from 'bungie-api-ts/common'
 import {
@@ -81,8 +81,10 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
   public downloadButtons = true
   public seasonTimes = true
   public poi = true
+  public locale: string
 
   constructor(
+    @Inject(LOCALE_ID) locale: string,
     public dialog: MatDialog,
     private manifestService: ManifestService,
     private bungieQueue: BungieQueueService,
@@ -90,25 +92,26 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     private readonly zone: NgZone
   ) {
     this.Math = Math
+    this.locale = locale
   }
 
   addDay(day: Date) {
-    if (!this.days[day.getFullYear()]) {
-      this.days[day.getFullYear()] = {}
+    if (!this.days[day.getUTCFullYear()]) {
+      this.days[day.getUTCFullYear()] = {}
     }
-    if (!this.days[day.getFullYear()][day.getMonth() + 1]) {
-      this.days[day.getFullYear()][day.getMonth() + 1] = {}
+    if (!this.days[day.getUTCFullYear()][day.getUTCMonth() + 1]) {
+      this.days[day.getUTCFullYear()][day.getUTCMonth() + 1] = {}
     }
-    if (!this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()]) {
-      this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()] = { date: new Date(day), activities: [] }
+    if (!this.days[day.getUTCFullYear()][day.getUTCMonth() + 1][day.getUTCDate()]) {
+      this.days[day.getUTCFullYear()][day.getUTCMonth() + 1][day.getUTCDate()] = { date: new Date(day), activities: [] }
     }
     this.seasons.some((season) => {
       if (day >= season.startDate) {
-        season.days.push(this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()])
+        season.days.push(this.days[day.getUTCFullYear()][day.getUTCMonth() + 1][day.getUTCDate()])
         return true
       }
     })
-    this.flatDays.push(this.days[day.getFullYear()][day.getMonth() + 1][day.getDate()].activities)
+    this.flatDays.push(this.days[day.getUTCFullYear()][day.getUTCMonth() + 1][day.getUTCDate()].activities)
   }
 
   ngOnInit() {
@@ -123,19 +126,19 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
         number: 15,
         name: 'Season of the Lost',
         days: [],
-        startDate: new Date('2021-8-24'),
+        startDate: new Date('2021-08-24'),
       },
       {
         number: 14,
         name: 'Season of the Splicer',
         days: [],
-        startDate: new Date('2021-5-11'),
+        startDate: new Date('2021-05-11'),
       },
       {
         number: 13,
         name: 'Season of the Chosen',
         days: [],
-        startDate: new Date('2021-2-9'),
+        startDate: new Date('2021-02-09'),
       },
       {
         number: 12,
@@ -147,13 +150,13 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
         number: 11,
         name: 'Season of Arrivals',
         days: [],
-        startDate: new Date('2020-6-9'),
+        startDate: new Date('2020-06-09'),
       },
       {
         number: 10,
         name: 'Season of the Worthy',
         days: [],
-        startDate: new Date('2020-3-10'),
+        startDate: new Date('2020-03-10'),
       },
       {
         number: 9,
@@ -165,49 +168,49 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
         number: 8,
         name: 'Season of Undying',
         days: [],
-        startDate: new Date('2019-10-1'),
+        startDate: new Date('2019-10-01'),
       },
       {
         number: 7,
         name: 'Season of Opulence',
         days: [],
-        startDate: new Date('2019-6-4'),
+        startDate: new Date('2019-06-04'),
       },
       {
         number: 6,
         name: 'Season of the Drifter',
         days: [],
-        startDate: new Date('2019-3-5'),
+        startDate: new Date('2019-03-05'),
       },
       {
         number: 5,
         name: 'Season of the Forge',
         days: [],
-        startDate: new Date('2018-12-4'),
+        startDate: new Date('2018-12-04'),
       },
       {
         number: 4,
         name: 'Season of the Outlaw',
         days: [],
-        startDate: new Date('2018-9-4'),
+        startDate: new Date('2018-09-04'),
       },
       {
         number: 3,
         name: 'Warmind',
         days: [],
-        startDate: new Date('2018-5-8'),
+        startDate: new Date('2018-05-08'),
       },
       {
         number: 2,
         name: 'Curse of Osiris',
         days: [],
-        startDate: new Date('2017-12-5'),
+        startDate: new Date('2017-12-05'),
       },
       {
         number: 1,
         name: 'Destiny 2',
         days: [],
-        startDate: new Date('2017-9-5'),
+        startDate: new Date('2017-09-05'),
       },
     ]
     this.flatDaysBS = new BehaviorSubject([])
@@ -221,7 +224,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     this.errorStatus = ''
     this.errorMessage = ''
 
-    const day = new Date('2017-09-05T17:00:00Z')
+    const day = new Date('2017-09-05T00:00:00Z')
     const now = new Date()
     while (day <= now) {
       this.addDay(day)
@@ -229,9 +232,9 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     }
     this.seasons.reverse()
     this.seasons.forEach((season, index) => {
-      season.startDateString = formatDate(season.startDate, 'shortDate', navigator.language || 'en-US')
+      season.startDateString = formatDate(season.startDate, 'shortDate', this.locale || 'en-US')
       if (this.seasons[index + 1]) {
-        season.endDateString = formatDate(this.seasons[index + 1].startDate, 'shortDate', navigator.language || 'en-US')
+        season.endDateString = formatDate(this.seasons[index + 1].startDate, 'shortDate', this.locale || 'en-US')
       }
     })
     this.flatDaysBS.next(this.flatDays)
@@ -328,10 +331,6 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
           }
           try {
             Object.keys(res.Response.characters.data).forEach((key) => {
-              const character = {
-                ...res.Response.profile.data,
-                ...res.Response.characters.data[key],
-              }
               characters.push(res.Response.characters.data[key])
             })
           } catch (e) {}
@@ -392,8 +391,8 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
           this.addHistorySub({ ...params, page: page + 3 })
           res.Response.activities.forEach((activity: scrubland.Activity) => {
             activity.characterId = params.characterId
-            const period = new Date(new Date(activity.period).getTime() - 17 * 60 * 60 * 1000)
-            const startDate = period.getTime() / 1000 + activity.values.startSeconds.basic.value
+            const period = new Date(activity.period).getTime() - 17 * 60 * 60 * 1000
+            const startDate = period / 1000 + activity.values.startSeconds.basic.value
             const endDate = startDate + activity.values.timePlayedSeconds.basic.value
             activity.startDate = new Date(startDate * 1000)
             activity.endDate = new Date(endDate * 1000)
