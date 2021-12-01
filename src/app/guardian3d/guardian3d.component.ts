@@ -4,10 +4,17 @@ import { ServerResponse } from 'bungie-api-ts/common'
 import {
   DestinyActivityHistoryResults,
   DestinyCharacterComponent,
+  DestinyCharacterResponse,
   DestinyComponentType,
+  DestinyHistoricalStatsAccountResult,
   DestinyProfileResponse,
+  DestinyStatsGroupType,
   getActivityHistory,
   GetActivityHistoryParams,
+  getCharacter,
+  GetCharacterParams,
+  getHistoricalStatsForAccount,
+  GetHistoricalStatsForAccountParams,
   getProfile,
   GetProfileParams,
 } from 'bungie-api-ts/destiny2'
@@ -24,6 +31,7 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { STLExporter } from 'three/examples/jsm/exporters/STLExporter'
 import { CSG } from 'three-csg-ts'
 import { formatDate } from '@angular/common'
+import { HttpErrorResponse } from '@angular/common/http'
 
 @Component({
   selector: 'app-guardian-3d',
@@ -33,7 +41,7 @@ import { formatDate } from '@angular/common'
 export class Guardian3DComponent implements OnInit, OnDestroy {
   private subs: Subscription[]
   private membershipDataForCurrentUser$: BehaviorSubject<ServerResponse<UserMembershipData>> = new BehaviorSubject(undefined)
-  private accountResponse$: BehaviorSubject<ServerResponse<DestinyProfileResponse>[]> = new BehaviorSubject([])
+  private accountResponse$: BehaviorSubject<ServerResponse<DestinyCharacterResponse>[][]> = new BehaviorSubject([])
   private flatDaysBS: BehaviorSubject<any[]>
   public displayName = ''
   public downloadLink = ''
@@ -284,56 +292,85 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
           switchMap((userMembershipData) =>
             forkJoin(
               userMembershipData?.Response?.destinyMemberships.map((destinyMembership) => {
-                const bs: BehaviorSubject<ServerResponse<DestinyProfileResponse>> = new BehaviorSubject(undefined)
+                const bs: BehaviorSubject<ServerResponse<DestinyHistoricalStatsAccountResult>> = new BehaviorSubject(undefined)
                 const { membershipId, membershipType } = destinyMembership
-                const action = getProfile
-                const callback = (response: ServerResponse<DestinyProfileResponse>) => {
-                  bs.next(response)
-                  bs.complete()
+                const action = getHistoricalStatsForAccount
+                const callback = (response: ServerResponse<DestinyHistoricalStatsAccountResult>) => {
+                  if (response && response.ErrorCode === 1) {
+                    forkJoin(
+                      response?.Response?.characters.map((character) => {
+                        const bsB: BehaviorSubject<ServerResponse<DestinyCharacterResponse>> = new BehaviorSubject(undefined)
+                        const { characterId } = character
+                        const actionB = getCharacter
+                        const callbackB = (res: ServerResponse<DestinyCharacterResponse>) => {
+                          if (res.ErrorCode === 1) {
+                            bsB.next(res)
+                          }
+                          bsB.complete()
+                        }
+                        const paramsB: GetCharacterParams = {
+                          characterId,
+                          destinyMembershipId: membershipId,
+                          membershipType,
+                          components: [DestinyComponentType.Characters],
+                        }
+                        this.bungieQueue.addToQueue('getProfile', actionB, callbackB, paramsB)
+                        return bsB
+                      }) ?? EMPTY
+                    )
+                      .pipe(take(1))
+                      .subscribe((b) => {
+                        bs.next(b)
+                        bs.complete()
+                      })
+                  } else {
+                    bs.complete()
+                  }
                 }
-                const params: GetProfileParams = {
+                const params: GetHistoricalStatsForAccountParams = {
                   destinyMembershipId: membershipId,
                   membershipType,
-                  components: [DestinyComponentType.Profiles, DestinyComponentType.Characters],
+                  groups: [DestinyStatsGroupType.General],
                 }
                 this.bungieQueue.addToQueue('getProfile', action, callback, params)
                 return bs
               }) ?? EMPTY
             )
           ),
-          map((responses) => this.accountResponse$.next(responses))
+          map((responses) => {
+            return this.accountResponse$.next(responses)
+          })
         )
         .subscribe()
     )
 
-    this.accountResponse$
+    this.membershipDataForCurrentUser$
       .pipe(
         distinctUntilChanged(),
-        tap((r) => console.log('accountResponse', r)),
-        map((responses) => responses[0]),
+        // tap((r) => console.log('accountResponse', r)),
+        // map((responses) => responses[0])
         map((res) => {
-          if (res?.ErrorCode !== 1 && res?.ErrorStatus) {
-            this.errorStatus = res.ErrorStatus
-            this.errorMessage = res.Message
-          }
-          this.displayName = res?.Response?.profile?.data?.userInfo?.displayName
+          console.log(res)
+          //   if (res?.ErrorCode !== 1 && res?.ErrorStatus) {
+          //     this.errorStatus = res.ErrorStatus
+          //     this.errorMessage = res.Message
+          //   }
+          this.displayName = res?.Response?.bungieNetUser?.displayName
         })
       )
       .subscribe()
     this.characters$ = this.accountResponse$.pipe(
       distinctUntilChanged(),
-      map((responses) => {
+      map((profiles) => {
         const characters = []
-        for (const res of responses) {
-          if (res?.ErrorCode !== 1 && res?.ErrorStatus) {
-            this.errorStatus = res.ErrorStatus
-            this.errorMessage = res.Message
+        for (const profile of profiles) {
+          if (profile) {
+            for (const character of profile) {
+              try {
+                characters.push(character.Response.character.data)
+              } catch (e) {}
+            }
           }
-          try {
-            Object.keys(res.Response.characters.data).forEach((key) => {
-              characters.push(res.Response.characters.data[key])
-            })
-          } catch (e) {}
         }
         return characters
       })
