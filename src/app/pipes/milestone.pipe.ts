@@ -177,6 +177,7 @@ export class MilestonePipe implements PipeTransform {
           case '2021-9-7':
           case '2021-09-07':
           case '2021-10-12':
+          case '2021-12-14':
             return 'event'
           default:
             return ''
@@ -418,7 +419,9 @@ export class MilestonePipe implements PipeTransform {
             return ' | Festival of the Lost'
           case '2021-12-7':
           case '2021-12-07':
-            return ' | Bungie 30th Anniversary Expansion'
+            return ' | Bungie 30th Anniversary | Grasp of Avarice Dungeon | Moments of Triumph | Exotic Quest: Gjallarhorn'
+          case '2021-12-14':
+            return ' | The Dawning'
           case '2022-2-22':
           case '2022-02-22':
             return ' | Launch: The Witch Queen'
