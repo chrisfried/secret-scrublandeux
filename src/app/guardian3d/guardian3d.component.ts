@@ -216,7 +216,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
       },
       {
         number: 1,
-        name: 'Destiny 2',
+        name: 'The Red War',
         days: [],
         startDate: new Date('2017-09-05'),
       },
