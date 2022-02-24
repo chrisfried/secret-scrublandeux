@@ -131,6 +131,12 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     this.flatDays = []
     this.seasons = [
       {
+        number: 16,
+        name: 'Season of the Risen',
+        days: [],
+        startDate: new Date('2022-02-22'),
+      },
+      {
         number: 15,
         name: 'Season of the Lost',
         days: [],

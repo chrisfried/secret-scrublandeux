@@ -59,6 +59,8 @@ export class MilestonePipe implements PipeTransform {
           case '2020-11-21':
           case '2021-5-22':
           case '2021-05-22':
+          case '2022-3-5':
+          case '2022-03-05':
             return 'raid'
           case '2018-7-8':
           case '2018-07-08':
@@ -178,6 +180,8 @@ export class MilestonePipe implements PipeTransform {
           case '2021-09-07':
           case '2021-10-12':
           case '2021-12-14':
+          case '2022-2-15':
+          case '2022-02-15':
             return 'event'
           default:
             return ''
@@ -422,9 +426,15 @@ export class MilestonePipe implements PipeTransform {
             return ' | Bungie 30th Anniversary | Grasp of Avarice Dungeon | Moments of Triumph | Exotic Quest: Gjallarhorn'
           case '2021-12-14':
             return ' | The Dawning'
+          case '2022-2-15':
+          case '2022-02-15':
+            return ' | The Exorcism'
           case '2022-2-22':
           case '2022-02-22':
-            return ' | Launch: The Witch Queen'
+            return ' | Launch: The Witch Queen | Season of the Risen | Exotic Quest: Dead Messenger'
+          case '2022-3-5':
+          case '2022-03-05':
+            return ' | Vow of the Disciple Raid'
           default:
             return ''
         }
