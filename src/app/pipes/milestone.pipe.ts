@@ -335,7 +335,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Seraph Bunker: Io'
           case '2020-4-21':
           case '2020-04-21':
-            return ' | Guardian Games | Grandmaster Ordeal'
+            return ' | Guardian Games | Grandmaster Nightfalls'
           case '2020-6-6':
           case '2020-06-06':
             return " | Live Event: Almighty's Destruction"
@@ -431,10 +431,19 @@ export class MilestonePipe implements PipeTransform {
             return ' | The Exorcism'
           case '2022-2-22':
           case '2022-02-22':
-            return ' | Launch: The Witch Queen | Season of the Risen | Exotic Quest: Dead Messenger'
+            return ' | Launch: The Witch Queen | Season of the Risen | Exotic Quest: Dead Messenger | PsiOps: EDZ'
+          case '2022-3-1':
+          case '2022-03-03':
+            return ' | PsiOps: Cosmodrome'
           case '2022-3-5':
           case '2022-03-05':
             return ' | Vow of the Disciple Raid'
+          case '2022-3-22':
+          case '2022-03-22':
+            return ' | PsiOps: Moon'
+          case '2022-5-3':
+          case '2022-05-03':
+            return ' | Guardian Games'
           default:
             return ''
         }
