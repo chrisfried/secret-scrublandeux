@@ -182,6 +182,12 @@ export class MilestonePipe implements PipeTransform {
           case '2021-12-14':
           case '2022-2-15':
           case '2022-02-15':
+          case '2022-3-1':
+          case '2022-03-01':
+          case '2022-3-22':
+          case '2022-03-22':
+          case '2022-5-3':
+          case '2022-05-03':
             return 'event'
           default:
             return ''
@@ -433,7 +439,7 @@ export class MilestonePipe implements PipeTransform {
           case '2022-02-22':
             return ' | Launch: The Witch Queen | Season of the Risen | Exotic Quest: Dead Messenger | PsiOps Battleground: EDZ'
           case '2022-3-1':
-          case '2022-03-03':
+          case '2022-03-01':
             return ' | PsiOps Battleground: Cosmodrome'
           case '2022-3-5':
           case '2022-03-05':
