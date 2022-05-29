@@ -41,6 +41,8 @@ export class MilestonePipe implements PipeTransform {
           case '2021-12-07':
           case '2022-2-22':
           case '2022-02-22':
+          case '2022-5-24':
+          case '2022-05-24':
             return 'release'
           case '2017-9-13':
           case '2017-09-13':
@@ -188,6 +190,10 @@ export class MilestonePipe implements PipeTransform {
           case '2022-03-22':
           case '2022-5-3':
           case '2022-05-03':
+          case '2022-5-27':
+          case '2022-05-27':
+          case '2022-7-19':
+          case '2022-07-19':
             return 'event'
           default:
             return ''
@@ -450,6 +456,15 @@ export class MilestonePipe implements PipeTransform {
           case '2022-5-3':
           case '2022-05-03':
             return ' | Guardian Games'
+          case '2022-5-24':
+          case '2022-05-24':
+            return ' | Season of the Haunted'
+          case '2022-5-27':
+          case '2022-05-27':
+            return ' | Duality Dungeon'
+          case '2022-7-19':
+          case '2022-07-19':
+            return ' | Solstice'
           default:
             return ''
         }
