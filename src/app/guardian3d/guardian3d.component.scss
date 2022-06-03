@@ -5,7 +5,6 @@
 }
 
 .calMonth {
-  min-width: 10em;
   display: flex;
   flex-direction: column;
   margin-right: 0.5em;
@@ -45,6 +44,7 @@
 }
 
 .monthLabel {
+  min-width: 13em;
   text-align: center;
 }
 
