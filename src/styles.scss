@@ -1,2 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+html {
+  background-color: #fff;
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  .mat-dialog-container {
+    background-color: #333;
+    color: white;
+  }
+
+  a {
+    &:link {
+      color: #3D9EFF;
+    }
+
+    &:visited {
+      color: #B785E5;
+    }
+  }
+
+  .mat-select-arrow,
+  .mat-option-text,
+  .mat-select-value {
+    color: white;
+  }
+
+  .mat-form-field-underline {
+    background-color: white !important;
+  }
+
+  .mat-select-panel {
+    background: #333;
+  }
+
+  .calDay,
+  .timelineActivity {
+    filter: brightness(75%);
+  }
+
+  .timelineLabels {
+    background-color: #555 !important;
+  }
+
+  .mat-checkbox-frame {
+    border-color: white;
+  }
+}
