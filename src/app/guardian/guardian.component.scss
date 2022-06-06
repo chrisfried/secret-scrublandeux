@@ -57,6 +57,18 @@
   border: solid 1px white;
 }
 
+@media (prefers-color-scheme: dark) {
+  .release,
+  .raid,
+  .event {
+    border-color: #333;
+  }
+
+  .inactive {
+    opacity: 0.15;
+  }
+}
+
 .spinner {
   -webkit-animation: spin 3s infinite linear;
   animation: spin 3s infinite linear;

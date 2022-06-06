@@ -9,13 +9,15 @@
   Total Time in Activities: <span class="mat-body-2">{{ activities | activitiesTotalHours }}</span> =
   <span class="mat-body-2">{{ activities | activitiesTotalTime }}</span> <br />
   Destiny 2 Activity Count: <span class="mat-body-2">{{ activities.length }}</span>
-  <mat-icon *ngIf="loadingArray | loadingReduce" aria-label="Search for Guardian" class="spinner">settings</mat-icon><br />
+  <mat-icon *ngIf="loadingArray | loadingReduce" aria-label="Search for Guardian" class="spinner">settings</mat-icon>
+  <br />
   Current Streak: {{ flatDays | currentStreak }}<br />
   Longest Streaks: {{ flatDays | longestStreaks }}<br />
   Filter Heatmap:
   <mat-form-field>
     <mat-select [(ngModel)]="calendarFilter">
-      <mat-option *ngFor="let option of modeOptions" [value]="option">{{ option | manifest: 'activityMode' | async }}</mat-option>
+      <mat-option *ngFor="let option of modeOptions" [value]="option">{{ option | manifest: 'activityMode' | async }}
+      </mat-option>
     </mat-select>
   </mat-form-field>
 </div>
@@ -23,34 +25,28 @@
   <div class="yearLabel mat-caption">
     <span>{{ year }}</span>
   </div>
-  <div
-    *ngFor="let month of monthKeys[year]"
-    class="calMonth"
-    [ngStyle]="{ width: Math.ceil((dayKeys[year][month].length + monthOffsets[year][month]) / 7) + 'em' }"
-  >
+  <div *ngFor="let month of monthKeys[year]" class="calMonth"
+    [ngStyle]="{ width: Math.ceil((dayKeys[year][month].length + monthOffsets[year][month]) / 7) + 'em' }">
     <div class="monthLabel mat-caption">{{ month }}</div>
     <div class="dayWrapper" [ngClass]="(loadingArray | loadingReduce) ? 'loading' : ''">
       <div class="monthSpacer" [ngStyle]="{ height: monthOffsets[year][month] + 'em' }"></div>
-      <div
-        *ngFor="let day of dayKeys[year][month]"
-        class="calDay"
-        [ngClass]="year + '-' + month + '-' + day | milestone: 'class'"
+      <div *ngFor="let day of dayKeys[year][month]" class="calDay"
+        [ngClass]="[(year + '-' + month + '-' + day | milestone: 'class'), ((days[year][month][day] | addTime: calendarFilter) > 0 ? 'active' : 'inactive')]"
         (click)="openDay(year + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day, days[year][month][day])"
         [ngStyle]="{
           'background-color':
             'hsl(' +
             (((100 - (days[year][month][day] | addTime: calendarFilter) / 864) * 120) / 50 - 120) +
             ', ' +
-            ((days[year][month][day] | addTime: calendarFilter) / 86400 > 0 ? '100%' : '0%') +
+            ((days[year][month][day] | addTime: calendarFilter) > 0 ? '100%' : '0%') +
             ', ' +
-            ((days[year][month][day] | addTime: calendarFilter) / 86400 > 0
+            ((days[year][month][day] | addTime: calendarFilter) > 0
               ? (days[year][month][day] | addTime: calendarFilter) / 864 > 50
                 ? 100 - (days[year][month][day] | addTime) / 864 + '%'
                 : '50%'
               : '90%') +
             ')'
-        }"
-        [matTooltip]="
+        }" [matTooltip]="
           year +
           '-' +
           month +
@@ -62,9 +58,7 @@
           'h ' +
           Math.floor(((days[year][month][day] | addTime: calendarFilter) % 3600) / 60) +
           'm'
-        "
-        matTooltipPosition="after"
-      ></div>
+        " matTooltipPosition="after"></div>
     </div>
   </div>
 </div>

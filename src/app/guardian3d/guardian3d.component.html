@@ -33,14 +33,15 @@
     <div class="dayWrapper" [ngClass]="(loadingArray | loadingReduce) ? 'loading' : ''">
       <!-- <div class="monthSpacer" [ngStyle]="{ height: monthOffsets[year][month] + 'em' }"></div> -->
       <div *ngFor="let day of season['days']" class="calDay"
-        [ngClass]="poi ? (day.date | date:'y-M-d':'GMT' | milestone: 'class') : ''" [ngStyle]="{
+        [ngClass]="[(poi ? (day.date | date:'y-M-d':'GMT' | milestone: 'class') : ''), ((day.activities | addTime: calendarFilter) > 0 ? 'active' : 'inactive')]"
+        [ngStyle]="{
           'background-color':
             'hsl(' +
             (((100 - (day.activities | addTime: calendarFilter) / 864) * 120) / 50 - 120) +
             ', ' +
-            ((day.activities | addTime: calendarFilter) / 86400 > 0 ? '100%' : '0%') +
+            ((day.activities | addTime: calendarFilter) > 0 ? '100%' : '0%') +
             ', ' +
-            ((day.activities | addTime: calendarFilter) / 86400 > 0
+            ((day.activities | addTime: calendarFilter) > 0
               ? (day.activities | addTime: calendarFilter) / 864 > 50
                 ? 100 - (day.activities | addTime) / 864 + '%'
                 : '50%'
@@ -56,7 +57,7 @@
         'm'
         "></div>
     </div>
-    <button class="downloadButtons" *ngIf="downloadButtons" [disabled]="loadingArray | loadingReduce"
+    <button mat-button class="downloadButtons" *ngIf="downloadButtons" [disabled]="loadingArray | loadingReduce"
       (click)="three(season, displayName, seasons.length)" [id]="'download' + season.number">Download STL</button>
   </div>
 </div>

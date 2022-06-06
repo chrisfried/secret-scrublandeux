@@ -15,11 +15,11 @@ html {
 
   a {
     &:link {
-      color: #3D9EFF;
+      color: #3d9eff;
     }
 
     &:visited {
-      color: #B785E5;
+      color: #b785e5;
     }
   }
 
@@ -35,11 +35,6 @@ html {
 
   .mat-select-panel {
     background: #333;
-  }
-
-  .calDay,
-  .timelineActivity {
-    filter: brightness(75%);
   }
 
   .timelineLabels {

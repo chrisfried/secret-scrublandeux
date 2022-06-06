@@ -77,3 +77,13 @@
 .mode-63 {
   background-color: #2b8e69;
 }
+@media (prefers-color-scheme: dark) {
+  // Social
+  .mode-40 {
+    background-color: black;
+  }
+  // Patrol
+  .mode-6 {
+    background-color: #888;
+  }
+}
