@@ -44,7 +44,12 @@
 }
 
 .monthLabel {
+  min-width: 13em;
   text-align: center;
+}
+
+.downloadButtons {
+  min-width: 12em;
 }
 
 .release {

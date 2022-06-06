@@ -192,6 +192,10 @@ export class MilestonePipe implements PipeTransform {
           case '2022-05-03':
           case '2022-5-27':
           case '2022-05-27':
+          case '2022-5-31':
+          case '2022-05-31':
+          case '2022-7-12':
+          case '2022-07-12':
           case '2022-7-19':
           case '2022-07-19':
             return 'event'
@@ -462,6 +466,12 @@ export class MilestonePipe implements PipeTransform {
           case '2022-5-27':
           case '2022-05-27':
             return ' | Duality Dungeon'
+          case '2022-5-31':
+          case '2022-05-31':
+            return ' | Iron Banner'
+          case '2022-7-12':
+          case '2022-07-12':
+            return ' | Iron Banner'
           case '2022-7-19':
           case '2022-07-19':
             return ' | Solstice'

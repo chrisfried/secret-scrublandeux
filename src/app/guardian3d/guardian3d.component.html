@@ -56,7 +56,7 @@
         'm'
         "></div>
     </div>
-    <button *ngIf="downloadButtons" [disabled]="loadingArray | loadingReduce"
+    <button class="downloadButtons" *ngIf="downloadButtons" [disabled]="loadingArray | loadingReduce"
       (click)="three(season, displayName, seasons.length)" [id]="'download' + season.number">Download STL</button>
   </div>
 </div>
