@@ -23,7 +23,8 @@ html {
     }
   }
 
-  .mat-select-arrow {
+  .mat-select-arrow,
+  .mat-option-text {
     color: white;
   }
 
@@ -33,10 +34,6 @@ html {
 
   .mat-select-panel {
     background: #333;
-  }
-
-  .mat-option-text {
-    color: white;
   }
 
   .calDay,
