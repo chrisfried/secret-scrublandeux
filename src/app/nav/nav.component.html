@@ -5,7 +5,7 @@
     (click)="login()">
     Login with Bungie <mat-icon aria-label="Login with Bungie">login</mat-icon>
   </button>
-  <button *ngIf="bungieAuth.hasValidAccessToken$ | async" mat-raised-button class="button" (click)="logout()">
+  <button *ngIf="bungieAuth.hasValidAccessToken$ | async" mat-raised-button class="button" id="logout" (click)="logout()">
     Logout <mat-icon aria-label="Logout">logout</mat-icon>
   </button>
 </div>

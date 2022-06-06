@@ -4,3 +4,16 @@
 .headline {
   margin-right: 1em;
 }
+
+@media (prefers-color-scheme: dark) {
+  #logout,
+  .mat-button-toggle,
+  .switch-game {
+    background-color: #444;
+    color: white;
+  }
+
+  .mat-button-toggle-checked {
+    background-color: #555;
+  }
+}
