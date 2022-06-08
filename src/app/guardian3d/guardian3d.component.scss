@@ -23,6 +23,137 @@
   width: 1em;
   height: 1em;
   box-sizing: border-box;
+  cursor: pointer;
+  transition: transform .2s;
+  background-position: center;
+  background-size: 16px;
+
+  &:hover.icon {
+    transform: scale(1.5);
+    z-index: 999;
+    box-shadow: 0 0 8px 3px #696969;
+    opacity: 1;
+  }
+
+  &.red-war {
+    background-image: url("../../assets/icons/red-war.png");
+  }
+
+  &.curse-of-osiris {
+    background-image: url("../../assets/icons/curse-of-osiris.png");
+  }
+
+  &.dawning {
+    background-image: url("../../assets/icons/dawning.png");
+  }
+
+  &.crimson-days {
+    background-image: url("../../assets/icons/crimson-days.png");
+  }
+
+  &.warmind {
+    background-image: url("../../assets/icons/warmind.png");
+  }
+
+  &.moments-of-triumph {
+    background-image: url("../../assets/icons/moments-of-triumph.png");
+  }
+
+  &.solstice {
+    background-image: url("../../assets/icons/solstice.png");
+  }
+
+  &.forsaken {
+    background-image: url("../../assets/icons/forsaken.png");
+  }
+
+  &.festival-of-the-lost {
+    background-image: url("../../assets/icons/festival-of-the-lost.png");
+  }
+
+  &.season-of-the-forge {
+    background-image: url("../../assets/icons/season-of-the-forge.png");
+  }
+
+  &.season-of-the-drifter {
+    background-image: url("../../assets/icons/season-of-the-drifter.png");
+  }
+
+  &.revelry {
+    background-image: url("../../assets/icons/revelry.png");
+  }
+
+  &.season-of-opulence {
+    background-image: url("../../assets/icons/season-of-opulence.png");
+  }
+
+  &.shadowkeep {
+    background-image: url("../../assets/icons/shadowkeep.png");
+  }
+
+  &.season-of-the-undying {
+    background-image: url("../../assets/icons/season-of-the-undying.png");
+  }
+
+  &.season-of-dawn {
+    background-image: url("../../assets/icons/season-of-dawn.png");
+  }
+
+  &.season-of-the-worthy {
+    background-image: url("../../assets/icons/season-of-the-worthy.png");
+  }
+
+  &.guardian-games {
+    background-image: url("../../assets/icons/guardian-games.png");
+  }
+
+  &.season-of-arrivals {
+    background-image: url("../../assets/icons/season-of-arrivals.png");
+  }
+
+  &.beyond-light {
+    background-image: url("../../assets/icons/beyond-light.png");
+  }
+
+  &.season-of-the-hunt {
+    background-image: url("../../assets/icons/season-of-the-hunt.png");
+  }
+
+  &.season-of-the-chosen {
+    background-image: url("../../assets/icons/season-of-the-chosen.png");
+  }
+
+  &.season-of-the-splicer {
+    background-image: url("../../assets/icons/season-of-the-splicer.png");
+  }
+
+  &.season-of-the-lost {
+    background-image: url("../../assets/icons/season-of-the-lost.png");
+  }
+
+  &.thirtieth-anniversary {
+    background-image: url("../../assets/icons/thirtieth-anniversary.png");
+  }
+
+  &.witch-queen {
+    background-image: url("../../assets/icons/witch-queen.png");
+  }
+
+  &.season-of-the-haunted {
+    background-image: url("../../assets/icons/season-of-the-haunted.png");
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .calDay {
+    transition: none;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+      background-image: none;
+    }
+  }
 }
 
 .loading > .calDay {
