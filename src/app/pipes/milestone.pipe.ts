@@ -265,7 +265,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Niobe Labs'
           case '2019-1-29':
           case '2019-01-29':
-            return ' | Exotic Quest: The Last Draw'
+            return ' | Exotic Quest: The Last Word'
           case '2019-2-5':
           case '2019-02-05':
             return ' | Crimson Days'
