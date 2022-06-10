@@ -24,7 +24,7 @@
   height: 1em;
   box-sizing: border-box;
   cursor: pointer;
-  transition: transform .2s;
+  transition: transform 0.2s;
   background-position: center;
   background-size: 16px;
 
@@ -35,112 +35,178 @@
     opacity: 1;
   }
 
-  &.red-war {
-    background-image: url("../../assets/icons/red-war.png");
+  &:before {
+    content: ' ';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
+    display: block;
+    -webkit-mask-size: contain;
+    mask-size: contain;
   }
 
-  &.curse-of-osiris {
-    background-image: url("../../assets/icons/curse-of-osiris.png");
+  &.red-war:before {
+    -webkit-mask-image: url('../../assets/icons/red-war.png');
+    mask-image: url('../../assets/icons/red-war.png');
+    background-color: inherit;
   }
 
-  &.dawning {
-    background-image: url("../../assets/icons/dawning.png");
+  &.curse-of-osiris:before {
+    -webkit-mask-image: url('../../assets/icons/curse-of-osiris.png');
+    mask-image: url('../../assets/icons/curse-of-osiris.png');
+    background-color: inherit;
   }
 
-  &.crimson-days {
-    background-image: url("../../assets/icons/crimson-days.png");
+  &.dawning:before {
+    -webkit-mask-image: url('../../assets/icons/dawning.png');
+    mask-image: url('../../assets/icons/dawning.png');
+    background-color: inherit;
   }
 
-  &.warmind {
-    background-image: url("../../assets/icons/warmind.png");
+  &.crimson-days:before {
+    -webkit-mask-image: url('../../assets/icons/crimson-days.png');
+    mask-image: url('../../assets/icons/crimson-days.png');
+    background-color: inherit;
   }
 
-  &.moments-of-triumph {
-    background-image: url("../../assets/icons/moments-of-triumph.png");
+  &.warmind:before {
+    -webkit-mask-image: url('../../assets/icons/warmind.png');
+    mask-image: url('../../assets/icons/warmind.png');
+    background-color: inherit;
   }
 
-  &.solstice {
-    background-image: url("../../assets/icons/solstice.png");
+  &.moments-of-triumph:before {
+    -webkit-mask-image: url('../../assets/icons/moments-of-triumph.png');
+    mask-image: url('../../assets/icons/moments-of-triumph.png');
+    background-color: inherit;
   }
 
-  &.forsaken {
-    background-image: url("../../assets/icons/forsaken.png");
+  &.solstice:before {
+    -webkit-mask-image: url('../../assets/icons/solstice.png');
+    mask-image: url('../../assets/icons/solstice.png');
+    background-color: inherit;
   }
 
-  &.festival-of-the-lost {
-    background-image: url("../../assets/icons/festival-of-the-lost.png");
+  &.forsaken:before {
+    -webkit-mask-image: url('../../assets/icons/forsaken.png');
+    mask-image: url('../../assets/icons/forsaken.png');
+    background-color: inherit;
   }
 
-  &.season-of-the-forge {
-    background-image: url("../../assets/icons/season-of-the-forge.png");
+  &.festival-of-the-lost:before {
+    -webkit-mask-image: url('../../assets/icons/festival-of-the-lost.png');
+    mask-image: url('../../assets/icons/festival-of-the-lost.png');
+    background-color: inherit;
   }
 
-  &.season-of-the-drifter {
-    background-image: url("../../assets/icons/season-of-the-drifter.png");
+  &.season-of-the-forge:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-forge.png');
+    mask-image: url('../../assets/icons/season-of-the-forge.png');
+    background-color: inherit;
   }
 
-  &.revelry {
-    background-image: url("../../assets/icons/revelry.png");
+  &.season-of-the-drifter:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-drifter.png');
+    mask-image: url('../../assets/icons/season-of-the-drifter.png');
+    background-color: inherit;
   }
 
-  &.season-of-opulence {
-    background-image: url("../../assets/icons/season-of-opulence.png");
+  &.revelry:before {
+    -webkit-mask-image: url('../../assets/icons/revelry.png');
+    mask-image: url('../../assets/icons/revelry.png');
+    background-color: inherit;
   }
 
-  &.shadowkeep {
-    background-image: url("../../assets/icons/shadowkeep.png");
+  &.season-of-opulence:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-opulence.png');
+    mask-image: url('../../assets/icons/season-of-opulence.png');
+    background-color: inherit;
   }
 
-  &.season-of-the-undying {
-    background-image: url("../../assets/icons/season-of-the-undying.png");
+  &.shadowkeep:before {
+    -webkit-mask-image: url('../../assets/icons/shadowkeep.png');
+    mask-image: url('../../assets/icons/shadowkeep.png');
+    background-color: inherit;
   }
 
-  &.season-of-dawn {
-    background-image: url("../../assets/icons/season-of-dawn.png");
+  &.season-of-the-undying:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-undying.png');
+    mask-image: url('../../assets/icons/season-of-the-undying.png');
+    background-color: inherit;
   }
 
-  &.season-of-the-worthy {
-    background-image: url("../../assets/icons/season-of-the-worthy.png");
+  &.season-of-dawn:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-dawn.png');
+    mask-image: url('../../assets/icons/season-of-dawn.png');
+    background-color: inherit;
   }
 
-  &.guardian-games {
-    background-image: url("../../assets/icons/guardian-games.png");
+  &.season-of-the-worthy:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-worthy.png');
+    mask-image: url('../../assets/icons/season-of-the-worthy.png');
+    background-color: inherit;
   }
 
-  &.season-of-arrivals {
-    background-image: url("../../assets/icons/season-of-arrivals.png");
+  &.guardian-games:before {
+    -webkit-mask-image: url('../../assets/icons/guardian-games.png');
+    mask-image: url('../../assets/icons/guardian-games.png');
+    background-color: inherit;
   }
 
-  &.beyond-light {
-    background-image: url("../../assets/icons/beyond-light.png");
+  &.season-of-arrivals:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-arrivals.png');
+    mask-image: url('../../assets/icons/season-of-arrivals.png');
+    background-color: inherit;
   }
 
-  &.season-of-the-hunt {
-    background-image: url("../../assets/icons/season-of-the-hunt.png");
+  &.beyond-light:before {
+    -webkit-mask-image: url('../../assets/icons/beyond-light.png');
+    mask-image: url('../../assets/icons/beyond-light.png');
+    background-color: inherit;
   }
 
-  &.season-of-the-chosen {
-    background-image: url("../../assets/icons/season-of-the-chosen.png");
+  &.season-of-the-hunt:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-hunt.png');
+    mask-image: url('../../assets/icons/season-of-the-hunt.png');
+    background-color: inherit;
   }
 
-  &.season-of-the-splicer {
-    background-image: url("../../assets/icons/season-of-the-splicer.png");
+  &.season-of-the-chosen:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-chosen.png');
+    mask-image: url('../../assets/icons/season-of-the-chosen.png');
+    background-color: inherit;
   }
 
-  &.season-of-the-lost {
-    background-image: url("../../assets/icons/season-of-the-lost.png");
+  &.season-of-the-splicer:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-splicer.png');
+    mask-image: url('../../assets/icons/season-of-the-splicer.png');
+    background-color: inherit;
   }
 
-  &.thirtieth-anniversary {
-    background-image: url("../../assets/icons/thirtieth-anniversary.png");
+  &.season-of-the-lost:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-lost.png');
+    mask-image: url('../../assets/icons/season-of-the-lost.png');
+    background-color: inherit;
   }
 
-  &.witch-queen {
-    background-image: url("../../assets/icons/witch-queen.png");
+  &.thirtieth-anniversary:before {
+    -webkit-mask-image: url('../../assets/icons/thirtieth-anniversary.png');
+    mask-image: url('../../assets/icons/thirtieth-anniversary.png');
+    background-color: inherit;
   }
 
-  &.season-of-the-haunted {
-    background-image: url("../../assets/icons/season-of-the-haunted.png");
+  &.witch-queen:before {
+    -webkit-mask-image: url('../../assets/icons/witch-queen.png');
+    mask-image: url('../../assets/icons/witch-queen.png');
+    background-color: inherit;
+  }
+
+  &.season-of-the-haunted:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-haunted.png');
+    mask-image: url('../../assets/icons/season-of-the-haunted.png');
+    background-color: inherit;
   }
 }
 
@@ -185,11 +251,23 @@
 
 .release {
   border: solid 2px white;
+
+  &:before {
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    margin: -2px;
+  }
 }
 
 .raid,
 .event {
   border: solid 1px white;
+
+  &:before {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    margin: -1px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
