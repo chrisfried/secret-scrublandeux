@@ -64,12 +64,16 @@ export class MilestonePipe implements PipeTransform {
           case '2022-3-5':
           case '2022-03-05':
             return 'raid'
+          case '2017-12-19':
+          case '2018-2-13':
+          case '2018-02-13':
           case '2018-7-8':
           case '2018-07-08':
           case '2018-7-20':
           case '2018-07-20':
           case '2018-7-31':
           case '2018-07-31':
+          case '2018-10-16':
           case '2018-12-4':
           case '2018-12-04':
           case '2018-12-7':
@@ -218,6 +222,11 @@ export class MilestonePipe implements PipeTransform {
           case '2017-12-6':
           case '2017-12-06':
             return ' | Eater of Worlds Raid Lair'
+          case '2017-12-19':
+            return ' | The Dawning'
+          case '2018-2-13':
+          case '2018-02-13':
+            return ' | Crimson Days'
           case '2018-5-8':
           case '2018-05-08':
             return ' | Launch: Warmind'
@@ -239,6 +248,8 @@ export class MilestonePipe implements PipeTransform {
           case '2018-9-14':
           case '2018-09-14':
             return ' | Last Wish Raid'
+          case '2018-10-16':
+            return ' | Festival of the Lost'
           case '2018-12-4':
           case '2018-12-04':
             return ' | Season of the Forge | Volundr Forge'
@@ -254,7 +265,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Niobe Labs'
           case '2019-1-29':
           case '2019-01-29':
-            return ' | The Draw Quest'
+            return ' | Exotic Quest: The Last Word'
           case '2019-2-5':
           case '2019-02-05':
             return ' | Crimson Days'
@@ -475,6 +486,115 @@ export class MilestonePipe implements PipeTransform {
           case '2022-7-19':
           case '2022-07-19':
             return ' | Solstice'
+          default:
+            return ''
+        }
+      case 'icon':
+        let classes = 'icon '
+        switch (date) {
+          case '2017-9-6':
+          case '2017-09-06':
+          case '2017-10-24':
+            return classes += 'red-war'
+          case '2017-12-5':
+          case '2017-12-05':
+            return classes += 'curse-of-osiris'
+          case '2017-12-19':
+          case '2018-12-11':
+          case '2019-12-17':
+          case '2020-12-15':
+          case '2021-12-14':
+            return classes += 'dawning'
+          case '2018-2-13':
+          case '2018-02-13':
+          case '2019-2-5':
+          case '2019-02-05':
+          case '2020-2-11':
+          case '2020-02-11':
+            return classes += 'crimson-days'
+          case '2018-5-8':
+          case '2018-05-08':
+            return classes += 'warmind'
+          case '2018-7-8':
+          case '2018-07-08':
+          case '2019-7-9':
+          case '2019-07-09':
+          case '2020-7-7':
+          case '2020-07-07':
+            return classes += 'moments-of-triumph'
+          case '2018-7-31':
+          case '2018-07-31':
+          case '2019-7-30':
+          case '2019-07-30':
+          case '2020-8-11':
+          case '2020-08-11':
+          case '2021-7-6':
+          case '2021-07-06':
+            return classes += 'solstice'
+          case '2018-9-4':
+          case '2018-09-04':
+            return classes += 'forsaken'
+          case '2018-10-16':
+          case '2019-10-29':
+          case '2020-10-6':
+          case '2020-10-06':
+          case '2021-10-12':
+            return classes += 'festival-of-the-lost'
+          case '2018-12-4':
+          case '2018-12-04':
+            return classes += 'season-of-the-forge'
+          case '2019-3-5':
+          case '2019-03-05':
+            return classes += 'season-of-the-drifter'
+          case '2019-4-16':
+          case '2019-04-16':
+            return classes += 'revelry'
+          case '2019-6-4':
+          case '2019-06-04':
+            return classes += 'season-of-opulence'
+          case '2019-10-1':
+          case '2019-10-01':
+            return classes += 'shadowkeep'
+          case '2019-10-5':
+          case '2019-10-05':
+            return classes += 'season-of-the-undying'
+          case '2019-12-10':
+            return classes += 'season-of-dawn'
+          case '2020-3-10':
+          case '2020-03-10':
+            return classes += 'season-of-the-worthy'
+          case '2020-4-21':
+          case '2020-04-21':
+          case '2021-4-20':
+          case '2021-04-20':
+          case '2022-5-3':
+          case '2022-05-03':
+            return classes += 'guardian-games'
+          case '2020-6-9':
+          case '2020-06-09':
+            return classes += 'season-of-arrivals'
+          case '2020-11-10':
+            return classes += 'beyond-light'
+          case '2020-11-17':
+            return classes += 'season-of-the-hunt'
+          case '2021-2-9':
+          case '2021-02-09':
+            return classes += 'season-of-the-chosen'
+          case '2021-5-11':
+          case '2021-05-11':
+            return classes += 'season-of-the-splicer'
+          case '2021-8-24':
+          case '2021-08-24':
+            return classes += 'season-of-the-lost'
+          case '2021-12-7':
+          case '2021-12-07':
+            return classes += 'thirtieth-anniversary'
+          case '2022-2-22':
+          case '2022-02-22':
+            return classes += 'witch-queen'
+          case '2022-5-24':
+          case '2022-05-24':
+            return classes += 'season-of-the-haunted'
           default:
             return ''
         }

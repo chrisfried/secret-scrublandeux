@@ -31,7 +31,7 @@
     <div class="dayWrapper" [ngClass]="(loadingArray | loadingReduce) ? 'loading' : ''">
       <div class="monthSpacer" [ngStyle]="{ height: monthOffsets[year][month] + 'em' }"></div>
       <div *ngFor="let day of dayKeys[year][month]" class="calDay"
-        [ngClass]="[(year + '-' + month + '-' + day | milestone: 'class'), ((days[year][month][day] | addTime: calendarFilter) > 0 ? 'active' : 'inactive')]"
+        [ngClass]="[(year + '-' + month + '-' + day | milestone: 'class'), ((days[year][month][day] | addTime: calendarFilter) > 0 ? 'active' : 'inactive'), (year + '-' + month + '-' + day | milestone: 'icon')]"
         (click)="openDay(year + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day, days[year][month][day])"
         [ngStyle]="{
           'background-color':
