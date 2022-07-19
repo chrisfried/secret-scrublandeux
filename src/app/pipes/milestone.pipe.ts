@@ -595,6 +595,9 @@ export class MilestonePipe implements PipeTransform {
           case '2022-5-24':
           case '2022-05-24':
             return classes += 'season-of-the-haunted'
+          case '2022-7-19':
+          case '2022-07-19':
+            return classes += 'solstice2022'
           default:
             return ''
         }
