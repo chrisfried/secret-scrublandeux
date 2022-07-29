@@ -208,6 +208,18 @@
     mask-image: url('../../assets/icons/season-of-the-haunted.png');
     background-color: inherit;
   }
+
+  &.iron-banner:before {
+    -webkit-mask-image: url('../../assets/icons/iron-banner.png');
+    mask-image: url('../../assets/icons/iron-banner.png');
+    background-color: inherit;
+  }
+
+  &.solstice2022:before {
+    -webkit-mask-image: url('../../assets/icons/solstice2022.png');
+    mask-image: url('../../assets/icons/solstice2022.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {
