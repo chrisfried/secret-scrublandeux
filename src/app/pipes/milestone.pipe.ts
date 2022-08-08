@@ -322,7 +322,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Launch: Shadowkeep | Season of Undying'
           case '2019-10-5':
           case '2019-10-05':
-            return ' | Garden of Salvation | Vex Offensive'
+            return ' | Garden of Salvation Raid | Vex Offensive'
           case '2019-10-22':
             return ' | Exotic Quest: Leviathan\'s Breath | Master Nightmare Hunts'
           case '2019-10-29':
@@ -603,6 +603,22 @@ export class MilestonePipe implements PipeTransform {
           case '2022-7-19':
           case '2022-07-19':
             return classes += 'solstice2022'
+          case '2017-9-13':
+          case '2017-09-13':
+          case '2017-12-6':
+          case '2017-12-06':
+          case '2018-5-11':
+          case '2018-05-11':
+          case '2018-9-14':
+          case '2018-09-14':
+          case '2018-12-7':
+          case '2018-12-07':
+          case '2020-11-21':
+          case '2021-5-22':
+          case '2021-05-22':
+          case '2022-3-5':
+          case '2022-03-05':
+            return classes += 'raid'
           default:
             return ''
         }

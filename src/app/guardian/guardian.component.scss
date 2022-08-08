@@ -220,6 +220,12 @@
     mask-image: url('../../assets/icons/solstice2022.png');
     background-color: inherit;
   }
+
+  &.raid:before {
+    -webkit-mask-image: url('../../assets/icons/raid.png');
+    mask-image: url('../../assets/icons/raid.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {
