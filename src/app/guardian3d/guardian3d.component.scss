@@ -226,6 +226,12 @@
     mask-image: url('../../assets/icons/raid.png');
     background-color: inherit;
   }
+
+  &.season-of-plunder:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-plunder.png');
+    mask-image: url('../../assets/icons/season-of-plunder.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {

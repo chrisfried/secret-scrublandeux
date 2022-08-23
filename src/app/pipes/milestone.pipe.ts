@@ -43,6 +43,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-02-22':
           case '2022-5-24':
           case '2022-05-24':
+          case '2022-2-28':
+          case '2022-02-28':
             return 'release'
           case '2017-9-13':
           case '2017-09-13':
@@ -63,6 +65,8 @@ export class MilestonePipe implements PipeTransform {
           case '2021-05-22':
           case '2022-3-5':
           case '2022-03-05':
+          case '2022-08-26':
+          case '2022-08-26':
             return 'raid'
           case '2017-12-19':
           case '2018-2-13':
@@ -202,6 +206,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-07-12':
           case '2022-7-19':
           case '2022-07-19':
+          case '2022-8-23':
+          case '2022-08-23':
             return 'event'
           default:
             return ''
@@ -486,6 +492,15 @@ export class MilestonePipe implements PipeTransform {
           case '2022-7-19':
           case '2022-07-19':
             return ' | Solstice'
+          case '2022-8-23':
+          case '2022-08-23':
+            return ' | Season of Plunder'
+          case '2022-8-26':
+          case '2022-08-26':
+            return ' | King\'s Fall Raid'
+          case '2022-2-28':
+          case '2022-02-28':
+            return ' | Launch: Lightfall'
           default:
             return ''
         }
@@ -618,7 +633,12 @@ export class MilestonePipe implements PipeTransform {
           case '2021-05-22':
           case '2022-3-5':
           case '2022-03-05':
+          case '2022-8-26':
+          case '2022-08-26':
             return classes += 'raid'
+          case '2022-8-23':
+          case '2022-08-23':
+            return classes += 'season-of-plunder'
           default:
             return ''
         }
