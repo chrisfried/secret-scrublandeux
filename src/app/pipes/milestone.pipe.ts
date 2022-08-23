@@ -65,7 +65,7 @@ export class MilestonePipe implements PipeTransform {
           case '2021-05-22':
           case '2022-3-5':
           case '2022-03-05':
-          case '2022-08-26':
+          case '2022-8-26':
           case '2022-08-26':
             return 'raid'
           case '2017-12-19':
