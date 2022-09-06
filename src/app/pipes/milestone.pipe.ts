@@ -498,6 +498,10 @@ export class MilestonePipe implements PipeTransform {
           case '2022-8-26':
           case '2022-08-26':
             return ' | King\'s Fall Raid'
+          case '2022-9-13':
+          case '2022-09-13':
+          case '2022-11-22':
+            return ' | Iron Banner'
           case '2022-2-28':
           case '2022-02-28':
             return ' | Launch: Lightfall'
@@ -614,6 +618,9 @@ export class MilestonePipe implements PipeTransform {
           case '2022-05-31':
           case '2022-7-12':
           case '2022-07-12':
+          case '2022-9-13':
+          case '2022-09-13':
+          case '2022-11-22':
             return classes += 'iron-banner'
           case '2022-7-19':
           case '2022-07-19':
