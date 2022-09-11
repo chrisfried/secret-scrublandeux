@@ -22,6 +22,10 @@ export class ManifestPipe implements PipeTransform {
               return this.manifestService.defs.Activity.get(hash)?.displayProperties.hasIcon
                 ? `https://bungie.net${this.manifestService.defs.Activity.get(hash).displayProperties.icon}`
                 : ``
+            case 'activityModeIcon':
+              return this.manifestService.defs.ActivityMode.get(hash)?.displayProperties.hasIcon
+                ? `https://bungie.net${this.manifestService.defs.ActivityMode.get(hash).displayProperties.icon}`
+                : ``
             default:
               return ''
           }

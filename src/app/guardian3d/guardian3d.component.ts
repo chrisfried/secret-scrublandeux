@@ -3,6 +3,9 @@ import { MatDialog } from '@angular/material/dialog'
 import { ServerResponse } from 'bungie-api-ts/common'
 import {
   DestinyActivityHistoryResults,
+  DestinyActivityModeCategory,
+  DestinyActivityModeDefinition,
+  DestinyActivityModeType,
   DestinyCharacterComponent,
   DestinyCharacterResponse,
   DestinyComponentType,
@@ -90,6 +93,18 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
   public seasonTimes = true
   public poi = true
   public locale: string
+  public modeTrends: {
+    [key in DestinyActivityModeType]?: {
+      ninetyDays: scrubland.Activity[]
+      threeSixtyFiveDays: scrubland.Activity[]
+    }
+  }
+  public overallTrend: {
+    ninetyDays: scrubland.Activity[]
+    threeSixtyFiveDays: scrubland.Activity[]
+  }
+  public ninetyDaysAgo: Date
+  public threeSixtyFiveDaysAgo: Date
 
   constructor(
     @Inject(LOCALE_ID) locale: string,
@@ -129,6 +144,13 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     this.activities = []
     this.days = {}
     this.flatDays = []
+    this.ninetyDaysAgo = new Date(new Date().setDate(new Date().getDate() - 90))
+    this.threeSixtyFiveDaysAgo = new Date(new Date().setDate(new Date().getDate() - 365))
+    this.modeTrends = {}
+    this.overallTrend = {
+      ninetyDays: [],
+      threeSixtyFiveDays: [],
+    }
     this.seasons = [
       {
         number: 18,
@@ -456,6 +478,26 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
               this.days[activity.startDate.getUTCFullYear()][activity.startDate.getUTCMonth() + 1][
                 activity.startDate.getUTCDate()
               ].activities.push(activity)
+
+              if (activity.endDate > this.threeSixtyFiveDaysAgo) {
+                activity.activityDetails.modes.forEach((mode) => {
+                  if (!this.modeTrends[mode]) {
+                    this.modeTrends[mode] = {
+                      ninetyDays: [],
+                      threeSixtyFiveDays: [],
+                    }
+                  }
+                  this.modeTrends[mode].threeSixtyFiveDays.push(activity)
+                  if (activity.endDate > this.ninetyDaysAgo) {
+                    this.modeTrends[mode].ninetyDays.push(activity)
+                  }
+                })
+
+                this.overallTrend.threeSixtyFiveDays.push(activity)
+                if (activity.endDate > this.ninetyDaysAgo) {
+                  this.overallTrend.ninetyDays.push(activity)
+                }
+              }
             } catch (e) {}
             this.flatDaysBS.next(this.flatDays)
           })
@@ -679,5 +721,28 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
         })
       }
     })
+  }
+
+  getModeTrends() {
+    return Object.keys(this.modeTrends)
+      .map((key) => ({
+        mode: Number(key),
+        ninety: Math.round(this.modeTrends[Number(key)].ninetyDays.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 13),
+        threeSixtyFive: Math.round(this.modeTrends[Number(key)].threeSixtyFiveDays.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 52),
+      }))
+      .sort((a, b) => b.threeSixtyFive - a.threeSixtyFive)
+      .sort((a, b) => b.ninety - a.ninety)
+      .map((m) => ({
+        ...m,
+        ninety: Math.round(m.ninety / 60000),
+        threeSixtyFive: Math.round(m.threeSixtyFive / 60000),
+      }))
+  }
+
+  getOverallTrend() {
+    return {
+      ninety: Math.round(this.overallTrend.ninetyDays.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 13 / 60000),
+      threeSixtyFive: Math.round(this.overallTrend.threeSixtyFiveDays.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 52 / 60000),
+    }
   }
 }

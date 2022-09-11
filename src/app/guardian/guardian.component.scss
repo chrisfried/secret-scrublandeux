@@ -332,3 +332,52 @@
 .errorStatus {
   margin-bottom: 0.5em;
 }
+
+.trends-header {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.trending_loading {
+  -webkit-animation: spin 3s infinite linear;
+  animation: spin 3s infinite linear;
+}
+.trends {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+
+  .trend-up {
+    color: green;
+  }
+
+  .trend-down {
+    color: red;
+  }
+
+  .trend {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    min-width: 17em;
+
+    .trend-header {
+      display: flex;
+      align-items: center;
+      gap: 0.25em;
+
+      img {
+        height: 1em;
+      }
+    }
+
+    .trend-time {
+      font-size: 0.75em;
+      opacity: 0.6;
+    }
+
+    .trend-values {
+      display: flex;
+      gap: 0.75em;
+    }
+  }
+}

@@ -9,7 +9,7 @@
   Total Time in Activities: <span class="mat-body-2">{{ activities | activitiesTotalHours }}</span> =
   <span class="mat-body-2">{{ activities | activitiesTotalTime }}</span> <br />
   Destiny 2 Activity Count: <span class="mat-body-2">{{ activities.length }}</span>
-  <mat-icon *ngIf="loadingArray | loadingReduce" aria-label="Search for Guardian" class="spinner">settings</mat-icon>
+  <mat-icon *ngIf="loadingArray | loadingReduce" aria-label="Search for Guardian" class="spinner">refresh</mat-icon>
   <br />
   Current Streak: {{ flatDays | currentStreak }}<br />
   Longest Streaks: {{ flatDays | longestStreaks }}<br />
@@ -60,4 +60,81 @@
     <button mat-button class="downloadButtons" *ngIf="downloadButtons" [disabled]="loadingArray | loadingReduce"
       (click)="three(season, displayName, seasons.length)" [id]="'download' + season.number">Download STL</button>
   </div>
+</div>
+
+<h3 class="trends-header">Trends</h3>
+<mat-icon class="trending_loading" *ngIf="loadingArray | loadingReduce">refresh</mat-icon>
+<div class="trends" *ngIf="!(loadingArray | loadingReduce)">
+
+  <div class="trend">
+    <mat-icon class="trend-up"
+      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().ninety > getOverallTrend().threeSixtyFive">
+      trending_up
+    </mat-icon>
+    <mat-icon class="trend-flat"
+      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().ninety === getOverallTrend().threeSixtyFive">
+      trending_flat
+    </mat-icon>
+    <mat-icon class="trend-down"
+      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().ninety < getOverallTrend().threeSixtyFive">
+      trending_down
+    </mat-icon>
+    <div class="trend-main">
+      <div class="trend-header">
+        <div class="trend-name">Overall</div>
+      </div>
+      <div class="trend-values">
+        <div class="trend-ninety">
+          <div class="trend-value">{{ getOverallTrend().ninety > 60 ? Math.floor(getOverallTrend().ninety /
+            60) + 'h' +
+            getOverallTrend().ninety % 60 :
+            getOverallTrend().ninety }}m/week</div>
+          <div class="trend-time">13 week avg</div>
+        </div>
+        <div class="trend-three-sixty-five">
+          <div class="trend-value">{{ getOverallTrend().threeSixtyFive > 60 ?
+            Math.floor(getOverallTrend().threeSixtyFive
+            /
+            60) + 'h' +
+            getOverallTrend().threeSixtyFive % 60 :
+            getOverallTrend().threeSixtyFive }}m/week</div>
+          <div class="trend-time">52 week avg</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngFor="let trend of getModeTrends()">
+    <div *ngIf="trend.ninety > 0 || trend.threeSixtyFive > 0" class="trend">
+      <mat-icon class="trend-up" *ngIf="trend.ninety > trend.threeSixtyFive">
+        trending_up
+      </mat-icon>
+      <mat-icon class="trend-flat" *ngIf="trend.ninety === trend.threeSixtyFive">
+        trending_flat
+      </mat-icon>
+      <mat-icon class="trend-down" *ngIf="trend.ninety < trend.threeSixtyFive">
+        trending_down
+      </mat-icon>
+      <div class="trend-main">
+        <div class="trend-header">
+          <img class="trend-icon" [src]="trend.mode | manifest: 'activityModeIcon' | async"
+            [alt]="trend.mode | manifest: 'activityMode' | async">
+          <div class="trend-name">{{trend.mode | manifest: 'activityMode' | async}}</div>
+        </div>
+        <div class="trend-values">
+          <div class="trend-ninety">
+            <div class="trend-value">{{ trend.ninety > 60 ? Math.floor(trend.ninety / 60) + 'h' + trend.ninety % 60
+              :
+              trend.ninety }}m/week</div>
+            <div class="trend-time">13 week avg</div>
+          </div>
+          <div class="trend-three-sixty-five">
+            <div class="trend-value">{{ trend.threeSixtyFive > 60 ? Math.floor(trend.threeSixtyFive / 60) + 'h' +
+              trend.threeSixtyFive % 60 :
+              trend.threeSixtyFive }}m/week</div>
+            <div class="trend-time">52 week avg</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
 </div>
