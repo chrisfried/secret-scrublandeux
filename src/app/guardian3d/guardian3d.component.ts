@@ -95,16 +95,16 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
   public locale: string
   public modeTrends: {
     [key in DestinyActivityModeType]?: {
-      ninetyDays: scrubland.Activity[]
-      threeSixtyFiveDays: scrubland.Activity[]
+      quarter: scrubland.Activity[]
+      year: scrubland.Activity[]
     }
   }
   public overallTrend: {
-    ninetyDays: scrubland.Activity[]
-    threeSixtyFiveDays: scrubland.Activity[]
+    quarter: scrubland.Activity[]
+    year: scrubland.Activity[]
   }
-  public ninetyDaysAgo: Date
-  public threeSixtyFiveDaysAgo: Date
+  public oneQuarterAgo: Date
+  public oneYearAgo: Date
 
   constructor(
     @Inject(LOCALE_ID) locale: string,
@@ -144,19 +144,19 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     this.activities = []
     this.days = {}
     this.flatDays = []
-    this.ninetyDaysAgo = new Date(new Date().setDate(new Date().getDate() - 90))
-    this.threeSixtyFiveDaysAgo = new Date(new Date().setDate(new Date().getDate() - 365))
+    this.oneQuarterAgo = new Date(new Date().setDate(new Date().getDate() - 91))
+    this.oneYearAgo = new Date(new Date().setDate(new Date().getDate() - 364))
     this.modeTrends = {}
     this.overallTrend = {
-      ninetyDays: [],
-      threeSixtyFiveDays: [],
+      quarter: [],
+      year: [],
     }
     this.seasons = [
       {
         number: 18,
         name: 'Season of Plunder',
         days: [],
-        startDate: new Date('2022-08-23')
+        startDate: new Date('2022-08-23'),
       },
       {
         number: 17,
@@ -479,23 +479,23 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
                 activity.startDate.getUTCDate()
               ].activities.push(activity)
 
-              if (activity.endDate > this.threeSixtyFiveDaysAgo) {
+              if (activity.endDate > this.oneYearAgo) {
                 activity.activityDetails.modes.forEach((mode) => {
                   if (!this.modeTrends[mode]) {
                     this.modeTrends[mode] = {
-                      ninetyDays: [],
-                      threeSixtyFiveDays: [],
+                      quarter: [],
+                      year: [],
                     }
                   }
-                  this.modeTrends[mode].threeSixtyFiveDays.push(activity)
-                  if (activity.endDate > this.ninetyDaysAgo) {
-                    this.modeTrends[mode].ninetyDays.push(activity)
+                  this.modeTrends[mode].year.push(activity)
+                  if (activity.endDate > this.oneQuarterAgo) {
+                    this.modeTrends[mode].quarter.push(activity)
                   }
                 })
 
-                this.overallTrend.threeSixtyFiveDays.push(activity)
-                if (activity.endDate > this.ninetyDaysAgo) {
-                  this.overallTrend.ninetyDays.push(activity)
+                this.overallTrend.year.push(activity)
+                if (activity.endDate > this.oneQuarterAgo) {
+                  this.overallTrend.quarter.push(activity)
                 }
               }
             } catch (e) {}
@@ -727,22 +727,22 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     return Object.keys(this.modeTrends)
       .map((key) => ({
         mode: Number(key),
-        ninety: Math.round(this.modeTrends[Number(key)].ninetyDays.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 13),
-        threeSixtyFive: Math.round(this.modeTrends[Number(key)].threeSixtyFiveDays.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 52),
+        quarter: Math.round(this.modeTrends[Number(key)].quarter.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 13),
+        year: Math.round(this.modeTrends[Number(key)].year.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 52),
       }))
-      .sort((a, b) => b.threeSixtyFive - a.threeSixtyFive)
-      .sort((a, b) => b.ninety - a.ninety)
+      .sort((a, b) => b.year - a.year)
+      .sort((a, b) => b.quarter - a.quarter)
       .map((m) => ({
         ...m,
-        ninety: Math.round(m.ninety / 60000),
-        threeSixtyFive: Math.round(m.threeSixtyFive / 60000),
+        quarter: Math.round(m.quarter / 60000),
+        year: Math.round(m.year / 60000),
       }))
   }
 
   getOverallTrend() {
     return {
-      ninety: Math.round(this.overallTrend.ninetyDays.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 13 / 60000),
-      threeSixtyFive: Math.round(this.overallTrend.threeSixtyFiveDays.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 52 / 60000),
+      quarter: Math.round(this.overallTrend.quarter.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 13 / 60000),
+      year: Math.round(this.overallTrend.year.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 52 / 60000),
     }
   }
 }

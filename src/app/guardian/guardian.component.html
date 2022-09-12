@@ -68,69 +68,69 @@
 
   <div class="trend">
     <mat-icon class="trend-up"
-      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().ninety > getOverallTrend().threeSixtyFive">
+      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().quarter > getOverallTrend().year">
       trending_up
     </mat-icon>
     <mat-icon class="trend-flat"
-      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().ninety === getOverallTrend().threeSixtyFive">
+      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().quarter === getOverallTrend().year">
       trending_flat
     </mat-icon>
     <mat-icon class="trend-down"
-      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().ninety < getOverallTrend().threeSixtyFive">
+      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().quarter < getOverallTrend().year">
       trending_down
     </mat-icon>
     <div class="trend-main">
       <div class="trend-header">
-        <div class="trend-name">Overall</div>
+        <div class="trend-name">All Activities</div>
       </div>
       <div class="trend-values">
-        <div class="trend-ninety">
-          <div class="trend-value">{{ getOverallTrend().ninety > 60 ? Math.floor(getOverallTrend().ninety /
+        <div class="trend-quarter">
+          <div class="trend-value">{{ getOverallTrend().quarter > 60 ? Math.floor(getOverallTrend().quarter /
             60) + 'h' +
-            getOverallTrend().ninety % 60 :
-            getOverallTrend().ninety }}m/week</div>
+            getOverallTrend().quarter % 60 :
+            getOverallTrend().quarter }}m/week</div>
           <div class="trend-time">13 week avg</div>
         </div>
-        <div class="trend-three-sixty-five">
-          <div class="trend-value">{{ getOverallTrend().threeSixtyFive > 60 ?
-            Math.floor(getOverallTrend().threeSixtyFive
+        <div class="trend-year">
+          <div class="trend-value">{{ getOverallTrend().year > 60 ?
+            Math.floor(getOverallTrend().year
             /
             60) + 'h' +
-            getOverallTrend().threeSixtyFive % 60 :
-            getOverallTrend().threeSixtyFive }}m/week</div>
+            getOverallTrend().year % 60 :
+            getOverallTrend().year }}m/week</div>
           <div class="trend-time">52 week avg</div>
         </div>
       </div>
     </div>
   </div>
   <ng-container *ngFor="let trend of getModeTrends()">
-    <div *ngIf="trend.ninety > 0 || trend.threeSixtyFive > 0" class="trend">
-      <mat-icon class="trend-up" *ngIf="trend.ninety > trend.threeSixtyFive">
+    <div *ngIf="trend.quarter > 0 || trend.year > 0" class="trend">
+      <mat-icon class="trend-up" *ngIf="trend.quarter > trend.year">
         trending_up
       </mat-icon>
-      <mat-icon class="trend-flat" *ngIf="trend.ninety === trend.threeSixtyFive">
+      <mat-icon class="trend-flat" *ngIf="trend.quarter === trend.year">
         trending_flat
       </mat-icon>
-      <mat-icon class="trend-down" *ngIf="trend.ninety < trend.threeSixtyFive">
+      <mat-icon class="trend-down" *ngIf="trend.quarter < trend.year">
         trending_down
       </mat-icon>
       <div class="trend-main">
         <div class="trend-header">
+          <div class="trend-name">{{trend.mode | manifest: 'activityMode' | async}}</div>
           <img class="trend-icon" [src]="trend.mode | manifest: 'activityModeIcon' | async"
             [alt]="trend.mode | manifest: 'activityMode' | async">
-          <div class="trend-name">{{trend.mode | manifest: 'activityMode' | async}}</div>
         </div>
         <div class="trend-values">
-          <div class="trend-ninety">
-            <div class="trend-value">{{ trend.ninety > 60 ? Math.floor(trend.ninety / 60) + 'h' + trend.ninety % 60
+          <div class="trend-quarter">
+            <div class="trend-value">{{ trend.quarter > 60 ? Math.floor(trend.quarter / 60) + 'h' + trend.quarter % 60
               :
-              trend.ninety }}m/week</div>
+              trend.quarter }}m/week</div>
             <div class="trend-time">13 week avg</div>
           </div>
-          <div class="trend-three-sixty-five">
-            <div class="trend-value">{{ trend.threeSixtyFive > 60 ? Math.floor(trend.threeSixtyFive / 60) + 'h' +
-              trend.threeSixtyFive % 60 :
-              trend.threeSixtyFive }}m/week</div>
+          <div class="trend-year">
+            <div class="trend-value">{{ trend.year > 60 ? Math.floor(trend.year / 60) + 'h' +
+              trend.year % 60 :
+              trend.year }}m/week</div>
             <div class="trend-time">52 week avg</div>
           </div>
         </div>
