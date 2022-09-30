@@ -1,16 +1,14 @@
+import { formatDate } from '@angular/common'
 import { Component, Inject, LOCALE_ID, NgZone, OnDestroy, OnInit } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
 import { ServerResponse } from 'bungie-api-ts/common'
 import {
   DestinyActivityHistoryResults,
-  DestinyActivityModeCategory,
-  DestinyActivityModeDefinition,
   DestinyActivityModeType,
   DestinyCharacterComponent,
   DestinyCharacterResponse,
   DestinyComponentType,
   DestinyHistoricalStatsAccountResult,
-  DestinyProfileResponse,
   DestinyStatsGroupType,
   getActivityHistory,
   GetActivityHistoryParams,
@@ -18,23 +16,19 @@ import {
   GetCharacterParams,
   getHistoricalStatsForAccount,
   GetHistoricalStatsForAccountParams,
-  getProfile,
-  GetProfileParams,
 } from 'bungie-api-ts/destiny2'
 import { getMembershipDataForCurrentUser, UserMembershipData } from 'bungie-api-ts/user'
 import { BehaviorSubject, EMPTY, forkJoin, Observable, Subscription } from 'rxjs'
-import { distinctUntilChanged, map, switchMap, tap, take } from 'rxjs/operators'
+import { distinctUntilChanged, map, switchMap, take, tap } from 'rxjs/operators'
+import * as THREE from 'three'
+import { CSG } from 'three-csg-ts'
+import { STLExporter } from 'three/examples/jsm/exporters/STLExporter'
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { BungieAuthService } from '../bungie-auth/bungie-auth.service'
 import { ManifestService } from '../manifest/manifest.service'
 import { scrubland } from '../scrubland.typings'
 import { BungieQueueService } from '../services/queue.service'
-import * as THREE from 'three'
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
-import { STLExporter } from 'three/examples/jsm/exporters/STLExporter'
-import { CSG } from 'three-csg-ts'
-import { formatDate } from '@angular/common'
-import { HttpErrorResponse } from '@angular/common/http'
 
 @Component({
   selector: 'app-guardian-3d',
@@ -390,7 +384,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
         // tap((r) => console.log('accountResponse', r)),
         // map((responses) => responses[0])
         map((res) => {
-          console.log(res)
+          // console.log(res)
           //   if (res?.ErrorCode !== 1 && res?.ErrorStatus) {
           //     this.errorStatus = res.ErrorStatus
           //     this.errorMessage = res.Message
