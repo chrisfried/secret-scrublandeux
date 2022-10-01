@@ -187,10 +187,20 @@ export class GuardianComponent implements OnInit, OnDestroy {
                       response?.Response?.characters.map((character) => {
                         const bsB: BehaviorSubject<ServerResponse<DestinyCharacterResponse>> = new BehaviorSubject(undefined)
                         const { characterId } = character
+                        const secondsPlayed = character.merged?.allTime?.secondsPlayed?.basic?.value
                         const actionB = getCharacter
                         const callbackB = (res: ServerResponse<DestinyCharacterResponse>) => {
                           if (res.ErrorCode === 1) {
-                            bsB.next(res)
+                            const r = res as any
+                            r.Response.character = res.Response.character ?? {
+                              data: {
+                                characterId,
+                                membershipId,
+                                membershipType,
+                                minutesPlayedTotal: secondsPlayed ? this.Math.floor(secondsPlayed / 60) : 0,
+                              },
+                            }
+                            bsB.next(r as ServerResponse<DestinyCharacterResponse>)
                           }
                           bsB.complete()
                         }
@@ -233,7 +243,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
     this.membershipDataForCurrentUser$
       .pipe(
         distinctUntilChanged(),
-        // tap((r) => console.log('accountResponse', r)),
+        // tap((r) => console.log('membershipDataForCurrentUser', r)),
         // map((responses) => responses[0])
         map((res) => {
           // console.log(res)
