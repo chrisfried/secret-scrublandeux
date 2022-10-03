@@ -326,13 +326,19 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
           switchMap((userMembershipData) =>
             forkJoin(
               userMembershipData?.Response?.destinyMemberships.map((destinyMembership) => {
+                const membershipLoading = { loading: true }
+                this.loadingArray.push(membershipLoading)
+
                 const bs: BehaviorSubject<ServerResponse<DestinyHistoricalStatsAccountResult>> = new BehaviorSubject(undefined)
                 const { membershipId, membershipType } = destinyMembership
                 const action = getHistoricalStatsForAccount
                 const callback = (response: ServerResponse<DestinyHistoricalStatsAccountResult>) => {
-                  if (response && response.ErrorCode === 1) {
+                  if (response && response.ErrorCode === 1 && response?.Response?.characters?.length > 0) {
                     forkJoin(
                       response?.Response?.characters.map((character) => {
+                        const characterLoading = { loading: true }
+                        this.loadingArray.push(characterLoading)
+
                         const bsB: BehaviorSubject<ServerResponse<DestinyCharacterResponse>> = new BehaviorSubject(undefined)
                         const { characterId } = character
                         const secondsPlayed = character.merged?.allTime?.secondsPlayed?.basic?.value
@@ -348,8 +354,10 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
                                 minutesPlayedTotal: secondsPlayed ? this.Math.floor(secondsPlayed / 60) : 0,
                               },
                             }
+
                             bsB.next(r as ServerResponse<DestinyCharacterResponse>)
                           }
+                          characterLoading.loading = false
                           bsB.complete()
                         }
                         const paramsB: GetCharacterParams = {
@@ -365,9 +373,11 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
                       .pipe(take(1))
                       .subscribe((b) => {
                         bs.next(b)
+                        membershipLoading.loading = false
                         bs.complete()
                       })
                   } else {
+                    membershipLoading.loading = false
                     bs.complete()
                   }
                 }
@@ -403,6 +413,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
         })
       )
       .subscribe()
+
     this.characters$ = this.accountResponse$.pipe(
       distinctUntilChanged(),
       map((profiles) => {
