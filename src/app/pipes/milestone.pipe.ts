@@ -503,6 +503,9 @@ export class MilestonePipe implements PipeTransform {
             return ' | King\'s Fall Raid'
           case '2022-9-6':
           case '2022-09-06':
+            return ' | Iron Banner'
+          case '2022-10-18':
+            return ' | Festival of the Lost'
           case '2022-11-15':
             return ' | Iron Banner'
           case '2023-2-28':
@@ -561,6 +564,7 @@ export class MilestonePipe implements PipeTransform {
           case '2020-10-6':
           case '2020-10-06':
           case '2021-10-12':
+          case '2022-10-18':
             return classes += 'festival-of-the-lost'
           case '2018-12-4':
           case '2018-12-04':
