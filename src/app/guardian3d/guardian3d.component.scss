@@ -232,6 +232,18 @@
     mask-image: url('../../assets/icons/season-of-plunder.png');
     background-color: inherit;
   }
+
+  &.dungeon:before {
+    -webkit-mask-image: url('../../assets/icons/dungeon.png');
+    mask-image: url('../../assets/icons/dungeon.png');
+    background-color: inherit;
+  }
+
+  &.season-of-the-seraph:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-seraph.png');
+    mask-image: url('../../assets/icons/season-of-the-seraph.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {
