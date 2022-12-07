@@ -45,6 +45,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-05-24':
           case '2022-8-23':
           case '2022-08-23':
+          case '2022-12-6':
+          case '2022-12-06':
           case '2023-2-28':
           case '2023-02-28':
             return 'release'
@@ -79,6 +81,8 @@ export class MilestonePipe implements PipeTransform {
           case '2018-07-20':
           case '2018-7-31':
           case '2018-07-31':
+          case '2018-9-25':
+          case '2018-09-25':
           case '2018-10-16':
           case '2018-12-4':
           case '2018-12-04':
@@ -211,6 +215,9 @@ export class MilestonePipe implements PipeTransform {
           case '2022-9-6':
           case '2022-09-06':
           case '2022-11-15':
+          case '2022-10-18':
+          case '2022-12-9':
+          case '2022-12-09':
             return 'event'
           default:
             return ''
@@ -257,6 +264,9 @@ export class MilestonePipe implements PipeTransform {
           case '2018-9-14':
           case '2018-09-14':
             return ' | Last Wish Raid'
+          case '2018-9-25':
+          case '2018-09-25':
+            return ' | Shattered Throne Dungeon'
           case '2018-10-16':
             return ' | Festival of the Lost'
           case '2018-12-4':
@@ -508,9 +518,22 @@ export class MilestonePipe implements PipeTransform {
             return ' | Festival of the Lost'
           case '2022-11-15':
             return ' | Iron Banner'
+          case '2022-11-27':
+            return ' | Eliksni Quarter Community Event'
+          case '2022-12-6':
+          case '2022-12-06':
+            return ' | Season of the Seraph | Moments of Triumph'
+          case '2022-12-9':
+          case '2022-12-09':
+            return ' | [REDACTED] Dungeon'
+          case '2022-12-20':
+            return ' | Exotic Quest: Division Zero'
+          case '2023-1-3':
+          case '2023-01-03':
+            return ' | Iron Banner'
           case '2023-2-28':
           case '2023-02-28':
-            return ' | Launch: Lightfall'
+            return ' | Launch: Lightfall | Season of [REDACTED]'
           default:
             return ''
         }
@@ -628,6 +651,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-9-6':
           case '2022-09-06':
           case '2022-11-15':
+          case '2023-1-3':
+          case '2023-01-03':
             return classes += 'iron-banner'
           case '2022-7-19':
           case '2022-07-19':
@@ -653,6 +678,16 @@ export class MilestonePipe implements PipeTransform {
           case '2022-8-23':
           case '2022-08-23':
             return classes += 'season-of-plunder'
+          case '2018-9-25':
+          case '2018-09-25':
+          case '2022-5-27':
+          case '2022-05-27':
+          case '2022-12-9':
+          case '2022-12-09':
+            return classes += 'dungeon'
+          case '2022-12-6':
+          case '2022-12-06':
+            return classes += 'season-of-the-seraph'
           default:
             return ''
         }
