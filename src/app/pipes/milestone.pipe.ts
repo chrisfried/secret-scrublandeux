@@ -525,7 +525,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Seraph | Moments of Triumph'
           case '2022-12-9':
           case '2022-12-09':
-            return ' | [REDACTED] Dungeon'
+            return ' | Spire of the Watcher Dungeon'
           case '2022-12-20':
             return ' | Exotic Quest: Division Zero'
           case '2023-1-3':
