@@ -218,6 +218,7 @@ export class MilestonePipe implements PipeTransform {
           case '2022-10-18':
           case '2022-12-9':
           case '2022-12-09':
+          case '2022-12-13':
             return 'event'
           default:
             return ''
@@ -534,6 +535,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-2-28':
           case '2023-02-28':
             return ' | Launch: Lightfall | Season of [REDACTED]'
+          case '2022-12-13':
+            return ' | The Dawning'
           default:
             return ''
         }
@@ -552,6 +555,7 @@ export class MilestonePipe implements PipeTransform {
           case '2019-12-17':
           case '2020-12-15':
           case '2021-12-14':
+          case '2022-12-13':
             return classes += 'dawning'
           case '2018-2-13':
           case '2018-02-13':
