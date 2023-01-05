@@ -218,6 +218,7 @@ export class MilestonePipe implements PipeTransform {
           case '2022-10-18':
           case '2022-12-9':
           case '2022-12-09':
+          case '2022-12-13':
             return 'event'
           default:
             return ''
@@ -526,6 +527,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-12-9':
           case '2022-12-09':
             return ' | Spire of the Watcher Dungeon'
+          case '2022-12-13':
+            return ' | The Dawning'
           case '2022-12-20':
             return ' | Exotic Quest: Division Zero'
           case '2023-1-3':
@@ -552,6 +555,7 @@ export class MilestonePipe implements PipeTransform {
           case '2019-12-17':
           case '2020-12-15':
           case '2021-12-14':
+          case '2022-12-13':
             return classes += 'dawning'
           case '2018-2-13':
           case '2018-02-13':
