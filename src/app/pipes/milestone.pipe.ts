@@ -534,7 +534,7 @@ export class MilestonePipe implements PipeTransform {
           case '2022-12-13':
             return ' | The Dawning'
           case '2022-12-20':
-            return ' | Exotic Quest: Division Zero'
+            return ' | Exotic Quest: Revision Zero'
           case '2023-1-3':
           case '2023-01-03':
           case '2023-1-31':
