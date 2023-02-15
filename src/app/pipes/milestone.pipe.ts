@@ -219,6 +219,10 @@ export class MilestonePipe implements PipeTransform {
           case '2022-12-9':
           case '2022-12-09':
           case '2022-12-13':
+          case '2023-1-3':
+          case '2023-01-03':
+          case '2023-1-31':
+          case '2023-01-31':
             return 'event'
           default:
             return ''
@@ -530,13 +534,15 @@ export class MilestonePipe implements PipeTransform {
           case '2022-12-13':
             return ' | The Dawning'
           case '2022-12-20':
-            return ' | Exotic Quest: Division Zero'
+            return ' | Exotic Quest: Revision Zero'
           case '2023-1-3':
           case '2023-01-03':
+          case '2023-1-31':
+          case '2023-01-31':
             return ' | Iron Banner'
           case '2023-2-28':
           case '2023-02-28':
-            return ' | Launch: Lightfall | Season of [REDACTED]'
+            return ' | Launch: Lightfall | Season of Defiance'
           default:
             return ''
         }
@@ -657,6 +663,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-11-15':
           case '2023-1-3':
           case '2023-01-03':
+          case '2023-1-31':
+          case '2023-01-31':
             return classes += 'iron-banner'
           case '2022-7-19':
           case '2022-07-19':
