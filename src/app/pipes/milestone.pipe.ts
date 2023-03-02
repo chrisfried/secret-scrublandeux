@@ -225,6 +225,14 @@ export class MilestonePipe implements PipeTransform {
           case '2023-01-03':
           case '2023-1-31':
           case '2023-01-31':
+          case '2023-3-14':
+          case '2023-03-14':
+          case '2023-4-4':
+          case '2023-04-04':
+          case '2023-4-25':
+          case '2023-04-25':
+          case '2023-5-2':
+          case '2023-05-02':
             return 'event'
           default:
             return ''
@@ -548,6 +556,16 @@ export class MilestonePipe implements PipeTransform {
           case '2023-03-10':
           case '2023-3-10':
             return ' | Root of Nightmares Raid'
+          case '2023-3-14':
+          case '2023-03-14':
+          case '2023-4-4':
+          case '2023-04-04':
+          case '2023-4-25':
+          case '2023-04-25':
+            return ' | Iron Banner'
+          case '2023-5-2':
+          case '2023-05-02':
+            return ' | Guardian Games'
           default:
             return ''
         }
@@ -633,6 +651,8 @@ export class MilestonePipe implements PipeTransform {
           case '2021-04-20':
           case '2022-5-3':
           case '2022-05-03':
+          case '2023-5-2':
+          case '2023-05-02':
             return classes += 'guardian-games'
           case '2020-6-9':
           case '2020-06-09':
@@ -670,6 +690,12 @@ export class MilestonePipe implements PipeTransform {
           case '2023-01-03':
           case '2023-1-31':
           case '2023-01-31':
+          case '2023-3-14':
+          case '2023-03-14':
+          case '2023-4-4':
+          case '2023-04-04':
+          case '2023-4-25':
+          case '2023-04-25':
             return classes += 'iron-banner'
           case '2022-7-19':
           case '2022-07-19':
