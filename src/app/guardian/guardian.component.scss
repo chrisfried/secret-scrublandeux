@@ -244,6 +244,12 @@
     mask-image: url('../../assets/icons/season-of-the-seraph.png');
     background-color: inherit;
   }
+
+  &.lightfall:before {
+    -webkit-mask-image: url('../../assets/icons/lightfall.png');
+    mask-image: url('../../assets/icons/lightfall.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {

@@ -71,6 +71,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-03-05':
           case '2022-8-26':
           case '2022-08-26':
+          case '2023-3-10':
+          case '2023-03-10':
             return 'raid'
           case '2017-12-19':
           case '2018-2-13':
@@ -223,6 +225,14 @@ export class MilestonePipe implements PipeTransform {
           case '2023-01-03':
           case '2023-1-31':
           case '2023-01-31':
+          case '2023-3-14':
+          case '2023-03-14':
+          case '2023-4-4':
+          case '2023-04-04':
+          case '2023-4-25':
+          case '2023-04-25':
+          case '2023-5-2':
+          case '2023-05-02':
             return 'event'
           default:
             return ''
@@ -543,6 +553,19 @@ export class MilestonePipe implements PipeTransform {
           case '2023-2-28':
           case '2023-02-28':
             return ' | Launch: Lightfall | Season of Defiance'
+          case '2023-03-10':
+          case '2023-3-10':
+            return ' | Root of Nightmares Raid'
+          case '2023-3-14':
+          case '2023-03-14':
+          case '2023-4-4':
+          case '2023-04-04':
+          case '2023-4-25':
+          case '2023-04-25':
+            return ' | Iron Banner'
+          case '2023-5-2':
+          case '2023-05-02':
+            return ' | Guardian Games'
           default:
             return ''
         }
@@ -628,6 +651,8 @@ export class MilestonePipe implements PipeTransform {
           case '2021-04-20':
           case '2022-5-3':
           case '2022-05-03':
+          case '2023-5-2':
+          case '2023-05-02':
             return classes += 'guardian-games'
           case '2020-6-9':
           case '2020-06-09':
@@ -665,6 +690,12 @@ export class MilestonePipe implements PipeTransform {
           case '2023-01-03':
           case '2023-1-31':
           case '2023-01-31':
+          case '2023-3-14':
+          case '2023-03-14':
+          case '2023-4-4':
+          case '2023-04-04':
+          case '2023-4-25':
+          case '2023-04-25':
             return classes += 'iron-banner'
           case '2022-7-19':
           case '2022-07-19':
@@ -686,6 +717,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-03-05':
           case '2022-8-26':
           case '2022-08-26':
+          case '2023-3-10':
+          case '2023-03-10':
             return classes += 'raid'
           case '2022-8-23':
           case '2022-08-23':
@@ -700,6 +733,9 @@ export class MilestonePipe implements PipeTransform {
           case '2022-12-6':
           case '2022-12-06':
             return classes += 'season-of-the-seraph'
+          case '2022-2-28':
+          case '2022-02-28':
+            return classes += 'lightfall'
           default:
             return ''
         }
