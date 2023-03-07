@@ -19,14 +19,17 @@
       "pre-commit": "git-format-staged -f 'prettier --ignore-unknown --stdin --stdin-filepath \"{}\"' ."
     }
   },
+  "resolutions": {
+    "webpack": "^5.0.0"
+  },
   "dependencies": {
     "@angular/animations": "11.2.14",
-    "@angular/cdk": "^10.1.1",
+    "@angular/cdk": "^11.2.13",
     "@angular/common": "11.2.14",
     "@angular/compiler": "11.2.14",
     "@angular/core": "11.2.14",
     "@angular/forms": "11.2.14",
-    "@angular/material": "^10.1.1",
+    "@angular/material": "^11.2.13",
     "@angular/platform-browser": "11.2.14",
     "@angular/platform-browser-dynamic": "11.2.14",
     "@angular/router": "11.2.14",
