@@ -1,11 +1,16 @@
-import { bungieDev } from './keys'
+// import { bungieDev } from './keys'
 
-// The file contents for the current environment will overwrite these during build.
-// The build system defaults to the dev environment which uses `environment.ts`, but if you do
-// `ng build --env=prod` then `environment.prod.ts` will be used instead.
-// The list of which env maps to which file can be found in `angular-cli.json`.
+// export const environment = {
+//   production: false,
+//   bungie: bungieDev,
+// }
 
 export const environment = {
-  production: false,
-  bungie: bungieDev,
+  production: true,
+  bungie: {
+    apiKey: 'cd01c0cb258c48228cdbc0f468674257',
+    authUrl: 'https://www.bungie.net/en/OAuth/Authorize',
+    clientId: '36111',
+    redirect: 'https://chrisfried.github.io/secret-scrublandeux/auth',
+  },
 }
