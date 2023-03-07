@@ -1,4 +1,4 @@
-<span class="mat-headline headline">Destiny 2 Historical Heatmap</span>
+<span class="mat-headline-5 headline">Destiny 2 Historical Heatmap</span>
 <a mat-raised-button class="switch-game" href="https://chrisfried.github.io/secret-scrubland/">Switch to Destiny 1</a>
 <div style="margin-bottom: 1em">
   <button *ngIf="(bungieAuth.hasValidAccessToken$ | async) === false" mat-raised-button color="primary" class="button"
@@ -9,7 +9,7 @@
     Logout <mat-icon aria-label="Logout">logout</mat-icon>
   </button>
 </div>
-<div class="mat-body-1">
+<div class="mat-body-2">
   Calendar Type:<br />
   <mat-button-toggle-group name="calendar" aria-label="Calendar">
     <mat-button-toggle value="gregorian" (click)="calendarChange.emit('gregorian')">Gregorian</mat-button-toggle>

@@ -1,14 +1,14 @@
-<mat-card *ngIf="errorStatus" class="errorStatus">
+<mat-card appearance="outlined" *ngIf="errorStatus" class="errorStatus">
   <mat-card-title>{{ errorStatus }}</mat-card-title>
   <mat-card-subtitle>{{ errorMessage }}</mat-card-subtitle>
 </mat-card>
-<div class="mat-body-1">
-  Name: <span class="mat-body-2">{{ displayName }}</span> <br />
-  Total Time in Destiny 2: <span class="mat-body-2">{{ minutesPlayedTotal | async | hoursPlayed }}</span> =
-  <span class="mat-body-2">{{ minutesPlayedTotal | async | parseMinutesPlayed }}</span> <br />
-  Total Time in Activities: <span class="mat-body-2">{{ activities | activitiesTotalHours }}</span> =
-  <span class="mat-body-2">{{ activities | activitiesTotalTime }}</span> <br />
-  Destiny 2 Activity Count: <span class="mat-body-2">{{ activities.length }}</span>
+<div class="mat-body-2">
+  Name: <span class="mat-subtitle-2">{{ displayName }}</span> <br />
+  Total Time in Destiny 2: <span class="mat-subtitle-2">{{ minutesPlayedTotal | async | hoursPlayed }}</span> =
+  <span class="mat-subtitle-2">{{ minutesPlayedTotal | async | parseMinutesPlayed }}</span> <br />
+  Total Time in Activities: <span class="mat-subtitle-2">{{ activities | activitiesTotalHours }}</span> =
+  <span class="mat-subtitle-2">{{ activities | activitiesTotalTime }}</span> <br />
+  Destiny 2 Activity Count: <span class="mat-subtitle-2">{{ activities.length }}</span>
   <mat-icon *ngIf="loadingArray | loadingReduce" aria-label="Search for Guardian" class="spinner">refresh</mat-icon>
   <br />
   Current Streak: {{ flatDays | currentStreak }}<br />

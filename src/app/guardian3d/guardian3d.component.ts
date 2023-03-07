@@ -1,6 +1,6 @@
 import { formatDate } from '@angular/common'
 import { Component, Inject, LOCALE_ID, NgZone, OnDestroy, OnInit } from '@angular/core'
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog'
+import { MatDialog } from '@angular/material/dialog'
 import { ServerResponse } from 'bungie-api-ts/common'
 import {
   DestinyActivityHistoryResults,

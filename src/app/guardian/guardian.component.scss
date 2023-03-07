@@ -274,6 +274,7 @@
 }
 
 .yearLabel span {
+  font-size: 0.75em;
   display: block;
   transform: rotate(-90deg);
 }
@@ -283,27 +284,22 @@
 }
 
 .monthLabel {
+  font-size: 0.75em;
   text-align: center;
 }
 
 .release {
-  border: solid 2px white;
-
   &:before {
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    margin: -2px;
+    width: 100%;
+    height: 100%;
   }
 }
 
 .raid,
 .event {
-  border: solid 1px white;
-
   &:before {
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
-    margin: -1px;
+    width: 100%;
+    height: 100%;
   }
 }
 

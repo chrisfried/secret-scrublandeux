@@ -1,47 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@use '@angular/material' as mat;
 
-html {
-  background-color: #fff;
-  color: black;
+@include mat.core();
+
+// Define a dark theme
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$pink-palette),
+      accent: mat.define-palette(mat.$blue-grey-palette),
+    ),
+    // Only include `typography` and `density` in the default dark theme.
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// Define a light theme
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$indigo-palette),
+      accent: mat.define-palette(mat.$pink-palette),
+    ),
+  )
+);
+
+// Apply the dark theme by default
+@include mat.core-theme($dark-theme);
+@include mat.all-component-themes($dark-theme);
+
+// Apply the light theme only when the user prefers light themes.
+@media (prefers-color-scheme: light) {
+  // Use the `-color` mixins to only apply color styles without reapplying the same
+  // typography and density styles.
+  @include mat.core-color($light-theme);
+  @include mat.all-component-themes($light-theme);
 }
 
-@media (prefers-color-scheme: dark) {
-  html,
-  .mat-dialog-container {
-    background-color: #333;
-    color: white;
-  }
-
-  a {
-    &:link {
-      color: #3d9eff;
-    }
-
-    &:visited {
-      color: #b785e5;
-    }
-  }
-
-  .mat-select-arrow,
-  .mat-option-text,
-  .mat-select-value {
-    color: white;
-  }
-
-  .mat-form-field-underline {
-    background-color: white !important;
-  }
-
-  .mat-select-panel {
-    background: #333;
-  }
-
-  .timelineLabels {
-    background-color: #555 !important;
-  }
-
-  .mat-checkbox-frame {
-    border-color: white;
-  }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
