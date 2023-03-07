@@ -358,7 +358,7 @@ export class MilestonePipe implements PipeTransform {
           case '2019-10-05':
             return ' | Garden of Salvation Raid | Vex Offensive'
           case '2019-10-22':
-            return ' | Exotic Quest: Leviathan\'s Breath | Master Nightmare Hunts'
+            return " | Exotic Quest: Leviathan's Breath | Master Nightmare Hunts"
           case '2019-10-29':
             return ' | Festival of the Lost | Pit of Heresy Dungeon | Exotic Quest: Xenophage'
           case '2019-11-19':
@@ -473,7 +473,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Splicer Epilogue'
           case '2021-8-24':
           case '2021-08-24':
-            return ' | Season of the Lost | Exotic Quest: Ager\'s Scepter | Shattered Realm: Forest of Echoes'
+            return " | Season of the Lost | Exotic Quest: Ager's Scepter | Shattered Realm: Forest of Echoes"
           case '2021-8-31':
           case '2021-08-31':
             return ' | Shattered Realm: Debris of Dreams'
@@ -525,7 +525,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of Plunder'
           case '2022-8-26':
           case '2022-08-26':
-            return ' | King\'s Fall Raid'
+            return " | King's Fall Raid"
           case '2022-9-6':
           case '2022-09-06':
             return ' | Iron Banner'
@@ -575,34 +575,34 @@ export class MilestonePipe implements PipeTransform {
           case '2017-9-6':
           case '2017-09-06':
           case '2017-10-24':
-            return classes += 'red-war'
+            return (classes += 'red-war')
           case '2017-12-5':
           case '2017-12-05':
-            return classes += 'curse-of-osiris'
+            return (classes += 'curse-of-osiris')
           case '2017-12-19':
           case '2018-12-11':
           case '2019-12-17':
           case '2020-12-15':
           case '2021-12-14':
           case '2022-12-13':
-            return classes += 'dawning'
+            return (classes += 'dawning')
           case '2018-2-13':
           case '2018-02-13':
           case '2019-2-5':
           case '2019-02-05':
           case '2020-2-11':
           case '2020-02-11':
-            return classes += 'crimson-days'
+            return (classes += 'crimson-days')
           case '2018-5-8':
           case '2018-05-08':
-            return classes += 'warmind'
+            return (classes += 'warmind')
           case '2018-7-8':
           case '2018-07-08':
           case '2019-7-9':
           case '2019-07-09':
           case '2020-7-7':
           case '2020-07-07':
-            return classes += 'moments-of-triumph'
+            return (classes += 'moments-of-triumph')
           case '2018-7-31':
           case '2018-07-31':
           case '2019-7-30':
@@ -611,40 +611,40 @@ export class MilestonePipe implements PipeTransform {
           case '2020-08-11':
           case '2021-7-6':
           case '2021-07-06':
-            return classes += 'solstice'
+            return (classes += 'solstice')
           case '2018-9-4':
           case '2018-09-04':
-            return classes += 'forsaken'
+            return (classes += 'forsaken')
           case '2018-10-16':
           case '2019-10-29':
           case '2020-10-6':
           case '2020-10-06':
           case '2021-10-12':
           case '2022-10-18':
-            return classes += 'festival-of-the-lost'
+            return (classes += 'festival-of-the-lost')
           case '2018-12-4':
           case '2018-12-04':
-            return classes += 'season-of-the-forge'
+            return (classes += 'season-of-the-forge')
           case '2019-3-5':
           case '2019-03-05':
-            return classes += 'season-of-the-drifter'
+            return (classes += 'season-of-the-drifter')
           case '2019-4-16':
           case '2019-04-16':
-            return classes += 'revelry'
+            return (classes += 'revelry')
           case '2019-6-4':
           case '2019-06-04':
-            return classes += 'season-of-opulence'
+            return (classes += 'season-of-opulence')
           case '2019-10-1':
           case '2019-10-01':
-            return classes += 'shadowkeep'
+            return (classes += 'shadowkeep')
           case '2019-10-5':
           case '2019-10-05':
-            return classes += 'season-of-the-undying'
+            return (classes += 'season-of-the-undying')
           case '2019-12-10':
-            return classes += 'season-of-dawn'
+            return (classes += 'season-of-dawn')
           case '2020-3-10':
           case '2020-03-10':
-            return classes += 'season-of-the-worthy'
+            return (classes += 'season-of-the-worthy')
           case '2020-4-21':
           case '2020-04-21':
           case '2021-4-20':
@@ -653,32 +653,32 @@ export class MilestonePipe implements PipeTransform {
           case '2022-05-03':
           case '2023-5-2':
           case '2023-05-02':
-            return classes += 'guardian-games'
+            return (classes += 'guardian-games')
           case '2020-6-9':
           case '2020-06-09':
-            return classes += 'season-of-arrivals'
+            return (classes += 'season-of-arrivals')
           case '2020-11-10':
-            return classes += 'beyond-light'
+            return (classes += 'beyond-light')
           case '2020-11-17':
-            return classes += 'season-of-the-hunt'
+            return (classes += 'season-of-the-hunt')
           case '2021-2-9':
           case '2021-02-09':
-            return classes += 'season-of-the-chosen'
+            return (classes += 'season-of-the-chosen')
           case '2021-5-11':
           case '2021-05-11':
-            return classes += 'season-of-the-splicer'
+            return (classes += 'season-of-the-splicer')
           case '2021-8-24':
           case '2021-08-24':
-            return classes += 'season-of-the-lost'
+            return (classes += 'season-of-the-lost')
           case '2021-12-7':
           case '2021-12-07':
-            return classes += 'thirtieth-anniversary'
+            return (classes += 'thirtieth-anniversary')
           case '2022-2-22':
           case '2022-02-22':
-            return classes += 'witch-queen'
+            return (classes += 'witch-queen')
           case '2022-5-24':
           case '2022-05-24':
-            return classes += 'season-of-the-haunted'
+            return (classes += 'season-of-the-haunted')
           case '2022-5-31':
           case '2022-05-31':
           case '2022-7-12':
@@ -696,10 +696,10 @@ export class MilestonePipe implements PipeTransform {
           case '2023-04-04':
           case '2023-4-25':
           case '2023-04-25':
-            return classes += 'iron-banner'
+            return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
-            return classes += 'solstice2022'
+            return (classes += 'solstice2022')
           case '2017-9-13':
           case '2017-09-13':
           case '2017-12-6':
@@ -719,23 +719,23 @@ export class MilestonePipe implements PipeTransform {
           case '2022-08-26':
           case '2023-3-10':
           case '2023-03-10':
-            return classes += 'raid'
+            return (classes += 'raid')
           case '2022-8-23':
           case '2022-08-23':
-            return classes += 'season-of-plunder'
+            return (classes += 'season-of-plunder')
           case '2018-9-25':
           case '2018-09-25':
           case '2022-5-27':
           case '2022-05-27':
           case '2022-12-9':
           case '2022-12-09':
-            return classes += 'dungeon'
+            return (classes += 'dungeon')
           case '2022-12-6':
           case '2022-12-06':
-            return classes += 'season-of-the-seraph'
-          case '2022-2-28':
-          case '2022-02-28':
-            return classes += 'lightfall'
+            return (classes += 'season-of-the-seraph')
+          case '2023-2-28':
+          case '2023-02-28':
+            return (classes += 'lightfall')
           default:
             return ''
         }
