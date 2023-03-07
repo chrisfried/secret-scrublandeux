@@ -108,7 +108,6 @@
       }
     }
   },
-  "defaultProject": "scrublandeux",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
