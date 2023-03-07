@@ -5925,10 +5925,12 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-ngx-indexed-db@^5.0.5:
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/ngx-indexed-db/-/ngx-indexed-db-5.0.5.tgz#ea4b21a8c32b6bea25d053e38db0603204ee9553"
-  integrity sha512-MRqtL51HoZp9CUEaQQEQY4pjuwDJmG5/ucHfxy8LaPEyW+HOL+kvAgXKumDiUH5Q/K0WNQwoQwSxPUFnsUQrdQ==
+ngx-indexed-db@^16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-indexed-db/-/ngx-indexed-db-16.0.0.tgz#1a939ad358e757dc8c548049f6b6d5ed762411b7"
+  integrity sha512-bl+Fo2JKa0uqgnWJuvZNQDkKLVVVDD4n0/a/QS1AMaiCw6im53DjSZ7vABkHL2vODhCnuapMqAw9Q+Gq6kKwGw==
+  dependencies:
+    tslib "^2.0.0"
 
 nice-try@^1.0.4:
   version "1.0.5"

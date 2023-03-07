@@ -37,7 +37,7 @@
     "core-js": "^3.1.4",
     "fast-equals": "^2.0.0",
     "idb-keyval": "^3.2.0",
-    "ngx-indexed-db": "^5.0.5",
+    "ngx-indexed-db": "^16.0.0",
     "rxjs": "^6.5.3",
     "sass": "^1.22.7",
     "three": "^0.135.0",
