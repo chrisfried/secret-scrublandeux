@@ -135,82 +135,81 @@ navigator.languages.some((l) => {
 })
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    FrontPageComponent,
-    GuardianComponent,
-    Guardian3DComponent,
-    AddTimePipe,
-    DayModalComponent,
-    ManifestPipe,
-    ActivitiesTotalTimePipe,
-    ParseMinutesPlayedPipe,
-    ActivitiesTotalHoursPipe,
-    HoursPlayedPipe,
-    FooterComponent,
-    BungieStatusComponent,
-    MilestonePipe,
-    LoadingReducePipe,
-    CurrentStreakPipe,
-    LongestStreaksPipe,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCheckboxModule,
-    MatIconModule,
-    MatTooltipModule,
-    MatDialogModule,
-    MatSelectModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
-    FormsModule,
-    HttpClientModule,
-    RoutesModule,
-    BungieAuthModule,
-    NgxIndexedDBModule.forRoot({
-      name: 'GtDb',
-      version: 1,
-      objectStoresMeta: [
-        {
-          store: 'pgcrs',
-          storeConfig: {
-            keyPath: 'instanceId',
-            autoIncrement: false,
-          },
-          storeSchema: [
-            {
-              name: 'instanceId',
-              keypath: 'instanceId',
-              options: {
-                unique: true,
-              },
-            },
-            {
-              name: 'period',
-              keypath: 'period',
-              options: {
-                unique: false,
-              },
-            },
-            {
-              name: 'response',
-              keypath: 'response',
-              options: {
-                unique: false,
-              },
-            },
-          ],
-        },
-      ],
-    }),
-  ],
-  entryComponents: [DayModalComponent],
-  providers: [{ provide: LOCALE_ID, useValue: lang }],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        NavComponent,
+        FrontPageComponent,
+        GuardianComponent,
+        Guardian3DComponent,
+        AddTimePipe,
+        DayModalComponent,
+        ManifestPipe,
+        ActivitiesTotalTimePipe,
+        ParseMinutesPlayedPipe,
+        ActivitiesTotalHoursPipe,
+        HoursPlayedPipe,
+        FooterComponent,
+        BungieStatusComponent,
+        MilestonePipe,
+        LoadingReducePipe,
+        CurrentStreakPipe,
+        LongestStreaksPipe,
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatInputModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatCheckboxModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatDialogModule,
+        MatSelectModule,
+        MatCardModule,
+        MatProgressSpinnerModule,
+        FormsModule,
+        HttpClientModule,
+        RoutesModule,
+        BungieAuthModule,
+        NgxIndexedDBModule.forRoot({
+            name: 'GtDb',
+            version: 1,
+            objectStoresMeta: [
+                {
+                    store: 'pgcrs',
+                    storeConfig: {
+                        keyPath: 'instanceId',
+                        autoIncrement: false,
+                    },
+                    storeSchema: [
+                        {
+                            name: 'instanceId',
+                            keypath: 'instanceId',
+                            options: {
+                                unique: true,
+                            },
+                        },
+                        {
+                            name: 'period',
+                            keypath: 'period',
+                            options: {
+                                unique: false,
+                            },
+                        },
+                        {
+                            name: 'response',
+                            keypath: 'response',
+                            options: {
+                                unique: false,
+                            },
+                        },
+                    ],
+                },
+            ],
+        }),
+    ],
+    providers: [{ provide: LOCALE_ID, useValue: lang }],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
