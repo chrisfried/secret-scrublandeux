@@ -44,6 +44,7 @@ import localeKo from '@angular/common/locales/ko'
 import localeIt from '@angular/common/locales/it'
 import localeRu from '@angular/common/locales/ru'
 import localePl from '@angular/common/locales/pl'
+import { WebringComponent } from './webring/webring.component'
 // import { SearchComponent } from './search/search.component'
 
 let lang = 'en'
@@ -167,6 +168,7 @@ navigator.languages.some((l) => {
     HttpClientModule,
     RoutesModule,
     BungieAuthModule,
+    WebringComponent,
   ],
   providers: [{ provide: LOCALE_ID, useValue: lang }],
   bootstrap: [AppComponent],

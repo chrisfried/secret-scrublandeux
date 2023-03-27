@@ -44,3 +44,10 @@ body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+
+.mat-bottom-sheet-container {
+  padding: 0 !important;
+}
+.mdc-list-item--with-leading-avatar .mdc-list-item__start {
+  border-radius: 0 !important;
+}

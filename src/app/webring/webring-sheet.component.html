@@ -1,0 +1,15 @@
+<mat-nav-list>
+  <a
+    mat-list-item
+    [href]="link.url"
+    rel="me"
+    target="_blank"
+    *ngFor="let link of links"
+  >
+    <img matListItemAvatar [src]="link.icon" [alt]="link.name" />
+    <h3 matListItemTitle>{{ link.name }}</h3>
+    <p matListItemLine>
+      <span>{{ link.description }}</span>
+    </p>
+  </a>
+</mat-nav-list>

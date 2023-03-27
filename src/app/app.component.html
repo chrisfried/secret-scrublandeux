@@ -1,8 +1,7 @@
+<destiny-webring></destiny-webring>
 <div class="appWrapper">
   <app-bungie-status class="bungieStatus"></app-bungie-status>
   <app-nav class="nav" [calendar]="calendar" (calendarChange)="calendarChange($event)"></app-nav>
   <app-guardian *ngIf="calendar === 'gregorian' && bungieAuth.hasValidAccessToken$ | async"></app-guardian>
   <app-guardian-3d *ngIf="calendar === 'bungie' && bungieAuth.hasValidAccessToken$ | async"></app-guardian-3d>
-  <br />
-  <app-footer class="footer"></app-footer>
 </div>
