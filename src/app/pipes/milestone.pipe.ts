@@ -49,6 +49,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-12-06':
           case '2023-2-28':
           case '2023-02-28':
+          case '2023-5-23':
+          case '2023-05-23':
             return 'release'
           case '2017-9-13':
           case '2017-09-13':
@@ -225,6 +227,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-01-03':
           case '2023-1-31':
           case '2023-01-31':
+          case '2023-3-7':
+          case '2023-03-07':
           case '2023-3-14':
           case '2023-03-14':
           case '2023-4-4':
@@ -553,6 +557,9 @@ export class MilestonePipe implements PipeTransform {
           case '2023-2-28':
           case '2023-02-28':
             return ' | Launch: Lightfall | Season of Defiance'
+          case '2023-3-7':
+          case '2023-03-07':
+            return ' | Exotic Quest: Vexcalibur'
           case '2023-03-10':
           case '2023-3-10':
             return ' | Root of Nightmares Raid'
@@ -566,6 +573,9 @@ export class MilestonePipe implements PipeTransform {
           case '2023-5-2':
           case '2023-05-02':
             return ' | Guardian Games'
+          case '2023-5-23':
+          case '2023-05-23':
+            return ' | Season of the Deep'
           default:
             return ''
         }
