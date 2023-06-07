@@ -15,7 +15,7 @@ import {
   getCharacter,
   GetCharacterParams,
   getHistoricalStatsForAccount,
-  GetHistoricalStatsForAccountParams,
+  GetHistoricalStatsForAccountParams
 } from 'bungie-api-ts/destiny2'
 import { getMembershipDataForCurrentUser, UserMembershipData } from 'bungie-api-ts/user'
 import { BehaviorSubject, EMPTY, forkJoin, Observable, Subscription } from 'rxjs'
@@ -26,10 +26,16 @@ import { scrubland } from '../scrubland.typings'
 import { BungieQueueService } from '../services/queue.service'
 import { DayModalComponent } from './day-modal/day-modal.component'
 
+interface ActivityGroup {
+  name: string
+  otherFilters: string[]
+  modes: DestinyActivityModeType[]
+}
+
 @Component({
   selector: 'app-guardian',
   templateUrl: './guardian.component.html',
-  styleUrls: ['./guardian.component.scss'],
+  styleUrls: ['./guardian.component.scss']
 })
 export class GuardianComponent implements OnInit, OnDestroy {
   private subs: Subscription[]
@@ -59,8 +65,9 @@ export class GuardianComponent implements OnInit, OnDestroy {
     }
   }
   public Math: Math
-  public calendarFilter: any
+  public calendarFilter: any[]
   public modeOptions: any[]
+  public modeGroups: ActivityGroup[]
   public loadingArray: { loading: boolean }[]
   public errorStatus: string
   public errorMessage: string
@@ -102,7 +109,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.loadingArray = []
-    this.calendarFilter = '0'
+    this.calendarFilter = []
     this.subs = []
     this.activities = []
     this.days = {}
@@ -112,14 +119,151 @@ export class GuardianComponent implements OnInit, OnDestroy {
     this.modeTrends = {}
     this.overallTrend = {
       quarter: [],
-      year: [],
+      year: []
     }
     this.flatDaysBS = new BehaviorSubject([])
+    this.modeGroups = [
+      {
+        name: 'General',
+        otherFilters: [],
+        modes: [
+          DestinyActivityModeType.Story,
+          DestinyActivityModeType.Patrol,
+          DestinyActivityModeType.Social,
+          DestinyActivityModeType.LostSector
+        ]
+      },
+      {
+        name: 'Vanguard',
+        otherFilters: ['Strike', 'Nightfall'],
+        modes: [
+          DestinyActivityModeType.AllPvE
+        ]
+      },
+      {
+        name: 'Crucible',
+        otherFilters: [],
+        modes: [
+          DestinyActivityModeType.AllPvP,
+          DestinyActivityModeType.AllMayhem,
+          DestinyActivityModeType.PvPCompetitive,
+          DestinyActivityModeType.PvPQuickplay,
+          DestinyActivityModeType.Control,
+          DestinyActivityModeType.ControlCompetitive,
+          DestinyActivityModeType.ControlQuickplay,
+          DestinyActivityModeType.Clash,
+          DestinyActivityModeType.ClashQuickplay,
+          DestinyActivityModeType.ClashCompetitive,
+          DestinyActivityModeType.CrimsonDoubles,
+          DestinyActivityModeType.Supremacy,
+          DestinyActivityModeType.Survival,
+          DestinyActivityModeType.Countdown,
+          DestinyActivityModeType.Rumble,
+          DestinyActivityModeType.AllDoubles,
+          DestinyActivityModeType.Doubles,
+          DestinyActivityModeType.PrivateMatchesClash,
+          DestinyActivityModeType.PrivateMatchesControl,
+          DestinyActivityModeType.PrivateMatchesCountdown,
+          DestinyActivityModeType.PrivateMatchesSupremacy,
+          DestinyActivityModeType.PrivateMatchesSurvival,
+          DestinyActivityModeType.PrivateMatchesMayhem,
+          DestinyActivityModeType.PrivateMatchesRumble,
+          DestinyActivityModeType.Showdown,
+          DestinyActivityModeType.Lockdown,
+          DestinyActivityModeType.Scorched,
+          DestinyActivityModeType.ScorchedTeam,
+          DestinyActivityModeType.Breakthrough,
+          DestinyActivityModeType.Salvage,
+          DestinyActivityModeType.Elimination,
+          DestinyActivityModeType.Momentum,
+          DestinyActivityModeType.Rift,
+          DestinyActivityModeType.ZoneControl
+        ]
+      },
+      {
+        name: 'Gambit',
+        otherFilters: [],
+        modes: []
+      },
+      {
+        name: 'Trials',
+        otherFilters: [],
+        modes: []
+      },
+      {
+        name: 'Iron Banner',
+        otherFilters: [],
+        modes: []
+      },
+      {
+        name: 'Raids',
+        otherFilters: [],
+        modes: [
+          DestinyActivityModeType.Raid,
+          DestinyActivityModeType.Dungeon
+        ]
+      },
+      {
+        name: 'Seasonal',
+        otherFilters: [],
+        modes: [
+          DestinyActivityModeType.BlackArmoryRun,
+          DestinyActivityModeType.Reckoning,
+          DestinyActivityModeType.Menagerie,
+          DestinyActivityModeType.VexOffensive,
+          DestinyActivityModeType.NightmareHunt,
+          DestinyActivityModeType.Sundial,
+          DestinyActivityModeType.Offensive
+        ]
+      }
+    ]
     this.manifestService.state$.subscribe((state) => {
       if (state.loaded) {
-        this.modeOptions = Object.keys(this.manifestService.defs.ActivityMode.dbTable)
+        const dbTable = Object.keys(this.manifestService.defs.ActivityMode.dbTable)
+
+        this.modeOptions = dbTable
           .map((key) => this.manifestService.defs.ActivityMode.dbTable[key].modeType)
           .sort()
+
+        const modeUngrouped: DestinyActivityModeType[] = []
+
+        for (const key of dbTable) {
+          const mode = this.manifestService.defs.ActivityMode.dbTable[key].modeType
+          let grouped = false
+          for (const group of this.modeGroups) {
+            if (group.modes.includes(mode)) { // skip predefined groups
+              grouped = true
+              break
+            }
+
+            const name = this.manifestService.defs.ActivityMode.dbTable[key].displayProperties.name
+            if (name.includes(group.name)) { // check group name
+              grouped = true
+            } else {
+              for (const filter of group.otherFilters) { // check other filters
+                if (name.includes(filter)) {
+                  grouped = true
+                  break
+                }
+              }
+            }
+
+            if (grouped) { // add to group if a match
+              group.modes.push(mode)
+              break
+            }
+          }
+
+          if (!grouped) { // add to other group if no match
+            modeUngrouped.push(mode)
+          }
+        }
+
+        this.modeGroups.push({
+          name: 'Other',
+          otherFilters: [],
+          modes: modeUngrouped
+        })
       }
     })
     this.errorStatus = ''
@@ -203,8 +347,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
                                 characterId,
                                 membershipId,
                                 membershipType,
-                                minutesPlayedTotal: secondsPlayed ? this.Math.floor(secondsPlayed / 60) : 0,
-                              },
+                                minutesPlayedTotal: secondsPlayed ? this.Math.floor(secondsPlayed / 60) : 0
+                              }
                             }
 
                             bsB.next(r as ServerResponse<DestinyCharacterResponse>)
@@ -216,7 +360,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
                           characterId,
                           destinyMembershipId: membershipId,
                           membershipType,
-                          components: [DestinyComponentType.Characters],
+                          components: [DestinyComponentType.Characters]
                         }
                         this.bungieQueue.addToQueue('getProfile', actionB, callbackB, paramsB)
                         return bsB
@@ -236,7 +380,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
                 const params: GetHistoricalStatsForAccountParams = {
                   destinyMembershipId: membershipId,
                   membershipType,
-                  groups: [DestinyStatsGroupType.General],
+                  groups: [DestinyStatsGroupType.General]
                 }
                 this.bungieQueue.addToQueue('getProfile', action, callback, params)
                 return bs
@@ -275,7 +419,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
             for (const character of profile) {
               try {
                 characters.push(character.Response.character.data)
-              } catch (e) {}
+              } catch (e) {
+              }
             }
           }
         }
@@ -302,7 +447,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
             membershipType: character.membershipType,
             characterId: character.characterId,
             mode: 0,
-            count: 250,
+            count: 250
           }
           this.addHistorySub({ ...params, page: 0 })
           this.addHistorySub({ ...params, page: 1 })
@@ -349,7 +494,7 @@ export class GuardianComponent implements OnInit, OnDestroy {
                   if (!this.modeTrends[mode]) {
                     this.modeTrends[mode] = {
                       quarter: [],
-                      year: [],
+                      year: []
                     }
                   }
                   this.modeTrends[mode].year.push(activity)
@@ -363,7 +508,8 @@ export class GuardianComponent implements OnInit, OnDestroy {
                   this.overallTrend.quarter.push(activity)
                 }
               }
-            } catch (e) {}
+            } catch (e) {
+            }
             this.flatDaysBS.next(this.flatDays)
           })
         }
@@ -379,9 +525,9 @@ export class GuardianComponent implements OnInit, OnDestroy {
       const dialogRef = this.dialog.open(DayModalComponent, {
         data: {
           date: date,
-          activities: day,
+          activities: day
         },
-        width: '300px',
+        width: '300px'
       })
     }
   }
@@ -395,21 +541,21 @@ export class GuardianComponent implements OnInit, OnDestroy {
       .map((key) => ({
         mode: Number(key),
         quarter: Math.round(this.modeTrends[Number(key)].quarter.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 13),
-        year: Math.round(this.modeTrends[Number(key)].year.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 52),
+        year: Math.round(this.modeTrends[Number(key)].year.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 52)
       }))
       .sort((a, b) => b.year - a.year)
       .sort((a, b) => b.quarter - a.quarter)
       .map((m) => ({
         ...m,
         quarter: Math.round(m.quarter / 60000),
-        year: Math.round(m.year / 60000),
+        year: Math.round(m.year / 60000)
       }))
   }
 
   getOverallTrend() {
     return {
       quarter: Math.round(this.overallTrend.quarter.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 13 / 60000),
-      year: Math.round(this.overallTrend.year.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 52 / 60000),
+      year: Math.round(this.overallTrend.year.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 52 / 60000)
     }
   }
 }

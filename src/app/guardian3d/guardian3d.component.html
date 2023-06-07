@@ -18,9 +18,11 @@
   Seasonal Times: <mat-checkbox [(ngModel)]="seasonTimes"></mat-checkbox><br />
   Filter Heatmap:
   <mat-form-field>
-    <mat-select [(ngModel)]="calendarFilter">
-      <mat-option *ngFor="let option of modeOptions" [value]="option">{{ option | manifest: 'activityMode' | async }}
-      </mat-option>
+    <mat-select [(ngModel)]="calendarFilter" multiple>
+      <mat-optgroup *ngFor="let group of modeGroups" [label]='group.name'>
+        <mat-option *ngFor="let mode of group.modes" [value]="mode">{{ mode | manifest: 'activityMode' | async }}
+        </mat-option>
+      </mat-optgroup>
     </mat-select>
   </mat-form-field>
 </div>

@@ -6,17 +6,21 @@ import { scrubland } from '../scrubland.typings'
   pure: false,
 })
 export class AddTimePipe implements PipeTransform {
-  transform(activities: scrubland.Activity[], modeFilter?: any): number {
+  transform(activities: scrubland.Activity[], modeFilter?: any[]): number {
     let count = 0
     activities.forEach((activity) => {
-      if (
-        !modeFilter ||
-        modeFilter === 0 ||
-        modeFilter === '0' ||
-        modeFilter === activity.activityDetails.mode ||
-        activity.activityDetails.modes.indexOf(+modeFilter) > -1
-      ) {
+      if (modeFilter.length === 0) {
         count += activity.values.timePlayedSeconds.basic.value
+        return
+      }
+
+      for (let i = 0; i < modeFilter.length; i++) {
+        if (
+          modeFilter[i] === activity.activityDetails.mode ||
+          activity.activityDetails.modes.indexOf(+modeFilter[i]) > -1
+        ) {
+          count += activity.values.timePlayedSeconds.basic.value
+        }
       }
     })
     return count
