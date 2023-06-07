@@ -428,6 +428,9 @@ export class MilestonePipe implements PipeTransform {
             return ' | Wrathborn Hunts'
           case '2020-11-21':
             return ' | Deep Stone Crypt Raid'
+          case '2020-12-8':
+          case '2020-12-08':
+            return ' | Exotic Quest: Hawkmoon'
           case '2020-12-15':
             return ' | The Dawning'
           case '2021-2-9':
@@ -435,7 +438,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Chosen | H.E.L.M. Opens | Behemoth & Hailstone Battlegrounds'
           case '2021-2-16':
           case '2021-02-16':
-            return ' | Foothold Battleground | Exotic Quest: Presage'
+            return ' | Foothold Battleground | Exotic Quest: Dead Man\'s Tale'
           case '2021-2-23':
           case '2021-02-23':
             return ' | Oracle Battleground'
@@ -576,6 +579,12 @@ export class MilestonePipe implements PipeTransform {
           case '2023-5-23':
           case '2023-05-23':
             return ' | Season of the Deep'
+          case '2023-5-26':
+          case '2023-05-26':
+            return ' | Ghosts of the Deep Dungeon'
+          case '2023-5-30':
+          case '2023-05-30':
+            return ' | Iron Banner'
           default:
             return ''
         }
@@ -706,6 +715,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-04-04':
           case '2023-4-25':
           case '2023-04-25':
+          case '2023-5-30':
+          case '2023-05-30':
             return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
@@ -739,6 +750,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-05-27':
           case '2022-12-9':
           case '2022-12-09':
+          case '2023-5-26':
+          case '2023-05-26':
             return (classes += 'dungeon')
           case '2022-12-6':
           case '2022-12-06':
@@ -746,6 +759,43 @@ export class MilestonePipe implements PipeTransform {
           case '2023-2-28':
           case '2023-02-28':
             return (classes += 'lightfall')
+          case '2023-5-23':
+          case '2023-05-23':
+            return (classes += 'season-of-the-deep')
+          case '2019-1-29':
+          case '2019-01-29':
+          case '2019-3-12':
+          case '2019-03-12':
+          case '2019-6-11':
+          case '2019-06-11':
+          case '2019-7-2':
+          case '2019-07-02':
+          case '2019-10-22':
+          case '2019-10-29':
+          case '2020-1-7':
+          case '2020-01-07':
+          case '2020-1-28':
+          case '2020-01-28':
+          case '2020-3-17':
+          case '2020-03-17':
+          case '2020-7-7':
+          case '2020-07-07':
+          case '2020-9-8':
+          case '2020-09-08':
+          case '2020-12-8':
+          case '2020-12-08':
+          case '2021-2-16':
+          case '2021-02-16':
+          case '2021-8-24':
+          case '2021-08-24':
+          case '2021-12-7':
+          case '2021-12-07':
+          case '2022-2-22':
+          case '2022-02-22':
+          case '2022-12-20':
+          case '2023-3-7':
+          case '2023-03-07':
+            return (classes += 'exotic-quest')
           default:
             return ''
         }

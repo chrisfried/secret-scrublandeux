@@ -250,6 +250,18 @@
     mask-image: url('../../assets/icons/lightfall.png');
     background-color: inherit;
   }
+
+  &.season-of-the-deep:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-deep.png');
+    mask-image: url('../../assets/icons/season-of-the-deep.png');
+    background-color: inherit;
+  }
+
+  &.exotic-quest:before {
+    -webkit-mask-image: url('../../assets/icons/exotic-quest.png');
+    mask-image: url('../../assets/icons/exotic-quest.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {
