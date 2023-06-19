@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core'
+import { DestinyActivityModeType } from 'bungie-api-ts/destiny2'
 import { scrubland } from '../scrubland.typings'
 
 @Pipe({
@@ -6,23 +7,27 @@ import { scrubland } from '../scrubland.typings'
   pure: false,
 })
 export class AddTimePipe implements PipeTransform {
-  transform(activities: scrubland.Activity[], modeFilter?: any[]): number {
+  transform(activities: scrubland.Activity[], modeFilter?: DestinyActivityModeType[]): number {
     let count = 0
-    activities.forEach((activity) => {
-      if (modeFilter.length === 0) {
-        count += activity.values.timePlayedSeconds.basic.value
-        return
-      }
-
-      for (let i = 0; i < modeFilter.length; i++) {
-        if (
-          modeFilter[i] === activity.activityDetails.mode ||
-          activity.activityDetails.modes.indexOf(+modeFilter[i]) > -1
-        ) {
-          count += activity.values.timePlayedSeconds.basic.value
+    activities
+      .filter((activity) => {
+        if (modeFilter.length === 0 || modeFilter.indexOf(DestinyActivityModeType.None) > -1) {
+          return true
         }
-      }
-    })
+        if (modeFilter.indexOf(activity.activityDetails.mode) > -1) {
+          return true
+        }
+        return (
+          modeFilter.filter((mode) => {
+            if (activity.activityDetails.modes.indexOf(mode) > -1) {
+              return true
+            }
+          }).length > 0
+        )
+      })
+      .forEach((activity) => {
+        count += activity.values.timePlayedSeconds.basic.value
+      })
     return count
   }
 }

@@ -4,21 +4,22 @@ import { MatDialog } from '@angular/material/dialog'
 import { ServerResponse } from 'bungie-api-ts/common'
 import {
   DestinyActivityHistoryResults,
+  DestinyActivityModeDefinition,
   DestinyActivityModeType,
   DestinyCharacterComponent,
   DestinyCharacterResponse,
   DestinyComponentType,
   DestinyHistoricalStatsAccountResult,
   DestinyStatsGroupType,
-  getActivityHistory,
   GetActivityHistoryParams,
-  getCharacter,
   GetCharacterParams,
+  GetHistoricalStatsForAccountParams,
+  getActivityHistory,
+  getCharacter,
   getHistoricalStatsForAccount,
-  GetHistoricalStatsForAccountParams
 } from 'bungie-api-ts/destiny2'
-import { getMembershipDataForCurrentUser, UserMembershipData } from 'bungie-api-ts/user'
-import { BehaviorSubject, EMPTY, forkJoin, Observable, Subscription } from 'rxjs'
+import { UserMembershipData, getMembershipDataForCurrentUser } from 'bungie-api-ts/user'
+import { BehaviorSubject, EMPTY, Observable, Subscription, forkJoin } from 'rxjs'
 import { distinctUntilChanged, map, switchMap, take, tap } from 'rxjs/operators'
 import * as THREE from 'three'
 import { CSG } from 'three-csg-ts'
@@ -30,16 +31,16 @@ import { ManifestService } from '../manifest/manifest.service'
 import { scrubland } from '../scrubland.typings'
 import { BungieQueueService } from '../services/queue.service'
 
-interface ActivityGroup {
-  name: string
-  otherFilters: string[]
-  modes: DestinyActivityModeType[]
+interface VerticalMode extends DestinyActivityModeDefinition {
+  parents: DestinyActivityModeDefinition[]
+  children: DestinyActivityModeDefinition[]
+  count: number
 }
 
 @Component({
   selector: 'app-guardian-3d',
   templateUrl: './guardian3d.component.html',
-  styleUrls: ['./guardian3d.component.scss']
+  styleUrls: ['./guardian3d.component.scss'],
 })
 export class Guardian3DComponent implements OnInit, OnDestroy {
   private subs: Subscription[]
@@ -85,8 +86,8 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
   }
   public Math: Math
   public calendarFilter: any[]
-  public modeOptions: any[]
-  public modeGroups: ActivityGroup[]
+  public flatModes: VerticalMode[]
+  public verticalModes: VerticalMode[]
   public loadingArray: { loading: boolean }[]
   public errorStatus: string
   public errorMessage: string
@@ -150,477 +151,361 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     this.modeTrends = {}
     this.overallTrend = {
       quarter: [],
-      year: []
+      year: [],
     }
     this.seasons = [
       {
         number: 21,
         name: 'Season of the Deep',
         days: [],
-        startDate: new Date('2023-05-23')
+        startDate: new Date('2023-05-23'),
       },
       {
         number: 20,
         name: 'Season of Defiance',
         days: [],
-        startDate: new Date('2023-02-28')
+        startDate: new Date('2023-02-28'),
       },
       {
         number: 19,
         name: 'Season of the Seraph',
         days: [],
-        startDate: new Date('2022-12-06')
+        startDate: new Date('2022-12-06'),
       },
       {
         number: 18,
         name: 'Season of Plunder',
         days: [],
-        startDate: new Date('2022-08-23')
+        startDate: new Date('2022-08-23'),
       },
       {
         number: 17,
         name: 'Season of the Haunted',
         days: [],
-        startDate: new Date('2022-05-24')
+        startDate: new Date('2022-05-24'),
       },
       {
         number: 16,
         name: 'Season of the Risen',
         days: [],
-        startDate: new Date('2022-02-22')
+        startDate: new Date('2022-02-22'),
       },
       {
         number: 15,
         name: 'Season of the Lost',
         days: [],
-        startDate: new Date('2021-08-24')
+        startDate: new Date('2021-08-24'),
       },
       {
         number: 14,
         name: 'Season of the Splicer',
         days: [],
-        startDate: new Date('2021-05-11')
+        startDate: new Date('2021-05-11'),
       },
       {
         number: 13,
         name: 'Season of the Chosen',
         days: [],
-        startDate: new Date('2021-02-09')
+        startDate: new Date('2021-02-09'),
       },
       {
         number: 12,
         name: 'Season of the Hunt',
         days: [],
-        startDate: new Date('2020-11-10')
+        startDate: new Date('2020-11-10'),
       },
       {
         number: 11,
         name: 'Season of Arrivals',
         days: [],
-        startDate: new Date('2020-06-09')
+        startDate: new Date('2020-06-09'),
       },
       {
         number: 10,
         name: 'Season of the Worthy',
         days: [],
-        startDate: new Date('2020-03-10')
+        startDate: new Date('2020-03-10'),
       },
       {
         number: 9,
         name: 'Season of Dawn',
         days: [],
-        startDate: new Date('2019-12-10')
+        startDate: new Date('2019-12-10'),
       },
       {
         number: 8,
         name: 'Season of Undying',
         days: [],
-        startDate: new Date('2019-10-01')
+        startDate: new Date('2019-10-01'),
       },
       {
         number: 7,
         name: 'Season of Opulence',
         days: [],
-        startDate: new Date('2019-06-04')
+        startDate: new Date('2019-06-04'),
       },
       {
         number: 6,
         name: 'Season of the Drifter',
         days: [],
-        startDate: new Date('2019-03-05')
+        startDate: new Date('2019-03-05'),
       },
       {
         number: 5,
         name: 'Season of the Forge',
         days: [],
-        startDate: new Date('2018-12-04')
+        startDate: new Date('2018-12-04'),
       },
       {
         number: 4,
         name: 'Season of the Outlaw',
         days: [],
-        startDate: new Date('2018-09-04')
+        startDate: new Date('2018-09-04'),
       },
       {
         number: 3,
         name: 'Warmind',
         days: [],
-        startDate: new Date('2018-05-08')
+        startDate: new Date('2018-05-08'),
       },
       {
         number: 2,
         name: 'Curse of Osiris',
         days: [],
-        startDate: new Date('2017-12-05')
+        startDate: new Date('2017-12-05'),
       },
       {
         number: 1,
         name: 'The Red War',
         days: [],
-        startDate: new Date('2017-09-05')
-      }
+        startDate: new Date('2017-09-05'),
+      },
     ]
     this.flatDaysBS = new BehaviorSubject([])
-    this.modeGroups = [
-      {
-        name: 'General',
-        otherFilters: [],
-        modes: [
-          DestinyActivityModeType.Story,
-          DestinyActivityModeType.Patrol,
-          DestinyActivityModeType.Social,
-          DestinyActivityModeType.LostSector
-        ]
-      },
-      {
-        name: 'Vanguard',
-        otherFilters: ['Strike', 'Nightfall'],
-        modes: [
-          DestinyActivityModeType.AllPvE
-        ]
-      },
-      {
-        name: 'Crucible',
-        otherFilters: [],
-        modes: [
-          DestinyActivityModeType.AllPvP,
-          DestinyActivityModeType.AllMayhem,
-          DestinyActivityModeType.PvPCompetitive,
-          DestinyActivityModeType.PvPQuickplay,
-          DestinyActivityModeType.Control,
-          DestinyActivityModeType.ControlCompetitive,
-          DestinyActivityModeType.ControlQuickplay,
-          DestinyActivityModeType.Clash,
-          DestinyActivityModeType.ClashQuickplay,
-          DestinyActivityModeType.ClashCompetitive,
-          DestinyActivityModeType.CrimsonDoubles,
-          DestinyActivityModeType.Supremacy,
-          DestinyActivityModeType.Survival,
-          DestinyActivityModeType.Countdown,
-          DestinyActivityModeType.Rumble,
-          DestinyActivityModeType.AllDoubles,
-          DestinyActivityModeType.Doubles,
-          DestinyActivityModeType.PrivateMatchesClash,
-          DestinyActivityModeType.PrivateMatchesControl,
-          DestinyActivityModeType.PrivateMatchesCountdown,
-          DestinyActivityModeType.PrivateMatchesSupremacy,
-          DestinyActivityModeType.PrivateMatchesSurvival,
-          DestinyActivityModeType.PrivateMatchesMayhem,
-          DestinyActivityModeType.PrivateMatchesRumble,
-          DestinyActivityModeType.Showdown,
-          DestinyActivityModeType.Lockdown,
-          DestinyActivityModeType.Scorched,
-          DestinyActivityModeType.ScorchedTeam,
-          DestinyActivityModeType.Breakthrough,
-          DestinyActivityModeType.Salvage,
-          DestinyActivityModeType.Elimination,
-          DestinyActivityModeType.Momentum,
-          DestinyActivityModeType.Rift,
-          DestinyActivityModeType.ZoneControl
-        ]
-      },
-      {
-        name: 'Gambit',
-        otherFilters: [],
-        modes: []
-      },
-      {
-        name: 'Trials',
-        otherFilters: [],
-        modes: []
-      },
-      {
-        name: 'Iron Banner',
-        otherFilters: [],
-        modes: []
-      },
-      {
-        name: 'Raids',
-        otherFilters: [],
-        modes: [
-          DestinyActivityModeType.Raid,
-          DestinyActivityModeType.Dungeon
-        ]
-      },
-      {
-        name: 'Seasonal',
-        otherFilters: [],
-        modes: [
-          DestinyActivityModeType.BlackArmoryRun,
-          DestinyActivityModeType.Reckoning,
-          DestinyActivityModeType.Menagerie,
-          DestinyActivityModeType.VexOffensive,
-          DestinyActivityModeType.NightmareHunt,
-          DestinyActivityModeType.Sundial,
-          DestinyActivityModeType.Offensive
-        ]
-      }
-    ]
+    this.flatModes = []
     this.manifestService.state$.subscribe((state) => {
       if (state.loaded) {
-        const dbTable = Object.keys(this.manifestService.defs.ActivityMode.dbTable)
-
-        this.modeOptions = dbTable
-          .map((key) => this.manifestService.defs.ActivityMode.dbTable[key].modeType)
-          .sort()
-
-        const modeUngrouped: DestinyActivityModeType[] = []
-
-        for (const key of dbTable) {
-          const mode = this.manifestService.defs.ActivityMode.dbTable[key].modeType
-          let grouped = false
-          for (const group of this.modeGroups) {
-            if (group.modes.includes(mode)) { // skip predefined groups
-              grouped = true
-              break
-            }
-
-            const name = this.manifestService.defs.ActivityMode.dbTable[key].displayProperties.name
-            if (name.includes(group.name)) { // check group name
-              grouped = true
-            } else {
-              for (const filter of group.otherFilters) { // check other filters
-                if (name.includes(filter)) {
-                  grouped = true
-                  break
-                }
-              }
-            }
-
-            if (grouped) { // add to group if a match
-              group.modes.push(mode)
-              break
-            }
-          }
-
-          if (!grouped) { // add to other group if no match
-            modeUngrouped.push(mode)
-          }
-        }
-
-        this.modeGroups.push({
-          name: 'Other',
-          otherFilters: [],
-          modes: modeUngrouped
-        })
-      }
-    })
-    this.errorStatus = ''
-    this.errorMessage = ''
-
-    const day = new Date('2017-09-05T00:00:00Z')
-    const now = new Date()
-    while (day <= now) {
-      this.addDay(day)
-      day.setDate(day.getDate() + 1)
-    }
-    this.seasons.reverse()
-    this.seasons.forEach((season, index) => {
-      season.startDateString = formatDate(season.startDate, 'shortDate', this.locale || 'en-US')
-      if (this.seasons[index + 1]) {
-        season.endDateString = formatDate(this.seasons[index + 1].startDate, 'shortDate', this.locale || 'en-US')
-      }
-    })
-    this.flatDaysBS.next(this.flatDays)
-    this.yearKeys = Object.keys(this.days)
-    this.monthKeys = {}
-    this.monthOffsets = { 2017: { 9: 0 } }
-    let previousOffset = 0
-    let previousCount = 28
-    this.dayKeys = {}
-    this.yearKeys.forEach((year) => {
-      this.monthKeys[year] = Object.keys(this.days[year])
-      if (!this.monthOffsets[year]) {
-        this.monthOffsets[year] = {}
-      }
-      this.dayKeys[year] = {}
-      this.monthKeys[year].forEach((month) => {
-        if (!this.monthOffsets[year][month]) {
-          this.monthOffsets[year][month] = (previousCount + previousOffset) % 7
-          previousCount = Object.keys(this.days[year][month]).length
-          previousOffset = this.monthOffsets[year][month]
-        }
-        this.dayKeys[year][month] = Object.keys(this.days[year][month])
-      })
-    })
-
-    this.subs.push(
-      this.bungieAuth.hasValidAccessToken$
-        .pipe(
-          distinctUntilChanged(),
-          tap((hasValidAccessToken) => {
-            if (hasValidAccessToken) {
-              const action = getMembershipDataForCurrentUser
-              const callback = (response: ServerResponse<UserMembershipData>) => {
-                this.membershipDataForCurrentUser$.next(response)
-              }
-              this.bungieQueue.addToQueue('getProfile', action, callback)
-            }
-          })
+        let modes: DestinyActivityModeDefinition[] = Object.keys(this.manifestService.defs.ActivityMode.dbTable).map(
+          (key) => this.manifestService.defs.ActivityMode.dbTable[key]
         )
-        .subscribe()
-    )
 
-    this.subs.push(
-      this.membershipDataForCurrentUser$
-        .pipe(
-          distinctUntilChanged(),
-          switchMap((userMembershipData) =>
-            forkJoin(
-              userMembershipData?.Response?.destinyMemberships.map((destinyMembership) => {
-                const membershipLoading = { loading: true }
-                this.loadingArray.push(membershipLoading)
+        modes.forEach((mode) => {
+          console.log(mode)
+          this.flatModes.push({
+            ...mode,
+            parents: [],
+            children: [],
+            count: 0,
+          })
+        })
 
-                const bs: BehaviorSubject<ServerResponse<DestinyHistoricalStatsAccountResult>> = new BehaviorSubject(undefined)
-                const { membershipId, membershipType } = destinyMembership
-                const action = getHistoricalStatsForAccount
-                const callback = (response: ServerResponse<DestinyHistoricalStatsAccountResult>) => {
-                  if (response && response.ErrorCode === 1 && response?.Response?.characters?.length > 0) {
-                    forkJoin(
-                      response?.Response?.characters.map((character) => {
-                        const characterLoading = { loading: true }
-                        this.loadingArray.push(characterLoading)
+        this.flatModes.sort((a, b) => a.modeType - b.modeType)
 
-                        const bsB: BehaviorSubject<ServerResponse<DestinyCharacterResponse>> = new BehaviorSubject(undefined)
-                        const { characterId } = character
-                        const secondsPlayed = character.merged?.allTime?.secondsPlayed?.basic?.value
-                        const actionB = getCharacter
-                        const callbackB = (res: ServerResponse<DestinyCharacterResponse>) => {
-                          if (res.ErrorCode === 1) {
-                            const r = res as any
-                            r.Response.character = res.Response.character ?? {
-                              data: {
-                                characterId,
-                                membershipId,
-                                membershipType,
-                                minutesPlayedTotal: secondsPlayed ? this.Math.floor(secondsPlayed / 60) : 0
+        this.flatModes.forEach((p) => {
+          p.parents = this.flatModes.filter((parent) => p.parentHashes?.includes(parent.hash))
+          p.children = this.flatModes.filter((parent) => parent.parentHashes?.includes(p.hash))
+        })
+
+        this.flatModes.sort((a, b) => (a.parentHashes ? a.parentHashes[0] ?? 0 : 0) - (b.parentHashes ? b.parentHashes[0] ?? 0 : 0))
+
+        this.verticalModes = this.flatModes.filter((p) => p.parents.length === 0)
+        this.errorStatus = ''
+        this.errorMessage = ''
+
+        const day = new Date('2017-09-05T00:00:00Z')
+        const now = new Date()
+        while (day <= now) {
+          this.addDay(day)
+          day.setDate(day.getDate() + 1)
+        }
+        this.seasons.reverse()
+        this.seasons.forEach((season, index) => {
+          season.startDateString = formatDate(season.startDate, 'shortDate', this.locale || 'en-US')
+          if (this.seasons[index + 1]) {
+            season.endDateString = formatDate(this.seasons[index + 1].startDate, 'shortDate', this.locale || 'en-US')
+          }
+        })
+        this.flatDaysBS.next(this.flatDays)
+        this.yearKeys = Object.keys(this.days)
+        this.monthKeys = {}
+        this.monthOffsets = { 2017: { 9: 0 } }
+        let previousOffset = 0
+        let previousCount = 28
+        this.dayKeys = {}
+        this.yearKeys.forEach((year) => {
+          this.monthKeys[year] = Object.keys(this.days[year])
+          if (!this.monthOffsets[year]) {
+            this.monthOffsets[year] = {}
+          }
+          this.dayKeys[year] = {}
+          this.monthKeys[year].forEach((month) => {
+            if (!this.monthOffsets[year][month]) {
+              this.monthOffsets[year][month] = (previousCount + previousOffset) % 7
+              previousCount = Object.keys(this.days[year][month]).length
+              previousOffset = this.monthOffsets[year][month]
+            }
+            this.dayKeys[year][month] = Object.keys(this.days[year][month])
+          })
+        })
+
+        this.subs.push(
+          this.bungieAuth.hasValidAccessToken$
+            .pipe(
+              distinctUntilChanged(),
+              tap((hasValidAccessToken) => {
+                if (hasValidAccessToken) {
+                  const action = getMembershipDataForCurrentUser
+                  const callback = (response: ServerResponse<UserMembershipData>) => {
+                    this.membershipDataForCurrentUser$.next(response)
+                  }
+                  this.bungieQueue.addToQueue('getProfile', action, callback)
+                }
+              })
+            )
+            .subscribe()
+        )
+
+        this.subs.push(
+          this.membershipDataForCurrentUser$
+            .pipe(
+              distinctUntilChanged(),
+              switchMap((userMembershipData) =>
+                forkJoin(
+                  userMembershipData?.Response?.destinyMemberships.map((destinyMembership) => {
+                    const membershipLoading = { loading: true }
+                    this.loadingArray.push(membershipLoading)
+
+                    const bs: BehaviorSubject<ServerResponse<DestinyHistoricalStatsAccountResult>> = new BehaviorSubject(undefined)
+                    const { membershipId, membershipType } = destinyMembership
+                    const action = getHistoricalStatsForAccount
+                    const callback = (response: ServerResponse<DestinyHistoricalStatsAccountResult>) => {
+                      if (response && response.ErrorCode === 1 && response?.Response?.characters?.length > 0) {
+                        forkJoin(
+                          response?.Response?.characters.map((character) => {
+                            const characterLoading = { loading: true }
+                            this.loadingArray.push(characterLoading)
+
+                            const bsB: BehaviorSubject<ServerResponse<DestinyCharacterResponse>> = new BehaviorSubject(undefined)
+                            const { characterId } = character
+                            const secondsPlayed = character.merged?.allTime?.secondsPlayed?.basic?.value
+                            const actionB = getCharacter
+                            const callbackB = (res: ServerResponse<DestinyCharacterResponse>) => {
+                              if (res.ErrorCode === 1) {
+                                const r = res as any
+                                r.Response.character = res.Response.character ?? {
+                                  data: {
+                                    characterId,
+                                    membershipId,
+                                    membershipType,
+                                    minutesPlayedTotal: secondsPlayed ? this.Math.floor(secondsPlayed / 60) : 0,
+                                  },
+                                }
+
+                                bsB.next(r as ServerResponse<DestinyCharacterResponse>)
                               }
+                              characterLoading.loading = false
+                              bsB.complete()
                             }
-
-                            bsB.next(r as ServerResponse<DestinyCharacterResponse>)
-                          }
-                          characterLoading.loading = false
-                          bsB.complete()
-                        }
-                        const paramsB: GetCharacterParams = {
-                          characterId,
-                          destinyMembershipId: membershipId,
-                          membershipType,
-                          components: [DestinyComponentType.Characters]
-                        }
-                        this.bungieQueue.addToQueue('getProfile', actionB, callbackB, paramsB)
-                        return bsB
-                      }) ?? EMPTY
-                    )
-                      .pipe(take(1))
-                      .subscribe((b) => {
-                        bs.next(b)
+                            const paramsB: GetCharacterParams = {
+                              characterId,
+                              destinyMembershipId: membershipId,
+                              membershipType,
+                              components: [DestinyComponentType.Characters],
+                            }
+                            this.bungieQueue.addToQueue('getProfile', actionB, callbackB, paramsB)
+                            return bsB
+                          }) ?? EMPTY
+                        )
+                          .pipe(take(1))
+                          .subscribe((b) => {
+                            bs.next(b)
+                            membershipLoading.loading = false
+                            bs.complete()
+                          })
+                      } else {
                         membershipLoading.loading = false
                         bs.complete()
-                      })
-                  } else {
-                    membershipLoading.loading = false
-                    bs.complete()
-                  }
-                }
-                const params: GetHistoricalStatsForAccountParams = {
-                  destinyMembershipId: membershipId,
-                  membershipType,
-                  groups: [DestinyStatsGroupType.General]
-                }
-                this.bungieQueue.addToQueue('getProfile', action, callback, params)
-                return bs
-              }) ?? EMPTY
+                      }
+                    }
+                    const params: GetHistoricalStatsForAccountParams = {
+                      destinyMembershipId: membershipId,
+                      membershipType,
+                      groups: [DestinyStatsGroupType.General],
+                    }
+                    this.bungieQueue.addToQueue('getProfile', action, callback, params)
+                    return bs
+                  }) ?? EMPTY
+                )
+              ),
+              map((responses) => {
+                return this.accountResponse$.next(responses)
+              })
             )
-          ),
-          map((responses) => {
-            return this.accountResponse$.next(responses)
-          })
+            .subscribe()
         )
-        .subscribe()
-    )
 
-    this.membershipDataForCurrentUser$
-      .pipe(
-        distinctUntilChanged(),
-        // tap((r) => console.log('accountResponse', r)),
-        // map((responses) => responses[0])
-        map((res) => {
-          // console.log(res)
-          //   if (res?.ErrorCode !== 1 && res?.ErrorStatus) {
-          //     this.errorStatus = res.ErrorStatus
-          //     this.errorMessage = res.Message
-          //   }
-          this.displayName = res?.Response?.bungieNetUser?.displayName
-        })
-      )
-      .subscribe()
+        this.membershipDataForCurrentUser$
+          .pipe(
+            distinctUntilChanged(),
+            // tap((r) => console.log('accountResponse', r)),
+            // map((responses) => responses[0])
+            map((res) => {
+              // console.log(res)
+              //   if (res?.ErrorCode !== 1 && res?.ErrorStatus) {
+              //     this.errorStatus = res.ErrorStatus
+              //     this.errorMessage = res.Message
+              //   }
+              this.displayName = res?.Response?.bungieNetUser?.displayName
+            })
+          )
+          .subscribe()
 
-    this.characters$ = this.accountResponse$.pipe(
-      distinctUntilChanged(),
-      map((profiles) => {
-        const characters = []
-        for (const profile of profiles) {
-          if (profile) {
-            for (const character of profile) {
-              try {
-                characters.push(character.Response.character.data)
-              } catch (e) {
+        this.characters$ = this.accountResponse$.pipe(
+          distinctUntilChanged(),
+          map((profiles) => {
+            const characters = []
+            for (const profile of profiles) {
+              if (profile) {
+                for (const character of profile) {
+                  try {
+                    characters.push(character.Response.character.data)
+                  } catch (e) {}
+                }
               }
             }
-          }
-        }
-        return characters
-      })
-    )
+            return characters
+          })
+        )
 
-    this.minutesPlayedTotal = this.characters$.pipe(
-      map((characters) => {
-        let minutesPlayed = 0
-        characters.forEach((character) => {
-          minutesPlayed += +character.minutesPlayedTotal
-        })
-        return minutesPlayed
-      })
-    )
+        this.minutesPlayedTotal = this.characters$.pipe(
+          map((characters) => {
+            let minutesPlayed = 0
+            characters.forEach((character) => {
+              minutesPlayed += +character.minutesPlayedTotal
+            })
+            return minutesPlayed
+          })
+        )
 
-    this.subs.push(
-      this.characters$.pipe(distinctUntilChanged()).subscribe((characters) => {
-        this.activities = []
-        characters.forEach((character) => {
-          const params: GetActivityHistoryParams = {
-            destinyMembershipId: character.membershipId,
-            membershipType: character.membershipType,
-            characterId: character.characterId,
-            mode: 0,
-            count: 250
-          }
-          this.addHistorySub({ ...params, page: 0 })
-          this.addHistorySub({ ...params, page: 1 })
-          this.addHistorySub({ ...params, page: 2 })
-        })
-      })
-    )
+        this.subs.push(
+          this.characters$.pipe(distinctUntilChanged()).subscribe((characters) => {
+            this.activities = []
+            characters.forEach((character) => {
+              const params: GetActivityHistoryParams = {
+                destinyMembershipId: character.membershipId,
+                membershipType: character.membershipType,
+                characterId: character.characterId,
+                mode: 0,
+                count: 250,
+              }
+              this.addHistorySub({ ...params, page: 0 })
+              this.addHistorySub({ ...params, page: 1 })
+              this.addHistorySub({ ...params, page: 2 })
+            })
+          })
+        )
+      }
+    })
   }
 
   addHistorySub(params: GetActivityHistoryParams) {
@@ -655,14 +540,14 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
             try {
               this.days[activity.startDate.getUTCFullYear()][activity.startDate.getUTCMonth() + 1][
                 activity.startDate.getUTCDate()
-                ].activities.push(activity)
+              ].activities.push(activity)
 
               if (activity.endDate > this.oneYearAgo) {
                 activity.activityDetails.modes.forEach((mode) => {
                   if (!this.modeTrends[mode]) {
                     this.modeTrends[mode] = {
                       quarter: [],
-                      year: []
+                      year: [],
                     }
                   }
                   this.modeTrends[mode].year.push(activity)
@@ -676,8 +561,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
                   this.overallTrend.quarter.push(activity)
                 }
               }
-            } catch (e) {
-            }
+            } catch (e) {}
             this.flatDaysBS.next(this.flatDays)
           })
         }
@@ -789,13 +673,13 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
 
         const loader = new FontLoader()
 
-        loader.load('assets/fonts/helvetiker_bold.typeface.json', function(font) {
+        loader.load('assets/fonts/helvetiker_bold.typeface.json', function (font) {
           textHeight = 1 * m
           textDepth = 0.25 * m
           geometry = new TextGeometry(season.name, {
             font: font,
             size: textHeight,
-            height: textDepth
+            height: textDepth,
           })
           geometry.computeBoundingBox()
 
@@ -813,7 +697,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
           geometry = new TextGeometry(displayName, {
             font: font,
             size: textHeight,
-            height: textDepth
+            height: textDepth,
           })
           newMesh = new THREE.Mesh(geometry, material)
           geometry.computeBoundingBox()
@@ -832,7 +716,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
             geometry = new TextGeometry(season.startDateString, {
               font: font,
               size: textHeight,
-              height: textDepth
+              height: textDepth,
             })
             newMesh = new THREE.Mesh(geometry, material)
             geometry.computeBoundingBox()
@@ -858,7 +742,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
               bevelThickness: 0,
               bevelSize: 0,
               bevelOffset: 0,
-              bevelSegments: 0
+              bevelSegments: 0,
             })
             newMesh = new THREE.Mesh(geometry, material)
             geometry.computeBoundingBox()
@@ -907,21 +791,21 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
       .map((key) => ({
         mode: Number(key),
         quarter: Math.round(this.modeTrends[Number(key)].quarter.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 13),
-        year: Math.round(this.modeTrends[Number(key)].year.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 52)
+        year: Math.round(this.modeTrends[Number(key)].year.reduce((a, b) => a + (b.endDate - b.startDate), 0) / 52),
       }))
       .sort((a, b) => b.year - a.year)
       .sort((a, b) => b.quarter - a.quarter)
       .map((m) => ({
         ...m,
         quarter: Math.round(m.quarter / 60000),
-        year: Math.round(m.year / 60000)
+        year: Math.round(m.year / 60000),
       }))
   }
 
   getOverallTrend() {
     return {
       quarter: Math.round(this.overallTrend.quarter.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 13 / 60000),
-      year: Math.round(this.overallTrend.year.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 52 / 60000)
+      year: Math.round(this.overallTrend.year.reduce((a, b: any) => a + (b.endDate - b.startDate), 0) / 52 / 60000),
     }
   }
 }

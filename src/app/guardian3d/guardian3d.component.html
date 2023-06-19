@@ -17,12 +17,31 @@
   Points of Interest: <mat-checkbox [(ngModel)]="poi"></mat-checkbox><br />
   Seasonal Times: <mat-checkbox [(ngModel)]="seasonTimes"></mat-checkbox><br />
   Filter Heatmap:
-  <mat-form-field>
+  <mat-form-field *ngIf="verticalModes.length">
     <mat-select [(ngModel)]="calendarFilter" multiple>
-      <mat-optgroup *ngFor="let group of modeGroups" [label]='group.name'>
-        <mat-option *ngFor="let mode of group.modes" [value]="mode">{{ mode | manifest: 'activityMode' | async }}
-        </mat-option>
-      </mat-optgroup>
+      <ng-container *ngFor="let mode of verticalModes">
+        <mat-option [value]="mode.modeType">{{ mode.modeType | manifest: 'activityMode'
+          | async
+          }}</mat-option>
+        <mat-optgroup *ngIf="mode.children.length" [label]="mode.modeType | manifest: 'activityMode' | async">
+          <ng-container *ngFor="let childMode of mode.children">
+            <mat-option [value]="childMode.modeType">{{ childMode.modeType |
+              manifest: 'activityMode'
+              | async
+              }}</mat-option>
+            <mat-optgroup *ngIf="childMode.children.length"
+              [label]="childMode.modeType | manifest: 'activityMode' | async">
+              <ng-container *ngFor="let grandchildMode of childMode.children">
+                <mat-option [value]="grandchildMode.modeType">{{
+                  grandchildMode.modeType | manifest:
+                  'activityMode'
+                  | async
+                  }}</mat-option>
+              </ng-container>
+            </mat-optgroup>
+          </ng-container>
+        </mat-optgroup>
+      </ng-container>
     </mat-select>
   </mat-form-field>
 </div>
