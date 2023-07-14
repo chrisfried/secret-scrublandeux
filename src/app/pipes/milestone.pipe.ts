@@ -584,7 +584,18 @@ export class MilestonePipe implements PipeTransform {
             return ' | Ghosts of the Deep Dungeon'
           case '2023-5-30':
           case '2023-05-30':
+          case '2023-6-20':
+          case '2023-06-20':
             return ' | Iron Banner'
+          case '2023-7-4':
+          case '2023-07-04':
+            return ' | Exotic Quest: Wicked Implement'
+          case '2023-7-11':
+          case '2023-07-11':
+            return ' | Iron Banner'
+          case '2023-8-22':
+          case '2023-08-22':
+            return ' | Season of [REDACTED]'
           default:
             return ''
         }
@@ -717,6 +728,10 @@ export class MilestonePipe implements PipeTransform {
           case '2023-04-25':
           case '2023-5-30':
           case '2023-05-30':
+          case '2023-6-20':
+          case '2023-06-20':
+          case '2023-7-11':
+          case '2023-07-11':
             return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
@@ -795,6 +810,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-12-20':
           case '2023-3-7':
           case '2023-03-07':
+          case '2023-7-4':
+          case '2023-07-04':
             return (classes += 'exotic-quest')
           default:
             return ''
