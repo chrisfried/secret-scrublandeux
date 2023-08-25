@@ -647,7 +647,6 @@ export class MilestonePipe implements PipeTransform {
           case '2020-08-11':
           case '2021-7-6':
           case '2021-07-06':
-          case '2023-07-18':
             return (classes += 'solstice')
           case '2018-9-4':
           case '2018-09-04':
