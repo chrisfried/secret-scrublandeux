@@ -593,9 +593,15 @@ export class MilestonePipe implements PipeTransform {
           case '2023-7-11':
           case '2023-07-11':
             return ' | Iron Banner'
+          case '2023-7-18':
+          case '2023-07-18':
+            return ' | Solstice'
           case '2023-8-22':
           case '2023-08-22':
-            return ' | Season of [REDACTED]'
+            return ' | Season of the Witch'
+          case '2023-9-1':
+          case '2023-09-01':
+            return ' Crota\'s End Raid'
           default:
             return ''
         }
@@ -641,6 +647,7 @@ export class MilestonePipe implements PipeTransform {
           case '2020-08-11':
           case '2021-7-6':
           case '2021-07-06':
+          case '2023-07-18':
             return (classes += 'solstice')
           case '2018-9-4':
           case '2018-09-04':
@@ -735,6 +742,8 @@ export class MilestonePipe implements PipeTransform {
             return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
+          case '2023-7-18':
+          case '2023-07-18':
             return (classes += 'solstice2022')
           case '2017-9-13':
           case '2017-09-13':
@@ -755,6 +764,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-08-26':
           case '2023-3-10':
           case '2023-03-10':
+          case '2023-9-1':
+          case '2023-09-01':
             return (classes += 'raid')
           case '2022-8-23':
           case '2022-08-23':
@@ -813,6 +824,9 @@ export class MilestonePipe implements PipeTransform {
           case '2023-7-4':
           case '2023-07-04':
             return (classes += 'exotic-quest')
+          case '2023-8-22':
+          case '2023-08-22':
+            return (classes += 'season-of-the-witch')
           default:
             return ''
         }

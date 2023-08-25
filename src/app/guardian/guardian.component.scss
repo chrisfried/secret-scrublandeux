@@ -262,6 +262,12 @@
     mask-image: url('../../assets/icons/exotic-quest.png');
     background-color: inherit;
   }
+
+  &.season-of-the-witch:before {
+    -webkit-mask-image: url('../../assets/icons/season-of-the-witch.png');
+    mask-image: url('../../assets/icons/season-of-the-witch.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {
