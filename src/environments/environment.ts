@@ -8,9 +8,9 @@
 export const environment = {
   production: true,
   bungie: {
-    apiKey: 'cd01c0cb258c48228cdbc0f468674257',
+    apiKey: '0450a4df81c84adeb86d9f4dcf552901',
     authUrl: 'https://www.bungie.net/en/OAuth/Authorize',
-    clientId: '36111',
-    redirect: 'https://chrisfried.github.io/secret-scrublandeux/auth',
+    clientId: '40469',
+    redirect: 'https://localhost:4200',
   },
 }

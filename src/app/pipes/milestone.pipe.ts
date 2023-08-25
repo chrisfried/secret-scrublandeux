@@ -601,7 +601,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Witch'
           case '2023-9-1':
           case '2023-09-01':
-            return ' Crota\'s End Raid'
+            return ' | Crota\'s End Raid'
           default:
             return ''
         }
