@@ -602,6 +602,11 @@ export class MilestonePipe implements PipeTransform {
           case '2023-9-1':
           case '2023-09-01':
             return ' | Crota\'s End Raid'
+          case '2023-9-5':
+          case '2023-09-05':
+          case '2023-10-10':
+          case '2023-11-14':
+            return ' | Iron Banner'
           default:
             return ''
         }
@@ -738,6 +743,10 @@ export class MilestonePipe implements PipeTransform {
           case '2023-06-20':
           case '2023-7-11':
           case '2023-07-11':
+          case '2023-9-5':
+          case '2023-09-05':
+          case '2023-10-10':
+          case '2023-11-14':
             return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
