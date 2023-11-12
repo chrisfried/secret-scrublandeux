@@ -607,6 +607,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-10-10':
           case '2023-11-14':
             return ' | Iron Banner'
+          case '2023-11-28':
+            return ' | Season of the Wish'
           default:
             return ''
         }
