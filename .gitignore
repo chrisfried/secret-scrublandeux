@@ -44,3 +44,4 @@ Thumbs.db
 
 /utils/defs/*
 src/environments/keys.ts
+src/environments/environment.ts
