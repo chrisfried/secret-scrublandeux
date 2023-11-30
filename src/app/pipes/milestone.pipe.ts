@@ -609,6 +609,12 @@ export class MilestonePipe implements PipeTransform {
             return ' | Iron Banner'
           case '2023-11-28':
             return ' | Season of the Wish'
+          case '2023-12-1':
+          case '2023-12-01':
+            return ' | Warlord\'s Ruin Dungeon'
+          case '2023-12-5':
+          case '2023-12-05':
+            return ' | Iron Banner'
           default:
             return ''
         }
@@ -749,6 +755,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-09-05':
           case '2023-10-10':
           case '2023-11-14':
+          case '2023-12-5':
+          case '2023-12-05':
             return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
@@ -788,6 +796,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-12-09':
           case '2023-5-26':
           case '2023-05-26':
+          case '2023-12-1':
+          case '2023-12-01':
             return (classes += 'dungeon')
           case '2022-12-6':
           case '2022-12-06':
@@ -837,6 +847,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-8-22':
           case '2023-08-22':
             return (classes += 'season-of-the-witch')
+          case '2023-11-28':
+            return (classes += 'season-of-the-wish')
           default:
             return ''
         }
