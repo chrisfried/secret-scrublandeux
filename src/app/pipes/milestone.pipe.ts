@@ -615,6 +615,13 @@ export class MilestonePipe implements PipeTransform {
           case '2023-12-5':
           case '2023-12-05':
             return ' | Iron Banner'
+          case '2023-12-12':
+            return ' | The Dawning'
+          case '2024-1-2':
+          case '2024-01-02':
+          case '2024-1-23':
+          case '2024-01-23':
+            return ' | Iron Banner'
           default:
             return ''
         }
@@ -634,6 +641,7 @@ export class MilestonePipe implements PipeTransform {
           case '2020-12-15':
           case '2021-12-14':
           case '2022-12-13':
+          case '2023-12-12':
             return (classes += 'dawning')
           case '2018-2-13':
           case '2018-02-13':
@@ -757,6 +765,10 @@ export class MilestonePipe implements PipeTransform {
           case '2023-11-14':
           case '2023-12-5':
           case '2023-12-05':
+          case '2024-1-2':
+          case '2024-01-02':
+          case '2024-1-23':
+          case '2024-01-23':
             return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
