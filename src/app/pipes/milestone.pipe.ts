@@ -623,6 +623,10 @@ export class MilestonePipe implements PipeTransform {
           case '2024-01-02':
           case '2024-1-23':
           case '2024-01-23':
+             return ' | Iron Banner'
+          case '2024-1-30':
+          case '2024-01-30':
+            return ' | Riven\'s Wishes'
           case '2024-04-02':
           case '2024-4-2':
             return ' | Iron Banner'
