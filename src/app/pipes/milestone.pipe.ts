@@ -617,10 +617,14 @@ export class MilestonePipe implements PipeTransform {
             return ' | Iron Banner'
           case '2023-12-12':
             return ' | The Dawning'
+          case '2023-12-19':
+            return ' | Exotic Quest: Wish-Keeper'
           case '2024-1-2':
           case '2024-01-02':
           case '2024-1-23':
           case '2024-01-23':
+          case '2024-04-02':
+          case '2024-4-2':
             return ' | Iron Banner'
           default:
             return ''
@@ -769,6 +773,8 @@ export class MilestonePipe implements PipeTransform {
           case '2024-01-02':
           case '2024-1-23':
           case '2024-01-23':
+          case '2024-04-02':
+          case '2024-4-2':
             return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
@@ -855,6 +861,7 @@ export class MilestonePipe implements PipeTransform {
           case '2023-03-07':
           case '2023-7-4':
           case '2023-07-04':
+          case '2023-12-19':
             return (classes += 'exotic-quest')
           case '2023-8-22':
           case '2023-08-22':
