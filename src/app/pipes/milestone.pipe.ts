@@ -627,6 +627,9 @@ export class MilestonePipe implements PipeTransform {
           case '2024-1-30':
           case '2024-01-30':
             return ' | Riven\'s Wishes'
+          case '2024-3-5':
+          case '2024-03-05':
+            return ' | Guardian Games All-Stars'
           case '2024-04-02':
           case '2024-4-2':
             return ' | Iron Banner'
@@ -718,6 +721,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-05-03':
           case '2023-5-2':
           case '2023-05-02':
+          case '2024-3-4':
+          case '2024-03-04':
             return (classes += 'guardian-games')
           case '2020-6-9':
           case '2020-06-09':
