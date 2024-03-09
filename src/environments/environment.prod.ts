@@ -4,6 +4,6 @@ export const environment = {
     apiKey: 'cd01c0cb258c48228cdbc0f468674257',
     authUrl: 'https://www.bungie.net/en/OAuth/Authorize',
     clientId: '36111',
-    redirect: 'https://chrisfried.github.io/secret-scrublandeux/auth',
+    redirect: 'https://d2scrub.land/auth',
   },
 }
