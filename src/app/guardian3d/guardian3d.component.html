@@ -19,64 +19,89 @@
   Filter Heatmap:
   <mat-form-field>
     <mat-select [(ngModel)]="calendarFilter">
-      <mat-option *ngFor="let option of modeOptions" [value]="option">{{ option | manifest: 'activityMode' | async }}
-      </mat-option>
+      <mat-option *ngFor="let option of modeOptions" [value]="option">{{ option | manifest : 'activityMode' | async }} </mat-option>
     </mat-select>
   </mat-form-field>
 </div>
 <div class="calYear">
-  <div *ngFor="let season of seasons" class="calMonth"
-    [ngStyle]="{ width: Math.ceil((season['days'].length) / 7) + 'em' }">
+  <div *ngFor="let season of seasons" class="calMonth" [ngStyle]="{ width: Math.ceil(season['days'].length / 7) + 'em' }">
     <div class="monthLabel mat-caption">{{ season.name }}</div>
-    <div class="monthLabel mat-caption" *ngIf="seasonTimes">{{ seasonActivities(season.days) |
-      activitiesTotalTime}}</div>
+    <div
+      class="monthLabel seasonTime mat-caption"
+      *ngIf="seasonTimes"
+      (click)="
+        seasonTimePeriod === 'week'
+          ? (seasonTimePeriod = 'day')
+          : seasonTimePeriod === 'day'
+          ? (seasonTimePeriod = undefined)
+          : (seasonTimePeriod = 'week')
+      "
+    >
+      {{
+        seasonActivities(season.days)
+          | activitiesTotalTime
+            : (seasonTimePeriod === 'day' ? season.days.length : seasonTimePeriod === 'week' ? season.days.length / 7 : undefined)
+      }}{{ seasonTimePeriod === 'day' ? ' / day' : seasonTimePeriod === 'week' ? ' / week' : '' }}
+    </div>
     <div class="dayWrapper" [ngClass]="(loadingArray | loadingReduce) ? 'loading' : ''">
       <!-- <div class="monthSpacer" [ngStyle]="{ height: monthOffsets[year][month] + 'em' }"></div> -->
-      <div *ngFor="let day of season['days']" class="calDay"
-        [ngClass]="[(poi ? (day.date | date:'y-M-d':'GMT' | milestone: 'class') : ''), ((day.activities | addTime: calendarFilter) > 0 ? 'active' : 'inactive'), (poi ? (day.date | date:'y-M-d':'GMT' | milestone: 'icon') : '')]"
+      <div
+        *ngFor="let day of season['days']"
+        class="calDay"
+        [ngClass]="[
+          poi ? (day.date | date : 'y-M-d' : 'GMT' | milestone : 'class') : '',
+          (day.activities | addTime : calendarFilter) > 0 ? 'active' : 'inactive',
+          poi ? (day.date | date : 'y-M-d' : 'GMT' | milestone : 'icon') : ''
+        ]"
         [ngStyle]="{
           'background-color':
             'hsl(' +
-            (((100 - (day.activities | addTime: calendarFilter) / 864) * 120) / 50 - 120) +
+            (((100 - (day.activities | addTime : calendarFilter) / 864) * 120) / 50 - 120) +
             ', ' +
-            ((day.activities | addTime: calendarFilter) > 0 ? '100%' : '0%') +
+            ((day.activities | addTime : calendarFilter) > 0 ? '100%' : '0%') +
             ', ' +
-            ((day.activities | addTime: calendarFilter) > 0
-              ? (day.activities | addTime: calendarFilter) / 864 > 50
+            ((day.activities | addTime : calendarFilter) > 0
+              ? (day.activities | addTime : calendarFilter) / 864 > 50
                 ? 100 - (day.activities | addTime) / 864 + '%'
                 : '50%'
               : '90%') +
             ')'
-        }" [matTooltip]="
-        (day.date | date:'shortDate':'GMT') +
-        (day.date | date:'y-M-d':'GMT' | milestone: 'text') +
-        ': ' +
-        Math.floor(((day.activities | addTime: calendarFilter) / 86400) * 24) +
-        'h ' +
-        Math.floor(((day.activities | addTime: calendarFilter) % 3600) / 60) +
-        'm'
-        "></div>
+        }"
+        [matTooltip]="
+          (day.date | date : 'shortDate' : 'GMT') +
+          (day.date | date : 'y-M-d' : 'GMT' | milestone : 'text') +
+          ': ' +
+          Math.floor(((day.activities | addTime : calendarFilter) / 86400) * 24) +
+          'h ' +
+          Math.floor(((day.activities | addTime : calendarFilter) % 3600) / 60) +
+          'm'
+        "
+      ></div>
     </div>
-    <button mat-button class="downloadButtons" *ngIf="downloadButtons" [disabled]="loadingArray | loadingReduce"
-      (click)="three(season, displayName, seasons.length)" [id]="'download' + season.number">Download STL</button>
+    <button
+      mat-button
+      class="downloadButtons"
+      *ngIf="downloadButtons"
+      [disabled]="loadingArray | loadingReduce"
+      (click)="three(season, displayName, seasons.length)"
+      [id]="'download' + season.number"
+    >
+      Download STL
+    </button>
   </div>
 </div>
 
 <h3 class="trends-header">Trends</h3>
 <mat-icon class="trending_loading" *ngIf="loadingArray | loadingReduce">refresh</mat-icon>
 <div class="trends" *ngIf="!(loadingArray | loadingReduce)">
-
   <div class="trend">
-    <mat-icon class="trend-up"
-      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().quarter > getOverallTrend().year">
+    <mat-icon class="trend-up" *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().quarter > getOverallTrend().year">
       trending_up
     </mat-icon>
-    <mat-icon class="trend-flat"
-      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().quarter === getOverallTrend().year">
+    <mat-icon class="trend-flat" *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().quarter === getOverallTrend().year">
       trending_flat
     </mat-icon>
-    <mat-icon class="trend-down"
-      *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().quarter < getOverallTrend().year">
+    <mat-icon class="trend-down" *ngIf="!(loadingArray | loadingReduce) && getOverallTrend().quarter < getOverallTrend().year">
       trending_down
     </mat-icon>
     <div class="trend-main">
@@ -85,19 +110,23 @@
       </div>
       <div class="trend-values">
         <div class="trend-quarter">
-          <div class="trend-value">{{ getOverallTrend().quarter > 60 ? Math.floor(getOverallTrend().quarter /
-            60) + 'h' +
-            getOverallTrend().quarter % 60 :
-            getOverallTrend().quarter }}m/week</div>
+          <div class="trend-value">
+            {{
+              getOverallTrend().quarter > 60
+                ? Math.floor(getOverallTrend().quarter / 60) + 'h' + (getOverallTrend().quarter % 60)
+                : getOverallTrend().quarter
+            }}m/week
+          </div>
           <div class="trend-time">13 week avg</div>
         </div>
         <div class="trend-year">
-          <div class="trend-value">{{ getOverallTrend().year > 60 ?
-            Math.floor(getOverallTrend().year
-            /
-            60) + 'h' +
-            getOverallTrend().year % 60 :
-            getOverallTrend().year }}m/week</div>
+          <div class="trend-value">
+            {{
+              getOverallTrend().year > 60
+                ? Math.floor(getOverallTrend().year / 60) + 'h' + (getOverallTrend().year % 60)
+                : getOverallTrend().year
+            }}m/week
+          </div>
           <div class="trend-time">52 week avg</div>
         </div>
       </div>
@@ -105,32 +134,27 @@
   </div>
   <ng-container *ngFor="let trend of getModeTrends()">
     <div *ngIf="trend.quarter > 0 || trend.year > 0" class="trend">
-      <mat-icon class="trend-up" *ngIf="trend.quarter > trend.year">
-        trending_up
-      </mat-icon>
-      <mat-icon class="trend-flat" *ngIf="trend.quarter === trend.year">
-        trending_flat
-      </mat-icon>
-      <mat-icon class="trend-down" *ngIf="trend.quarter < trend.year">
-        trending_down
-      </mat-icon>
+      <mat-icon class="trend-up" *ngIf="trend.quarter > trend.year"> trending_up </mat-icon>
+      <mat-icon class="trend-flat" *ngIf="trend.quarter === trend.year"> trending_flat </mat-icon>
+      <mat-icon class="trend-down" *ngIf="trend.quarter < trend.year"> trending_down </mat-icon>
       <div class="trend-main">
         <div class="trend-header">
-          <div class="trend-name">{{trend.mode | manifest: 'activityMode' | async}}</div>
-          <img class="trend-icon" [src]="trend.mode | manifest: 'activityModeIcon' | async"
-            [alt]="trend.mode | manifest: 'activityMode' | async">
+          <div class="trend-name">{{ trend.mode | manifest : 'activityMode' | async }}</div>
+          <img
+            class="trend-icon"
+            [src]="trend.mode | manifest : 'activityModeIcon' | async"
+            [alt]="trend.mode | manifest : 'activityMode' | async"
+          />
         </div>
         <div class="trend-values">
           <div class="trend-quarter">
-            <div class="trend-value">{{ trend.quarter > 60 ? Math.floor(trend.quarter / 60) + 'h' + trend.quarter % 60
-              :
-              trend.quarter }}m/week</div>
+            <div class="trend-value">
+              {{ trend.quarter > 60 ? Math.floor(trend.quarter / 60) + 'h' + (trend.quarter % 60) : trend.quarter }}m/week
+            </div>
             <div class="trend-time">13 week avg</div>
           </div>
           <div class="trend-year">
-            <div class="trend-value">{{ trend.year > 60 ? Math.floor(trend.year / 60) + 'h' +
-              trend.year % 60 :
-              trend.year }}m/week</div>
+            <div class="trend-value">{{ trend.year > 60 ? Math.floor(trend.year / 60) + 'h' + (trend.year % 60) : trend.year }}m/week</div>
             <div class="trend-time">52 week avg</div>
           </div>
         </div>
