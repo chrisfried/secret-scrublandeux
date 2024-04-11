@@ -459,7 +459,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Override: Moon'
           case '2021-5-22':
           case '2021-05-22':
-            return ' | Vault of Glass Raid'
+            return ' | Vault of Glass Reprised Raid'
           case '2021-5-25':
           case '2021-05-25':
             return ' | Override: Tangled Shore | Expunge: Labyrinth'
@@ -601,7 +601,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Witch'
           case '2023-9-1':
           case '2023-09-01':
-            return ' | Crota\'s End Raid'
+            return ' | Crota\'s End Reprised Raid'
           case '2023-9-5':
           case '2023-09-05':
           case '2023-10-10':
@@ -626,13 +626,25 @@ export class MilestonePipe implements PipeTransform {
              return ' | Iron Banner'
           case '2024-1-30':
           case '2024-01-30':
-            return ' | Riven\'s Wishes'
+            return ' | Moments of Triumph | Riven\'s Wishes'
           case '2024-3-5':
           case '2024-03-05':
             return ' | Guardian Games All-Stars'
           case '2024-04-02':
           case '2024-4-2':
             return ' | Iron Banner'
+          case '2024-4-9':
+          case '2024-04-09':
+            return ' | Into the Light | Hall of Champions | Onslaught | Reprised Exotic Quest: Whisper of the Worm'
+          case '2024-4-30':
+          case '2024-04-30':
+            return ' | Pantheon | Iron Banner'
+          case '2024-5-14':
+          case '2024-05-14':
+            return ' | Reprised Exotic Quest: Outbreak Perfected'
+          case '2024-6-4':
+          case '2024-06-04':
+            return ' | Launch: The Final Shape'
           default:
             return ''
         }
@@ -670,6 +682,8 @@ export class MilestonePipe implements PipeTransform {
           case '2019-07-09':
           case '2020-7-7':
           case '2020-07-07':
+          case '2024-1-30':
+          case '2024-01-30':
             return (classes += 'moments-of-triumph')
           case '2018-7-31':
           case '2018-07-31':
@@ -784,6 +798,7 @@ export class MilestonePipe implements PipeTransform {
           case '2024-01-23':
           case '2024-04-02':
           case '2024-4-2':
+
             return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
@@ -811,6 +826,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-03-10':
           case '2023-9-1':
           case '2023-09-01':
+          case '2024-4-30':
+          case '2024-04-30':
             return (classes += 'raid')
           case '2022-8-23':
           case '2022-08-23':
@@ -877,6 +894,9 @@ export class MilestonePipe implements PipeTransform {
             return (classes += 'season-of-the-witch')
           case '2023-11-28':
             return (classes += 'season-of-the-wish')
+          case '2024-4-9':
+          case '2024-04-09':
+            return (classes += 'into-the-light')
           default:
             return ''
         }

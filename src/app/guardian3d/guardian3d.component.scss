@@ -274,6 +274,12 @@
     mask-image: url('../../assets/icons/season-of-the-wish.png');
     background-color: inherit;
   }
+
+  &.into-the-light:before {
+        -webkit-mask-image: url('../../assets/icons/into-the-light.png');
+        mask-image: url('../../assets/icons/into-the-light.png');
+        background-color: inherit;
+    }
 }
 
 @media (prefers-reduced-motion) {
