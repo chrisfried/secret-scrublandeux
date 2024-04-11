@@ -532,7 +532,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of Plunder'
           case '2022-8-26':
           case '2022-08-26':
-            return " | King's Fall Raid"
+            return " | King's Fall Reprised Raid"
           case '2022-9-6':
           case '2022-09-06':
             return ' | Iron Banner'
