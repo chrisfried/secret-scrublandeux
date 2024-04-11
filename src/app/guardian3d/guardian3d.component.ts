@@ -85,6 +85,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
   public errorMessage: string
   public downloadButtons = true
   public seasonTimes = true
+  public seasonTimePeriod?: 'day' | 'week'
   public poi = true
   public locale: string
   public modeTrends: {
