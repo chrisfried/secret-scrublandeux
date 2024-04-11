@@ -6,11 +6,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ghp": "ng build --configuration production --base-href /secret-scrublandeux/ && cp dist/index.html dist/404.html",
+    "build:ghp": "ng build --configuration production && echo d2scrub.land > dist/CNAME && cp dist/index.html dist/404.html",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ngh": "ng build --configuration production --base-href /secret-scrublandeux/ && cp dist/index.html dist/404.html && ngh",
     "manifest": "node ./utils/update-definitions.js && node ./utils/parse-definitions.js"
   },
   "private": true,

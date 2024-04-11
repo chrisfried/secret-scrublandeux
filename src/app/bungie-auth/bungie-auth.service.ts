@@ -28,6 +28,7 @@ export class BungieAuthService {
       clientId: environment.bungie.clientId,
       responseType: 'code',
       scope: '',
+      dummyClientSecret: environment.bungie.clientSecret,
     })
     this.oAuthService.tokenValidationHandler = new JwksValidationHandler()
     this.tryLogin()
