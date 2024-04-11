@@ -626,7 +626,7 @@ export class MilestonePipe implements PipeTransform {
              return ' | Iron Banner'
           case '2024-1-30':
           case '2024-01-30':
-            return ' | Moments of Triumph | Riven\'s Wishes'
+            return " | Moments of Triumph | Riven's Wishes"
           case '2024-3-5':
           case '2024-03-05':
             return ' | Guardian Games All-Stars'
