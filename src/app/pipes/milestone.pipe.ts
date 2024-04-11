@@ -438,7 +438,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Chosen | H.E.L.M. Opens | Behemoth & Hailstone Battlegrounds'
           case '2021-2-16':
           case '2021-02-16':
-            return ' | Foothold Battleground | Exotic Quest: Dead Man\'s Tale'
+            return " | Foothold Battleground | Exotic Quest: Dead Man's Tale"
           case '2021-2-23':
           case '2021-02-23':
             return ' | Oracle Battleground'
@@ -601,7 +601,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Witch'
           case '2023-9-1':
           case '2023-09-01':
-            return ' | Crota\'s End Reprised Raid'
+            return " | Crota's End Reprised Raid"
           case '2023-9-5':
           case '2023-09-05':
           case '2023-10-10':
@@ -611,7 +611,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Wish'
           case '2023-12-1':
           case '2023-12-01':
-            return ' | Warlord\'s Ruin Dungeon'
+            return " | Warlord's Ruin Dungeon"
           case '2023-12-5':
           case '2023-12-05':
             return ' | Iron Banner'
