@@ -229,8 +229,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-01-31':
           case '2023-3-7':
           case '2023-03-07':
-          case '2023-3-14':
-          case '2023-03-14':
+          case '2023-3-21':
+          case '2023-03-21':
           case '2023-4-4':
           case '2023-04-04':
           case '2023-4-25':
@@ -456,7 +456,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Season of the Splicer | Override: Europa'
           case '2021-5-18':
           case '2021-05-18':
-            return ' | Override: Moon'
+            return ' | Override: Moon | Iron Banner'
           case '2021-5-22':
           case '2021-05-22':
             return ' | Vault of Glass Reprised Raid'
@@ -468,7 +468,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Expunge: Styx'
           case '2021-6-8':
           case '2021-06-08':
-            return ' | Expunge: Tartarus'
+            return ' | Expunge: Tartarus | Iron Banner'
           case '2021-6-29':
           case '2021-06-29':
             return ' | Expunge: Delphi'
@@ -483,20 +483,29 @@ export class MilestonePipe implements PipeTransform {
             return " | Season of the Lost | Exotic Quest: Ager's Scepter | Shattered Realm: Forest of Echoes"
           case '2021-8-31':
           case '2021-08-31':
-            return ' | Shattered Realm: Debris of Dreams'
+            return ' | Shattered Realm: Debris of Dreams | Iron Banner'
           case '2021-9-7':
           case '2021-09-07':
             return ' | Shattered Realm: Ruins of Wrath'
+          case '2021-9-28':
+          case '2021-09-28':
+            return ' | Iron Banner'
           case '2021-10-12':
             return ' | Festival of the Lost'
+          case '2021-11-2':
+          case '2021-11-02':
+            return ' | Iron Banner'
           case '2021-12-7':
           case '2021-12-07':
-            return ' | Bungie 30th Anniversary | Grasp of Avarice Dungeon | Moments of Triumph | Exotic Quest: Gjallarhorn'
+            return ' | Bungie 30th Anniversary | Grasp of Avarice Dungeon | Moments of Triumph | Exotic Quest: Gjallarhorn | Iron Banner'
           case '2021-12-14':
             return ' | The Dawning'
+          case '2022-1-11':
+          case '2022-01-11':
+            return ' | Iron Banner'
           case '2022-2-15':
           case '2022-02-15':
-            return ' | The Exorcism'
+            return ' | The Exorcism | Iron Banner'
           case '2022-2-22':
           case '2022-02-22':
             return ' | Launch: The Witch Queen | Season of the Risen | Exotic Quest: Dead Messenger | PsiOps Battleground: EDZ'
@@ -506,6 +515,9 @@ export class MilestonePipe implements PipeTransform {
           case '2022-3-5':
           case '2022-03-05':
             return ' | Vow of the Disciple Raid'
+          case '2022-3-15':
+          case '2022-03-15':
+            return ' | Iron Banner'
           case '2022-3-22':
           case '2022-03-22':
             return ' | PsiOps Battleground: Moon'
@@ -566,8 +578,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-03-10':
           case '2023-3-10':
             return ' | Root of Nightmares Raid'
-          case '2023-3-14':
-          case '2023-03-14':
+          case '2023-3-21':
+          case '2023-03-21':
           case '2023-4-4':
           case '2023-04-04':
           case '2023-4-25':
@@ -763,6 +775,22 @@ export class MilestonePipe implements PipeTransform {
           case '2022-5-24':
           case '2022-05-24':
             return (classes += 'season-of-the-haunted')
+          case '2021-5-18':
+          case '2021-05-18':
+          case '2021-6-8':
+          case '2021-06-08':
+          case '2021-8-31':
+          case '2021-08-31':
+          case '2021-9-28':
+          case '2021-09-28':
+          case '2021-11-2':
+          case '2021-11-02':
+          case '2022-1-11':
+          case '2022-01-11':
+          case '2022-2-15':
+          case '2022-02-15':
+          case '2022-3-15':
+          case '2022-03-15':
           case '2022-5-31':
           case '2022-05-31':
           case '2022-7-12':
@@ -798,7 +826,6 @@ export class MilestonePipe implements PipeTransform {
           case '2024-01-23':
           case '2024-04-02':
           case '2024-4-2':
-
             return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
