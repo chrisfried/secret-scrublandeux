@@ -735,8 +735,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-05-03':
           case '2023-5-2':
           case '2023-05-02':
-          case '2024-3-4':
-          case '2024-03-04':
+          case '2024-3-5':
+          case '2024-03-05':
             return (classes += 'guardian-games')
           case '2020-6-9':
           case '2020-06-09':
