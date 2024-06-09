@@ -151,7 +151,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
         number: 23,
         name: 'Episode: Echoes',
         days: [],
-        startDate: new Date('2023-06-04'),
+        startDate: new Date('2024-06-04'),
       },
       {
         number: 23,
