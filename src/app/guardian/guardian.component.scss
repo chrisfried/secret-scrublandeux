@@ -280,6 +280,18 @@
       mask-image: url('../../assets/icons/into-the-light.png');
       background-color: inherit;
   }
+
+  &.the-final-shape:before {
+    -webkit-mask-image: url('../../assets/icons/the-final-shape.png');
+    mask-image: url('../../assets/icons/the-final-shape.png');
+    background-color: inherit;
+  }
+
+  &.episode-echoes:before {
+    -webkit-mask-image: url('../../assets/icons/episode-echoes.png');
+    mask-image: url('../../assets/icons/episode-echoes.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {
