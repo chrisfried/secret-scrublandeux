@@ -943,6 +943,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-7-4':
           case '2023-07-04':
           case '2023-12-19':
+          case '2024-5-14':
+          case '2024-05-14':
             return (classes += 'exotic-quest')
           case '2023-8-22':
           case '2023-08-22':
