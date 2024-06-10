@@ -51,6 +51,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-02-28':
           case '2023-5-23':
           case '2023-05-23':
+          case '2024-06-4':
+          case '2024-6-4':
             return 'release'
           case '2017-9-13':
           case '2017-09-13':
@@ -75,6 +77,8 @@ export class MilestonePipe implements PipeTransform {
           case '2022-08-26':
           case '2023-3-10':
           case '2023-03-10':
+          case '2024-06-07':
+          case '2024-6-7':
             return 'raid'
           case '2017-12-19':
           case '2018-2-13':
@@ -657,6 +661,24 @@ export class MilestonePipe implements PipeTransform {
           case '2024-6-4':
           case '2024-06-04':
             return ' | Launch: The Final Shape'
+          case '2024-6-7':
+          case '2024-06-07':
+            return ' | Salvations Edge Raid'
+          case '2024-6-11':
+          case '2024-06-11':
+            return ' | Episode: Echoes - Act I'
+          case '2024-7-2':
+          case '2024-07-02':
+            return ' | Iron Banner'
+          case '2024-7-16':
+          case '2024-07-16':
+            return ' | Episode: Echoes - Act II'
+          case '2024-8-6':
+          case '2024-08-06':
+            return ' | Solstice'
+          case '2024-8-27':
+          case '2024-08-27':
+            return ' | Episode: Echoes - Act III'
           default:
             return ''
         }
@@ -826,11 +848,15 @@ export class MilestonePipe implements PipeTransform {
           case '2024-01-23':
           case '2024-04-02':
           case '2024-4-2':
+          case '2024-7-2':
+          case '2024-07-02':
             return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
           case '2023-7-18':
           case '2023-07-18':
+          case '2024-8-6':
+          case '2024-08-06':
             return (classes += 'solstice2022')
           case '2017-9-13':
           case '2017-09-13':
@@ -855,6 +881,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-09-01':
           case '2024-4-30':
           case '2024-04-30':
+          case '2024-6-7':
+          case '2024-06-07':
             return (classes += 'raid')
           case '2022-8-23':
           case '2022-08-23':
@@ -915,6 +943,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-7-4':
           case '2023-07-04':
           case '2023-12-19':
+          case '2024-5-14':
+          case '2024-05-14':
             return (classes += 'exotic-quest')
           case '2023-8-22':
           case '2023-08-22':
@@ -924,6 +954,16 @@ export class MilestonePipe implements PipeTransform {
           case '2024-4-9':
           case '2024-04-09':
             return (classes += 'into-the-light')
+          case '2024-6-4':
+          case '2024-06-04':
+            return (classes += 'the-final-shape')
+          case '2024-6-11':
+          case '2024-06-11':
+          case '2024-7-16':
+          case '2024-07-16':
+          case '2024-8-27':
+          case '2024-08-27':
+            return (classes += 'episode-echoes')
           default:
             return ''
         }
