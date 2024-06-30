@@ -253,6 +253,8 @@ export class MilestonePipe implements PipeTransform {
           case '2017-9-13':
           case '2017-09-13':
             return ' | Leviathan Raid'
+          case '2017-10-10':
+            return ' | Iron Banner'
           case '2017-10-24':
             return ' | Destiny 2 PC'
           case '2017-12-5':
@@ -263,35 +265,61 @@ export class MilestonePipe implements PipeTransform {
             return ' | Eater of Worlds Raid Lair'
           case '2017-12-19':
             return ' | The Dawning'
+          case '2018-1-30':
+          case '2018-01-30':
+            return ' | Iron Banner'
           case '2018-2-13':
           case '2018-02-13':
             return ' | Crimson Days'
+          case '2018-3-6':
+          case '2018-03-06':
+            return ' | Iron Banner'
+          case '2018-4-17':
+          case '2018-04-17':
+            return ' | Iron Banner'
           case '2018-5-8':
           case '2018-05-08':
             return ' | Launch: Warmind'
           case '2018-5-11':
           case '2018-05-11':
             return ' | Spire of Stars Raid Lair'
+          case '2018-5-22':
+          case '2018-05-22':
+            return ' | Iron Banner'
+          case '2018-6-19':
+          case '2018-06-19':
+            return ' | Iron Banner'
           case '2018-7-8':
           case '2018-07-08':
             return ' | Moments of Triumph'
+          case '2018-7-10':
+          case '2018-07-10':
+            return ' | Iron Banner'
           case '2018-7-20':
           case '2018-07-20':
             return ' | The Whisper'
           case '2018-7-31':
           case '2018-07-31':
             return ' | Solstice of Heroes'
+          case '2018-8-14':
+          case '2018-08-14':
+            return ' | Iron Banner'
           case '2018-9-4':
           case '2018-09-04':
             return ' | Launch: Forsaken | Season of the Outlaw'
           case '2018-9-14':
           case '2018-09-14':
             return ' | Last Wish Raid'
+          case '2018-9-18':
+          case '2018-09-18':
+            return ' | Iron Banner'
           case '2018-9-25':
           case '2018-09-25':
             return ' | Shattered Throne Dungeon'
           case '2018-10-16':
-            return ' | Festival of the Lost'
+            return ' | Festival of the Lost | Iron Banner'
+          case '2018-11-13':
+            return ' | Iron Banner'
           case '2018-12-4':
           case '2018-12-04':
             return ' | Season of the Forge | Volundr Forge'
@@ -302,9 +330,14 @@ export class MilestonePipe implements PipeTransform {
             return ' | The Dawning'
           case '2018-12-18':
             return ' | Izanami Forge'
+          case '2018-12-25':
+            return ' | Iron Banner'
           case '2019-1-8':
           case '2019-01-08':
             return ' | Niobe Labs'
+          case '2019-1-15':
+          case '2019-01-15':
+            return ' | Iron Banner'
           case '2019-1-29':
           case '2019-01-29':
             return ' | Exotic Quest: The Last Word'
@@ -328,13 +361,16 @@ export class MilestonePipe implements PipeTransform {
             return " | Gambit Prime: Legion's Folly"
           case '2019-3-26':
           case '2019-03-26':
-            return ' | Gambit Prime: Emerald Coast'
+            return ' | Gambit Prime: Emerald Coast | Iron Banner'
           case '2019-4-2':
           case '2019-04-02':
             return ' | Gambit Prime: All Maps'
           case '2019-4-9':
           case '2019-04-09':
             return ' | Arc Week'
+          case '2019-5-14':
+          case '2019-05-14':
+            return ' | Iron Banner'
           case '2019-4-16':
           case '2019-04-16':
             return ' | The Revelry'
@@ -346,7 +382,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | New Menagerie Boss | Exotic Quest: Truth'
           case '2019-6-18':
           case '2019-06-18':
-            return ' | New Menagerie Boss | Iron Banner Quest'
+            return ' | New Menagerie Boss | Iron Banner'
           case '2019-6-25':
           case '2019-06-25':
             return ' | Menagerie Heroic Mode'
@@ -359,25 +395,43 @@ export class MilestonePipe implements PipeTransform {
           case '2019-7-30':
           case '2019-07-30':
             return ' | Solstice of Heroes'
+          case '2019-8-27':
+          case '2019-08-27':
+            return ' | Iron Banner'
+          case '2019-9-17':
+          case '2019-09-17':
+            return ' | Iron Banner'
           case '2019-10-1':
           case '2019-10-01':
             return ' | Launch: Shadowkeep | Season of Undying'
           case '2019-10-5':
           case '2019-10-05':
             return ' | Garden of Salvation Raid | Vex Offensive'
+          case '2019-10-15':
+            return ' | Iron Banner'
           case '2019-10-22':
             return " | Exotic Quest: Leviathan's Breath | Master Nightmare Hunts"
           case '2019-10-29':
             return ' | Festival of the Lost | Pit of Heresy Dungeon | Exotic Quest: Xenophage'
+          case '2019-11-5':
+          case '2019-11-05':
+            return ' | Iron Banner'
           case '2019-11-19':
             return ' | Vex Offensive: Final Assault'
+          case '2019-11-26':
+            return ' | Iron Banner'
           case '2019-12-10':
             return ' | Season of Dawn'
           case '2019-12-17':
             return ' | The Dawning'
+          case '2019-12-24':
+            return ' | Iron Banner'
           case '2020-1-7':
           case '2020-01-07':
             return " | Exotic Quest: Devil's Ruin"
+          case '2020-1-21':
+          case '2020-01-21':
+            return ' | Iron Banner'
           case '2020-1-28':
           case '2020-01-28':
             return ' | Exotic Quest: Bastion'
@@ -398,10 +452,13 @@ export class MilestonePipe implements PipeTransform {
             return ' | Exotic Quest: The Fourth Horseman'
           case '2020-3-24':
           case '2020-03-24':
-            return ' | Seraph Bunker: Moon'
+            return ' | Seraph Bunker: Moon | Iron Banner'
           case '2020-4-7':
           case '2020-04-07':
             return ' | Seraph Bunker: Io'
+          case '2020-4-14':
+          case '2020-04-14':
+            return ' | Iron Banner'
           case '2020-4-21':
           case '2020-04-21':
             return ' | Guardian Games | Grandmaster Nightfalls'
@@ -411,15 +468,21 @@ export class MilestonePipe implements PipeTransform {
           case '2020-6-9':
           case '2020-06-09':
             return ' | Season of Arrivals | Contact Event: Io | Prophecy Dungeon'
+          case '2020-6-30':
+          case '2020-06-30':
+            return ' | Iron Banner'
           case '2020-7-7':
           case '2020-07-07':
             return ' | Moments of Triumph | Exotic Quest: Ruinous Effigy | Contact Event: Titan'
+          case '2020-8-4':
+          case '2020-08-04':
+            return ' | Iron Banner'
           case '2020-8-11':
           case '2020-08-11':
             return ' | Solstice of Heroes'
           case '2020-9-8':
           case '2020-09-08':
-            return " | Exotic Quest: Traveler's Chosen"
+            return " | Exotic Quest: Traveler's Chosen | Iron Banner"
           case '2020-10-6':
           case '2020-10-06':
             return ' | Festival of the Lost'
@@ -434,9 +497,11 @@ export class MilestonePipe implements PipeTransform {
             return ' | Deep Stone Crypt Raid'
           case '2020-12-8':
           case '2020-12-08':
-            return ' | Exotic Quest: Hawkmoon'
+            return ' | Exotic Quest: Hawkmoon | Iron Banner'
           case '2020-12-15':
             return ' | The Dawning'
+          case '2020-12-24':
+            return ' | Iron Banner'
           case '2021-2-9':
           case '2021-02-09':
             return ' | Season of the Chosen | H.E.L.M. Opens | Behemoth & Hailstone Battlegrounds'
@@ -445,10 +510,13 @@ export class MilestonePipe implements PipeTransform {
             return " | Foothold Battleground | Exotic Quest: Dead Man's Tale"
           case '2021-2-23':
           case '2021-02-23':
-            return ' | Oracle Battleground'
+            return ' | Oracle Battleground | Iron Banner'
           case '2021-3-23':
           case '2021-03-23':
-            return ' | Proving Grounds Strike'
+            return ' | Proving Grounds Strike | Iron Banner'
+          case '2021-4-13':
+          case '2021-04-13':
+            return ' | Iron Banner'
           case '2021-4-20':
           case '2021-04-20':
             return ' | Guardian Games'
@@ -646,8 +714,8 @@ export class MilestonePipe implements PipeTransform {
           case '2024-3-5':
           case '2024-03-05':
             return ' | Guardian Games All-Stars'
-          case '2024-04-02':
           case '2024-4-2':
+          case '2024-04-02':
             return ' | Iron Banner'
           case '2024-4-9':
           case '2024-04-09':
@@ -797,60 +865,6 @@ export class MilestonePipe implements PipeTransform {
           case '2022-5-24':
           case '2022-05-24':
             return (classes += 'season-of-the-haunted')
-          case '2021-5-18':
-          case '2021-05-18':
-          case '2021-6-8':
-          case '2021-06-08':
-          case '2021-8-31':
-          case '2021-08-31':
-          case '2021-9-28':
-          case '2021-09-28':
-          case '2021-11-2':
-          case '2021-11-02':
-          case '2022-1-11':
-          case '2022-01-11':
-          case '2022-2-15':
-          case '2022-02-15':
-          case '2022-3-15':
-          case '2022-03-15':
-          case '2022-5-31':
-          case '2022-05-31':
-          case '2022-7-12':
-          case '2022-07-12':
-          case '2022-9-6':
-          case '2022-09-06':
-          case '2022-11-15':
-          case '2023-1-3':
-          case '2023-01-03':
-          case '2023-1-31':
-          case '2023-01-31':
-          case '2023-3-14':
-          case '2023-03-14':
-          case '2023-4-4':
-          case '2023-04-04':
-          case '2023-4-25':
-          case '2023-04-25':
-          case '2023-5-30':
-          case '2023-05-30':
-          case '2023-6-20':
-          case '2023-06-20':
-          case '2023-7-11':
-          case '2023-07-11':
-          case '2023-9-5':
-          case '2023-09-05':
-          case '2023-10-10':
-          case '2023-11-14':
-          case '2023-12-5':
-          case '2023-12-05':
-          case '2024-1-2':
-          case '2024-01-02':
-          case '2024-1-23':
-          case '2024-01-23':
-          case '2024-04-02':
-          case '2024-4-2':
-          case '2024-7-2':
-          case '2024-07-02':
-            return (classes += 'iron-banner')
           case '2022-7-19':
           case '2022-07-19':
           case '2023-7-18':
@@ -964,6 +978,117 @@ export class MilestonePipe implements PipeTransform {
           case '2024-8-27':
           case '2024-08-27':
             return (classes += 'episode-echoes')
+          case '2017-10-10':
+          case '2018-01-30':
+          case '2018-1-30':
+          case '2018-03-06':
+          case '2018-3-6':
+          case '2018-04-17':
+          case '2018-4-17':
+          case '2018-05-22':
+          case '2018-5-22':
+          case '2018-06-19':
+          case '2018-6-19':
+          case '2018-07-10':
+          case '2018-7-10':
+          case '2018-08-14':
+          case '2018-8-14':
+          case '2018-09-18':
+          case '2018-9-18':
+          case '2018-10-16':
+          case '2018-11-13':
+          case '2018-12-25':
+          case '2019-01-15':
+          case '2019-1-15':
+          case '2019-03-26':
+          case '2019-3-26':
+          case '2019-05-14':
+          case '2019-5-14':
+          case '2019-06-18':
+          case '2019-6-18':
+          case '2019-08-27':
+          case '2019-8-27':
+          case '2019-09-17':
+          case '2019-9-17':
+          case '2019-10-15':
+          case '2019-11-05':
+          case '2019-11-5':
+          case '2019-11-26':
+          case '2019-12-24':
+          case '2020-01-21':
+          case '2020-1-21':
+          case '2020-03-24':
+          case '2020-3-24':
+          case '2020-04-14':
+          case '2020-4-14':
+          case '2020-06-30':
+          case '2020-6-30':
+          case '2020-08-04':
+          case '2020-8-4':
+          case '2020-09-08':
+          case '2020-9-8':
+          case '2020-12-08':
+          case '2020-12-8':
+          case '2021-02-23':
+          case '2021-2-23':
+          case '2021-03-23':
+          case '2021-3-23':
+          case '2021-04-13':
+          case '2021-4-13':
+          case '2021-5-18':
+          case '2021-05-18':
+          case '2021-6-8':
+          case '2021-06-08':
+          case '2021-8-31':
+          case '2021-08-31':
+          case '2021-9-28':
+          case '2021-09-28':
+          case '2021-11-2':
+          case '2021-11-02':
+          case '2022-1-11':
+          case '2022-01-11':
+          case '2022-2-15':
+          case '2022-02-15':
+          case '2022-3-15':
+          case '2022-03-15':
+          case '2022-5-31':
+          case '2022-05-31':
+          case '2022-7-12':
+          case '2022-07-12':
+          case '2022-9-6':
+          case '2022-09-06':
+          case '2022-11-15':
+          case '2023-1-3':
+          case '2023-01-03':
+          case '2023-1-31':
+          case '2023-01-31':
+          case '2023-3-21':
+          case '2023-03-21':
+          case '2023-4-4':
+          case '2023-04-04':
+          case '2023-4-25':
+          case '2023-04-25':
+          case '2023-5-30':
+          case '2023-05-30':
+          case '2023-6-20':
+          case '2023-06-20':
+          case '2023-7-11':
+          case '2023-07-11':
+          case '2023-9-5':
+          case '2023-09-05':
+          case '2023-10-10':
+          case '2023-11-14':
+          case '2023-12-5':
+          case '2023-12-05':
+          case '2024-1-2':
+          case '2024-01-02':
+          case '2024-1-23':
+          case '2024-01-23':
+          case '2024-4-2':
+          case '2024-04-02':
+          case '2024-7-2':
+          case '2024-07-02':
+            return (classes += 'iron-banner')
           default:
             return ''
         }
