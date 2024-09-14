@@ -292,6 +292,12 @@
     mask-image: url('../../assets/icons/episode-echoes.png');
     background-color: inherit;
   }
+
+  &.10-year-anniversary:before {
+    -webkit-mask-image: url('../../assets/icons/10-year-anniversary.png');
+    mask-image: url('../../assets/icons/10-year-anniversary.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {
