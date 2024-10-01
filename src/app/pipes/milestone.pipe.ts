@@ -746,7 +746,19 @@ export class MilestonePipe implements PipeTransform {
             return ' | Solstice'
           case '2024-8-27':
           case '2024-08-27':
-            return ' | Episode: Echoes - Act III'
+            return ' | Episode: Echoes - Act III | Exotic Quest: Choir of One'
+          case '2024-9-9':
+          case '2024-09-09':
+            return ' | Destiny 10 Year Anniversary'
+          case '2024-9-10':
+          case '2024-09-10':
+            return ' | Iron Banner'
+          case '2024-8-8':
+          case '2024-08-08':
+            return ' | Episode: Revenant - Act I'
+          case '2024-8-11':
+          case '2024-08-11':
+            return ' | [REDACTED] Dungeon'
           default:
             return ''
         }
@@ -911,6 +923,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-05-26':
           case '2023-12-1':
           case '2023-12-01':
+          case '2024-8-11':
+          case '2024-08-11':
             return (classes += 'dungeon')
           case '2022-12-6':
           case '2022-12-06':
@@ -978,6 +992,9 @@ export class MilestonePipe implements PipeTransform {
           case '2024-8-27':
           case '2024-08-27':
             return (classes += 'episode-echoes')
+          case '2024-9-9':
+          case '2024-09-09':
+            return (classes += '10-year-anniversary')
           case '2017-10-10':
           case '2018-01-30':
           case '2018-1-30':
