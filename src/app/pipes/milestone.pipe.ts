@@ -755,10 +755,10 @@ export class MilestonePipe implements PipeTransform {
             return ' | Iron Banner'
           case '2024-8-8':
           case '2024-08-08':
-            return ' | Episode: Revenant - Act I'
+            return ' | Episode: Revenant - Act I | Festival of the Lost'
           case '2024-8-11':
           case '2024-08-11':
-            return ' | [REDACTED] Dungeon'
+            return ' | Vesper\'s Host Dungeon'
           default:
             return ''
         }
