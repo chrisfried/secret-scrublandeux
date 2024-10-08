@@ -298,6 +298,12 @@
     mask-image: url('../../assets/icons/10-year-anniversary.png');
     background-color: inherit;
   }
+
+  &.episode-revenant:before {
+    -webkit-mask-image: url('../../assets/icons/episode-revenant.png');
+    mask-image: url('../../assets/icons/episode-revenant.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {
