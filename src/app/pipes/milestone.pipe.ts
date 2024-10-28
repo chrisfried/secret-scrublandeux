@@ -689,6 +689,9 @@ export class MilestonePipe implements PipeTransform {
           case '2023-9-5':
           case '2023-09-05':
           case '2023-10-10':
+            return ' | Iron Banner'
+          case '2023-10-17':
+            return ' | Festival of the Lost'
           case '2023-11-14':
             return ' | Iron Banner'
           case '2023-11-28':
@@ -753,12 +756,18 @@ export class MilestonePipe implements PipeTransform {
           case '2024-9-10':
           case '2024-09-10':
             return ' | Iron Banner'
-          case '2024-8-8':
-          case '2024-08-08':
+          case '2024-10-8':
+          case '2024-10-08':
             return ' | Episode: Revenant - Act I'
-          case '2024-8-11':
-          case '2024-08-11':
-            return ' | [REDACTED] Dungeon'
+          case '2024-10-11':
+            return ' | Vesper\'s Host Dungeon'
+          case '2024-10-28':
+            return ' | Festival of the Lost'
+          case '2024-11-19':
+            return ' | Episode: Revenant - Act II'
+          case '2024-1-7':
+          case '2024-01-07':
+            return ' | Episode: Revenant - Act III'
           default:
             return ''
         }
@@ -817,6 +826,8 @@ export class MilestonePipe implements PipeTransform {
           case '2020-10-06':
           case '2021-10-12':
           case '2022-10-18':
+          case '2023-10-17':
+          case '2024-10-29':
             return (classes += 'festival-of-the-lost')
           case '2018-12-4':
           case '2018-12-04':
@@ -923,8 +934,7 @@ export class MilestonePipe implements PipeTransform {
           case '2023-05-26':
           case '2023-12-1':
           case '2023-12-01':
-          case '2024-8-11':
-          case '2024-08-11':
+          case '2024-10-11':
             return (classes += 'dungeon')
           case '2022-12-6':
           case '2022-12-06':
@@ -1106,6 +1116,12 @@ export class MilestonePipe implements PipeTransform {
           case '2024-7-2':
           case '2024-07-02':
             return (classes += 'iron-banner')
+          case '2024-10-8':
+          case '2024-10-08':
+          case '2024-11-19':
+          case '2024-1-7':
+          case '2024-01-07':
+            return (classes += 'episode-revenant')
           default:
             return ''
         }

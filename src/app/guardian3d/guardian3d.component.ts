@@ -148,6 +148,12 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     }
     this.seasons = [
       {
+        number: 25,
+        name: 'Episode: Revenant',
+        days: [],
+        startDate: new Date('2024-10-08'),
+      },
+      {
         number: 24,
         name: 'Episode: Echoes',
         days: [],
