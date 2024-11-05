@@ -761,10 +761,12 @@ export class MilestonePipe implements PipeTransform {
             return ' | Episode: Revenant - Act I'
           case '2024-10-11':
             return ' | Vesper\'s Host Dungeon'
-          case '2024-10-28':
+          case '2024-10-29':
             return ' | Festival of the Lost'
           case '2024-11-19':
             return ' | Episode: Revenant - Act II'
+          case '2024-11-26':
+            return ' | Iron Banner'
           case '2024-1-7':
           case '2024-01-07':
             return ' | Episode: Revenant - Act III'
@@ -1004,7 +1006,7 @@ export class MilestonePipe implements PipeTransform {
             return (classes += 'episode-echoes')
           case '2024-9-9':
           case '2024-09-09':
-            return (classes += '10-year-anniversary')
+            return (classes += 'ten-year-anniversary')
           case '2017-10-10':
           case '2018-01-30':
           case '2018-1-30':
@@ -1115,6 +1117,7 @@ export class MilestonePipe implements PipeTransform {
           case '2024-04-02':
           case '2024-7-2':
           case '2024-07-02':
+          case '2024-11-26':
             return (classes += 'iron-banner')
           case '2024-10-8':
           case '2024-10-08':
