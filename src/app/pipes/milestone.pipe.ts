@@ -737,13 +737,13 @@ export class MilestonePipe implements PipeTransform {
             return ' | Salvations Edge Raid'
           case '2024-6-11':
           case '2024-06-11':
-            return ' | Episode: Echoes - Act I'
+            return ' | Episode: Echoes - Act I | Enigma Protocol | Breach Executable'
           case '2024-7-2':
           case '2024-07-02':
             return ' | Iron Banner'
           case '2024-7-16':
           case '2024-07-16':
-            return ' | Episode: Echoes - Act II'
+            return ' | Episode: Echoes - Act II | Battleground: Echoes'
           case '2024-8-6':
           case '2024-08-06':
             return ' | Solstice'
@@ -758,7 +758,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Iron Banner'
           case '2024-10-8':
           case '2024-10-08':
-            return ' | Episode: Revenant - Act I'
+            return ' | Episode: Revenant - Act I | Onslaught: Salvation'
           case '2024-10-11':
             return ' | Vesper\'s Host Dungeon'
           case '2024-10-29':
@@ -777,16 +777,19 @@ export class MilestonePipe implements PipeTransform {
             return ' | Iron Banner'
           case '2025-2-4':
           case '2025-02-04':
-            return ' | Episode: Heresy - Act I'
+            return ' | Episode: Heresy - Act I | The Nether'
           case '2025-2-7':
           case '2025-02-07':
-            return ' | [REDACTED] Dungeon'
+            return ' | Sundered Doctrine Dungeon'
           case '2025-2-18':
           case '2025-02-18':
             return ' | Iron Banner'
+          case '2025-3-11':
+          case '2025-03-11':
+            return ' | Episode: Heresy - Act II'
           case '2025-4-1':
           case '2025-04-01':
-            return ' | Iron Banner'
+            return ' | Episode Heresy - Act III | Iron Banner'
           case '2025-4-29':
           case '2025-04-29':
             return ' | Iron Banner'
@@ -1145,8 +1148,6 @@ export class MilestonePipe implements PipeTransform {
           case '2025-01-14':
           case '2025-2-18':
           case '2025-02-18':
-          case '2025-4-1':
-          case '2025-04-01':
           case '2025-4-29':
           case '2025-04-29':
             return (classes += 'iron-banner')
@@ -1156,6 +1157,13 @@ export class MilestonePipe implements PipeTransform {
           case '2024-1-7':
           case '2024-01-07':
             return (classes += 'episode-revenant')
+          case '2025-2-4':
+          case '2025-02-04':
+          case '2025-3-11':
+          case '2025-03-11':
+          case '2025-4-1':
+          case '2025-04-01':
+            return (classes += 'episode-heresy')
           default:
             return ''
         }
