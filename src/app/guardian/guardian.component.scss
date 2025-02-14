@@ -304,6 +304,12 @@
     mask-image: url('../../assets/icons/episode-revenant.png');
     background-color: inherit;
   }
+
+  &.episode-heresy:before {
+    -webkit-mask-image: url('../../assets/icons/episode-heresy.png');
+    mask-image: url('../../assets/icons/episode-heresy.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {

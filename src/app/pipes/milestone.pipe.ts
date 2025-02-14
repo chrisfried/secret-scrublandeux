@@ -737,13 +737,13 @@ export class MilestonePipe implements PipeTransform {
             return ' | Salvations Edge Raid'
           case '2024-6-11':
           case '2024-06-11':
-            return ' | Episode: Echoes - Act I'
+            return ' | Episode: Echoes - Act I | Enigma Protocol | Breach Executable'
           case '2024-7-2':
           case '2024-07-02':
             return ' | Iron Banner'
           case '2024-7-16':
           case '2024-07-16':
-            return ' | Episode: Echoes - Act II'
+            return ' | Episode: Echoes - Act II | Battleground: Echoes'
           case '2024-8-6':
           case '2024-08-06':
             return ' | Solstice'
@@ -758,7 +758,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Iron Banner'
           case '2024-10-8':
           case '2024-10-08':
-            return ' | Episode: Revenant - Act I'
+            return ' | Episode: Revenant - Act I | Onslaught: Salvation'
           case '2024-10-11':
             return ' | Vesper\'s Host Dungeon'
           case '2024-10-29':
@@ -767,9 +767,32 @@ export class MilestonePipe implements PipeTransform {
             return ' | Episode: Revenant - Act II'
           case '2024-11-26':
             return ' | Iron Banner'
-          case '2024-1-7':
-          case '2024-01-07':
-            return ' | Episode: Revenant - Act III'
+          case '2024-12-10':
+            return ' | The Dawning'
+          case '2025-1-7':
+          case '2025-01-07':
+            return ' | Episode: Revenant - Act III | Exotic Mission: Slayer\'s Fang'
+          case '2025-1-14':
+          case '2025-01-14':
+            return ' | Iron Banner'
+          case '2025-2-4':
+          case '2025-02-04':
+            return ' | Episode: Heresy - Act I | The Nether'
+          case '2025-2-7':
+          case '2025-02-07':
+            return ' | Sundered Doctrine Dungeon'
+          case '2025-2-18':
+          case '2025-02-18':
+            return ' | Iron Banner'
+          case '2025-3-11':
+          case '2025-03-11':
+            return ' | Episode: Heresy - Act II'
+          case '2025-4-1':
+          case '2025-04-01':
+            return ' | Episode Heresy - Act III | Iron Banner'
+          case '2025-4-29':
+          case '2025-04-29':
+            return ' | Iron Banner'
           default:
             return ''
         }
@@ -790,6 +813,7 @@ export class MilestonePipe implements PipeTransform {
           case '2021-12-14':
           case '2022-12-13':
           case '2023-12-12':
+          case '2024-12-10':
             return (classes += 'dawning')
           case '2018-2-13':
           case '2018-02-13':
@@ -937,6 +961,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-12-1':
           case '2023-12-01':
           case '2024-10-11':
+          case '2025-2-7':
+          case '2025-02-07':
             return (classes += 'dungeon')
           case '2022-12-6':
           case '2022-12-06':
@@ -1118,6 +1144,12 @@ export class MilestonePipe implements PipeTransform {
           case '2024-7-2':
           case '2024-07-02':
           case '2024-11-26':
+          case '2025-1-14':
+          case '2025-01-14':
+          case '2025-2-18':
+          case '2025-02-18':
+          case '2025-4-29':
+          case '2025-04-29':
             return (classes += 'iron-banner')
           case '2024-10-8':
           case '2024-10-08':
@@ -1125,6 +1157,13 @@ export class MilestonePipe implements PipeTransform {
           case '2024-1-7':
           case '2024-01-07':
             return (classes += 'episode-revenant')
+          case '2025-2-4':
+          case '2025-02-04':
+          case '2025-3-11':
+          case '2025-03-11':
+          case '2025-4-1':
+          case '2025-04-01':
+            return (classes += 'episode-heresy')
           default:
             return ''
         }
