@@ -310,6 +310,18 @@
     mask-image: url('../../assets/icons/episode-heresy.png');
     background-color: inherit;
   }
+
+  &.rite-of-the-nine:before {
+    -webkit-mask-image: url('../../assets/icons/rite-of-the-nine.png');
+    mask-image: url('../../assets/icons/rite-of-the-nine.png');
+    background-color: inherit;
+  }
+
+  &.heavy-metal:before {
+    -webkit-mask-image: url('../../assets/icons/heavy-metal.png');
+    mask-image: url('../../assets/icons/heavy-metal.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {
