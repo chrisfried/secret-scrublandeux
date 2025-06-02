@@ -793,6 +793,18 @@ export class MilestonePipe implements PipeTransform {
           case '2025-4-29':
           case '2025-04-29':
             return ' | Iron Banner'
+          case '2025-5-6':
+          case '2025-05-06':
+            return ' | Rite of the Nine'
+          case '2025-5-9':
+          case '2025-05-09':
+            return ' | Heavy Metal'
+          case '2025-5-20':
+          case '2025-05-20':
+            return ' | Iron Banner'
+          case '2025-7-15':
+          case '2025-07-15':
+            return ' | Launch: The Edge of Fate'
           default:
             return ''
         }
@@ -1150,6 +1162,8 @@ export class MilestonePipe implements PipeTransform {
           case '2025-02-18':
           case '2025-4-29':
           case '2025-04-29':
+          case '2025-5-20':
+          case '2025-05-20':
             return (classes += 'iron-banner')
           case '2024-10-8':
           case '2024-10-08':
@@ -1164,6 +1178,12 @@ export class MilestonePipe implements PipeTransform {
           case '2025-4-1':
           case '2025-04-01':
             return (classes += 'episode-heresy')
+          case '2025-5-6':
+          case '2025-05-06':
+            return (classes += 'rite-of-the-nine')
+          case '2025-5-9':
+          case '2025-05-09':
+            return (classes += 'heavy-metal')
           default:
             return ''
         }
