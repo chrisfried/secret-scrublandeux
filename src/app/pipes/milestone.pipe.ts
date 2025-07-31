@@ -807,7 +807,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | Launch: The Edge of Fate | Season: Reclamation'
           case '2025-7-19':
           case '2025-07-19':
-            return ' | Raid: The Desert Prepetual'
+            return ' | Raid: The Desert Perpetual'
           case '2025-7-29':
           case '2025-07-29':
             return ' | Arms Week'
