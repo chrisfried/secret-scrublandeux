@@ -804,7 +804,16 @@ export class MilestonePipe implements PipeTransform {
             return ' | Iron Banner'
           case '2025-7-15':
           case '2025-07-15':
-            return ' | Launch: The Edge of Fate'
+            return ' | Launch: The Edge of Fate | Season: Reclamation'
+          case '2025-7-19':
+          case '2025-07-19':
+            return ' | Raid: The Desert Prepetual'
+          case '2025-7-29':
+          case '2025-07-29':
+            return ' | Arms Week'
+          case '2025-8-5':
+          case '2025-08-05':
+            return ' | Solstice'
           default:
             return ''
         }
@@ -932,6 +941,8 @@ export class MilestonePipe implements PipeTransform {
           case '2023-07-18':
           case '2024-8-6':
           case '2024-08-06':
+          case '2025-8-5':
+          case '2025-08-05':
             return (classes += 'solstice2022')
           case '2017-9-13':
           case '2017-09-13':
@@ -958,6 +969,8 @@ export class MilestonePipe implements PipeTransform {
           case '2024-04-30':
           case '2024-6-7':
           case '2024-06-07':
+          case '2025-7-19':
+          case '2025-07-19':
             return (classes += 'raid')
           case '2022-8-23':
           case '2022-08-23':
@@ -1184,6 +1197,12 @@ export class MilestonePipe implements PipeTransform {
           case '2025-5-9':
           case '2025-05-09':
             return (classes += 'heavy-metal')
+          case '2025-7-15':
+          case '2025-07-15':
+            return (classes += 'edge-of-fate')
+          case '2025-7-29':
+          case '2025-07-29':
+            return (classes += 'arms-week')
           default:
             return ''
         }
