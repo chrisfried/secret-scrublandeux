@@ -322,6 +322,18 @@
     mask-image: url('../../assets/icons/heavy-metal.png');
     background-color: inherit;
   }
+
+  &.edge-of-fate:before {
+    -webkit-mask-image: url('../../assets/icons/edge-of-fate.png');
+    mask-image: url('../../assets/icons/edge-of-fate.png');
+    background-color: inherit;
+  }
+
+  &.arms-week:before {
+    -webkit-mask-image: url('../../assets/icons/arms-week.png');
+    mask-image: url('../../assets/icons/arms-week.png');
+    background-color: inherit;
+  }
 }
 
 @media (prefers-reduced-motion) {
