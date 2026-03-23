@@ -1244,14 +1244,14 @@ export class MilestonePipe implements PipeTransform {
           case '2025-07-29':
           case '2025-10-7':
           case '2025-10-07':
-          case' 2026-1-27':
+          case '2026-1-27':
           case '2026-01-27':
             return (classes += 'arms-week')
           case '2025-9-9':
           case '2025-09-09':
             return (classes += 'ash-and-iron')
-          case '2026-12-2':
-          case '2026-12-02':
+          case '2025-12-2':
+          case '2025-12-02':
             return (classes += 'renegades') 
           default:
             return ''
