@@ -991,6 +991,7 @@ export class MilestonePipe implements PipeTransform {
           case '2022-12-13':
           case '2023-12-12':
           case '2024-12-10':
+          case '2025-12-16':
             return (classes += 'dawning')
           case '2018-2-13':
           case '2018-02-13':
@@ -1149,6 +1150,7 @@ export class MilestonePipe implements PipeTransform {
           case '2024-10-11':
           case '2025-2-7':
           case '2025-02-07':
+          case '2025-12-13':
             return (classes += 'dungeon')
           case '2022-12-6':
           case '2022-12-06':
