@@ -465,6 +465,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
       this.addDay(day)
       day.setDate(day.getDate() + 1)
     }
+    this.seasons = this.seasons.filter((season) => season.startDate <= now)
     this.seasons.reverse()
     this.seasons.forEach((season, index) => {
       season.startDateString = formatDate(season.startDate, 'shortDate', this.locale || 'en-US')
