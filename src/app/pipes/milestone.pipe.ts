@@ -845,6 +845,8 @@ export class MilestonePipe implements PipeTransform {
           case '2026-3-24':
           case '2026-03-24':
             return ' | Guardian Games'
+          case '2026-06-09':
+            return ' | Monument of Triumph | Pantheon | Sparrow Racing League'
           case '2026-6-30':
           case '2026-06-30':
           case '2026-7-28':
@@ -1496,6 +1498,9 @@ export class MilestonePipe implements PipeTransform {
           case '2025-12-2':
           case '2025-12-02':
             return (classes += 'renegades')
+          case '2026-6-9':
+          case '2026-06-09':
+            return (classes += 'monument-of-triumph')
           default:
             return ''
         }
