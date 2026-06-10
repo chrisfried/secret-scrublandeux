@@ -107,7 +107,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     private manifestService: ManifestService,
     private bungieQueue: BungieQueueService,
     private bungieAuth: BungieAuthService,
-    private readonly zone: NgZone
+    private readonly zone: NgZone,
   ) {
     this.Math = Math
     this.locale = locale
@@ -147,6 +147,138 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
       year: [],
     }
     this.seasons = [
+      {
+        number: 50,
+        name: 'Monument of Triumph XXII',
+        days: [],
+        startDate: new Date('2031-09-01'),
+      },
+      {
+        number: 49,
+        name: 'Monument of Triumph XXI',
+        days: [],
+        startDate: new Date('2031-06-02'),
+      },
+      {
+        number: 48,
+        name: 'Monument of Triumph XX',
+        days: [],
+        startDate: new Date('2031-03-04'),
+      },
+      {
+        number: 47,
+        name: 'Monument of Triumph XIX',
+        days: [],
+        startDate: new Date('2030-12-03'),
+      },
+      {
+        number: 46,
+        name: 'Monument of Triumph XVIII',
+        days: [],
+        startDate: new Date('2030-09-02'),
+      },
+      {
+        number: 45,
+        name: 'Monument of Triumph XVII',
+        days: [],
+        startDate: new Date('2030-06-03'),
+      },
+      {
+        number: 44,
+        name: 'Monument of Triumph XVI',
+        days: [],
+        startDate: new Date('2030-03-05'),
+      },
+      {
+        number: 43,
+        name: 'Monument of Triumph XV',
+        days: [],
+        startDate: new Date('2029-12-04'),
+      },
+      {
+        number: 42,
+        name: 'Monument of Triumph XIV',
+        days: [],
+        startDate: new Date('2029-09-03'),
+      },
+      {
+        number: 41,
+        name: 'Monument of Triumph XIII',
+        days: [],
+        startDate: new Date('2029-06-04'),
+      },
+      {
+        number: 40,
+        name: 'Monument of Triumph XII',
+        days: [],
+        startDate: new Date('2029-03-06'),
+      },
+      {
+        number: 39,
+        name: 'Monument of Triumph XI',
+        days: [],
+        startDate: new Date('2028-12-05'),
+      },
+      {
+        number: 38,
+        name: 'Monument of Triumph X',
+        days: [],
+        startDate: new Date('2028-09-05'),
+      },
+      {
+        number: 37,
+        name: 'Monument of Triumph IX',
+        days: [],
+        startDate: new Date('2028-06-06'),
+      },
+      {
+        number: 36,
+        name: 'Monument of Triumph VIII',
+        days: [],
+        startDate: new Date('2028-03-07'),
+      },
+      {
+        number: 35,
+        name: 'Monument of Triumph VII',
+        days: [],
+        startDate: new Date('2027-12-07'),
+      },
+      {
+        number: 34,
+        name: 'Monument of Triumph VI',
+        days: [],
+        startDate: new Date('2027-09-07'),
+      },
+      {
+        number: 33,
+        name: 'Monument of Triumph V',
+        days: [],
+        startDate: new Date('2027-06-08'),
+      },
+      {
+        number: 32,
+        name: 'Monument of Triumph IV',
+        days: [],
+        startDate: new Date('2027-03-09'),
+      },
+      {
+        number: 31,
+        name: 'Monument of Triumph III',
+        days: [],
+        startDate: new Date('2026-12-08'),
+      },
+      {
+        number: 30,
+        name: 'Monument of Triumph II',
+        days: [],
+        startDate: new Date('2026-09-08'),
+      },
+      {
+        number: 29,
+        name: 'Monument of Triumph',
+        days: [],
+        startDate: new Date('2026-06-09'),
+      },
       {
         number: 28,
         name: 'Season: Lawless',
@@ -375,9 +507,9 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
               }
               this.bungieQueue.addToQueue('getProfile', action, callback)
             }
-          })
+          }),
         )
-        .subscribe()
+        .subscribe(),
     )
 
     this.subs.push(
@@ -429,7 +561,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
                         }
                         this.bungieQueue.addToQueue('getProfile', actionB, callbackB, paramsB)
                         return bsB
-                      }) ?? EMPTY
+                      }) ?? EMPTY,
                     )
                       .pipe(take(1))
                       .subscribe((b) => {
@@ -449,14 +581,14 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
                 }
                 this.bungieQueue.addToQueue('getProfile', action, callback, params)
                 return bs
-              }) ?? EMPTY
-            )
+              }) ?? EMPTY,
+            ),
           ),
           map((responses) => {
             return this.accountResponse$.next(responses)
-          })
+          }),
         )
-        .subscribe()
+        .subscribe(),
     )
 
     this.membershipDataForCurrentUser$
@@ -471,7 +603,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
           //     this.errorMessage = res.Message
           //   }
           this.displayName = res?.Response?.bungieNetUser?.displayName
-        })
+        }),
       )
       .subscribe()
 
@@ -489,7 +621,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
           }
         }
         return characters
-      })
+      }),
     )
 
     this.minutesPlayedTotal = this.characters$.pipe(
@@ -499,7 +631,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
           minutesPlayed += +character.minutesPlayedTotal
         })
         return minutesPlayed
-      })
+      }),
     )
 
     this.subs.push(
@@ -517,7 +649,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
           this.addHistorySub({ ...params, page: 1 })
           this.addHistorySub({ ...params, page: 2 })
         })
-      })
+      }),
     )
   }
 
@@ -582,7 +714,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
           loading.loading = false
           this.flatDaysBS.next(this.flatDays)
         }
-      })
+      }),
     )
   }
 
@@ -594,7 +726,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
     days: {
       date: Date
       activities: scrubland.Activity[]
-    }[]
+    }[],
   ) {
     return days.reduce((s, d) => s.concat(d.activities), [])
   }
@@ -609,7 +741,7 @@ export class Guardian3DComponent implements OnInit, OnDestroy {
       endDateString?: string
     },
     displayName,
-    seasonCount: number
+    seasonCount: number,
   ) {
     this.zone.runOutsideAngular((_) => {
       let button

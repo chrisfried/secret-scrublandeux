@@ -760,7 +760,7 @@ export class MilestonePipe implements PipeTransform {
           case '2024-10-08':
             return ' | Episode: Revenant - Act I | Onslaught: Salvation'
           case '2024-10-11':
-            return ' | Vesper\'s Host Dungeon'
+            return " | Vesper's Host Dungeon"
           case '2024-10-29':
             return ' | Festival of the Lost'
           case '2024-11-19':
@@ -771,7 +771,7 @@ export class MilestonePipe implements PipeTransform {
             return ' | The Dawning'
           case '2025-1-7':
           case '2025-01-07':
-            return ' | Episode: Revenant - Act III | Exotic Mission: Slayer\'s Fang'
+            return " | Episode: Revenant - Act III | Exotic Mission: Slayer's Fang"
           case '2025-1-14':
           case '2025-01-14':
             return ' | Iron Banner'
@@ -845,6 +845,128 @@ export class MilestonePipe implements PipeTransform {
           case '2026-3-24':
           case '2026-03-24':
             return ' | Guardian Games'
+          case '2026-6-30':
+          case '2026-06-30':
+          case '2026-7-28':
+          case '2026-07-28':
+          case '2026-8-25':
+          case '2026-08-25':
+          case '2026-9-22':
+          case '2026-09-22':
+          case '2026-10-20':
+          case '2026-11-17':
+          case '2026-12-15':
+          case '2027-1-12':
+          case '2027-01-12':
+          case '2027-2-9':
+          case '2027-02-09':
+          case '2027-3-9':
+          case '2027-03-09':
+          case '2027-4-6':
+          case '2027-04-06':
+          case '2027-5-4':
+          case '2027-05-04':
+          case '2027-6-1':
+          case '2027-06-01':
+          case '2027-6-29':
+          case '2027-06-29':
+          case '2027-7-27':
+          case '2027-07-27':
+          case '2027-8-24':
+          case '2027-08-24':
+          case '2027-9-21':
+          case '2027-09-21':
+          case '2027-10-19':
+          case '2027-11-16':
+          case '2027-12-14':
+          case '2028-1-11':
+          case '2028-01-11':
+          case '2028-2-8':
+          case '2028-02-08':
+          case '2028-3-7':
+          case '2028-03-07':
+          case '2028-4-4':
+          case '2028-04-04':
+          case '2028-5-2':
+          case '2028-05-02':
+          case '2028-5-30':
+          case '2028-05-30':
+          case '2028-6-27':
+          case '2028-06-27':
+          case '2028-7-25':
+          case '2028-07-25':
+          case '2028-8-22':
+          case '2028-08-22':
+          case '2028-9-19':
+          case '2028-09-19':
+          case '2028-10-17':
+          case '2028-11-14':
+          case '2028-12-12':
+          case '2029-1-9':
+          case '2029-01-09':
+          case '2029-2-6':
+          case '2029-02-06':
+          case '2029-3-6':
+          case '2029-03-06':
+          case '2029-4-2':
+          case '2029-04-02':
+          case '2029-4-30':
+          case '2029-04-30':
+          case '2029-5-28':
+          case '2029-05-28':
+          case '2029-6-25':
+          case '2029-06-25':
+          case '2029-7-23':
+          case '2029-07-23':
+          case '2029-8-20':
+          case '2029-08-20':
+          case '2029-9-17':
+          case '2029-09-17':
+          case '2029-10-15':
+          case '2029-11-13':
+          case '2029-12-11':
+          case '2030-1-8':
+          case '2030-01-08':
+          case '2030-2-5':
+          case '2030-02-05':
+          case '2030-3-5':
+          case '2030-03-05':
+          case '2030-4-1':
+          case '2030-04-01':
+          case '2030-4-29':
+          case '2030-04-29':
+          case '2030-5-27':
+          case '2030-05-27':
+          case '2030-6-24':
+          case '2030-06-24':
+          case '2030-7-22':
+          case '2030-07-22':
+          case '2030-8-19':
+          case '2030-08-19':
+          case '2030-9-16':
+          case '2030-09-16':
+          case '2030-10-14':
+          case '2030-11-12':
+          case '2030-12-10':
+          case '2031-1-7':
+          case '2031-01-07':
+          case '2031-2-4':
+          case '2031-02-04':
+          case '2031-3-4':
+          case '2031-03-04':
+          case '2031-3-31':
+          case '2031-03-31':
+          case '2031-4-28':
+          case '2031-04-28':
+          case '2031-5-26':
+          case '2031-05-26':
+          case '2031-6-23':
+          case '2031-06-23':
+          case '2031-7-21':
+          case '2031-07-21':
+          case '2031-8-18':
+          case '2031-08-18':
+            return ' | Iron Banner'
           default:
             return ''
         }
@@ -1215,6 +1337,127 @@ export class MilestonePipe implements PipeTransform {
           case '2025-05-20':
           case '2025-9-16':
           case '2025-09-16':
+          case '2026-6-30':
+          case '2026-06-30':
+          case '2026-7-28':
+          case '2026-07-28':
+          case '2026-8-25':
+          case '2026-08-25':
+          case '2026-9-22':
+          case '2026-09-22':
+          case '2026-10-20':
+          case '2026-11-17':
+          case '2026-12-15':
+          case '2027-1-12':
+          case '2027-01-12':
+          case '2027-2-9':
+          case '2027-02-09':
+          case '2027-3-9':
+          case '2027-03-09':
+          case '2027-4-6':
+          case '2027-04-06':
+          case '2027-5-4':
+          case '2027-05-04':
+          case '2027-6-1':
+          case '2027-06-01':
+          case '2027-6-29':
+          case '2027-06-29':
+          case '2027-7-27':
+          case '2027-07-27':
+          case '2027-8-24':
+          case '2027-08-24':
+          case '2027-9-21':
+          case '2027-09-21':
+          case '2027-10-19':
+          case '2027-11-16':
+          case '2027-12-14':
+          case '2028-1-11':
+          case '2028-01-11':
+          case '2028-2-8':
+          case '2028-02-08':
+          case '2028-3-7':
+          case '2028-03-07':
+          case '2028-4-4':
+          case '2028-04-04':
+          case '2028-5-2':
+          case '2028-05-02':
+          case '2028-5-30':
+          case '2028-05-30':
+          case '2028-6-27':
+          case '2028-06-27':
+          case '2028-7-25':
+          case '2028-07-25':
+          case '2028-8-22':
+          case '2028-08-22':
+          case '2028-9-19':
+          case '2028-09-19':
+          case '2028-10-17':
+          case '2028-11-14':
+          case '2028-12-12':
+          case '2029-1-9':
+          case '2029-01-09':
+          case '2029-2-6':
+          case '2029-02-06':
+          case '2029-3-6':
+          case '2029-03-06':
+          case '2029-4-2':
+          case '2029-04-02':
+          case '2029-4-30':
+          case '2029-04-30':
+          case '2029-5-28':
+          case '2029-05-28':
+          case '2029-6-25':
+          case '2029-06-25':
+          case '2029-7-23':
+          case '2029-07-23':
+          case '2029-8-20':
+          case '2029-08-20':
+          case '2029-9-17':
+          case '2029-09-17':
+          case '2029-10-15':
+          case '2029-11-13':
+          case '2029-12-11':
+          case '2030-1-8':
+          case '2030-01-08':
+          case '2030-2-5':
+          case '2030-02-05':
+          case '2030-3-5':
+          case '2030-03-05':
+          case '2030-4-1':
+          case '2030-04-01':
+          case '2030-4-29':
+          case '2030-04-29':
+          case '2030-5-27':
+          case '2030-05-27':
+          case '2030-6-24':
+          case '2030-06-24':
+          case '2030-7-22':
+          case '2030-07-22':
+          case '2030-8-19':
+          case '2030-08-19':
+          case '2030-9-16':
+          case '2030-09-16':
+          case '2030-10-14':
+          case '2030-11-12':
+          case '2030-12-10':
+          case '2031-1-7':
+          case '2031-01-07':
+          case '2031-2-4':
+          case '2031-02-04':
+          case '2031-3-4':
+          case '2031-03-04':
+          case '2031-3-31':
+          case '2031-03-31':
+          case '2031-4-28':
+          case '2031-04-28':
+          case '2031-5-26':
+          case '2031-05-26':
+          case '2031-6-23':
+          case '2031-06-23':
+          case '2031-7-21':
+          case '2031-07-21':
+          case '2031-8-18':
+          case '2031-08-18':
             return (classes += 'iron-banner')
           case '2024-10-8':
           case '2024-10-08':
@@ -1252,7 +1495,7 @@ export class MilestonePipe implements PipeTransform {
             return (classes += 'ash-and-iron')
           case '2025-12-2':
           case '2025-12-02':
-            return (classes += 'renegades') 
+            return (classes += 'renegades')
           default:
             return ''
         }
