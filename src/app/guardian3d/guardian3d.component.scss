@@ -346,6 +346,12 @@
     mask-image: url('../../assets/icons/renegades.png');
     background-color: inherit;
   }
+
+    &.monument-of-triumph:before {
+      -webkit-mask-image: url('../../assets/icons/monument-of-triumph.png');
+      mask-image: url('../../assets/icons/monument-of-triumph.png');
+      background-color: inherit;
+    }
 }
 
 @media (prefers-reduced-motion) {
